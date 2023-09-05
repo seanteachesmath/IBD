@@ -12,8 +12,8 @@
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
-<meta property="book:title" content="My Great Book">
-<meta property="book:author" content="You">
+<meta property="book:title" content="Introduction to Biological Dynamics">
+<meta property="book:author" content="Sean Laverty">
 <script>
 var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
@@ -88,11 +88,11 @@ window.MathJax = {
 <link href="https://pretextbook.org/css/0.7/colors_blue_red.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.7/setcolors.css" rel="stylesheet" type="text/css">
 </head>
-<body class="pretext book ignore-math">
+<body id="laverty-IBD" class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
 <a id="logo-link" class="logo-link" href=""></a><div class="title-container">
-<h1 class="heading"><a href="my-great-book.html"><span class="title">My Great Book:</span> <span class="subtitle">An example to get you started</span></a></h1>
-<p class="byline">You</p>
+<h1 class="heading"><a href="intro-bio-dynamics.html"><span class="title">Introduction to Biological Dynamics</span></a></h1>
+<p class="byline">Sean Laverty</p>
 </div>
 <div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
 <button id="closesearchresults" class="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms" class="searchterms"></span>
@@ -202,9 +202,9 @@ window.MathJax = {
 <span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
 </ol>
 </li>
-</ol></div></button><span class="treebuttons"><a class="previous-button button" href="my-great-book.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="my-great-book.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="colophon-1.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
+</ol></div></button><span class="treebuttons"><a class="previous-button button" href="intro-bio-dynamics.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="intro-bio-dynamics.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="preface-disclaimer.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
 <input id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" class="searchbutton" type="button" onclick="doSearch()">🔍</button>
-</div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\R}{\mathbb R}
+</div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\require{cancel}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
@@ -213,24 +213,95 @@ window.MathJax = {
 \)</span></div>
 <div class="ptx-page">
 <div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural">
-<li class="active"><div class="toc-item"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
-<li>
-<div class="toc-item"><a href="chapter-title.html" class="internal"><span class="codenumber">1</span> <span class="title">Chapter title</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="section-title.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Section title</span></a></div></li></ul>
+<li class="active">
+<div class="toc-item"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="preface-disclaimer.html" class="internal"><span class="title">Disclaimer</span></a></div></li>
+<li><div class="toc-item"><a href="preface-motto.html" class="internal"><span class="title">Preface</span></a></div></li>
+<li><div class="toc-item"><a href="preface-themes.html" class="internal"><span class="title">Themes</span></a></div></li>
+</ul>
 </li>
-<li><div class="toc-item"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
+<li>
+<div class="toc-item"><a href="introduction.html" class="internal"><span class="codenumber">1</span> <span class="title">Introduction</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="what-is-modeling.html" class="internal"><span class="codenumber">1.1</span> <span class="title">What is modeling</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="introduction.html" class="internal"><span class="codenumber">2</span> <span class="title">Single differential equations as models</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="single-species-population-models.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Single-species population models</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="single-species-population-models.html#review" class="internal"><span class="codenumber">2.1.1</span> <span class="title">Review</span></a></div></li>
+<li><div class="toc-item"><a href="single-species-population-models.html#model-classification" class="internal"><span class="codenumber">2.1.2</span> <span class="title">Model classification</span></a></div></li>
+<li><div class="toc-item"><a href="single-species-population-models.html#harvesting-and-logistic-growth" class="internal"><span class="codenumber">2.1.3</span> <span class="title">Harvesting and logistic growth</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="continuous-time-models-derivations.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Continuous-time models</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="systems-des.html" class="internal"><span class="codenumber">3</span> <span class="title">Systems of differential equations as ecological models</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="two-dimensional-systems.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Two-dimensional systems of differential equations as ecological models</span></a></div></li>
+<li><div class="toc-item"><a href="harvesting-and-predator-prey.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Harvesting and predator-prey</span></a></div></li>
+<li><div class="toc-item"><a href="two-dim-ecology.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Two dimensional models in ecology</span></a></div></li>
+<li><div class="toc-item"><a href="ecological-competition.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Ecological competition</span></a></div></li>
+<li><div class="toc-item"><a href="the-trace-determinant-method.html" class="internal"><span class="codenumber">3.5</span> <span class="title">The ‘Trace-Determinant Method’</span></a></div></li>
+<li><div class="toc-item"><a href="parameters-rates-and-units-prelude-to-chemical-kinetics.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Parameters, rates, and units: Prelude to chemical kinetics</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="systems-des-phys.html" class="internal"><span class="codenumber">4</span> <span class="title">Systems of differential equations as physiological models</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="michaelis-menten-kinetics.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Michaelis-Menten kinetics</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="michaelis-menten-kinetics.html#equilibrium-assumption-vs-quasi-steady-state-assumption" class="internal"><span class="codenumber">4.1.1</span> <span class="title">Equilibrium assumption vs. the Quasi-steady state assumption</span></a></div></li></ul>
+</li>
+<li><div class="toc-item"><a href="nullclines-and-neuroscience.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Nullclines and Neuroscience</span></a></div></li>
+<li><div class="toc-item"><a href="higher-dimensional-systems.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Higher-dimensional systems of differential equations as models</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="introduction-to-stochastic-processes.html" class="internal"><span class="codenumber">5</span> <span class="title">Stochastic models</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="stochastic-model.html" class="internal"><span class="codenumber">5.1</span> <span class="title">What is a stochastic process?</span></a></div></li>
+<li><div class="toc-item"><a href="introduction-to-stochastic-models.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Introduction to stochastic models</span></a></div></li>
+<li><div class="toc-item"><a href="birth-death-processes-and-the-gillespie-algorithm.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Birth-death processes and the Gillespie algorithm</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="introduction-single-dtds.html" class="internal"><span class="codenumber">6</span> <span class="title">Discrete-time dynamical systems</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="what-is-dtds.html" class="internal"><span class="codenumber">6.1</span> <span class="title">What is a discrete-time dynamical system?</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="what-is-dtds.html#one-dimensional-linear-discrete-time-dynamical-systems" class="internal"><span class="codenumber">6.1.1</span> <span class="title">One-dimensional, Linear, discrete-time dynamical systems</span></a></div></li></ul>
+</li>
+<li><div class="toc-item"><a href="nonlinear-discrete-time-models-1d.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Nonlinear discrete-time models (1D)</span></a></div></li>
+<li><div class="toc-item"><a href="nonlinear-discrete-time-models-1-2d.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Nonlinear discrete-time models (1, 2D)</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="higher-order-dtds.html" class="internal"><span class="codenumber">7</span> <span class="title">Discrete-time dynamical systems with linear algebra</span></a></div>
+<ul class="structural"><li>
+<div class="toc-item"><a href="discrete-time-with-linear-algebra.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Discrete-time dynamical systems with linear algebra</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="discrete-time-with-linear-algebra.html#linear-discrete-time-models-2d-1" class="internal"><span class="codenumber">7.1.1</span> <span class="title">Linear discrete-time models (2D)</span></a></div></li></ul>
+</li></ul>
+</li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="frontmatter" id="frontmatter"><h2 class="heading">
-<span class="title">My Great Book:</span> <span class="subtitle">An example to get you started</span>
-</h2>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="frontmatter" id="frontmatter"><h2 class="heading"><span class="title">Introduction to Biological Dynamics</span></h2>
 <div class="author">
-<div class="author-name">You</div>
-<div class="author-info">Your department<br>Your institution</div>
+<div class="author-name">Sean Laverty</div>
+<div class="author-info">Department of Mathematics and Statistics<br>University of Central Oklahoma<br><a href="mailto:slaverty@uco.edu">slaverty@uco.edu</a>
 </div>
-<div class="date">September 1, 2023</div>
-<nav class="summary-links"><ul><li><a href="colophon-1.html" class="internal"><span class="title">Colophon</span></a></li></ul></nav></section></div>
+</div>
+<div class="date">September 5, 2023</div>
+<nav class="summary-links"><ul>
+<li><a href="preface-disclaimer.html" class="internal"><span class="title">Disclaimer</span></a></li>
+<li><a href="preface-motto.html" class="internal"><span class="title">Preface</span></a></li>
+<li><a href="preface-themes.html" class="internal"><span class="title">Themes</span></a></li>
+</ul></nav></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="my-great-book.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="colophon-1.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
+<a class="previous-button button" href="intro-bio-dynamics.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="preface-disclaimer.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
