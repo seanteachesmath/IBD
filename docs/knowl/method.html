@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<section class="paragraphs"><h3 class="heading"><span class="title">Method.</span></h3> <div class="para">To review, we apply the following method to study 2D nonlinear dynamical systems.</div> <div class="para logical"><ol class="decimal">
+<li><div class="para">Write a model.</div></li>
+<li><div class="para">Read and interpret the model (dimensional analysis of parameters.</div></li>
+<li><div class="para">Compute nullclines and equilibria.</div></li>
+<li><div class="para">Plot phase portraits with direction arrows and trajectories.</div></li>
+<li><div class="para">Refine knowledge of stability with linearization via Jacobian.</div></li>
+</ol></div> <div class="para logical">
+<div class="para">Consider two species <span class="process-math">\(A(t)\)</span> and <span class="process-math">\(B(t)\)</span> for ants and beetles, respectively. Assume that each grows (in the absence of the other) according to logistic growth,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+\begin{cases}
+\displaystyle\frac{d^{} {A}}{d {t}^{}}&amp;=a A\Big(1-\frac{A}{K_A}\Big)\\[10pt] 
+\displaystyle\frac{d^{} {B}}{d {t}^{}}&amp;=b B\Big(1-\frac{B}{K_B}\Big).
+\end{cases}
+\end{aligned}
+\end{equation*}
+</div>
+<div class="para">Here, each species grows independently of the other. Beetles have no effect on ants; ants have no effect on beetles. Our mechanism for interaction will be <em class="emphasis">interference</em> competition, which leads in increased mortality.</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+\begin{cases} \displaystyle\frac{d^{} {A}}{d {t}^{}}&amp;=a
+A\Big(1-\frac{A}{K_A}-\frac{\mu B}{K_A}\Big)\\[10pt]
+\displaystyle\frac{d^{} {B}}{d {t}^{}}&amp;=b
+B\Big(1-\frac{B}{K_B}-\frac{\delta A}{K_B}\Big).
+\end{cases}\end{aligned}
+\end{equation*}
+</div>
+</div> <div class="para">To understand interspecific competition, we need to understand the units and magnitude of <span class="process-math">\(\mu\)</span> and <span class="process-math">\(\delta\text{.}\)</span> Roughly, <span class="process-math">\(\mu\)</span> translates from units of beetle density to an “effective ant density.” According to the ratio <span class="process-math">\(\frac{B}{K_A}\text{,}\)</span> beetles ‘fill’ some of the carrying capacity allotted to ants. Just how much of the capacity that they fill is given by the parameter <span class="process-math">\(\mu\text{,}\)</span> which when multiplied by <span class="process-math">\(B\)</span> gives the ‘ant equivalency’ of <span class="process-math">\(B\)</span> beetles. We will look more closely at the equation for <span class="process-math">\(B\text{,}\)</span> but note that we could make similar observations about the equation for <span class="process-math">\(A\text{.}\)</span>
+</div> <div class="para logical">
+<div class="para">The dynamics of <span class="process-math">\(B\)</span> are given by,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{d^{} {B}}{d
+{t}^{}}=b B\Big(1-\frac{B+\delta A}{K_B}\Big),
+\end{equation*}
+</div>
+<div class="para">which slightly more directly illustrates that both <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> fill the carrying capacity allotted to <span class="process-math">\(B\text{.}\)</span> In one dimension, equilibria depend on the zeros of the right hand side of an equation like this. In two dimensions, equilibria depend on the values of both quantities <span class="process-math">\(A\)</span> and <span class="process-math">\(B\text{.}\)</span> The first step, as before, is to compute the nullclines for <span class="process-math">\(B\text{.}\)</span> Setting <span class="process-math">\(\frac{d^{} {B}}{d {t}^{}}=0\)</span> implies that either <span class="process-math">\(B=0\)</span> or</div>
+<div class="displaymath process-math">
+\begin{equation*}
+1-\frac{B+\delta A}{K_B}=0.
+\end{equation*}
+</div>
+<div class="para">With a single species, this equation looks like</div>
+<div class="displaymath process-math">
+\begin{equation*}
+1-\frac{\text{animals}}{K_B}=0.
+\end{equation*}
+</div>
+<div class="para">We can solve this equation for the density of animals at equilibrium to find,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\text{animals}=K_B.
+\end{equation*}
+</div>
+<div class="para">But we know that we have a particular composition of animals, such that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\text{animals}=B+\delta A.
+\end{equation*}
+</div>
+<div class="para">Combining these equations,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+K_B=B+\delta A,
+\end{equation*}
+</div>
+<div class="para">gives <span class="process-math">\(B\)</span> as a function of <span class="process-math">\(A\text{,}\)</span> the abundance of <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> that guarantee that <span class="process-math">\(B\)</span> is unchanging,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+B=K_B -\delta A.
+\end{equation*}
+</div>
+</div> <div class="para">Finally, we have that <span class="process-math">\(\dfrac{dB}{dt}=0\text{,}\)</span> if either <span class="process-math">\(B=0\)</span> or <span class="process-math">\(B = K_B - \delta A\text{.}\)</span> By their definition, on <span class="process-math">\(B\)</span>-nullclines, the motion in the <span class="process-math">\(B\)</span> direction is zero, and dynamics are strictly increasing (or decreasing) in <span class="process-math">\(A\text{.}\)</span>
+</div> <div class="para">Similarly, we can compute that <span class="process-math">\(\dfrac{dA}{dt}=0\text{,}\)</span> if either <span class="process-math">\(A=0\)</span> or <span class="process-math">\(B = \dfrac{K_A - A}{\mu}\text{.}\)</span> By their definition, on <span class="process-math">\(A\)</span>-nullclines, the motion in the <span class="process-math">\(A\)</span> direction is zero, and dynamics are strictly increasing (or decreasing) in <span class="process-math">\(B\text{.}\)</span> We have to consider a variety of parameter combinations and relative magnitudes. This lets us plot four distinct phase portraits, shown in <a href="" class="xref" data-knowl="./knowl/fig-compet-A-only.html" title="Figure 3.4.1">Figure 3.4.1</a> - <a href="" class="xref" data-knowl="./knowl/fig-compet-saddle.html" title="Figure 3.4.4">Figure 3.4.4</a>
+</div> <figure class="figure figure-like"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/./images/compet_A.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.4.1<span class="period">.</span></span><span class="space"> </span>When <span class="process-math">\(\frac{K_A}{\mu}&gt;K_B\)</span> and <span class="process-math">\(\frac{K_B}{\delta}&lt;K_A\text{,}\)</span> only <span class="process-math">\(A\)</span> exists at equilibrium. This is equivalent to <span class="process-math">\(\frac{K_A}{K_B}&gt;\mu\)</span> and <span class="process-math">\(\frac{K_B}{K_A}&lt;\delta\text{,}\)</span> which suggests that <span class="process-math">\(B\)</span> has a weak effect on <span class="process-math">\(A\text{,}\)</span> but <span class="process-math">\(A\)</span> has a strong effect on <span class="process-math">\(B\text{.}\)</span></figcaption></figure> <figure class="figure figure-like"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/./images/compet_B.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.4.2<span class="period">.</span></span><span class="space"> </span>When <span class="process-math">\(\frac{K_A}{\mu}&lt;K_B\)</span> and <span class="process-math">\(\frac{K_B}{\delta}&gt;K_A\text{,}\)</span> only <span class="process-math">\(B\)</span> exists at equilibrium. This is equivalent to <span class="process-math">\(\frac{K_A}{K_B}&lt;\mu\)</span> and <span class="process-math">\(\frac{K_B}{K_A}&gt;\delta\text{,}\)</span> which suggests that <span class="process-math">\(B\)</span> has a strong effect on <span class="process-math">\(A\text{,}\)</span> but <span class="process-math">\(A\)</span> has a weak effect on <span class="process-math">\(B\text{.}\)</span></figcaption></figure> <figure class="figure figure-like"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/./images/compet_AB.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.4.3<span class="period">.</span></span><span class="space"> </span>When <span class="process-math">\(\frac{K_A}{\mu}&gt;K_B\)</span> and <span class="process-math">\(\frac{K_B}{\delta}&gt;K_A\text{,}\)</span> nullclines intersect, and the coexistence equilibrium is stable. This is equivalent to <span class="process-math">\(\frac{K_A}{K_B}&gt;\mu\)</span> and <span class="process-math">\(\frac{K_B}{K_A}&gt;\delta\text{,}\)</span> which suggests that <span class="process-math">\(B\)</span> has a weak effect on <span class="process-math">\(A\text{,}\)</span> and <span class="process-math">\(A\)</span> has a weak effect on <span class="process-math">\(B\text{.}\)</span></figcaption></figure> <figure class="figure figure-like"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/./images/compet_saddle.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.4.4<span class="period">.</span></span><span class="space"> </span>When <span class="process-math">\(\frac{K_A}{\mu}&lt;K_B\)</span> and <span class="process-math">\(\frac{K_B}{\delta}&lt;K_A\text{,}\)</span> but the coexistence equilibrium is unstable. This is equivalent to <span class="process-math">\(\frac{K_B}{K_A}&gt;\mu\)</span> and <span class="process-math">\(\frac{K_A}{K_B}&gt;\delta\text{,}\)</span> which suggests that <span class="process-math">\(B\)</span> has a weak effect on <span class="process-math">\(A\text{,}\)</span> and <span class="process-math">\(A\)</span> has a weak effect on <span class="process-math">\(B\text{.}\)</span> The ‘winner’ depends on the initial conditions.</figcaption></figure></section><span class="incontext"><a href="ecological-competition.html#method" class="internal">in-context</a></span>
+</body>
+</html>

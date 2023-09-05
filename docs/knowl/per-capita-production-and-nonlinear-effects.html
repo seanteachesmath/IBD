@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<section class="paragraphs"><h3 class="heading"><span class="title">per capita production and nonlinear effects.</span></h3> <div class="para logical">
+<div class="para">So far our model has roughly been,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+N_{t+1}=r N_t,
+\end{equation*}
+</div>
+<div class="para">or</div>
+<div class="displaymath process-math">
+\begin{equation*}
+P_{t+1}=M P_{t},
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(N_t\)</span> and <span class="process-math">\(r\)</span> are scalars, or <span class="process-math">\(P_t\)</span> is a vector and <span class="process-math">\(M\)</span> is a matrix.</div>
+</div> <div class="para logical">
+<div class="para">As an example of a 1D model, our linear model assumes that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{N_{t+1}}{N_t}=r,
+\end{equation*}
+</div>
+<div class="para">or the ratio of current population to previous population is <span class="process-math">\(r\text{,}\)</span> no matter the size of the previous generation. Instead, we might expect that, for a variety of reasons (like space, food, aggression, or lack of resources) this ratio decreases as the current population size increases. Mathematically, this requires <span class="process-math">\(r=r(N_t)\text{.}\)</span>
+</div>
+</div> <div class="para">In words, small populations are capable of large increases from one generation to the next. But, large populations might only increase by slight amounts over generations. In fact, really large populations might actually shrink. The comparison of linear and nonlinear models is given in <a href="" class="xref" data-knowl="./knowl/fig-pcp.html" title="Figure 6.2.1">Figure 6.2.1</a>.</div> <figure class="figure figure-like"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/./images/lin_nonlin_pcp.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">6.2.1<span class="period">.</span></span><span class="space"> </span>Per capita production plots. Left) Generation to generation change independent of population size, Right) change dependent on population size for three famous models of ‘density dependence’.</figcaption></figure> <div class="para">Notice the peculiarity of the black line (or curve) in the right panel of <a href="" class="xref" data-knowl="./knowl/fig-pcp.html" title="Figure 6.2.1">Figure 6.2.1</a>(or <a href="" class="xref" data-knowl="./knowl/fig-nonlin-upd.html" title="Figure 6.3.2">Figure 6.3.2</a>). It quite happily ‘goes negative’, which means for an initially large enough population, the subsequent generation is multiplied by a negative number. Simply stated, that is weird. Fortunately, our other models circumvent this problem by requiring <span class="process-math">\(p.c.p.&gt;0\)</span> at all population sizes.</div> <div class="para logical">
+<div class="para">Multiplying <span class="process-math">\(p.c.p\)</span> by population size <span class="process-math">\(N_t\)</span> gives our updating function, <span class="process-math">\(f(N_t)=(p.c.p.)\times N_t\text{.}\)</span> Then, our model is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/fig-upd.html">
+\begin{equation*}
+N_{t+1}=f(N_t)=(p.c.p.)\times N_t.
+\end{equation*}
+</div>
+<div class="para">Some sample updating functions are plotted in <a href="" class="xref" data-knowl="./knowl/fig-upd.html" title="Figure 6.2.2">Figure 6.2.2</a>. Notice that there are some major qualitative changes when we compare the line in the left panel to any of the curves in the right panel. Most importantly, the updating function intersects the resetting line more than once. Again, these intersections suggest that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/fig-upd.html">
+\begin{equation*}
+N_{t+1}=N_t=N^*.
+\end{equation*}
+</div>
+<div class="para">Recalling our previous notation and definitions, these nonlinear models possess multiple equilibria!</div>
+</div> <figure class="figure figure-like"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/./images/lin_nonlin_upd.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">6.2.2<span class="period">.</span></span><span class="space"> </span>Cobwebbing diagrams. Left) Updating functions of linear model, Right) change dependent on population size for three famous models of ‘density dependence’.</figcaption></figure></section><span class="incontext"><a href="nonlinear-discrete-time-models-1d.html#per-capita-production-and-nonlinear-effects" class="internal">in-context</a></span>
+</body>
+</html>
