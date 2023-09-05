@@ -1,8 +1,17 @@
-INFO    : PreTeXt project found in `/Users/seanlaverty/GitHub/IBD`.
-INFO    : Using latest build located in `/Users/seanlaverty/GitHub/IBD/output/web`.
-INFO    : 
-INFO    : Preparing to deploy from active `main` git branch.
-INFO    : 
-INFO    : Changes to project source since last commit detected.
-INFO    : Add/committing these changes to local Git repository.
-INFO    : 
+INFO    : PreTeXt project found in `/Users/slaverty/GitHub/IBD`.
+WARNING : You already have a project.ptx file; a new default one for comparison has been created as /Users/slaverty/GitHub/IBD/project-20230905-112450.ptx.
+INFO    : Generated `/Users/slaverty/GitHub/IBD/project-20230905-112450.ptx`
+
+WARNING : You already have a publication.ptx file; a new default one for comparison has been created as /Users/slaverty/GitHub/IBD/publication/publication-20230905-112450.ptx.
+INFO    : Generated `/Users/slaverty/GitHub/IBD/publication/publication-20230905-112450.ptx`
+
+INFO    : Generated `/Users/slaverty/GitHub/IBD/.gitignore`
+
+INFO    : Generated `/Users/slaverty/GitHub/IBD/.devcontainer.json`
+
+WARNING : You already have a requirements.txt file at /Users/slaverty/GitHub/IBD/requirements.txt`.
+WARNING : The one suggested by PreTeXt will be created as /Users/slaverty/GitHub/IBD/requirements-20230905-112450.txt for comparison.
+INFO    : Generated requirements file at /Users/slaverty/GitHub/IBD/requirements-20230905-112450.txt.
+
+INFO    : Success! Open project.ptx to edit your project manifest.
+INFO    : Edit your <target/>s to point to the location of your PreTeXt source files.
