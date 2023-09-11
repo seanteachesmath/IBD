@@ -46,11 +46,11 @@ Statistics</department>
 <preface xml:id="preface-disclaimer">
 <title>Disclaimer</title>
 	<p> These notes were originally written for MATH 056 at
-	Swarthmore College and subsequently quite heavily modifited for
+	Swarthmore College and subsequently quite heavily modified for
 	courses taught at the University of Central Oklahoma. This
 	course was developed and taught as MATH 056 in Fall 2011, and
 	subsequently as MATH 4910/5910 in the Spring of 2013, 2015, and
-	2017. These notes were inspired by a course that I took as a
+	2017, 2021, and <em>Fall 2023</em>. These notes were inspired by a course that I took as a
 	first year graduate student at the University of Utah which was
 	taught by Fred Adler. </p>
 
@@ -58,7 +58,7 @@ Statistics</department>
 	(unfortunately at this point in time uncited within the text)
 	are listed on the last "page". </p>
 
-	<p> The structure of these notes might be jarring, but the goal
+<!-->	<p> The structure of these notes might be jarring, but the goal
 	is to facilitate rapid entry to inspired, independent
 	investigations of interesting questions. Often books begin with
 	discrete-time mathematical models (which are conceptually and
@@ -70,7 +70,7 @@ Statistics</department>
 	mathematical modeling and to take an early look at stochastic
 	processes and to introduce modeling that scales to higher
 	dimensional problems. Both of these approaches rely quite
-	heavily on numerical tools. </p>
+	heavily on numerical tools. </p>-->
 </preface>
 
 <preface xml:id="preface-motto">
@@ -101,13 +101,13 @@ assigned, first <latex/>, then <c>R</c>, then <c>sage</c>.
 <!--***************************-->
 <!--***************************-->
 
-        <xi:include href="./intro/main.ptx" />
-        <xi:include href="./single_DE/main.ptx" />
+        <xi:include href="./fall2023/intro.ptx" />
+<!-->        <xi:include href="./single_DE/main.ptx" />
         <xi:include href="./systems_DE/main.ptx" />
         <xi:include href="./systems_DE_phys/main.ptx" />
         <xi:include href="./stochastic/main.ptx" />
         <xi:include href="./single_DTDS/main.ptx" />
-        <xi:include href="./systems_DTDS/main.ptx" />
+        <xi:include href="./systems_DTDS/main.ptx" />-->
 
 <!--***************************-->
 <!--***************************-->
