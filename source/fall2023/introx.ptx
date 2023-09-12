@@ -212,7 +212,7 @@ described by <sq>continuous-time</sq> dynamics. </p>
 	<title>Do we always arrive at the same answer?</title>
 
 <p> Most of the models we study will be deterministic. This means our
-model (a set of rules, and initial conditions) will always give the same 
+model (a set of rules, and initial conditions) will always give the same
 answer. </p>
 
 <p> In contrast, some models can handle (random) variability between
@@ -236,8 +236,7 @@ differential equations. </p>
 <p>We will often use three related graphs: the phase line diagram (a
 plot of the derivative against the function value), the solutions (a
 plot of the value against time), and a bifurcation diagram (a plot of
-the equilibrium against a parameter of interest).</p>
-</introduction>
+the equilibrium against a parameter of interest).</p> </introduction>
 
 <subsection xml:id="sub-logistic-growth"> <title>Logistic growth</title>
 <introduction><p> </p></introduction> </subsection>
@@ -260,54 +259,60 @@ bifirucation diagram. It sometimes helps with one step to do another in
 parallel, for example, the equilibria are relevant to the phase
 plane.</p>
 
-<paragraphs xml:id = "constant-harvesting-phase-lines"> 
-<title>Phase line analysis of the constant harvesting model</title>
-<p>The right-hand side of the
-differential equation is <me>f(N) = rN\left(1-\frac{N}{K}\right) -
-h,</me> a quadratic function of <m>N</m>. This is similar to the phase
-line for the regular logistic growth model, but as <m>h</m> grows, the
-parabola is shifted down.</p> å
-</paragraphs>
+<paragraphs xml:id = "constant-harvesting-phase-lines"> <title>Phase
+line analysis of the constant harvesting model</title> <p>The right-hand
+side of the differential equation is <me>f(N) =
+rN\left(1-\frac{N}{K}\right) - h,</me> a quadratic function of <m>N</m>.
+This is similar to the phase line for the regular logistic growth model,
+but as <m>h</m> grows, the parabola is shifted down.</p> å </paragraphs>
 
 </subsection>
 
 
 <subsection xml:id="sub-proportional-harvesting"> <title>Logistic growth
-with proportional harvesting</title> <introduction>
-<p>Admittedly, that last section was kind of a nightmare, and the change
-we are about to make might convince you things are only going to get
-worse.  Stick with me.
-</p>
-<p> You may have noticed some potential drawbacks of constant
-harvesting. Chiefly, driving small populations to extinction. Instead of
-a constant harvesting rate, we will now take the term to be porportional
-to population density, that is <me>\dfrac{dN}{dt} =
+with proportional harvesting</title> <introduction> <p>Admittedly, that
+last section was kind of a nightmare, and the change we are about to
+make might convince you things are only going to get worse.  Stick with
+me. It gets better. </p> <p> You may have noticed some potential
+drawbacks of constant harvesting. Chiefly, driving small populations to
+extinction is probably not a good thing. Instead of a constant
+harvesting rate, we will now take the term to be porportional to
+population density, that is <me>\dfrac{dN}{dt} =
 rN\left(1-\frac{N}{K}\right) - hN</me>. Again, that is a more
 complicated term than before, but the analysis will go much more
-smoothly.
-</p>
+smoothly. </p>
 
-<paragraphs xml:id = "proportional-harvesting-phase-lines"> 
-<title>Phase line analysis of the proportional harvesting model</title>
-<p>The right-hand side of the
-differential equation is <me>f(N) = rN\left(1-\frac{N}{K}\right) -
-hN,</me> a quadratic function of <m>N</m>. This is similar to the phase
-line for the regular logistic growth model, but as <m>hN</m> grows, the
-parabola is again altered.  Despite the model looking more complicated
-than in the previous section, the analysis proceeds more smoothly.</p>
-</paragraphs>
+<paragraphs xml:id = "proportional-harvesting-phase-lines"> <title>Phase
+line analysis of the proportional harvesting model</title> <p>The
+right-hand side of the differential equation is <me>f(N) =
+rN\left(1-\frac{N}{K}\right) - hN,</me> a quadratic function of
+<m>N</m>. This is similar to the phase line for the regular logistic
+growth model, but as <m>hN</m> grows, the parabola is again altered. 
+Despite the model looking more complicated than in the previous section,
+the analysis proceeds more smoothly.</p> </paragraphs>
 
-<paragraphs xml:id = "proportional-harvesting-equilibria"> 
+<paragraphs xml:id = "proportional-harvesting-equilibria">
 <title>Equilibrium analysis of the proportional harvesting model</title>
-<p>The right-hand side of the
-differential equation is <me>f(N) = rN\left(1-\frac{N}{K}\right) -
-hN,</me> a quadratic function of <m>N</m>. This is similar to the
-equation for the regular logistic growth model, but as <m>hN</m> grows,
-the parabola is again altered.  Despite the model looking more complicated
-than in the previous section, the analysis proceeds more smoothly.</p>
+<p>The right-hand side of the differential equation is <me>f(N) =
+rN\left(1-\frac{N}{K}\right) - hN,</me> a quadratic function of
+<m>N</m>. This is similar to the equation for the regular logistic
+growth model, but as <m>hN</m> grows, the parabola is again altered. 
+Despite the model looking more complicated than in the previous section,
+the analysis proceeds more smoothly.</p>
 
-<p>First, we can factor the right-hand side as <me>0 = \left(r\left(1-\frac{N}{K}\right) -
-h\right)N</me>.</p>
+<p>Our equilibrium condition highlights the special value of <m>N</m>
+which we call <m>N^*</m>, so we have <m>f(N^*) = 0</m>, or 
+<me>rN^*\left(1-\frac{N^*}{K}\right) - hN^* = 0.</me> First, we can
+factor the right-hand side as <me>0 =
+\left(r\left(1-\frac{N^*}{K}\right) - h\right)N^*</me>.  From there we
+get the trivial equilibrium <m>N^* = 0</m> and the nontrivial
+equilibrium <m>N^* = K\left(1-\frac{h}{r}\right)</m> which solves
+<me>r\left(1-\frac{N^*}{K}\right) - h = 0.</me> This should make some
+sense intuitively - if we set <m>h = 0</m>, our model reduces to the
+logistic growth model <em>without</em> harvesting.  Notice that with
+<m>h=0</m>, <me>N^* = K\left(1 - \frac{0}{r}\right) = K</me></p>
+
+
 </paragraphs>
 
 </introduction> </subsection>
