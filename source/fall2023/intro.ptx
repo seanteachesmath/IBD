@@ -259,20 +259,13 @@ bifirucation diagram. It sometimes helps with one step to do another in
 parallel, for example, the equilibria are relevant to the phase
 plane.</p>
 
-<paragraphs xml:id = "constant-harvesting-phase-lines"> <title>Phase
-line analysis of the constant harvesting model</title> <p>The right-hand
+<paragraphs xml:id = "constant-harvesting-phase-lines"> 
+<title>Phase line analysis of the constant harvesting model</title>
+<p>The right-hand
 side of the differential equation is <me>f(N) =
 rN\left(1-\frac{N}{K}\right) - h,</me> a quadratic function of <m>N</m>.
 This is similar to the phase line for the regular logistic growth model,
-but as <m>h</m> grows, the parabola is shifted down.</p> å </paragraphs>
-=======
-<paragraphs xml:id = "constant-harvesting-phase-lines"> 
-<title>Phase line analysis of the constant harvesting model</title>
-<p>The right-hand side of the
-differential equation is <me>f(N) = rN\left(1-\frac{N}{K}\right) -
-h,</me> a quadratic function of <m>N</m>. This is similar to the phase
-line for the regular logistic growth model, but as <m>h</m> grows, the
-parabola is shifted down.</p>
+but as <m>h</m> grows, the parabola is shifted down.</p> 
 </paragraphs>
 
 <paragraphs xml:id = "constant-harvesting-equilibria"> 
@@ -309,7 +302,9 @@ When <m>h = \frac{rK}{4}</m>, the equilibria collide at
 with proportional harvesting</title> <introduction> <p>Admittedly, that
 last section was kind of a nightmare, and the change we are about to
 make might convince you things are only going to get worse.  Stick with
-me. It gets better. </p> <p> You may have noticed some potential
+me. It gets better. </p>
+
+<p> You may have noticed some potential
 drawbacks of constant harvesting. Chiefly, driving small populations to
 extinction is probably not a good thing. Instead of a constant
 harvesting rate, we will now take the term to be porportional to
