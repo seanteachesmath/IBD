@@ -11,17 +11,40 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h4 class="heading"><span class="type">Paragraph</span></h4>
+<h5 class="heading"><span class="type">Paragraph</span></h5>
 <div class="para logical">
-<div class="para">Solutions to</div>
+<div class="para">The stability of an equilibrium is determined by the sign of the derivative of right-hand side of the differential equation when evaluated at the equilibrium. Here the right-hand side is</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\frac{d^{} {n}}{d {t}^{}}= f'(N^*)n
+f(N) =
+rN\left(1-\frac{N}{K}\right) - hN,
 \end{equation*}
 </div>
-<div class="para">decay to zero if <span class="process-math">\(f'(N^*)&lt;0\)</span> and grow if <span class="process-math">\(f'(N^*)&gt;0\text{.}\)</span> Hence, an equilibrium point <span class="process-math">\(N^*\)</span> (trivial or not) is stable if <span class="process-math">\(f'(N^*)&lt;0\)</span> and unstable if <span class="process-math">\(f'(N^*)&gt;0\text{.}\)</span>
+<div class="para">a quadratic function of <span class="process-math">\(N\text{,}\)</span> so the derivative, with respect to <span class="process-math">\(N\)</span> is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f'(N) =
+\dfrac{d}{dN}\left(rN\left(1-\frac{N}{K}\right) - hN\right) =
+r-\frac{2rN}{K}-h\text{.}
+\end{equation*}
+</div>
+<div class="para">At <span class="process-math">\(N^*=0\text{,}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f'(0) = r-h\text{.}
+\end{equation*}
+</div>
+<div class="para">At <span class="process-math">\(N^*
+= K\left(1-\frac{h}{r}\right)\text{,}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f'\left(K\left(1-\frac{h}{r}\right)\right) =
+r-\frac{2rK\left(1-\frac{h}{r}\right)}{K}-h = h-r\text{.}
+\end{equation*}
 </div>
 </div>
-<span class="incontext"><a href="single-species-population-models.html#p-70" class="internal">in-context</a></span>
+<span class="incontext"><a href="sec-simple-1d-ode.html#p-70" class="internal">in-context</a></span>
 </body>
 </html>

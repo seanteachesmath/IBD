@@ -11,22 +11,16 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h5 class="heading"><span class="type">Paragraph</span></h5>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">In general we are unable to investigate certain questions about extinction with models like</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/fig-coin-flips.html ./knowl/fig-coin-flips-100.html">
+<div class="para">You may have noticed some potential drawbacks of constant harvesting. Chiefly, driving small populations to extinction is probably not a good thing. Instead of a constant harvesting rate, we will now take the term to be porportional to population density, that is</div>
+<div class="displaymath process-math">
 \begin{equation*}
-\dfrac{dN}{dt} = rN
+\dfrac{dN}{dt} = rN\left(1-\frac{N}{K}\right) - hN\text{.}
 \end{equation*}
 </div>
-<div class="para">because the solution</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/fig-coin-flips.html ./knowl/fig-coin-flips-100.html">
-\begin{equation*}
-N(t) = N_0e^{rt}
-\end{equation*}
+<div class="para">Again, that is a more complicated term than before, but the analysis will go much more smoothly.</div>
 </div>
-<div class="para">only approaches zero in the limit as <span class="process-math">\(t\to\infty\)</span> (given <span class="process-math">\(r&lt;0\)</span>), but never <em class="emphasis">reaches</em> 0. In contrast to this, stochastic models, whose realizations are illustrated in <a href="" class="xref" data-knowl="./knowl/fig-coin-flips.html" title="Figure 5.1.1">Figure 5.1.1</a> and <a href="" class="xref" data-knowl="./knowl/fig-coin-flips-100.html" title="Figure 5.1.2">Figure 5.1.2</a> certainly demonstrate extinction. Moreover, the stochastic results allow a variety of new questions about phenomenon related to extinction. We could investigate things such as the variability (i.e., variance) in population size as time goes on or the average time to extinction for small populations where stochasticity might be important.</div>
-</div>
-<span class="incontext"><a href="single-species-population-models.html#p-64" class="internal">in-context</a></span>
+<span class="incontext"><a href="sec-simple-1d-ode.html#p-64" class="internal">in-context</a></span>
 </body>
 </html>
