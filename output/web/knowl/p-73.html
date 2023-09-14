@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(N(t)\)</span> be the concentration of brain-eating amebae (<a class="external" href="http://www.cdc.gov/parasites/naegleria/" target="_blank">http: //www.cdc.gov/parasites/naegleria/</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-2-hidden.html" title="Footnote 2.2.1"><sup> 1 </sup></a>) at time <span class="process-math">\(t\)</span> living in a warm lake. Naegleria reproduce at rate <span class="process-math">\(b\)</span> and die at rate <span class="process-math">\(m\)</span> per time. We take two closely spaced water samples to determine whether naegleria is on the rise or it is otherwise ‘safe’ to swim. The future concentration <span class="process-math">\(N(t+\Delta t)\)</span> is equal to the following:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+N(t+\Delta t)&amp;=\overbrace{(1+b\Delta t)}^{\text{reproduction}\atop{\text{by survivors}}}\underbrace{(1-m\Delta t)N(t)}_{\text{survivors}}\\
+&amp;=(1+b\Delta t- m \Delta t-mb(\Delta t)^2)N(t)\\
+&amp;=N(t)+ (b-m)\Delta t N(t) - mb(\Delta t)^2
+N(t).\end{aligned}
+\end{equation*}
+</div>
+<div class="para">Today we really started with the <em class="emphasis">last</em> line in the derivation which assumed that only one event was possible (i.e., we can think that we immediately ignored that individuals that died in a short interval gave birth at the same time.). We can think of <span class="process-math">\(m\)</span> as the per time probability of mortality, so that <span class="process-math">\(m\Delta
+t\)</span> is the fraction of naegleria that die in an interval of length <span class="process-math">\(\Delta t\text{.}\)</span> Finally, <span class="process-math">\(1-m\Delta t\)</span> is the fraction of survivors from a previous time step. Those that survive, <span class="process-math">\((1-m\Delta
+t)N(t)\text{,}\)</span> are ‘allowed’ to reproduce, and contribute themselves (the ‘1’) plus their offspring (the ‘<span class="process-math">\(b\Delta t\)</span>’) to the future generation.</div>
+</div>
+<span class="incontext"><a href="continuous-time-models-derivations.html#p-73" class="internal">in-context</a></span>
+</body>
+</html>
