@@ -356,8 +356,7 @@ relatively simple term on the analysis and the outcome. We use
 <me>\dfrac{dN}{dt} = rN\left(1-\frac{N}{K}\right) - h</me> with
 harvesting rate <m>h</m>. We will imagine the parameters <m>r</m> and
 <m>K</m> as being out of our control, but <m>h</m> as being something we
-might hope to control.</p
-></introduction>
+might hope to control.</p> 
 
 <p>A common approach is to draw and analyze phase lines, compute
 equilibria, sketch sample solutions, assess stability analytically,
@@ -365,6 +364,8 @@ verify that everything makes sense, and summarize what we learned with a
 bifirucation diagram. It sometimes helps with one step to do another in
 parallel, for example, the equilibria are relevant to the phase
 plane.</p>
+</introduction>
+
 
 <paragraphs xml:id = "constant-harvesting-phase-lines"> <title>Phase
 line analysis of the constant harvesting model</title> <p>The right-hand
@@ -451,10 +452,48 @@ between, equilibria are described by the upper and lower halves of a
 sideways parabola that shares these three points in common.</p>
 </paragraphs>
 
+<<<<<<< Updated upstream
  <figure> <caption>Bifurcation diagram for the logistic growth model
  with constant harvesting. Stable equilibria are shown in solid blue and
  unstable equilibria are shown in dotted red.</caption> <image
  source="bif-const.png"/> </figure>
+=======
+<paragraphs><title>Stability analysis motivated by the logistic growth model</title>
+
+<p> For the remainder of this section, we will study the logistic growth
+equation and variations. The logistic growth equation is given by,<me>\frac{d^{}
+{N}}{d {t}^{}}=rN\Big(1-\frac{N}{K}\Big).</me> Let <m>N^*</m> be an
+equilibrium point, so that we can write <m>N(t)=N^*+n(t).</m> We will
+derive a stability condition for an arbitrary equilibrium point,
+starting by identifying the dynamics of <m>n(t)</m>, <me>\begin{aligned}
+\frac{d^{} {N}}{d {t}^{}}&amp;=\frac{d^{} {}}{d
+{t}^{}}\Big(N^*+n(t)\Big)\\ &amp;=0+\frac{d^{} {n}}{d
+{t}^{}}.\end{aligned}</me> Now, substituting the formula for <m>N(t)</m>
+and expanding, <me>\begin{aligned} \frac{d^{} {n}}{d {t}^{}}&amp;=
+\frac{d^{} {N}}{d {t}^{}}\\ &amp;=r(N^*+n)\Big(1-\frac{N^*+n}{K}\Big)\\
+&amp;=rN^*\Big(1-\frac{N^*+n}{K}\Big)+rn\Big (1-\frac{N^*+n}{K}\Big)\\
+&amp;=\cancel{rN^*\Big(1-\frac{N^*}{K}\Big)}
+-\frac{rN^*n}{K}+rn\Big(1-\frac{N^*}{K}\Big) -\cancel{\frac{rn^2}{K}}\\
+&amp;=r\Big(1-\frac{2N^*}{K}\Big)n\\ \frac{d^{} {n}}{d {t}^{}}&amp;=
+f'(N^*)n\end{aligned}</me> In the last step we can see that the terms
+that remain are equivalent to the derivative of <m>f(N)</m>, with
+respect to <m>N</m> evaluated at <m>N^*</m>. Here we linearize by
+substituting our formula for the solution and dropping al higher order
+terms in <m>n(t)</m>. You could do this, more formally or generally, by
+Taylor series. </p>
+
+<p> Solutions to <me>\frac{d^{} {n}}{d {t}^{}}= f'(N^*)n</me> decay to
+zero if <m>f'(N^*)&lt;0</m> and grow if <m>f'(N^*)&gt;0</m>. Hence, an
+equilibrium point <m>N^*</m> (trivial or not) is stable if
+<m>f'(N^*)&lt;0</m> and unstable if <m>f'(N^*)&gt;0</m>. </p>
+
+<p> Evaluating derivatives should work in general, but it is not our
+only tool. Today we will use graphical methods to develop a qualitative
+understanding of the dynamics of a harvested population. If we think
+about what our model means, we can make progress without tackling
+sometimes frustrating, other times uninspiring, algebra. </p>
+</paragraphs>
+>>>>>>> Stashed changes
 
 
 </subsection>
