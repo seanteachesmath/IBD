@@ -12,9 +12,34 @@
 </head>
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<div class="para">When <span class="process-math">\(r \gt h\text{,}\)</span> <span class="process-math">\(f'\left(K\left(1-\frac{h}{r}\right)\right) =
-h-r \gt 0\)</span> and the nontrivial equilibrium is stable, while <span class="process-math">\(f'(0) =
-r - h \gt 0\)</span> and the trivial population is stable. The population equilibrates to some positive number when harvesting is week. In the extreme, when <span class="process-math">\(h = 0\text{,}\)</span> there is no harvesting and the model is equivalent to the logistic model in terms of equilibria and stability. Otherwise, for <span class="process-math">\(h \gt r\text{,}\)</span> signs and stability are reversed and all positive initial conditions lead to extinction.</div>
+<div class="para logical">
+<div class="para">Our equilibrium condition highlights the special value of <span class="process-math">\(N\)</span> which we call <span class="process-math">\(N^*\text{,}\)</span> so we have <span class="process-math">\(f(N^*) = 0\text{,}\)</span> or</div>
+<div class="displaymath process-math">
+\begin{equation*}
+rN^*\left(1-\frac{N^*}{K}\right) - hN^* = 0.
+\end{equation*}
+</div>
+<div class="para">First, we can factor the right-hand side as</div>
+<div class="displaymath process-math">
+\begin{equation*}
+0 =
+\left(r\left(1-\frac{N^*}{K}\right) - h\right)N^*\text{.}
+\end{equation*}
+</div>
+<div class="para">From there we get the trivial equilibrium <span class="process-math">\(N^* = 0\)</span> and the nontrivial equilibrium <span class="process-math">\(N^* = K\left(1-\frac{h}{r}\right)\)</span> which solves</div>
+<div class="displaymath process-math">
+\begin{equation*}
+r\left(1-\frac{N^*}{K}\right) - h = 0.
+\end{equation*}
+</div>
+<div class="para">This should make some sense intuitively - if we set <span class="process-math">\(h = 0\text{,}\)</span> our model reduces to the logistic growth model <em class="emphasis">without</em> harvesting. Notice that with <span class="process-math">\(h=0\text{,}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+N^* = K\left(1 - \frac{0}{r}\right) = K
+\end{equation*}
+</div>
+</div>
 <span class="incontext"><a href="sec-simple-1d-ode.html#p-71" class="internal">in-context</a></span>
 </body>
 </html>

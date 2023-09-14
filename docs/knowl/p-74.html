@@ -11,37 +11,10 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para logical">
-<div class="para">Previously (when thinking in discrete-time) we worked with fractions of survivors and now we are suddenly transitioning to working with rates. When we took <span class="process-math">\(\Delta t=1\)</span> unit of time it may have been easy enough to convince ourselves that the fraction of individuals that survive an interval of length <span class="process-math">\(\Delta t=1\)</span> unit was some number</div>
-<div class="displaymath process-math">
-\begin{equation*}
-q=1-m.
-\end{equation*}
-</div>
-<div class="para">where <span class="process-math">\(m\)</span> is the fraction that die per unit time step. If we put the <span class="process-math">\(\Delta t\)</span> back into the equation we see the intermediate,</div>
-<div class="displaymath process-math">
-\begin{equation*}
-q\Delta t=1-m\Delta t.
-\end{equation*}
-</div>
-<div class="para">We need this per unit time survival probability, <span class="process-math">\(0\leq q\Delta t\leq1,\)</span> which hopefully suggests that we need,</div>
-<div class="displaymath process-math">
-\begin{equation*}
-0\leq 1-m\Delta t\leq1.
-\end{equation*}
-</div>
-<div class="para">A bit of entertaining algebra shows that we need,</div>
-<div class="displaymath process-math">
-\begin{equation*}
-0\leq m \leq
-\frac{1}{\Delta t}.
-\end{equation*}
-</div>
-<div class="para">So, when <span class="process-math">\(\Delta t=1\text{,}\)</span> as with our discrete-time models, we needed <span class="process-math">\(0\leq m\leq 1\text{.}\)</span> What we really need is the product <span class="process-math">\(m\Delta t\leq 1\text{,}\)</span> so that as <span class="process-math">\(\Delta
-t\rightarrow0\text{,}\)</span> <span class="process-math">\(m\)</span> itself can become large and still preserve this inequality. In fact, as <span class="process-math">\(\Delta t\rightarrow0\)</span> we allow <span class="process-math">\(m\rightarrow\infty\text{!}\)</span>
-</div>
-</div>
-<span class="incontext"><a href="continuous-time-models-derivations.html#p-74" class="internal">in-context</a></span>
+<h5 class="heading"><span class="type">Paragraph</span></h5>
+<div class="para">When <span class="process-math">\(r \gt h\text{,}\)</span> <span class="process-math">\(f'\left(K\left(1-\frac{h}{r}\right)\right) =
+h-r \gt 0\)</span> and the nontrivial equilibrium is stable, while <span class="process-math">\(f'(0) =
+r - h \gt 0\)</span> and the trivial population is stable. The population equilibrates to some positive number when harvesting is week. In the extreme, when <span class="process-math">\(h = 0\text{,}\)</span> there is no harvesting and the model is equivalent to the logistic model in terms of equilibria and stability. Otherwise, for <span class="process-math">\(h \gt r\text{,}\)</span> signs and stability are reversed and all positive initial conditions lead to extinction.</div>
+<span class="incontext"><a href="sec-simple-1d-ode.html#p-74" class="internal">in-context</a></span>
 </body>
 </html>
