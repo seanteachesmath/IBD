@@ -1,0 +1,5 @@
+/Users/seanlaverty/GitHub/IBD/source/main.ptx:1:0:ERROR:RELAXNGV:RELAXNG_ERR_NOTELEM: Expecting an element got text
+/Users/seanlaverty/GitHub/IBD/source/main.ptx:3:0:ERROR:RELAXNGV:RELAXNG_ERR_ELEMWRONG: Did not expect element section there
+/Users/seanlaverty/GitHub/IBD/source/main.ptx:3:0:ERROR:RELAXNGV:RELAXNG_ERR_ELEMNAME: Expecting element sidebyside, got section
+/Users/seanlaverty/GitHub/IBD/source/main.ptx:3:0:ERROR:RELAXNGV:RELAXNG_ERR_ELEMNAME: Expecting element proof, got section
+/Users/seanlaverty/GitHub/IBD/source/main.ptx:3:0:ERROR:RELAXNGV:RELAXNG_ERR_ELEMNAME: Expecting element exercise, got section

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>What is modeling</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Introduction to Biological Dynamics">
+<meta property="book:author" content="Sean Laverty">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "https://pretextbook.org/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.3/pretext_search.js"></script><link href="https://pretextbook.org/css/0.7/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.3</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.3/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.3/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.3/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link href="https://pretextbook.org/css/0.7/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body id="laverty-IBD" class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="intro-bio-dynamics.html"><span class="title">Introduction to Biological Dynamics</span></a></h1>
+<p class="byline">Sean Laverty</p>
+</div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" class="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms" class="searchterms"></span>
+</h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" aria-label="Show or hide table of contents"><span class="icon">☰</span><span class="name">Contents</span></button><button id="user-preferences-button" class="user-preferences-button button" title="Modify user preferences"><span id="avatarbutton" class="avatarbutton name">You!</span><div id="preferences_menu_holder" class="preferences_menu_holder hidden"><ol id="preferences_menu" class="preferences_menu" style="font-family: 'Roboto Serif', serif;">
+<li data-env="avatar" tabindex="-1">Choose avatar<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden avatar">
+<li data-val="You!" tabindex="-1">
+<span id="theYou!" class="avatarcheck">✔️</span>You!</li>
+<li data-val="😺" tabindex="-1">
+<span id="the😺" class="avatarcheck"></span>😺</li>
+<li data-val="👤" tabindex="-1">
+<span id="the👤" class="avatarcheck"></span>👤</li>
+<li data-val="👽" tabindex="-1">
+<span id="the👽" class="avatarcheck"></span>👽</li>
+<li data-val="🐶" tabindex="-1">
+<span id="the🐶" class="avatarcheck"></span>🐶</li>
+<li data-val="🐼" tabindex="-1">
+<span id="the🐼" class="avatarcheck"></span>🐼</li>
+<li data-val="🌈" tabindex="-1">
+<span id="the🌈" class="avatarcheck"></span>🌈</li>
+</ol>
+</li>
+<li data-env="fontfamily" tabindex="-1">Font family<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fontfamily">
+<li data-val="face" data-change="OS" tabindex="-1" style="font-family: 'Open Sans'">
+<span id="theOS" class="ffcheck">✔️</span><span class="name">Open Sans</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+<li data-val="face" data-change="RS" tabindex="-1" style="font-family: 'Roboto Serif'">
+<span id="theRS" class="ffcheck"></span><span class="name">Roboto Serif</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+</ol>
+</li>
+<li data-env="font" tabindex="-1">Adjust font<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fonts">
+<li>Size</li>
+<li><span id="thesize">12</span></li>
+<li data-val="size" data-change="-1" tabindex="-1" style="font-size: 80%">Smaller</li>
+<li data-val="size" data-change="1" tabindex="-1" style="font-size: 110%">Larger</li>
+<li>Width</li>
+<li><span id="thewdth">100</span></li>
+<li data-val="wdth" data-change="-5" tabindex="-1" style="font-variation-settings: 'wdth' 60">narrower</li>
+<li data-val="wdth" data-change="5" tabindex="-1" style="font-variation-settings: 'wdth' 150">wider</li>
+<li>Weight</li>
+<li><span id="thewght">400</span></li>
+<li data-val="wght" data-change="-50" tabindex="-1" style="font-weight: 200">thinner</li>
+<li data-val="wght" data-change="50" tabindex="-1" style="font-weight: 700">heavier</li>
+<li>Letter spacing</li>
+<li>
+<span id="thelspace">0</span><span class="byunits">/200</span>
+</li>
+<li data-val="lspace" data-change="-1" tabindex="-1">closer</li>
+<li data-val="lspace" data-change="1" tabindex="-1">f a r t h e r</li>
+<li>Word spacing</li>
+<li>
+<span id="thewspace">0</span><span class="byunits">/50</span>
+</li>
+<li data-val="wspace" data-change="-1" tabindex="-1">smaller gap </li>
+<li data-val="wspace" data-change="1" tabindex="-1">larger gap</li>
+<li>Line Spacing</li>
+<li>
+<span id="theheight">135</span><span class="byunits">/100</span>
+</li>
+<li data-val="height" data-change="-5" tabindex="-1" style="line-height: 1">closer<br>together</li>
+<li data-val="height" data-change="5" tabindex="-1" style="line-height: 1.75">further<br>apart</li>
+</ol>
+</li>
+<li data-env="atmosphere" tabindex="-1">Light/dark mode<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden atmosphere">
+<li data-val="default" tabindex="-1">
+<span id="thedefault" class="atmospherecheck">✔️</span>default</li>
+<li data-val="pastel" tabindex="-1">
+<span id="thepastel" class="atmospherecheck"></span>pastel</li>
+<li data-val="darktwilight" tabindex="-1">
+<span id="thedarktwilight" class="atmospherecheck"></span>twilight</li>
+<li data-val="dark" tabindex="-1">
+<span id="thedark" class="atmospherecheck"></span>dark</li>
+<li data-val="darkmidnight" tabindex="-1">
+<span id="thedarkmidnight" class="atmospherecheck"></span>midnight</li>
+</ol>
+</li>
+<li data-env="ruler" tabindex="-1">Reading ruler<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden ruler">
+<li data-val="none" tabindex="-1">
+<span id="thenone" class="rulercheck">✔️</span>none</li>
+<li data-val="underline" tabindex="-1">
+<span id="theunderline" class="rulercheck"></span>underline</li>
+<li data-val="lunderline" tabindex="-1">
+<span id="thelunderline" class="rulercheck"></span>L-underline</li>
+<li data-val="greybar" tabindex="-1">
+<span id="thegreybar" class="rulercheck"></span>grey bar</li>
+<li data-val="lightbox" tabindex="-1">
+<span id="thelightbox" class="rulercheck"></span>light box</li>
+<li data-val="sunrise" tabindex="-1">
+<span id="thesunrise" class="rulercheck"></span>sunrise</li>
+<li data-val="sunriseunderline" tabindex="-1">
+<span id="thesunriseunderline" class="rulercheck"></span>sunrise underline</li>
+<li class="moveQ">Motion by:</li>
+<li data-val="mouse" tabindex="-1">
+<span id="themouse" class="motioncheck">✔️</span>follow the mouse</li>
+<li data-val="arrow" tabindex="-1">
+<span id="thearrow" class="motioncheck"></span>up/down arrows - not yet</li>
+<li data-val="eye" tabindex="-1">
+<span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
+</ol>
+</li>
+</ol></div></button><span class="treebuttons"><a class="previous-button button" href="introduction.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="introduction.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="sec-simple-1d-ode.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" class="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\require{cancel}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural">
+<li>
+<div class="toc-item"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="preface-disclaimer.html" class="internal"><span class="title">Disclaimer</span></a></div></li>
+<li><div class="toc-item"><a href="preface-motto.html" class="internal"><span class="title">Preface</span></a></div></li>
+<li><div class="toc-item"><a href="preface-themes.html" class="internal"><span class="title">Themes</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="introduction.html" class="internal"><span class="codenumber">1</span> <span class="title">Introduction</span></a></div>
+<ul class="structural">
+<li class="active"><div class="toc-item"><a href="what-is-modeling.html" class="internal"><span class="codenumber">1.1</span> <span class="title">What is modeling</span></a></div></li>
+<li>
+<div class="toc-item"><a href="sec-simple-1d-ode.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Single differential equation models</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-simple-1d-ode.html#sub-logistic-growth" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Logistic growth</span></a></div></li>
+<li><div class="toc-item"><a href="sec-simple-1d-ode.html#sub-constant-harvesting" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Logistic growth with constant harvesting</span></a></div></li>
+<li><div class="toc-item"><a href="sec-simple-1d-ode.html#sub-proportional-harvesting" class="internal"><span class="codenumber">1.2.3</span> <span class="title">Logistic growth with proportional harvesting</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="what-is-modeling"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">1.1</span> <span class="title">What is modeling</span>
+</h2>
+<div class="para" id="p-5"></div>
+<section class="paragraphs" id="what-is-mathematical-biology"><h3 class="heading"><span class="title">What is mathematical biology?</span></h3> <section class="paragraphs" id="what-is-mathematics"><h4 class="heading"><span class="title">What is mathematics?</span></h4> <div class="para" id="p-6">The study of number, quantity, space.</div> <section class="paragraphs" id="what-is-biology"><h5 class="heading"><span class="title">What is biology?</span></h5> <div class="para" id="p-7">The study of life.</div></section> <section class="paragraphs" id="what-is-mathematical-biology-1"><h5 class="heading"><span class="title">What is mathematical biology?</span></h5> <div class="para" id="p-8">Using mathematical tools to study life.</div> <div class="para logical" id="p-9"><ul class="disc">
+<li id="li-1"><div class="para" id="p-10">Understanding the details of interactions between interacting populations of chemicals, cells, or individuals</div></li>
+<li id="li-2"><div class="para" id="p-11">Understanding or hypothesizing the mechanisms by which any biological quantities (numbers, densities, concentrations) change over time (or space)</div></li>
+</ul></div></section> <section class="paragraphs" id="biology-vs-physics"><h5 class="heading"><span class="title">Biological science vs. Physical science.</span></h5> <div class="para" id="p-12">Physics has ‘laws’, biology has no such ‘laws’.</div></section></section></section><section class="paragraphs" id="what-are-our-goals-for-mathematical-biology"><h3 class="heading"><span class="title">What are our goals for mathematical biology.</span></h3> <div class="para logical" id="p-13"><ul class="disc">
+<li id="li-3"><div class="para" id="p-14">Draw qualitative conclusions about biological processes.</div></li>
+<li id="li-4"><div class="para" id="p-15">Apply simplified mechanisms to complex systems.</div></li>
+<li id="li-5"><div class="para" id="p-16">Guide thought experiments and physical experiments.</div></li>
+<li id="li-6"><div class="para" id="p-17">Occasionally make precise, quantitative predictions.</div></li>
+</ul></div></section><section class="paragraphs" id="what-is-a-mathematical-model"><h3 class="heading"><span class="title">What is a mathematical model?</span></h3> <section class="paragraphs" id="features-and-definitions"><h4 class="heading"><span class="title">Features and definitions.</span></h4> <div class="para" id="p-18">A mathematical model is an abstract mathematical description of any (biological) system, using logic, notation, and techniques of mathematics.</div></section> <section class="paragraphs" id="a-familiar-example"><h4 class="heading"><span class="title">A familiar example.</span></h4> <div class="para logical" id="p-19">
+<div class="para">Picture a tall, cylindrical water tower with radius <span class="process-math">\(r\)</span> in which the height of the water is <span class="process-math">\(h\text{.}\)</span> We want to know how fast the water level is dropping as we draw water from the bottom of the tank at a fixed flow. Our situation relies on the following relationship between volume of water and height of water.</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(\text{change in
+volume})\propto(\text{change in height})
+\end{equation*}
+</div>
+<div class="para">But what is the actual relationship between the two, and how do we replace ‘<span class="process-math">\(\propto\)</span>’ with ‘<span class="process-math">\(=\)</span>’? First,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+V=\pi r^2
+h,
+\end{equation*}
+</div>
+<div class="para">and differentiating,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{d^{} {V}}{d {t}^{}} = \pi r^2
+\frac{d^{} {h}}{d {t}^{}}.
+\end{equation*}
+</div>
+</div> <div class="para" id="p-20">Pause to think about this. We want to know how the height <span class="process-math">\(h(t)\)</span> is changing as a function of time. We are thinking of a cylinder with a fixed radius, <span class="process-math">\(r\text{.}\)</span> We will assume that we are in control of the outflow from the tank, <span class="process-math">\(\displaystyle \frac{d^{} {V}}{d
+{t}^{}}\text{.}\)</span>
+</div> <div class="para logical" id="p-21">
+<div class="para">We can write a model for the height,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{d^{} {h}}{d
+{t}^{}}=\frac{\frac{d^{} {V}}{d {t}^{}}}{\pi r^2}.
+\end{equation*}
+</div>
+</div> <div class="para" id="p-22">Let’s assume we fix the outflow at <span class="process-math">\(\displaystyle100\,\frac{\text{ft}^3}{\text{ sec}}\text{,}\)</span> by adjusting the outflow knob. The first consequence is that the volume of water in the tank is decreasing, so that <span class="process-math">\(\displaystyle\frac{d^{} {V}}{d
+{t}^{}}\)</span> should be negative.</div> <div class="para" id="p-23">We’ll now use our model to study the dynamics of water depth in two theoretical water tanks: one tall and thin and the other short and thick.</div> <div class="para logical" id="p-24">
+<div class="para">When <span class="process-math">\(r=10\text{,}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{d^{} {h}}{d
+{t}^{}}=\frac{-100\,\frac{\text{ft}^3}{\text{sec }}}{\pi \times(10
+\text{ft})^2}=-\frac{1}{\pi}\,\frac{\text{ft}}{\ text{sec}}.
+\end{equation*}
+</div>
+<div class="para">So that the water height <em class="emphasis">drops</em> about 1 foot in approximately 3 seconds.</div>
+</div> <div class="para logical" id="p-25">
+<div class="para">When <span class="process-math">\(r=100\text{,}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{d^{} {h}}{d
+{t}^{}}=\frac{-100\,\frac{\text{ft}^3}{\text{sec }}}{\pi \times(100
+\text{ft})^2}=-\frac{1}{100\pi}\,\frac{\text{ft} }{\text{sec}}.
+\end{equation*}
+</div>
+<div class="para">So that the water height <em class="emphasis">drops</em> about 1 foot in approximately 5 minutes!</div>
+</div> <div class="para" id="p-26">This model allows us to discuss two important and often confused concepts in modeling: the distinction between parameters and (state) variables. The “state variable” is the ‘thing’ that we are making an effort to model. Here it is the height, <span class="process-math">\(h(t)\)</span> of the water in the tower. Everything else - the outflow volume <span class="process-math">\(\left(\displaystyle \frac{d^{} {V}}{d {t}^{}}\right)\)</span> and the radius <span class="process-math">\((r)\)</span> is known, or under our control. We call these things parameters. Changing parameters affects the evolution of state variables.</div></section></section><section class="paragraphs" id="why-do-we-write-models-and-what-can-we-model"><h3 class="heading"><span class="title">Why do we write models and what can we model?</span></h3> <section class="paragraphs" id="counting"><h4 class="heading"><span class="title">Counting.</span></h4> <div class="para" id="p-27">Models allow us to count things that might be too expensive, too time consuming, or otherwise impossible to count: animals, cells, proteins, viruses, molecules.</div></section> <section class="paragraphs" id="what-do-we-count"><h4 class="heading"><span class="title">What do we count?</span></h4> <div class="para logical" id="p-28"><ul class="disc">
+<li id="li-7"><div class="para" id="p-29">Populations of individual plants or animals that interact (Ecology)</div></li>
+<li id="li-8"><div class="para" id="p-30">Populations of cells <em class="emphasis">within</em> individuals that interact (Physiology, e.g., Immunology)</div></li>
+<li id="li-9"><div class="para" id="p-31">Populations of molecules and chemicals <em class="emphasis">within</em> cells that interact (Physiology, e.g., Neurobiology)</div></li>
+</ul></div></section></section><section class="paragraphs" id="what-does-a-model-look-like"><h3 class="heading"><span class="title">What does a model look like?</span></h3> <div class="para" id="p-32">A model is a description of “how things change” (like the height of water in a water tower). Biologically similar things might change in very different ways and be governed by very different processes.</div> <section class="paragraphs" id="thinking-about-time"><h4 class="heading"><span class="title">Thinking about time.</span></h4> <div class="para" id="p-33">We should think about how the organisms, or components of our model, interact with one another.Dynamics of some plants and animals are characterized by discrete, non-overlapping generations.</div> <div class="para logical" id="p-34"><ul class="disc">
+<li id="li-10"><div class="para" id="p-35">Insects might reproduce over just a few days and be dormant over the remainder of the year.</div></li>
+<li id="li-11"><div class="para" id="p-36">Plants might set seeds over a short season.</div></li>
+</ul></div> <div class="para" id="p-37">Alternatively, we might have a set of measurements at a regular interval (e.g., 2-weeks) that we wish to explain. Many human diseases are often reported to organizations like CDC and WHO at weekly, bi-weekly, or monthly intervals (e.g, measles, cholera, HIV).</div> <div class="para" id="p-38">Other organisms like yeast, bacteria, mice, and so on, might be best described by ‘continuous-time’ dynamics.</div></section> <section class="paragraphs" id="thinking-about-interactions"><h4 class="heading"><span class="title">Thinking about interactions.</span></h4> <div class="para" id="p-39">Interactions might be characterized as linear or non-linear.</div> <div class="para logical" id="p-40"><ul class="disc">
+<li id="li-12"><div class="para" id="p-41">From chemistry, “first-order reactions” are linear - exponential growth or decay result from first order reactions (linear-models).</div></li>
+<li id="li-13"><div class="para" id="p-42">Reactions with multiple reactants (interactions between Na and Cl, foxes and bunnies, humans and zombies are give rise to nonlinear models - products or functions state variables.</div></li>
+</ul></div></section> <section class="paragraphs" id="do-we-always-arrive-at-the-same-answer"><h4 class="heading"><span class="title">Do we always arrive at the same answer?</span></h4> <div class="para" id="p-43">Most of the models we study will be deterministic. This means our model (a set of rules, and initial conditions) will always give the same answer.</div> <div class="para" id="p-44">In contrast, some models can handle (random) variability between individuals or at different points in time. These are stochastic models, and while often more complicated, they allow us to ask and answer very different questions. As an example we’ll look at “birth-death process” models a bit later.</div></section></section></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="introduction.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="sec-simple-1d-ode.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+</div>
+</body>
+</html>
