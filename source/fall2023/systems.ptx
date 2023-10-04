@@ -93,6 +93,13 @@ system given by <me>\begin{cases}
 \dfrac{dy}{dt} \amp = 4x+3y
 \end{cases}</me>
 </statement>
+<solution>
+<figure xml:id="fig-linear-saddle">
+<image xml:id="image-nullclines-arrows-linear-saddle"  source="saddle.png" width = "100%"/>
+<caption>Nullclines and a few arrows for the phase plane corresponding to this linear system in which the equilibrium is a saddle.</caption>
+</figure>
+
+</solution>
 </example>
 
 <example xml:id = "ex-real-distinct-opposite">
@@ -180,6 +187,12 @@ system given by <me>\begin{cases}
 \dfrac{dy}{dt} \amp = 3x-4y
 \end{cases}.</me>
 </statement>
+<solution>
+<figure xml:id="fig-linear-real-opposite">
+<image xml:id="image-nullclines-arrows-linear-stable-node"  source="s-node.png" width = "100%"/>
+<caption>Nullclines and a few arrows for the phase plane corresponding to this linear system in which the equilibrium is a stable node.</caption>
+</figure>
+</solution>
 </example>
 
 
@@ -271,6 +284,15 @@ system given by <me>\begin{cases}
 \dfrac{dy}{dt} \amp = -x-y
 \end{cases}.</me>
 </statement>
+
+<solution>
+<figure xml:id="fig-linear-complex-centers">
+<image xml:id="image-nullclines-arrows-linear-centers"  source="centers.png" width = "100%"/>
+<caption>Nullclines and a few arrows for the phase plane corresponding to this linear system in which the equilibrium is a center.</caption>
+</figure>
+</solution>
+
+
 </example>
 
 
