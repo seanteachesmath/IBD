@@ -12,45 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<<<<<<< HEAD
-<div class="para logical">
-<div class="para">Consider</div>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-\begin{cases}
-\dfrac{dS}{dt} \amp = \gamma I - \beta S I\\
-\dfrac{dI}{dt} \amp = \beta S I - \gamma I
-\end{cases}
-\end{equation*}
-</div>
-<div class="para">This model tracks the populations of individuals in two classes of a population of size <span class="process-math">\(N\text{.}\)</span>  Since there are only two classes, <span class="process-math">\(N =
-S+ I\text{.}\)</span>  Differentiating gives</div>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-\dfrac{dN}{dt} = \dfrac{dS}{dt} +
-\dfrac{dI}{dt} = 0,
-\end{equation*}
-</div>
-<div class="para">in words, the total population size is constant. We can actually replace one of our differential equations with an algebraic constraint given by <span class="process-math">\(S = N - I\text{.}\)</span> This gives us a chance to write our 2D system in 1D, meaning that this model may not actually require any of our new tools.  We have</div>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-\dfrac{dI}{dt} =
-\beta (N-I)I-\gamma I.
-\end{equation*}
-</div>
-<div class="para">With a little rewriting, this becomes</div>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-\dfrac{dI}{dt} = \beta N
-I\left(1-\frac{I}{N}\right)-\gamma I\text{.}
-\end{equation*}
-</div>
-<div class="para">Looking closely, aside from the letters being different, this is exactly the form of the logistic growth model with proportional harvesting from <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "logistic-prop-harvest" missing or not unique]</code>. We could completely analyze this with steps that parallel our work back there.  The threshold quantity for stability relates the parameters <span class="process-math">\(\beta\text{,}\)</span> <span class="process-math">\(N\text{,}\)</span> and <span class="process-math">\(\gamma\text{.}\)</span>  Note that <span class="process-math">\(N\)</span> wasn’t originally in our model, but was introduced in the steps to eliminate the equation for <span class="process-math">\(S\text{.}\)</span>  There was no reason we would have known to do this, but it turned out that there was no reason we couldn’t do it.</div>
-</div>
+<div class="para">Consider a mild infection circulating among members of a population, where the ‘healthy’ individuals are susceptible to the infection (<span class="process-math">\(S\)</span>) and the ‘infectious’ individuals are capable of transmitting the infection to others (<span class="process-math">\(I\)</span>).</div>
 <span class="incontext"><a href="sec-nonlinear-systems.html#p-112" class="internal">in-context</a></span>
-=======
-<div class="para">The prevailing models in the literature are called ‘mass action’ and ‘constant contact’, which refers specifically to the choice of the function <span class="process-math">\(\beta(N)\)</span> within our transmission function.</div>
-<span class="incontext"><a href="parameters-rates-and-units-prelude-to-chemical-kinetics.html#p-112" class="internal">in-context</a></span>
->>>>>>> 0918a0748f055cebac428623c8af7583fffae8fe
 </body>
 </html>

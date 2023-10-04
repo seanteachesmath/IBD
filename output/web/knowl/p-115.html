@@ -12,13 +12,31 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<<<<<<< HEAD
-<div class="para">Ecological competition between two species for a shared resource is a classic model.</div>
-<span class="incontext"><a href="sec-nonlinear-systems.html#p-115" class="internal">in-context</a></span>
-=======
-<div class="para">mass action (density dependent) assumes that<span class="process-math">\(\beta(N)=\beta_1 N\)</span>
+<div class="para logical">
+<div class="para"> This model tracks the populations of individuals in two classes of a population of size <span class="process-math">\(N\text{.}\)</span>  Since there are only two classes, <span class="process-math">\(N =
+S+ I\text{.}\)</span>  Differentiating gives</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/sub-proportional-harvesting.html">
+\begin{equation*}
+\dfrac{dN}{dt} = \dfrac{dS}{dt} +
+\dfrac{dI}{dt} = 0,
+\end{equation*}
 </div>
-<span class="incontext"><a href="parameters-rates-and-units-prelude-to-chemical-kinetics.html#p-115" class="internal">in-context</a></span>
->>>>>>> 0918a0748f055cebac428623c8af7583fffae8fe
+<div class="para">in words, the total population size is constant. We can actually replace one of our differential equations with an algebraic constraint given by <span class="process-math">\(S = N - I\text{.}\)</span> This gives us a chance to write our 2D system in 1D, meaning that this model may not actually require any of our new tools.  We have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/sub-proportional-harvesting.html">
+\begin{equation*}
+\dfrac{dI}{dt} =
+\beta (N-I)I-\gamma I.
+\end{equation*}
+</div>
+<div class="para">With a little rewriting, this becomes</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/sub-proportional-harvesting.html">
+\begin{equation*}
+\dfrac{dI}{dt} = \beta N
+I\left(1-\frac{I}{N}\right)-\gamma I\text{.}
+\end{equation*}
+</div>
+<div class="para">Looking closely, aside from the letters being different, this is exactly the form of the logistic growth model with proportional harvesting from <a href="sec-simple-1d-ode.html#sub-proportional-harvesting" class="internal" title="Subsection 1.2.3: Logistic growth with proportional harvesting">Subsection 1.2.3</a>. We could completely analyze this with steps that parallel our work back there.  The threshold quantity for stability relates the parameters <span class="process-math">\(\beta\text{,}\)</span> <span class="process-math">\(N\text{,}\)</span> and <span class="process-math">\(\gamma\text{.}\)</span>  Note that <span class="process-math">\(N\)</span> wasn’t originally in our model, but was introduced in the steps to eliminate the equation for <span class="process-math">\(S\text{.}\)</span>  There was no reason we would have known to do this, but it turned out that there was no reason we couldn’t do it.</div>
+</div>
+<span class="incontext"><a href="sec-nonlinear-systems.html#p-115" class="internal">in-context</a></span>
 </body>
 </html>

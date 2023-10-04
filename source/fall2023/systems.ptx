@@ -81,7 +81,7 @@ corresponding eigenvectors.  We find those by solving <me> 0 =
 \begin{pmatrix}a - r_\pm\amp b\\c\amp d -
 r_\pm\end{pmatrix}\begin{pmatrix}u_\pm\\v_\pm\end{pmatrix}.</me> The
 subscripts indicate that in the case of real and distinct roots we will
-have one solution for each solution from the quadratic formula. 
+have one pair of eigenvalue and eigenvector for each solution from the quadratic formula. 
 </p>
 </introduction>
 
@@ -354,7 +354,7 @@ Below we highlight a few classical first-order, nonlinear systems of two differe
 </introduction>
 
 <subsection xml:id = "subsec-SIS">
-<title>SIS epidemiological model</title>
+<title>SI epidemiological model</title>
 <introduction>
 <p>
 The SI (or SIS) model that allows for the transmission of a mild infection through a closed population is a nice way to introduce 2D models.
@@ -362,10 +362,77 @@ The SI (or SIS) model that allows for the transmission of a mild infection throu
 </introduction>
 
 <p>
-Consider <me>\begin{cases}
+Consider a mild infection circulating among members of a population, where the
+<sq>healthy</sq> individuals are susceptible to the infection (<m>S</m>) and the
+<sq>infectious</sq> individuals are capable of transmitting the infection to others
+(<m>I</m>). 
+</p>
+
+<figure xml:id="fig-epi">
+  <caption>An <m>SI(S)</m> model for transmission of a mild infection in a closed population.</caption>
+            <image xml:id="image-epi">
+                <latex-image>
+                \begin{tikzpicture}
+                \tikzset{infect/.style={->, bend left=20, thick, shorten \lt=0.1em, shorten >=0.1em}}
+                \tikzset{recover/.style={->, bend left=20, thick, shorten \lt=0.1em, shorten >=0.1em}}
+                \draw (10em, 5em) circle [x radius=2em, y radius=2em, thick];
+                \draw (20em, 5em) circle [x radius=2em, y radius=2em, thick];
+
+                \node (S) at ( 10em, 5em) {\(S\)};
+                \node (I) at ( 20em, 5em) {\(I\)};
+				
+				\node (Stop) at (10em, 7em) {};
+				\node (Itop) at (20em, 7em) {};
+				
+				\node (Sbot) at (10em, 3em) {};
+				\node (Ibot) at (20em, 3em) {};
+				
+				\draw[infect] (Stop) to node[auto] {Infection} (Itop);
+                \draw[recover] (Ibot) to node[auto] {Recovery}  (Sbot);
+
+                \end{tikzpicture}
+                </latex-image>
+            </image>
+        </figure>
+        
+
+<p>
+Much like in class we will build a word model as we go.
+<me>\begin{aligned}
+\text{change in }S &amp; = +\text{(gain from recovery)} - \text{(loss to infection)}\\
+\text{change in }I &amp; = +\text{(gain from infection)} - \text{(loss to recovery)},
+\end{aligned}</me> and replace
+the terms with symbols. Our <sq>first</sq> term is <sq>loss to
+recovery</sq> in the <m>I</m> equation. We can think of <m>\delta</m> as
+the leaving rate from the <m>I</m> compartment, much like <m>m</m> was
+the <sq>leaving rate from the living</sq> (i.e., dying) compartment of a
+population model. Everything, in this model, that leaves one compartment
+enters another (i.e., there are no <sq>leaks</sq>). We can also argue
+for the infection rate as follows, since infection is only transmitted
+directly and by infectious hosts, we might expect that the rate that
+<m>S</m> individuals gain infection is proportional to the density
+(individuals per hectare) of infectious individuals, <m>I</m>. In fact here, we
+assume that the infection rate is a linearly increasing function of
+<m>I</m>. There are plenty of other models of transmission, some we will
+study in the homework, others later in the semester, still more in our
+projects. 
+</p>
+
+
+<p>
+<me>\begin{aligned}
+ \text{change in }S &amp; = +\text{(gain from recovery)} &amp;&amp;-\text{(loss to infection)}\\
+\frac{dS}{dt}&amp;= + \gamma I &amp;&amp; - {\beta I} S\\
+\text{change in }I &amp; =  + \text{(gain from infection)}&amp;&amp; -\text{(loss to recovery)}\\
+\frac{dI}{dt}&amp;= + \beta IS &amp;&amp; -{\gamma} I
+\end{aligned}</me> 
+</p>
+
+<p>
+<!--Consider <me>\begin{cases}
 \dfrac{dS}{dt} \amp = \gamma I - \beta S I\\
 \dfrac{dI}{dt} \amp = \beta S I - \gamma I
-\end{cases}</me> 
+\end{cases}</me> -->
 This model tracks the populations of individuals in two classes of a
 population of size <m>N</m>.  Since there are only two classes, <m>N =
 S+ I</m>.  Differentiating gives <me>\dfrac{dN}{dt} = \dfrac{dS}{dt} +
@@ -379,7 +446,7 @@ With a little rewriting, this becomes <me>\dfrac{dI}{dt} = \beta N
 I\left(1-\frac{I}{N}\right)-\gamma I</me>.  Looking closely, aside from
 the letters being different, this is exactly the form of the logistic
 growth model with proportional harvesting from <xref ref =
-'logistic-prop-harvest'/>. We could completely analyze this with steps
+'sub-proportional-harvesting'/>. We could completely analyze this with steps
 that parallel our work back there.  The threshold quantity for stability
 relates the parameters <m>\beta</m>, <m>N</m>, and <m>\gamma</m>.  Note
 that <m>N</m> wasn't originally in our model, but was introduced in the
@@ -419,7 +486,7 @@ Predator-prey dynamics between two species is a classic model.
 <p>
 Consider <me>\begin{cases}
 \dfrac{dB}{dt} \amp = r_BB - pBC\\
-\dfrac{dC}{dt} \amp = \epsilon p B C - m P
+\dfrac{dC}{dt} \amp = \epsilon p B C - m C
 \end{cases}</me> 
 </p>
 
@@ -433,6 +500,7 @@ Consider <me>\begin{cases}
 
 <subsubsection xml:id="subsubsec-pred-prey-jacobian">
 <title>Predator-Prey Jacobian</title>
+<p>For this model, the Jacobian is <me>J(B, C) = \begin{pmatrix} r_{B} - p C \amp -p B\\\epsilon p C \amp \epsilon p B - m\end{pmatrix}</me> </p>
 </subsubsection>
 
 <subsubsection xml:id="subsubsec-pred-prey-summary">
@@ -448,6 +516,8 @@ Consider <me>\begin{cases}
 <p>
 Ecological competition between two species for a shared resource is a classic model.
 </p>
+
+
 </introduction>
 
 <p>
@@ -466,6 +536,8 @@ Consider <me>\begin{cases}
 
 <subsubsection xml:id="subsubsec-competition-jacobian">
 <title>Competition Jacobian</title>
+<p>For this model, the Jacobian is <me>J(B, F) = \begin{pmatrix} r_B - \dfrac{2r_B}{K_B} - \alpha F \amp -\alpha B\\ -\gamma F \amp
+r_F - \dfrac{2r_{F}}{K_{F}} - \gamma B \end{pmatrix}</me> </p>
 </subsubsection>
 
 <subsubsection xml:id="subsubsec-competition-summary">
@@ -503,6 +575,7 @@ Consider <me>\begin{cases}
 
 <subsubsection xml:id="subsubsec-SIS-jacobian">
 <title>SIS Jacobian</title>
+<p>For this model, the Jacobian is <me>J(S, I) = \begin{pmatrix} -\beta I \amp \gamma - \beta S\\\beta I \amp \beta S - \gamma\end{pmatrix}</me> </p>
 </subsubsection>
 
 <subsubsection xml:id="subsubsec-SIS-summary">
@@ -512,9 +585,29 @@ Consider <me>\begin{cases}
 </subsection>
 
 
+
 </section>
 
+<exercises>
+<exercise>
+<statement>
+What if the prey population in a predator-prey model grew according to logistic growth rather than exponential growth in the absence of its predator?
+</statement>
+</exercise>
 
+<exercise>
+<statement>
+What if the prey population from the predator-prey model were subject to the Allee effect, that is, the "single species" part of its equation paralleled <me>\dfrac{dN}{dt} = rN\left(\frac{N}{K_{0}} - 1\right)\left(1-\frac{N}{K}\right)</me>?  Try to find the nontrivial nullcline for each and contemplate how many distinct phase planes are possible.
+</statement>
+</exercise>
+
+<exercise>
+<statement>
+What if both populations from the competition model were subject to the Allee effect, that is, the "single species" parts of the model paralleled <me>\dfrac{dN}{dt} = rN\left(\frac{N}{K_{0}} - 1\right)\left(1-\frac{N}{K}\right)</me>?  Try to find the nontrivial nullcline for each and contemplate how many distinct phase planes are possible.
+</statement>
+</exercise>
+
+</exercises>
 </chapter>
 
 <!--><solution>

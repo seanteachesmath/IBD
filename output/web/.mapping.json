@@ -1,5 +1,1 @@
-<<<<<<< HEAD
 {"source/main.ptx": ["intro-bio-dynamics", "frontmatter", "preface-disclaimer", "preface-motto", "preface-themes"], "source/fall2023/intro.ptx": ["introduction", "what-is-modeling", "sec-simple-1d-ode"], "source/fall2023/systems.ptx": ["systems", "systems-intro", "sec-nonlinear-systems"]}
-=======
-{"source/main.ptx": ["intro-bio-dynamics", "frontmatter", "preface-disclaimer", "preface-motto", "preface-themes"], "source/fall2023/intro.ptx": ["introduction", "what-is-modeling", "sec-simple-1d-ode"], "source/fall2023/system-de.ptx": ["systems-des", "two-dimensional-systems", "harvesting-and-predator-prey", "two-dim-ecology", "ecological-competition", "the-trace-determinant-method", "parameters-rates-and-units-prelude-to-chemical-kinetics"]}
->>>>>>> 0918a0748f055cebac428623c8af7583fffae8fe
