@@ -12,22 +12,16 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para logical">
-<div class="para">Before moving on to nonlinear models, guided by our prior modeling experiences we should recognize that we could write models of the form</div>
-<div class="displaymath process-math">
+<div class="para logical"><div class="displaymath process-math">
 \begin{equation*}
-\frac{d^{} {N}}{d {t}^{}}=(b-m)N-h,
+\begin{aligned}
+\text{change in }S &amp; = +\text{(gain from recovery)} &amp;&amp;-\text{(loss to infection)}\\
+\frac{dS}{dt}&amp;= + \delta I &amp;&amp; - {\beta I} S\\
+\text{change in }I &amp; =  + \text{(gain from infection)}&amp;&amp; -\text{(loss to recovery)}\\
+\frac{dI}{dt}&amp;= + \beta IS &amp;&amp; -{\delta} I
+\end{aligned}
 \end{equation*}
-</div>
-<div class="para">or</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\frac{d^{} {N}}{d
-{t}^{}}=(b-m)N+s.
-\end{equation*}
-</div>
-<div class="para">Biologically, what do these models say? Mathematically, how might you solve them?</div>
-</div>
-<span class="incontext"><a href="continuous-time-models-derivations.html#p-82" class="internal">in-context</a></span>
+</div></div>
+<span class="incontext"><a href="two-dimensional-systems.html#p-82" class="internal">in-context</a></span>
 </body>
 </html>

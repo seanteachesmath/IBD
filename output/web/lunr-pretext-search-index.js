@@ -116,6 +116,150 @@ var ptx_lunr_docs = [
   "number": "1.2.8",
   "title": "",
   "body": " Bifurcation diagram for the logistic growth model with proporational harvesting. Stable equilibria are shown in solid blue and unstable equilibria are shown in dotted red.   "
+},
+{
+  "id": "two-dimensional-systems",
+  "level": "1",
+  "url": "two-dimensional-systems.html",
+  "type": "Section",
+  "number": "2.1",
+  "title": "Two-dimensional systems of differential equations as ecological models",
+  "body": " Two-dimensional systems of differential equations as ecological models  As we transition towards new topics, it is worth mentioning our goals.   Read and interpret models A term by term understanding of the assumptions of a model.    Analyze, solve, or simulate (compute) solutions. Equilibria and stability, or transient dynamics.    Write models.    Evaluate results and draw biological or mathematical conclusions. Dynamics (of NB) were unstable, might be missing biological ingredients.      A disease model  Consider a mild infection circulating among members of a population, where the healthy individuals are susceptible to the infection ( ) and the infectious individuals are capable of transmitting the infection to others ( ).   An model for transmission of a mild infection in a closed population.      Much like in class we will build a word model as we go. and replace the terms with symbols. Our first term is loss to recovery in the equation. We can think of as the leaving rate from the compartment, much like was the leaving rate from the living (i.e., dying) compartment of a population model. Everything, in this model, that leaves one compartment enters another (i.e., there are no leaks ). We can also argue for the infection rate as follows, since infection is only transmitted directly and by infectious hosts, we might expect that the rate that individuals gain infection is proportional to the density (individuals per hectare) of infectious individuals, . In fact here, we assume that the infection rate is a linearly increasing function of . There are plenty of other models of transmission, some we will study in the homework, others later in the semester, still more in our projects.     Since the total number* of individuals is preserved, we can replace the equation for by an algebraic constraint . We can substitute this into the equation for and derive a 1-dimensional, nonlinear model, If we define our model we can plot the more interesting version of our phase line as in . Ignoring graphs for the moment, we can also compute equilibria of continuous time models, defined as solutions to . This gives and It might prove useful to notice that our nontrivial solution exists when this suggests a limitation on the recovery rate that depends on the contact parameter and the total population size .    Analysis    Equilibrium    Phase line and stability    Solutions and observations    Bifurcation diagram   "
+},
+{
+  "id": "fig-epi",
+  "level": "2",
+  "url": "two-dimensional-systems.html#fig-epi",
+  "type": "Figure",
+  "number": "2.1.1",
+  "title": "",
+  "body": " An model for transmission of a mild infection in a closed population.     "
+},
+{
+  "id": "p-83",
+  "level": "2",
+  "url": "two-dimensional-systems.html#p-83",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "defined as "
+},
+{
+  "id": "harvesting-and-predator-prey",
+  "level": "1",
+  "url": "harvesting-and-predator-prey.html",
+  "type": "Section",
+  "number": "2.2",
+  "title": "Harvesting and predator-prey",
+  "body": " Harvesting and predator-prey   Key concepts in continuous-time models  Consider the model that describes the dynamics of a logistically-growing population subjected to harvesting. Equilibria of this model are and . The removal rate due to harvesting is per . One short derivation of this functional form is given here, we will see another derivation in a few lectures.    Derivation of a functional response  A harvester spends its time, of which it has , searching ( ) or handling ( ), thus, The handling time depends on the number of prey captured ( ) and the handling time per prey ( ), so that, In turn, the number captured depends on the searching or finding rate ( ), the number of prey available ( ), and the time spend searching by predators or harvesters ( ), Solving for the search time, so that Solving for ,   The per predator feeding rate is, since the definition of was per predator . Redefining constants and , we can finally write the per predator harvesting rate as so that the harvesting term is If predators instantaneously consume their prey, which returns the Type I response, because saturation vanishes.   "
+},
+{
+  "id": "two-dim-ecology",
+  "level": "1",
+  "url": "two-dim-ecology.html",
+  "type": "Section",
+  "number": "2.3",
+  "title": "Two dimensional models in ecology",
+  "body": " Two dimensional models in ecology  Consider now, a two dimensional extension where is no longer a parameter, but instead a dynamic variable. Whose growth is proportional to the consumption of prey, up to a scaling factor . Such a model is, We can give ourselves a slightly simpler situation if we assume that the predator is a Type I predator, A common approach to studying such a model is to first nondimensionalize the variables by scaling by some relevant value. Here we have a carrying capacity for , so if we scale by we can define and study the dynamics of which describes the proportion of carrying capacity that is filled. The goal of this is to combine parameters and reduce the dimension of parameter space. We also rescale time by setting and replacing the derivative by . The definition involving is less clear from the start, but as we step through the process we find that using works pretty well. Ultimately, after some failed attempts, we find something like,   Just as we used phase lines in one dimension, we will use phase planes in two dimensions. To introduce this process we will use an even simpler model describing the densities of prey ( ) and predator ( ),   First, we hope to compute equilibria. We can start by solving when each of the equations is equal to zero (i.e., when individual quantities are unchanging). Setting This equation implies that is unchanging along the lines and in the -plane. Additionally, setting This equation implies that is unchanging along the lines and in the -plane. Equilibria require both equations be satisfied simultaneously, thus opposite nullclines must intersect so that both of and are unchanging. We will jump ahead and plot everything in  , this includes trajectories in the phase plane and direction arrows.     On lines , motion is in the vertical direction. On lines , motion is in the horizontal direction.   Direction arrows in  , are obtained by treating the individual differential equations as inequalities. The motivation is that we know that when Since is of interest, the to ensure the derivative is positive, we need Thus, is increasing below the (nonzero) -nullcline. Similarly, is decreasing above this nullcline. Lastly, we can show that is decreasing to the left of the (again, nonzero) vertical -nullcline, and decreasing to the right. This shows that motion is counterclockwise. Numerical solutions show that we have closed orbits around the equilibrium point . We call this point neutrally stable .  If we hadn’t computed solutions, we wouldn’t necessarily know from the phase portrait that these solutions do not spiral in towards or out from the equilibrium. To know for certain, we would need to study the linearized dynamics near each equilibrium point, including the point , as well. Since we have solutions, we might as well plot them in time (see ).    Numbers (or ) of prey ( ) and predators ( ).   "
+},
+{
+  "id": "fig-pred-prey-pp",
+  "level": "2",
+  "url": "two-dim-ecology.html#fig-pred-prey-pp",
+  "type": "Figure",
+  "number": "2.3.1",
+  "title": "",
+  "body": "  On lines , motion is in the vertical direction. On lines , motion is in the horizontal direction.  "
+},
+{
+  "id": "fig-pred-prey",
+  "level": "2",
+  "url": "two-dim-ecology.html#fig-pred-prey",
+  "type": "Figure",
+  "number": "2.3.2",
+  "title": "",
+  "body": "  Numbers (or ) of prey ( ) and predators ( ).  "
+},
+{
+  "id": "ecological-competition",
+  "level": "1",
+  "url": "ecological-competition.html",
+  "type": "Section",
+  "number": "2.4",
+  "title": "Ecological competition",
+  "body": " Ecological competition   Method  To review, we apply the following method to study 2D nonlinear dynamical systems.     Write a model.    Read and interpret the model (dimensional analysis of parameters.    Compute nullclines and equilibria.    Plot phase portraits with direction arrows and trajectories.    Refine knowledge of stability with linearization via Jacobian.     Consider two species and for ants and beetles, respectively. Assume that each grows (in the absence of the other) according to logistic growth, Here, each species grows independently of the other. Beetles have no effect on ants; ants have no effect on beetles. Our mechanism for interaction will be interference competition, which leads in increased mortality.   To understand interspecific competition, we need to understand the units and magnitude of and . Roughly, translates from units of beetle density to an effective ant density. According to the ratio , beetles fill some of the carrying capacity allotted to ants. Just how much of the capacity that they fill is given by the parameter , which when multiplied by gives the ant equivalency of beetles. We will look more closely at the equation for , but note that we could make similar observations about the equation for .  The dynamics of are given by, which slightly more directly illustrates that both and fill the carrying capacity allotted to . In one dimension, equilibria depend on the zeros of the right hand side of an equation like this. In two dimensions, equilibria depend on the values of both quantities and . The first step, as before, is to compute the nullclines for . Setting implies that either or With a single species, this equation looks like We can solve this equation for the density of animals at equilibrium to find, But we know that we have a particular composition of animals, such that Combining these equations, gives as a function of , the abundance of and that guarantee that is unchanging,   Finally, we have that , if either or . By their definition, on -nullclines, the motion in the direction is zero, and dynamics are strictly increasing (or decreasing) in .  Similarly, we can compute that , if either or . By their definition, on -nullclines, the motion in the direction is zero, and dynamics are strictly increasing (or decreasing) in . We have to consider a variety of parameter combinations and relative magnitudes. This lets us plot four distinct phase portraits, shown in   -      When and , only exists at equilibrium. This is equivalent to and , which suggests that has a weak effect on , but has a strong effect on .     When and , only exists at equilibrium. This is equivalent to and , which suggests that has a strong effect on , but has a weak effect on .     When and , nullclines intersect, and the coexistence equilibrium is stable. This is equivalent to and , which suggests that has a weak effect on , and has a weak effect on .     When and , but the coexistence equilibrium is unstable. This is equivalent to and , which suggests that has a weak effect on , and has a weak effect on . The winner depends on the initial conditions.    "
+},
+{
+  "id": "fig-compet-A-only",
+  "level": "2",
+  "url": "ecological-competition.html#fig-compet-A-only",
+  "type": "Figure",
+  "number": "2.4.1",
+  "title": "",
+  "body": "  When and , only exists at equilibrium. This is equivalent to and , which suggests that has a weak effect on , but has a strong effect on .  "
+},
+{
+  "id": "fig-compet-B-only",
+  "level": "2",
+  "url": "ecological-competition.html#fig-compet-B-only",
+  "type": "Figure",
+  "number": "2.4.2",
+  "title": "",
+  "body": "  When and , only exists at equilibrium. This is equivalent to and , which suggests that has a strong effect on , but has a weak effect on .  "
+},
+{
+  "id": "fig-compet-AB",
+  "level": "2",
+  "url": "ecological-competition.html#fig-compet-AB",
+  "type": "Figure",
+  "number": "2.4.3",
+  "title": "",
+  "body": "  When and , nullclines intersect, and the coexistence equilibrium is stable. This is equivalent to and , which suggests that has a weak effect on , and has a weak effect on .  "
+},
+{
+  "id": "fig-compet-saddle",
+  "level": "2",
+  "url": "ecological-competition.html#fig-compet-saddle",
+  "type": "Figure",
+  "number": "2.4.4",
+  "title": "",
+  "body": "  When and , but the coexistence equilibrium is unstable. This is equivalent to and , which suggests that has a weak effect on , and has a weak effect on . The winner depends on the initial conditions.  "
+},
+{
+  "id": "the-trace-determinant-method",
+  "level": "1",
+  "url": "the-trace-determinant-method.html",
+  "type": "Section",
+  "number": "2.5",
+  "title": "The ‘Trace-Determinant Method’",
+  "body": " The Trace-Determinant Method   Diagnostics for eigenvalues and stability  In many cases, the calculation of eigenvalues from the Jacobian matrix at equilibria is unnecessary. Instead, we prefer a simpler approach that we refer to as the trace-determinant method. Combined with a cautious sketch of the phase plane, the inspection of and    In some situations, the phase plan suggests that trajectories might oscillate about a fixed point. Yet, without the aid of computers we are often unable to distinguish between equilibria that attract, repel, or do neither. We call these attracting (repelling) equilibria stable (unstable) foci, the plural of focus, or neutrally stable centers, in the third case. Since we expect solutions to oscillate given the phase plane, all that remains is to determine whether or not the real part of the eigenvalue is positive, negative, or zero. This is obvious from the sign of . The eigenvalues corresponding to the characteristic polynomial are given by We can see that implies , which means perturbations from equilibria decay and a particular equilibrium is a stable focus. We can repeat the argument for , which suggests an unstable focus, characterized by growing oscillations. Eigenvalues are purely imaginary, giving rise to neutrally stable centers, if . Thus, if we expect oscillations, tells us whether oscillations grow ( ), decay ( ), or are sustained ( ), all without ever calculating the actual eigenvalue.  Another interesting case, that gives us yet another obvious conclusion, is . If we consider a matrix, , then is the sum of its eigenvalues while is the product. Thus, for a matrix , If , then eigenvalues must be of opposite sign. This gives rise the the dynamics of a saddle point, stable in one direction, unstable in the other.  The only other nondegenerate cases occur when we have distinct, real eigenvalues of the same sign. The corresponding equilibria are termed nodes, with stability governed by the sign of , since .  We have our degenerate cases on the axis and along the curve . The case gives us a line of fixed points, where one quantity remains fixed (since one eigenvalue is zero) while the other grows from ( ) or decays towards ( ) zero. Along the curve equilibria are called degenerate nodes, characterized by a repeated eigenvalue.  Stable points, which attract trajectories, are often called sinks. Unstable points, which repel trajectories, are often called sources, since solutions emanate from such a source.  "
+},
+{
+  "id": "parameters-rates-and-units-prelude-to-chemical-kinetics",
+  "level": "1",
+  "url": "parameters-rates-and-units-prelude-to-chemical-kinetics.html",
+  "type": "Section",
+  "number": "2.6",
+  "title": "Parameters, rates, and units: Prelude to chemical kinetics",
+  "body": " Parameters, rates, and units: Prelude to chemical kinetics   Parameters, rates, and units  We always need to keep in mind the fact that our parameters and rates have important units. We will review a few familiar examples to motivate this concept before moving on to biochemical kinetics of enzymatic reactions.    SIR models  Recall the SIR model (illustrated in ), where , , and are the host population densities of susceptible, infect ious , and recovered (or removed) hosts. Susceptible hosts are infected at a rate and infectious hosts recover (or are removed by death) at a rate .   Flow diagram for SIR model.     The prevailing models in the literature are called mass action and constant contact , which refers specifically to the choice of the function within our transmission function.   constant contact (frequency dependent) assumes that   mass action (density dependent) assumes that    Notice that we have to assign different units to the transmission parameter  depending on its form.    Predator - Prey equations  Consider the densities of prey ( ) and its predator ( ), given by the following (slightly incorrect, or at least misleading equations), The interaction term, , is the term that we focus on. This term represents predation in the -equation, but growth in the -equation .   Indeed, describes the rate of predation on , but it cannot describe, as it is now, the growth rate of . The unit’s in the second equation are inconsistent, thus, the model must be wrong! In fact, we have where is some (probably small) number describing the conversion efficiency of producing new predators from consumed prey.   "
+},
+{
+  "id": "example1-sir-models",
+  "level": "2",
+  "url": "parameters-rates-and-units-prelude-to-chemical-kinetics.html#example1-sir-models",
+  "type": "Example",
+  "number": "2.6.1",
+  "title": "SIR models.",
+  "body": " SIR models  Recall the SIR model (illustrated in ), where , , and are the host population densities of susceptible, infect ious , and recovered (or removed) hosts. Susceptible hosts are infected at a rate and infectious hosts recover (or are removed by death) at a rate .   Flow diagram for SIR model.     The prevailing models in the literature are called mass action and constant contact , which refers specifically to the choice of the function within our transmission function.   constant contact (frequency dependent) assumes that   mass action (density dependent) assumes that    Notice that we have to assign different units to the transmission parameter  depending on its form.  "
+},
+{
+  "id": "example-predator-prey",
+  "level": "2",
+  "url": "parameters-rates-and-units-prelude-to-chemical-kinetics.html#example-predator-prey",
+  "type": "Example",
+  "number": "2.6.3",
+  "title": "Predator - Prey equations.",
+  "body": " Predator - Prey equations  Consider the densities of prey ( ) and its predator ( ), given by the following (slightly incorrect, or at least misleading equations), The interaction term, , is the term that we focus on. This term represents predation in the -equation, but growth in the -equation .   Indeed, describes the rate of predation on , but it cannot describe, as it is now, the growth rate of . The unit’s in the second equation are inconsistent, thus, the model must be wrong! In fact, we have where is some (probably small) number describing the conversion efficiency of producing new predators from consumed prey.  "
 }
 ]
 

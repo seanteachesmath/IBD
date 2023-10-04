@@ -13,31 +13,17 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">Recall,</div>
+<div class="para">Much like in class we will build a word model as we go.</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\frac{d^{} {N}}{d {t}^{}}=(b-m)N.
+\begin{aligned}
+\text{change in }S &amp; = +\text{(gain from recovery)} - \text{(loss to infection)}\\
+\text{change in }I &amp; = +\text{(gain from infection)} - \text{(loss to recovery)},
+\end{aligned}
 \end{equation*}
 </div>
-<div class="displaymath process-math">
-\begin{equation*}
-\begin{aligned} \frac{dN}{N}&amp;=r\,dt\\
-\int_0^s\frac{dN}{N}&amp;=\int_0^s (b-m)\,dt\\
-\ln(N)\Big|_0^s&amp;=(b-m)t\Big|_0^s\\ \ln(N(s))-\ln(N_0)&amp;=(b-m) s\\
-\ln(N(s))&amp;=\ln(N_0)+(b-m) s\\ N(s)&amp;=\exp(\ln(N_0)+(b-m) s)\\
-&amp;=\exp(\ln(N_0))\exp((b-m) s)\\ N(s)&amp;=N_0\exp((b-m)
-s)\\\end{aligned}
-\end{equation*}
+<div class="para">and replace the terms with symbols. Our ‘first’ term is ‘loss to recovery’ in the <span class="process-math">\(I\)</span> equation. We can think of <span class="process-math">\(\delta\)</span> as the leaving rate from the <span class="process-math">\(I\)</span> compartment, much like <span class="process-math">\(m\)</span> was the ‘leaving rate from the living’ (i.e., dying) compartment of a population model. Everything, in this model, that leaves one compartment enters another (i.e., there are no ‘leaks’). We can also argue for the infection rate as follows, since infection is only transmitted directly and by infectious hosts, we might expect that the rate that <span class="process-math">\(S\)</span> individuals gain infection is proportional to the density (individuals per hectare) of infectious individuals, <span class="process-math">\(I\text{.}\)</span> In fact here, we assume that the infection rate is a linearly increasing function of <span class="process-math">\(I\text{.}\)</span> There are plenty of other models of transmission, some we will study in the homework, others later in the semester, still more in our projects.</div>
 </div>
-<div class="para">Replacing <span class="process-math">\(s\)</span> by <span class="process-math">\(t\text{,}\)</span>
-</div>
-<div class="displaymath process-math">
-\begin{equation*}
-N(t)=N_0\exp((b-m) t),
-\end{equation*}
-</div>
-<div class="para">and we can see that when <span class="process-math">\(b&lt;m\text{,}\)</span> <span class="process-math">\(N(t)\rightarrow0\text{.}\)</span> Otherwise, when <span class="process-math">\(b&gt;m\text{,}\)</span> <span class="process-math">\(N(t)\rightarrow\infty\text{.}\)</span> If <span class="process-math">\(b=m\text{,}\)</span> then <span class="process-math">\(r=0\)</span> and <span class="process-math">\(N(t)\)</span> never changes from <span class="process-math">\(N_0\text{.}\)</span> We might be interested in using the formula for <span class="process-math">\(N(t)\)</span> to compute the half-life (commonly <span class="process-math">\(\tau_{1/2}\)</span>) or doubling time (commonly <span class="process-math">\(\tau_2\)</span>).</div>
-</div>
-<span class="incontext"><a href="continuous-time-models-derivations.html#p-81" class="internal">in-context</a></span>
+<span class="incontext"><a href="two-dimensional-systems.html#p-81" class="internal">in-context</a></span>
 </body>
 </html>

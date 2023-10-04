@@ -11,8 +11,31 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">If we hadn’t computed solutions, we wouldn’t necessarily know from the phase portrait that these solutions do not spiral in towards or out from the equilibrium. To know for certain, we would need to study the ‘linearized’ dynamics near each equilibrium point, including the point <span class="process-math">\((0, 0)\text{,}\)</span> as well. Since we have solutions, we might as well plot them in time (see <a href="" class="xref" data-knowl="./knowl/fig-pred-prey.html" title="Figure 3.3.2">Figure 3.3.2</a>).</div>
-<span class="incontext"><a href="two-dim-ecology.html#p-99" class="internal">in-context</a></span>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para logical">
+<div class="para">Consider two species <span class="process-math">\(A(t)\)</span> and <span class="process-math">\(B(t)\)</span> for ants and beetles, respectively. Assume that each grows (in the absence of the other) according to logistic growth,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+\begin{cases}
+\displaystyle\frac{d^{} {A}}{d {t}^{}}&amp;=a A\Big(1-\frac{A}{K_A}\Big)\\[10pt] 
+\displaystyle\frac{d^{} {B}}{d {t}^{}}&amp;=b B\Big(1-\frac{B}{K_B}\Big).
+\end{cases}
+\end{aligned}
+\end{equation*}
+</div>
+<div class="para">Here, each species grows independently of the other. Beetles have no effect on ants; ants have no effect on beetles. Our mechanism for interaction will be <em class="emphasis">interference</em> competition, which leads in increased mortality.</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+\begin{cases} \displaystyle\frac{d^{} {A}}{d {t}^{}}&amp;=a
+A\Big(1-\frac{A}{K_A}-\frac{\mu B}{K_A}\Big)\\[10pt]
+\displaystyle\frac{d^{} {B}}{d {t}^{}}&amp;=b
+B\Big(1-\frac{B}{K_B}-\frac{\delta A}{K_B}\Big).
+\end{cases}\end{aligned}
+\end{equation*}
+</div>
+</div>
+<span class="incontext"><a href="ecological-competition.html#p-99" class="internal">in-context</a></span>
 </body>
 </html>
