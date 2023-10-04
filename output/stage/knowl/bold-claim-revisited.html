@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<section class="paragraphs"><h3 class="heading"><span class="title">Bold claim revisited.</span></h3> <div class="para">Previously, we claimed that all populations go to extinction (in the absence of immigration). If we wish to simulate the process described in <a href="" class="xref" data-knowl="./knowl/fig-bdp2.html" title="Figure 5.3.2">Figure 5.3.2</a>, we need to track a few pieces of information: the event that occurs (a birth or a death), and the time that the event occurs. =[draw, fill=white, minimum size=3em, circle] =[ fill=white, minimum size=3em, circle]</div> <div class="para logical">
+<div class="para">Using Fig. <a href="" class="xref" data-knowl="./knowl/fig-bdp2.html" title="Figure 5.3.2">Figure 5.3.2</a>, the <em class="emphasis">probability</em> that a birth occurs as the ‘next event’ is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/fig-bdp2.html">
+\begin{equation*}
+\operatorname{Prob}({\text{a birth}})=\frac{rn}{rn+\mu n}=
+\frac{r}{r+\mu},
+\end{equation*}
+</div>
+<div class="para">and similarly for a death,</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/fig-bdp2.html">
+\begin{equation*}
+\operatorname{Prob}({\text{a death}})=1-\operatorname{Prob}({\text{a birth}})=
+1-\frac{r}{r+\mu}=\frac{\mu}{r+\mu}.
+\end{equation*}
+</div>
+<div class="para">To determine what happens we consider the interval <span class="process-math">\([0,1],\)</span> which we divide, here, into two subintervals whose widths reflect the event probabilities above. For example, if <span class="process-math">\(r=0\)</span> (<span class="process-math">\(\mu&gt;0\)</span>), the probability of a birth is zero and probability of a death is one. In contrast, if <span class="process-math">\(\mu=0\)</span> (<span class="process-math">\(r&gt;0\)</span>), then the probability of a death is zero and the probability of a birth is one.</div>
+</div> <div class="para">More interesting cases occur if, for example, <span class="process-math">\(r=8\)</span> and <span class="process-math">\(\mu=2\text{,}\)</span> then the probability of a birth is <span class="process-math">\(\frac{4}{5}\)</span> and the probability of a death is <span class="process-math">\(\frac{1}{5}\text{.}\)</span> To illustrate this last case, we divide the unit interval into subintervals <span class="process-math">\((0,
+\frac{4}{5}]\text{,}\)</span> representing the probabilities of birth, and <span class="process-math">\((\frac{4}{5}, 1)\text{,}\)</span> representing the probabilities of death. Then we choose a uniform random number (a dart) and throw it at the divided number line (a target). The interval in which it lands identifies our next event. In this example, since <span class="process-math">\(r&gt;&gt;\mu\text{,}\)</span> the probability that a birth occurs is much larger than the probability that a death occurs. Thus, the birth interval in the target is much larger than the death interval, and we are more likely to have a birth.</div> <figure class="figure figure-like"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/./images/event_prob.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.3.3<span class="period">.</span></span><span class="space"> </span>A uniform random random number has an 80% chance of landing in the ‘blue’ (birth) interval, making this event the more likely outcome. That said, here we have the less likely outcome of a death.</figcaption></figure> <div class="para logical">
+<div class="para">Given that we can identify the event that occurs, our next task is to identify the time until the event occurs. Here we assume that he events occur at a constant rate</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\lambda=(r+\mu)n,
+\end{equation*}
+</div>
+<div class="para">and that the time until the next event, <span class="process-math">\(T\text{,}\)</span> is exponentially distributed with parameter <span class="process-math">\(\lambda\text{.}\)</span> Thus,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+T\sim\exp(\lambda).
+\end{equation*}
+</div>
+<div class="para">We can easily sample numbers from certain distributions. To sample exponentially distributed random numbers, we take advantage of its cumulative distribution function, <span class="process-math">\(F(t)=1-\exp(-\lambda t)\text{.}\)</span> We pick a uniform random number <span class="process-math">\(r_2\)</span> and solve for <span class="process-math">\(t\)</span> using <span class="process-math">\(r_2=F(t)\)</span> to find our even time.</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned} r_2 &amp; =
+F(t)\\ &amp;= 1-\exp(-\lambda t)\\ \exp(-\lambda t) &amp; = 1-r_2\\
+-\lambda t &amp; =\ln(1-r_2)\\ t &amp;
+=-\frac{\ln(1-r_2)}{\lambda}\end{aligned}
+\end{equation*}
+</div>
+<div class="para">Importantly, since <span class="process-math">\(r_2\)</span> is a random number so is <span class="process-math">\(1-r_2\text{.}\)</span> In slight abuse of notation, we relabel the argument of <span class="process-math">\(\ln(\cdot)\text{,}\)</span> which is <span class="process-math">\(1-r_2\text{,}\)</span> by <span class="process-math">\(r_2\text{,}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+t =-\frac{\ln(r_2)}{\lambda}.
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(r_2\in(0,1)\text{,}\)</span> the logarithm is negative, so the negative in front ensures a positive event time <span class="process-math">\(t\text{.}\)</span>
+</div>
+</div> <div class="para">Now that we have identified both our event and the event eating time, <span class="process-math">\(t\text{,}\)</span> we simply update our state and repeat the process for until we reach either a fixed number of events, a fixed final time, or a population that becomes extinct (or reaches some other pre-specified condition). An example solution to the birth-death process is plotted in <a href="" class="xref" data-knowl="./knowl/fig-stoch-sample.html" title="Figure 5.3.4">Figure 5.3.4</a>, where unlike in <a href="" class="xref" data-knowl="./knowl/fig-in-class-sim.html" title="Figure 5.3.1">Figure 5.3.1</a> the rate of birth is non-zero.</div> <figure class="figure figure-like"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/./images/sample.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.3.4<span class="period">.</span></span><span class="space"> </span>Sample solutions to the stochastic process with the deterministic result (or expectation) in red. One population (black) rather quickly goes extinct, while the other (blue) does better than expected. Only the first 500 events are shown.</figcaption></figure> <div class="para">While the details of evaluating our claim are beyond our needs, we can and should temper our ‘everything vanishes’ statement. In the absence of immigration, populations that remain finite are bound to reach extinction. They tend to do so rather quickly, after a string of bad luck. Otherwise populations can grow to infinity, avoiding and escaping the threat of extinction.</div> <div class="para">More sophisticated approaches, using generating functions (special power series) let us calculate the mean extinction time for a given problem.</div></section><span class="incontext"><a href="birth-death-processes-and-the-gillespie-algorithm.html#bold-claim-revisited" class="internal">in-context</a></span>
+</body>
+</html>

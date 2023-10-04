@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Discrete-time dynamical systems with linear algebra</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Introduction to Biological Dynamics">
+<meta property="book:author" content="Sean Laverty">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "https://pretextbook.org/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.3/pretext_search.js"></script><link href="https://pretextbook.org/css/0.7/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.3</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.3/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.3/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.3/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link href="https://pretextbook.org/css/0.7/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body id="laverty-IBD" class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="intro-bio-dynamics.html"><span class="title">Introduction to Biological Dynamics</span></a></h1>
+<p class="byline">Sean Laverty</p>
+</div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" class="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms" class="searchterms"></span>
+</h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" aria-label="Show or hide table of contents"><span class="icon">☰</span><span class="name">Contents</span></button><button id="user-preferences-button" class="user-preferences-button button" title="Modify user preferences"><span id="avatarbutton" class="avatarbutton name">You!</span><div id="preferences_menu_holder" class="preferences_menu_holder hidden"><ol id="preferences_menu" class="preferences_menu" style="font-family: 'Roboto Serif', serif;">
+<li data-env="avatar" tabindex="-1">Choose avatar<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden avatar">
+<li data-val="You!" tabindex="-1">
+<span id="theYou!" class="avatarcheck">✔️</span>You!</li>
+<li data-val="😺" tabindex="-1">
+<span id="the😺" class="avatarcheck"></span>😺</li>
+<li data-val="👤" tabindex="-1">
+<span id="the👤" class="avatarcheck"></span>👤</li>
+<li data-val="👽" tabindex="-1">
+<span id="the👽" class="avatarcheck"></span>👽</li>
+<li data-val="🐶" tabindex="-1">
+<span id="the🐶" class="avatarcheck"></span>🐶</li>
+<li data-val="🐼" tabindex="-1">
+<span id="the🐼" class="avatarcheck"></span>🐼</li>
+<li data-val="🌈" tabindex="-1">
+<span id="the🌈" class="avatarcheck"></span>🌈</li>
+</ol>
+</li>
+<li data-env="fontfamily" tabindex="-1">Font family<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fontfamily">
+<li data-val="face" data-change="OS" tabindex="-1" style="font-family: 'Open Sans'">
+<span id="theOS" class="ffcheck">✔️</span><span class="name">Open Sans</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+<li data-val="face" data-change="RS" tabindex="-1" style="font-family: 'Roboto Serif'">
+<span id="theRS" class="ffcheck"></span><span class="name">Roboto Serif</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+</ol>
+</li>
+<li data-env="font" tabindex="-1">Adjust font<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fonts">
+<li>Size</li>
+<li><span id="thesize">12</span></li>
+<li data-val="size" data-change="-1" tabindex="-1" style="font-size: 80%">Smaller</li>
+<li data-val="size" data-change="1" tabindex="-1" style="font-size: 110%">Larger</li>
+<li>Width</li>
+<li><span id="thewdth">100</span></li>
+<li data-val="wdth" data-change="-5" tabindex="-1" style="font-variation-settings: 'wdth' 60">narrower</li>
+<li data-val="wdth" data-change="5" tabindex="-1" style="font-variation-settings: 'wdth' 150">wider</li>
+<li>Weight</li>
+<li><span id="thewght">400</span></li>
+<li data-val="wght" data-change="-50" tabindex="-1" style="font-weight: 200">thinner</li>
+<li data-val="wght" data-change="50" tabindex="-1" style="font-weight: 700">heavier</li>
+<li>Letter spacing</li>
+<li>
+<span id="thelspace">0</span><span class="byunits">/200</span>
+</li>
+<li data-val="lspace" data-change="-1" tabindex="-1">closer</li>
+<li data-val="lspace" data-change="1" tabindex="-1">f a r t h e r</li>
+<li>Word spacing</li>
+<li>
+<span id="thewspace">0</span><span class="byunits">/50</span>
+</li>
+<li data-val="wspace" data-change="-1" tabindex="-1">smaller gap </li>
+<li data-val="wspace" data-change="1" tabindex="-1">larger gap</li>
+<li>Line Spacing</li>
+<li>
+<span id="theheight">135</span><span class="byunits">/100</span>
+</li>
+<li data-val="height" data-change="-5" tabindex="-1" style="line-height: 1">closer<br>together</li>
+<li data-val="height" data-change="5" tabindex="-1" style="line-height: 1.75">further<br>apart</li>
+</ol>
+</li>
+<li data-env="atmosphere" tabindex="-1">Light/dark mode<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden atmosphere">
+<li data-val="default" tabindex="-1">
+<span id="thedefault" class="atmospherecheck">✔️</span>default</li>
+<li data-val="pastel" tabindex="-1">
+<span id="thepastel" class="atmospherecheck"></span>pastel</li>
+<li data-val="darktwilight" tabindex="-1">
+<span id="thedarktwilight" class="atmospherecheck"></span>twilight</li>
+<li data-val="dark" tabindex="-1">
+<span id="thedark" class="atmospherecheck"></span>dark</li>
+<li data-val="darkmidnight" tabindex="-1">
+<span id="thedarkmidnight" class="atmospherecheck"></span>midnight</li>
+</ol>
+</li>
+<li data-env="ruler" tabindex="-1">Reading ruler<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden ruler">
+<li data-val="none" tabindex="-1">
+<span id="thenone" class="rulercheck">✔️</span>none</li>
+<li data-val="underline" tabindex="-1">
+<span id="theunderline" class="rulercheck"></span>underline</li>
+<li data-val="lunderline" tabindex="-1">
+<span id="thelunderline" class="rulercheck"></span>L-underline</li>
+<li data-val="greybar" tabindex="-1">
+<span id="thegreybar" class="rulercheck"></span>grey bar</li>
+<li data-val="lightbox" tabindex="-1">
+<span id="thelightbox" class="rulercheck"></span>light box</li>
+<li data-val="sunrise" tabindex="-1">
+<span id="thesunrise" class="rulercheck"></span>sunrise</li>
+<li data-val="sunriseunderline" tabindex="-1">
+<span id="thesunriseunderline" class="rulercheck"></span>sunrise underline</li>
+<li class="moveQ">Motion by:</li>
+<li data-val="mouse" tabindex="-1">
+<span id="themouse" class="motioncheck">✔️</span>follow the mouse</li>
+<li data-val="arrow" tabindex="-1">
+<span id="thearrow" class="motioncheck"></span>up/down arrows - not yet</li>
+<li data-val="eye" tabindex="-1">
+<span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
+</ol>
+</li>
+</ol></div></button><span class="treebuttons"><a class="previous-button button" href="higher-order-dtds.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="higher-order-dtds.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon">&gt;</span></span></span><div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" class="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\require{cancel}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural">
+<li>
+<div class="toc-item"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="preface-disclaimer.html" class="internal"><span class="title">Disclaimer</span></a></div></li>
+<li><div class="toc-item"><a href="preface-motto.html" class="internal"><span class="title">Preface</span></a></div></li>
+<li><div class="toc-item"><a href="preface-themes.html" class="internal"><span class="title">Themes</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="introduction.html" class="internal"><span class="codenumber">1</span> <span class="title">Introduction</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="what-is-modeling.html" class="internal"><span class="codenumber">1.1</span> <span class="title">What is modeling</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="introduction.html" class="internal"><span class="codenumber">2</span> <span class="title">Single differential equations as models</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="single-species-population-models.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Single-species population models</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="single-species-population-models.html#review" class="internal"><span class="codenumber">2.1.1</span> <span class="title">Review</span></a></div></li>
+<li><div class="toc-item"><a href="single-species-population-models.html#model-classification" class="internal"><span class="codenumber">2.1.2</span> <span class="title">Model classification</span></a></div></li>
+<li><div class="toc-item"><a href="single-species-population-models.html#harvesting-and-logistic-growth" class="internal"><span class="codenumber">2.1.3</span> <span class="title">Harvesting and logistic growth</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="continuous-time-models-derivations.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Continuous-time models</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="systems-des.html" class="internal"><span class="codenumber">3</span> <span class="title">Systems of differential equations as ecological models</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="two-dimensional-systems.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Two-dimensional systems of differential equations as ecological models</span></a></div></li>
+<li><div class="toc-item"><a href="harvesting-and-predator-prey.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Harvesting and predator-prey</span></a></div></li>
+<li><div class="toc-item"><a href="two-dim-ecology.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Two dimensional models in ecology</span></a></div></li>
+<li><div class="toc-item"><a href="ecological-competition.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Ecological competition</span></a></div></li>
+<li><div class="toc-item"><a href="the-trace-determinant-method.html" class="internal"><span class="codenumber">3.5</span> <span class="title">The ‘Trace-Determinant Method’</span></a></div></li>
+<li><div class="toc-item"><a href="parameters-rates-and-units-prelude-to-chemical-kinetics.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Parameters, rates, and units: Prelude to chemical kinetics</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="systems-des-phys.html" class="internal"><span class="codenumber">4</span> <span class="title">Systems of differential equations as physiological models</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="michaelis-menten-kinetics.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Michaelis-Menten kinetics</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="michaelis-menten-kinetics.html#equilibrium-assumption-vs-quasi-steady-state-assumption" class="internal"><span class="codenumber">4.1.1</span> <span class="title">Equilibrium assumption vs. the Quasi-steady state assumption</span></a></div></li></ul>
+</li>
+<li><div class="toc-item"><a href="nullclines-and-neuroscience.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Nullclines and Neuroscience</span></a></div></li>
+<li><div class="toc-item"><a href="higher-dimensional-systems.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Higher-dimensional systems of differential equations as models</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="introduction-to-stochastic-processes.html" class="internal"><span class="codenumber">5</span> <span class="title">Stochastic models</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="stochastic-model.html" class="internal"><span class="codenumber">5.1</span> <span class="title">What is a stochastic process?</span></a></div></li>
+<li><div class="toc-item"><a href="introduction-to-stochastic-models.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Introduction to stochastic models</span></a></div></li>
+<li><div class="toc-item"><a href="birth-death-processes-and-the-gillespie-algorithm.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Birth-death processes and the Gillespie algorithm</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="introduction-single-dtds.html" class="internal"><span class="codenumber">6</span> <span class="title">Discrete-time dynamical systems</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="what-is-dtds.html" class="internal"><span class="codenumber">6.1</span> <span class="title">What is a discrete-time dynamical system?</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="what-is-dtds.html#one-dimensional-linear-discrete-time-dynamical-systems" class="internal"><span class="codenumber">6.1.1</span> <span class="title">One-dimensional, Linear, discrete-time dynamical systems</span></a></div></li></ul>
+</li>
+<li><div class="toc-item"><a href="nonlinear-discrete-time-models-1d.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Nonlinear discrete-time models (1D)</span></a></div></li>
+<li><div class="toc-item"><a href="nonlinear-discrete-time-models-1-2d.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Nonlinear discrete-time models (1, 2D)</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="higher-order-dtds.html" class="internal"><span class="codenumber">7</span> <span class="title">Discrete-time dynamical systems with linear algebra</span></a></div>
+<ul class="structural"><li class="active">
+<div class="toc-item"><a href="discrete-time-with-linear-algebra.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Discrete-time dynamical systems with linear algebra</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="discrete-time-with-linear-algebra.html#linear-discrete-time-models-2d-1" class="internal"><span class="codenumber">7.1.1</span> <span class="title">Linear discrete-time models (2D)</span></a></div></li></ul>
+</li></ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="discrete-time-with-linear-algebra"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">7.1</span> <span class="title">Discrete-time dynamical systems with linear algebra</span>
+</h2>
+<section class="introduction" id="introduction-3">We spent some time on the Nicholson-Bailey model for a few important reasons: largely because it is a great example of the modeling process. The results it generates may be bothersome. But the idea that we told a rough story, then iteratively refined it is the art of mathematical modeling.</section><div class="para" id="p-213">Recall our example concerning weekly dandelion dynamics. Previously, we counted only the number of flowering plants present in our ‘yard’ each week. We can count a bit more carefully, and take advantage of more biological information if we think about the ’structure’ of the population. Ignoring seeds, in reality we have at least a few ways to break down the plant community:</div>
+<div class="para logical" id="p-214"><ul class="disc">
+<li id="li-47"><div class="para" id="p-215">juveniles vs. adults</div></li>
+<li id="li-48"><div class="para" id="p-216">seedlings vs. vegetative vs. flowering vs. seed-setting</div></li>
+<li id="li-49"><div class="para" id="p-217">non-reproductive vs. reproductive</div></li>
+</ul></div>
+<div class="para" id="p-218">We will lump together the seedlings and vegetative plans as ‘non-reproductive’ and the flowering and seed-setting plants as ‘reproductive’. Let <span class="process-math">\(V_t\)</span> be the number of non-reproductive (vegetative) plants in the yard and <span class="process-math">\(R_t\)</span> be the number of reproductive plants in the yard, both at week <span class="process-math">\(t\text{.}\)</span>
+</div>
+<div class="para" id="p-219">We will use familiar notation for parameters. Since it is challenging to count seeds after they have left the plant, and nobody vacuums seeds from the yard, we’ll focus on the life stages above.</div>
+<figure class="table table-like" id="table-5"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">7.1.1<span class="period">.</span></span><span class="space"> </span></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(s\)</span></td>
+<td class="l m b0 r0 l0 t0 lines">be the number of seedlings generated per plant</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\sigma\)</span></td>
+<td class="l m b0 r0 l0 t0 lines">be the fraction of seedlings that survive to adulthood</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(a\)</span></td>
+<td class="l m b0 r0 l0 t0 lines">be the fraction of adults that survive</td>
+</tr>
+</table></div></figure><div class="para logical" id="p-220">
+<div class="para">This means we can write</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+V_{t+1}&amp;=0\cdot V_t+s\cdot R_t\\ 
+R_{t+1}&amp;=\sigma \cdot V_t+ a\cdot R_t.
+\end{aligned}
+\end{equation*}
+</div>
+<div class="para">This looks like a matrix equation,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\left(
+\begin{array}{c}
+V_{t+1}\\
+R_{t+1}\end{array}
+\right) =
+\left(
+\begin{array}{cc}
+0 &amp; s\\
+\sigma &amp;a
+\end{array}
+\right)\left(
+\begin{array}{c}V_{t}\\
+R_{t}
+\end{array}
+\right).
+\end{equation*}
+</div>
+<div class="para">With a single equation, it was easy enough to determine growth. This is less obvious with a higher dimensional model. Additionally, we might be interested in the following questions:</div>
+</div>
+<div class="para logical" id="p-221"><ul class="disc">
+<li id="li-50"><div class="para" id="p-222">Will the population grow?</div></li>
+<li id="li-51"><div class="para" id="p-223">If it grows, how fast is it going to grow?</div></li>
+<li id="li-52"><div class="para" id="p-224">What is the balance between reproductive and non-reproductive dandelions in the population?</div></li>
+</ul></div>
+<div class="para" id="p-225">For a plant starting in the non-reproductive state (a one week old plant), we track its lifetime reproduction in the following table:</div>
+<figure class="table table-like" id="table-6"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">7.1.2<span class="period">.</span></span><span class="space"> </span>Starting with a single female, she must survive to adulthood (<span class="process-math">\(\sigma\)</span>), then every time after survive another week as an adult (a).</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="l m b0 r0 l0 t0 lines">Age (Weeks)</th>
+<th scope="col" class="l m b0 r0 l0 t0 lines">Population</th>
+<th scope="col" class="l m b0 r0 l0 t0 lines">Fecundity</th>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">1</td>
+<td class="l m b0 r0 l0 t0 lines">1</td>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">2</td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\sigma\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(s\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">3</td>
+<td class="l m b0 r0 l0 t0 lines">
+<span class="process-math">\(\sigma\)</span> <span class="process-math">\(a\)</span>
+</td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(s\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">…</td>
+<td class="l m b0 r0 l0 t0 lines">…</td>
+<td class="l m b0 r0 l0 t0 lines">…</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">n</td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\sigma a ^{n-2}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(s\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">…</td>
+<td class="l m b0 r0 l0 t0 lines">…</td>
+<td class="l m b0 r0 l0 t0 lines">…</td>
+</tr>
+</table></div></figure><div class="para" id="p-226">Next we append a column for the reproductive value of each age (remembering that our model only tracks two age classes, but once plants flower they <em class="emphasis">could</em> survive indefinitely):</div>
+<figure class="table table-like" id="table-7"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">7.1.3<span class="period">.</span></span><span class="space"> </span>Starting with a single female, she must survive to adulthood (<span class="process-math">\(\sigma\)</span>), then every time after survive another week as an adult (a).</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="l m b0 r0 l0 t0 lines">Age (Weeks)</th>
+<th scope="col" class="l m b0 r0 l0 t0 lines">Population</th>
+<th scope="col" class="l m b0 r0 l0 t0 lines">Fecundity</th>
+<th scope="col" class="l m b0 r0 l0 t0 lines">Value</th>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">1</td>
+<td class="l m b0 r0 l0 t0 lines">1</td>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">2</td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\sigma\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(s\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(s\sigma\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">3</td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\sigma a\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(s\)</span></td>
+<td class="l m b0 r0 l0 t0 lines">
+<span class="process-math">\(s\sigma\)</span> a</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">…</td>
+<td class="l m b0 r0 l0 t0 lines">…</td>
+<td class="l m b0 r0 l0 t0 lines">…</td>
+<td class="l m b0 r0 l0 t0 lines">…</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">n</td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\sigma
+a ^{n-2}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(s\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(s\sigma a^{n-2}\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">…</td>
+<td class="l m b0 r0 l0 t0 lines">…</td>
+<td class="l m b0 r0 l0 t0 lines">…</td>
+<td class="l m b0 r0 l0 t0 lines">…</td>
+</tr>
+</table></div></figure><div class="para logical" id="p-227">
+<div class="para">Starting from seedling, the expected lifetime reproduction of a plant is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+ELR=s\sigma+s\sigma a + s\sigma a^2 + \dots .
+\end{equation*}
+</div>
+<div class="para">By definition <span class="process-math">\(a\)</span> is a weekly survival probability for adult plants, so <span class="process-math">\(a\leq1\text{.}\)</span> Keep this in mind as we press on:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+ELR &amp; = s\sigma+s\sigma a + s\sigma a^2 + \dots \\ 
+&amp; = s\sigma\left(1+a+a^2+\dots\right)\\
+&amp; = s\sigma \sum_{k=0}^\infty a^k
+\end{aligned}
+\end{equation*}
+</div>
+<div class="para">Knowing what we do about geometric series,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+ELR = s\sigma \sum_{k=0}^\infty a^k = s\sigma\left(\frac{1}{1-a}\right).
+\end{equation*}
+</div>
+<div class="para">So, <span class="process-math">\(ELR &gt;1\)</span> when <span class="process-math">\(s\sigma&gt;1-a\text{.}\)</span> This is identical to our ‘adult plant’-only model result,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+s\sigma+a&gt;1!
+\end{equation*}
+</div>
+</div>
+<section class="paragraphs" id="questions"><h3 class="heading"><span class="title">Questions.</span></h3> <div class="para logical" id="p-228"><ul class="disc">
+<li id="li-53"><div class="para" id="p-229">What’s so special about ELR as a measure of growth?</div></li>
+<li id="li-54"><div class="para" id="p-230">How does ELR relate to eigenvalues?</div></li>
+</ul></div></section><section class="paragraphs" id="answers"><h3 class="heading"><span class="title">Answers.</span></h3> <div class="para logical" id="p-231">
+<div class="para">For a matrix <span class="process-math">\(A\text{,}\)</span> like our transition matrix above, a number <span class="process-math">\(\lambda\)</span> is an eigenvalue with eigenvector <span class="process-math">\(x\)</span> if</div>
+<div class="displaymath process-math">
+\begin{equation*}
+Ax=\lambda x.
+\end{equation*}
+</div>
+<div class="para">The eigenvalue reduces the dimension in multidimensional problems. It turns matrix multiplication into scalar multiplication. How do we find eigenvalues?</div>
+</div></section><section class="paragraphs" id="linear-algebra-review"><h3 class="heading"><span class="title">Linear algebra review.</span></h3> <div class="para logical" id="p-232">
+<div class="para">We first want to write our eigenvalue problem as:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+Ax-\lambda
+x=0.
+\end{equation*}
+</div>
+<div class="para">Then, since <span class="process-math">\(\lambda\)</span> is a number,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(A-\lambda
+I)x=0,
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(I\)</span> is the appropriate ‘identity matrix’.</div>
+</div> <div class="para logical" id="p-233">
+<div class="para">Let’s take</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A= \left(
+\begin{array}{cc}
+a &amp; b\\
+c &amp; d
+\end{array}
+\right),
+\end{equation*}
+</div>
+<div class="para">so that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A-\lambda I=
+\left(
+\begin{array}{cc}
+a-\lambda &amp; b\\
+c &amp; d-\lambda
+\end{array}
+\right).
+\end{equation*}
+</div>
+</div> <div class="para logical" id="p-234">
+<div class="para">Eigenvalues solve</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\operatorname{det}(A-\lambda I)=0.
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+0&amp;=\operatorname{det}(A-\lambda I)\\
+&amp;=(a-\lambda)(d-\lambda)-bc\\
+0&amp;=\lambda^2-(a+d)\lambda+ad-bc
+\end{aligned}
+\end{equation*}
+</div>
+</div> <div class="para logical" id="p-235">
+<div class="para">Solutions are</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\lambda_{\pm}=\frac{(a+d)\pm\sqrt{(a+
+d)^2-4(ad-bc)}}{2}.
+\end{equation*}
+</div>
+<div class="para">From here it helps to consider specific examples so we do not have to solve equations containing obtuse algebraic expressions.</div>
+</div></section><section class="subsection" id="linear-discrete-time-models-2d-1"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">7.1.1</span> <span class="title">Linear discrete-time models (2D)</span>
+</h3>
+<section class="paragraphs" id="question"><h4 class="heading"><span class="title">Question.</span></h4> <div class="para logical" id="p-236">
+<div class="para">How do structured and unstructured populations differ? From a one dimensional model ignoring plant developmental stage,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+N_t=r N_t,
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(r=s\sigma+a\text{,}\)</span> we wrote a two-dimensional model,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+P_{t+1}=MP_t,
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(P_0=(V_0, R_0)^T\)</span> and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+M=\left(
+\begin{array}{cc}0 &amp; s\\\sigma &amp;
+a\end{array}\right).
+\end{equation*}
+</div>
+</div> <div class="para logical" id="p-237">
+<div class="para">Keeping with our example, eigenvalues of <span class="process-math">\(M\)</span> are found using</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\det\left(
+\begin{array}{cc}
+-\lambda &amp; s\\
+\sigma &amp;
+a-\lambda
+\end{array}
+\right)=0.
+\end{equation*}
+</div>
+<div class="para">This gives</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+0&amp;=-\lambda(a-\lambda)-s\sigma\\
+&amp;=\lambda^2-a\lambda-s\sigma
+\end{aligned}
+\end{equation*}
+</div>
+<div class="para">Using the quadratic formula,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\lambda_\pm = \frac{a\pm\sqrt{a^2+4s\sigma}}{2}.
+\end{equation*}
+</div>
+</div> <div class="para logical" id="p-238">
+<div class="para">Suppose we know the initial plant distribution,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+P_0=\left(
+\begin{array}{c}
+V_0\\
+R_0
+\end{array}
+\right),
+\end{equation*}
+</div>
+<div class="para">the solution to our model is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+P_t=M^tP_0.
+\end{equation*}
+</div>
+<div class="para">First write, <span class="process-math">\(P_0=c_1 v_1+c_2 v_2\text{,}\)</span> where <span class="process-math">\(c_1, c_2\)</span> are constants and <span class="process-math">\(v_1, v_2\)</span> are eigenvectors. We are assuming that <span class="process-math">\(v_1, v_2\)</span> are linearly independent, thus they form a basis in two-dimensions, such that any other vector can be written as a linear combination.</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+P_1&amp;=A P_0 &amp; \quad\text{(start)}\\
+&amp; = A(c_1 v_1+c_2 v_2)&amp; \quad\text{(basis vectors)}\\
+&amp; = c_1 Av_1+c_2 Av_2&amp; \quad\text{(distributive property)}\\
+P_1&amp; = c_1 \lambda_1 v_1+c_2 \lambda_2v_2&amp; \quad\text{(eigenvalues!)}
+\end{aligned}
+\end{equation*}
+</div>
+<div class="para">We can compute <span class="process-math">\(P_2\text{,}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+P_2&amp;=A P_1\\
+&amp; = A(c_1 \lambda_1 v_1+c_2 \lambda_2 v_2)\\
+&amp; = (c_1 \lambda_1) Av_1+(c_2\lambda_2) Av_2\\
+&amp; = c_1 \lambda_1^2 v_1+c_2 \lambda_2^2v_2
+\end{aligned}
+\end{equation*}
+</div>
+<div class="para">And similarly,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+P_t=c_1\lambda_1^tv_1+c_2\lambda_2^tv_2.
+\end{equation*}
+</div>
+<div class="para">If we assume that <span class="process-math">\(|\lambda_1|&gt;|\lambda_2|\text{,}\)</span> then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+P_t\approx c_1
+\lambda_1^t v_1.
+\end{equation*}
+</div>
+<div class="para">We will see how this approximation works at the end of the following example. But, perhaps motivated by this approximation, we see that the magnitude of <span class="process-math">\(\lambda_1\)</span> is important to the growth of the population, both <span class="process-math">\(V_t\)</span> and <span class="process-math">\(R_t\text{.}\)</span> The population changes by a factor <span class="process-math">\(\lambda_1\)</span> each generation. It grows if <span class="process-math">\(\lambda_1&gt;1\)</span> and shrinks if <span class="process-math">\(\lambda_1&lt;1\text{.}\)</span>
+</div>
+</div> <div class="para logical" id="p-239">
+<div class="para">Let <span class="process-math">\(\lambda_1\)</span> be the positive eigenvalue, <span class="process-math">\(\lambda_1&gt;1\text{,}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+\lambda_1 =\frac{a+\sqrt{a^2+4s\sigma}}{2}&amp;&gt;1\\
+a+\sqrt{a^2+4s\sigma}&amp;&gt;2\\
+\sqrt{a^2+4s\sigma}&amp;&gt;2-a\\
+a^2+4s\sigma&amp;&gt;(2-a)^2\\ 
+a^2+4s\sigma&amp;&gt;4-4a+a^2\\
+4s\sigma&amp;&gt;4-4a\\ 
+s\sigma&amp;&gt;1-a\\
+s\sigma+a&amp;&gt;1
+\end{aligned}
+\end{equation*}
+</div>
+<div class="para">The positive eigenvalue <span class="process-math">\(\lambda_1&gt;1\)</span> if <span class="process-math">\(r=s\sigma+a&gt;1\text{,}\)</span> but in general, <span class="process-math">\(ELR\neq\lambda_1\text{!}\)</span> But, if <span class="process-math">\(\lambda_1&gt;1\)</span> so is <span class="process-math">\(ELR\text{,}\)</span> and vice versa. Again, our characteristic polynomial, that governs the eigenvalues is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+C(\lambda)=\lambda^2-a\lambda-s\sigma.
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(s, \sigma&gt;0\text{,}\)</span> we have <span class="process-math">\(C(0)&lt;0\)</span> and we know that <span class="process-math">\(C(\lambda)\)</span> is concave up. If <span class="process-math">\(C(1)&lt;0\text{,}\)</span> we know that the leading eigenvalue <span class="process-math">\(\lambda&gt;1\text{.}\)</span> Lastly, let’s study the relationships between <span class="process-math">\(1, \lambda_+\text{,}\)</span> and <span class="process-math">\(r\text{.}\)</span> We’ve already looked at some of the relationships involving <span class="process-math">\(1\text{.}\)</span> Now, <span class="process-math">\(\lambda&lt;r=s\sigma+a\)</span> when</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+0&amp;&lt;C(r)\\
+0&amp;&lt;r^2-ar-s\sigma\\ 
+s\sigma&amp;&lt;r(r-a)\\
+s\sigma&amp;&lt;(s\sigma+a)(s\sigma+a-a)\\
+s\sigma&amp;&lt;s\sigma(s\sigma+a)\\
+0&amp;&lt;s\sigma(s\sigma+a)-s\sigma\\
+0&amp;&lt;s\sigma(s\sigma+a-1)
+\end{aligned}
+\end{equation*}
+</div>
+<div class="para">This is satisfied when <span class="process-math">\(r=s\sigma+a&gt;1\text{,}\)</span> thus <span class="process-math">\(1&lt;\lambda&lt;ELR\text{.}\)</span> For the reverse, <span class="process-math">\(ELR&lt;\lambda&lt;1\)</span> when <span class="process-math">\(r=s\sigma+a&lt;1\text{.}\)</span> We will also look at the relationships between <span class="process-math">\(r\text{,}\)</span> <span class="process-math">\(ELR\text{,}\)</span> and <span class="process-math">\(\lambda\)</span> in the example, so that we can actually compute eigenpair.</div>
+</div></section><article class="example example-like" id="example-matrix-model"><a href="" data-knowl="" class="id-ref example-knowl original has-image" data-refid="hk-example-matrix-model"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">7.1.4</span><span class="period">.</span><span class="space"> </span><span class="title">A matrix model.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-matrix-model"><article class="example example-like"> <div class="para" id="p-240">Recall <span class="process-math">\(r=s\sigma+a\)</span> was the per generation growth rate from the one-equation model. In that model, we made no distinction between plant growth stages, an assumed that all plants were capable of reproducing. When we considered the reproductive schedule of our plants, we derived <span class="process-math">\(ELR\)</span> as a measure of the replacement rate of each individual plant. Let <span class="process-math">\(a=\frac{2}{3}\text{,}\)</span> <span class="process-math">\(s=\frac{16}{9}\text{,}\)</span> <span class="process-math">\(\sigma=\frac{1}{2}\text{,}\)</span> so that, <span class="process-math">\(r=\left(\frac{16}{9}\right)\left(\frac{1}{2}\right)+
+\left(\frac{2}{3}\right)=
+\left(\frac{14}{9}\right)\approx1.\overline{55}\text{.}\)</span> Also, <span class="process-math">\(ELR=\frac{\left(\frac{16}{9}\right)\left(\frac{1}{2}\right)}{\frac{1}{3}}=\frac{8}{3}\approx2.\overline{66}\text{.}\)</span> When vegetative plants are less likely to mature (small <span class="process-math">\(\sigma\text{,}\)</span> <a href="" class="xref" data-knowl="./knowl/fig-elr-eig.html" title="Figure 7.1.5">Figure 7.1.5</a>) weekly adult survivorship, <span class="process-math">\(a\text{,}\)</span> must increase in order for population growth to occur (<span class="process-math">\(r, ELR, \lambda&gt;1\)</span>).</div> <figure class="figure figure-like" id="fig-elr-eig"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/elr_vs_eig_a.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">7.1.5<span class="period">.</span></span><span class="space"> </span>Relationships between <span class="process-math">\(r\text{,}\)</span> <span class="process-math">\(ELR\text{,}\)</span> and <span class="process-math">\(\lambda\text{,}\)</span> for fixed <span class="process-math">\(s=\frac{16}{9}\)</span> and (left) <span class="process-math">\(\sigma=\frac{1}{2}\)</span> or (right) <span class="process-math">\(\sigma=\frac{1}{3}\text{,}\)</span> over a range of adult weekly survival probabilities, <span class="process-math">\(0\leq a\leq
+1\text{.}\)</span></figcaption></figure> <figure class="figure figure-like" id="fig-elr-eig2"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/./images/elr_vs_eig_b.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">7.1.6<span class="period">.</span></span><span class="space"> </span>Relationships between <span class="process-math">\(r\text{,}\)</span> <span class="process-math">\(ELR\text{,}\)</span> and <span class="process-math">\(\lambda\text{,}\)</span> for fixed <span class="process-math">\(s=\frac{16}{9}\)</span> and (left) <span class="process-math">\(\sigma=\frac{1}{2}\)</span> or (right) <span class="process-math">\(\sigma=\frac{1}{3}\text{,}\)</span> over a range of adult weekly survival probabilities, <span class="process-math">\(0\leq a\leq 1\text{.}\)</span></figcaption></figure></article></div>
+<section class="paragraphs" id="question-1"><h4 class="heading"><span class="title">Question.</span></h4> <div class="para" id="p-241">What is the effect of population structure (tracking flower types), in growing and shrinking flower populations (see <a href="" class="xref" data-knowl="./knowl/fig-elr-eig.html" title="Figure 7.1.5">Figure 7.1.5</a>)?</div></section><section class="paragraphs" id="answer"><h4 class="heading"><span class="title">Answer.</span></h4> <div class="para logical" id="p-242">
+<div class="para">Imposing structure reduces the growth rate (relative to <span class="process-math">\(r\)</span>) in growing populations. Imposing structure slows the decay rate (relative to <span class="process-math">\(r\)</span>) in shrinking populations. In this parameterization,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+\lambda_\pm &amp;=\frac{\frac{2}{3}\pm\sqrt{\frac{4}{9}+4\left(\frac{16}{9}\right)\left(\frac{1}{2}\right) }}{2}\\
+&amp;=\frac{1}{3}\pm\frac{1}{2}\sqrt{\frac{4 }{9}+\frac{32}{9}}\\
+&amp;=\frac{1}{3}\pm 1\\
+\lambda_\pm&amp;=\frac{4}{3}, -\frac{2}{3}.
+\end{aligned}
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\left(
+\begin{array}{cc}
+0 &amp;\frac{16}{9}\\[2pt]
+\frac{1}{2} &amp;\frac{2}{3}
+\end{array}\right)
+\left(
+\begin{array}{c}
+x_1\\
+x_2
+\end{array}
+\right)=
+\frac{4}{3}\left(
+\begin{array}{c}
+x_1\\
+x_2
+\end{array}
+\right).
+\end{equation*}
+</div>
+<div class="para">Notice that <span class="process-math">\(ELR&gt;\lambda_+&gt;1\text{,}\)</span> so that the population grows.</div>
+</div> <figure class="figure figure-like" id="fig-SAD"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/./images/SAD.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">7.1.7<span class="period">.</span></span><span class="space"> </span>Left) Weekly temporal dynamics of vegetative and reproductive plants. Right) Stable age distribution and iterated solutions starting from <span class="process-math">\((V_0,
+R_0)=(0,1)\text{.}\)</span> Initial condition is black dot.</figcaption></figure> <div class="para logical" id="p-243">
+<div class="para">The eigenvector associated with <span class="process-math">\(\lambda=\frac{4}{3}\)</span> is of the form</div>
+<div class="displaymath process-math">
+\begin{equation*}
+v_1=\left(
+\begin{array}{c}x_1\\
+\frac{3}{4}x_1\end{array}\right).
+\end{equation*}
+</div>
+<div class="para">The eigenvector associated with <span class="process-math">\(\lambda=-\frac{2}{3}\)</span> is of the form</div>
+<div class="displaymath process-math">
+\begin{equation*}
+v_1=\left(
+\begin{array}{c}x_1\\
+-\frac{3}{8}x_1\end{array}\right).
+\end{equation*}
+</div>
+</div></section><section class="paragraphs" id="question-2"><h4 class="heading"><span class="title">Question.</span></h4> <div class="para" id="p-244">How do the eigenvectors help explain long term population growth (see <a href="" class="xref" data-knowl="./knowl/fig-SAD.html" title="Figure 7.1.7">Figure 7.1.7</a>)?</div></section><section class="paragraphs" id="answer-1"><h4 class="heading"><span class="title">Answer.</span></h4> <div class="para logical" id="p-245">
+<div class="para">Long-term proportions approach the distribution described by the leading eigenvector. Numbers increase geometrically. Start with a typical initial condition <span class="process-math">\(P_0=(V_0, R_0)=(0,1)\text{.}\)</span> We first want to express <span class="process-math">\(P_0\)</span> as a linear combination of eigenvectors.</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\left(
+\begin{array}{c}
+0 \\
+1
+\end{array}
+\right) =
+c_1\left(
+\begin{array}{c}
+1\\
+\frac{3}{4}
+\end{array}
+\right)+c_2\left(
+\begin{array}{c}
+1\\
+-\frac{3}{8}
+\end{array}
+\right).
+\end{equation*}
+</div>
+<div class="para">Skipping a few calculations, <span class="process-math">\(c_1=-c_2\)</span> and <span class="process-math">\(c_1=\frac{8}{9}\text{.}\)</span> Finally we can write,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+P_1&amp;=A P_0\\ 
+&amp; = A\left(c_1\left(
+\begin{array}{c}
+1\\
+\frac{3}{4}
+\end{array}
+\right)+c_2
+\left(
+\begin{array}{c}
+1\\
+-\frac{3}{8}
+\end{array}
+\right)\right)\\
+&amp; = c_1 A\left(
+\begin{array}{c}
+1\\
+\frac{3}{4}
+\end{array}\right)+c_2 A\left(
+\begin{array}{c}
+1\\
+-\frac{3}{8}
+\end{array}
+\right)\\
+P_1&amp; = c_1 \lambda_1^2 \left(
+\begin{array}{c}
+1\\
+\frac{3}{4}
+\end{array}\right)+c_2 \lambda_2^2\left(
+\begin{array}{c}
+1\\
+-\frac{3}{8}
+\end{array}\right)\\
+P_1&amp; = \left(
+\frac{8}{9}\right)
+\left(\frac{4}{3}\right)^2 \left(
+\begin{array}{c}
+1\\
+\frac{3}{4}
+\end{array}\right)- \left(\frac{8}{9}\right)
+\left(\frac{2}{3}\right)^2\left(
+\begin{array}{c}
+1\\
+-\frac{3}{8}
+\end{array}\right),
+\end{aligned} 
+\end{equation*}
+</div>
+<div class="para">as before. Iterating this solution we wind up with,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+P_t=\frac{8}{9}\left(\frac{4}{3}\right)^t\left(
+\begin{array}{c}
+1\\
+\frac{3}{4}
+\end{array}
+\right)-
+\frac{8}{9}\left(\frac{2}{3}\right)^t\left(
+\begin{array}{c}
+1\\
+-\frac{3}{8}
+\end{array}
+\right)
+\end{equation*}
+</div>
+<div class="para">Since the second term contains a value <span class="process-math">\(\lambda_2&lt;1\)</span> which is raised to a larger and larger power, its contribution decreases. If we ignore it (at large <span class="process-math">\(t\)</span>),</div>
+<div class="displaymath process-math">
+\begin{equation*}
+P_t\approx\frac{8}{9}\left(\frac{4}{3}\right)^t\left(
+\begin{array}{c}
+1\\
+\frac{3}{4}
+\end{array}
+\right).
+\end{equation*}
+</div>
+</div> <div class="para" id="p-246">The population will grow 33% larger each generation, but the proportion of young (non-reproductive) and old (reproductive) plants will remain fixed. This suggests that juvenile (tasty young plants) will outnumber the older flowering plants, specifically, the flowering plants will be 75% the abundance of young plants. Alternatively, young plants will be 33% more abundant than old plants. It might also be useful to use our leading eigenvector approximation, rather than our exact matrix solution. We plot the approximate dynamics of each plant type, as well as the comparison of the exact and approximate solutions in <a href="" class="xref" data-knowl="./knowl/fig-exac-app.html" title="Figure 7.1.8">Figure 7.1.8</a>
+</div> <figure class="figure figure-like" id="fig-exac-app"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/./images/exact_vs_approx.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">7.1.8<span class="period">.</span></span><span class="space"> </span>Left) Approximate dynamics using first eigenpair. Right) Iterated solutions starting from <span class="process-math">\((V_0, R_0)=(0,1)\)</span> for matrix solutions (open circles) and approximate solutions (closed circles).</figcaption></figure></section></section></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="higher-order-dtds.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon">&gt;</span></span>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+</div>
+</body>
+</html>

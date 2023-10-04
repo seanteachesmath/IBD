@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<section class="paragraphs"><h4 class="heading"><span class="title">Equilibrium analysis of the constant harvesting model.</span></h4> <div class="para logical">
+<div class="para">We can, and sometimes must, confirm graphical results by complementing them with analysis.  The right-hand side of the differential equation is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(N) =
+rN\left(1-\frac{N}{K}\right) - h,
+\end{equation*}
+</div>
+<div class="para">a quadratic function of <span class="process-math">\(N\text{.}\)</span> We cannot factor, and instead can only rely on the quadratic formula - it could be worse, but it’s not great. To get anywhere in the next step, it’s helpful to expand the quadratic to</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(N) = -\frac{r}{K}N^{2} +
+rN - h\text{.}
+\end{equation*}
+</div>
+<div class="para">From there we apply the quadratic formula,</div>
+</div>
+<div class="displaymath process-math">
+\begin{align*}
+N^* \amp = \dfrac{-r \pm \sqrt{r^{2} -
+4(-\frac{r}{K})(-h)}}{2(-\frac{r}{K})}\\
+\amp =
+\dfrac{-r}{-\frac{2r}{K}} \pm \frac{\sqrt{{r^2} -
+\frac{4rh}{K}}}{-\frac{2r}{K}}\\
+\amp = \dfrac{K}{2} \mp
+\frac{\sqrt{\frac{4r^2}{K^2}\left(\frac{K^2}{4} -
+\frac{hK}{r}\right)}}{\frac{2r}{K}}\\
+N^*\amp = \dfrac{K}{2}
+\mp \sqrt{\frac{K^2}{4} - \frac{hK}{r}}
+\end{align*}
+</div>
+<div class="para">For real-valued solutions we need <span class="process-math">\(\frac{K^2}{4} - \frac{hK}{r} \gt
+0\)</span> or <span class="process-math">\(\frac{rK}{4} \gt h\text{,}\)</span> in words, <span class="process-math">\(h\)</span> must be small. When <span class="process-math">\(h = 0\text{,}\)</span> the equilibria are <span class="process-math">\(N^*=0\)</span> and <span class="process-math">\(N^* = K\)</span> (consistent with the basic logistic growth model). When <span class="process-math">\(h =
+\frac{rK}{4}\text{,}\)</span> the equilibria collide at <span class="process-math">\(N^*=\frac{K}{2}\text{.}\)</span> In between, equilibria are described by the upper and lower halves of a sideways parabola that shares these three points in common.</div></section><span class="incontext"><a href="sec-simple-1d-ode.html#constant-harvesting-equilibria" class="internal">in-context</a></span>
+</body>
+</html>

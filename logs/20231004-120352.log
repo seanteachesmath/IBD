@@ -1,0 +1,40 @@
+INFO    : PreTeXt project found in `/Users/slaverty/GitHub/IBD`.
+INFO    : converting latex-image pictures from /Users/slaverty/GitHub/IBD/source/main.ptx to svg graphics for placement in /Users/slaverty/GitHub/IBD/generated-assets/latex-image
+INFO    : extracting latex-image pictures from /Users/slaverty/GitHub/IBD/source/main.ptx
+INFO    : string parameters passed to extraction stylesheet: {'publisher': '/Users/slaverty/GitHub/IBD/publication/publication.ptx', 'subtree': 'image-epi'}
+INFO    : discovering source file's directory name: /Users/slaverty/GitHub/IBD/source
+INFO    : verifying and expanding input directory: /Users/slaverty/GitHub/IBD/source/../generated-assets
+INFO    : input directory expanded to absolute path: /Users/slaverty/GitHub/IBD/generated-assets
+INFO    : verifying and expanding input directory: /Users/slaverty/GitHub/IBD/source/../assets
+INFO    : input directory expanded to absolute path: /Users/slaverty/GitHub/IBD/assets
+INFO    : XSL conversion of /Users/slaverty/GitHub/IBD/source/main.ptx by /Users/slaverty/.ptx/xsl/extract-latex-image.xsl
+INFO    : comprehensive messages, warnings, and errors:
+INFO    : successful application of /Users/slaverty/.ptx/xsl/extract-latex-image.xsl
+INFO    : converting image-epi.tex to image-epi.pdf
+INFO    : cropping image-epi.pdf to cropped-image-epi.pdf
+INFO    : renaming cropped-image-epi.pdf to image-epi.pdf
+INFO    : converting image-epi.pdf to image-epi.svg
+INFO    : Removing temporary directory /var/folders/hb/k6_ywz5j0hd8rnp5qz7kgkvm0000gn/T/tmpn_b1l2pk
+INFO    : Preparing to build into /Users/slaverty/GitHub/IBD/output/web.
+INFO    : discovering source file's directory name: /Users/slaverty/GitHub/IBD/source
+INFO    : verifying and expanding input directory: /Users/slaverty/GitHub/IBD/source/../generated-assets
+INFO    : input directory expanded to absolute path: /Users/slaverty/GitHub/IBD/generated-assets
+INFO    : verifying and expanding input directory: /Users/slaverty/GitHub/IBD/source/../assets
+INFO    : input directory expanded to absolute path: /Users/slaverty/GitHub/IBD/assets
+INFO    : Runestone Services (via PreTeXt repository): version 7.1.2
+INFO    : Runestone Services (using newer, via online CDN query): version 7.1.7
+INFO    : converting /Users/slaverty/GitHub/IBD/source/main.ptx to HTML in /var/folders/hb/k6_ywz5j0hd8rnp5qz7kgkvm0000gn/T/tmp7_t0sxhk
+INFO    : XSL conversion of /Users/slaverty/GitHub/IBD/source/main.ptx by /Users/slaverty/.ptx/xsl/pretext-html.xsl
+INFO    : comprehensive messages, warnings, and errors:
+INFO    :     * PTX:WARNING: A section containing subsections needs to have other content inside an <introduction> and/or  <conclusion>.
+INFO    :     *              located within: "systems-intro" (xml:id), "Introduction to 2D systems" (title)
+INFO    :     * PTX:WARNING: A subsection containing subsubsections needs to have other content inside an <introduction> and/or  <conclusion>.
+INFO    :     *              located within: "subsec-pred-prey" (xml:id), "Predator-prey" (title)
+INFO    :     * PTX:WARNING: A subsection containing subsubsections needs to have other content inside an <introduction> and/or  <conclusion>.
+INFO    :     *              located within: "subsec-competition" (xml:id), "Competition" (title)
+INFO    :     * PTX:WARNING: A subsection containing subsubsections needs to have other content inside an <introduction> and/or  <conclusion>.
+INFO    :     *              located within: "subsec-SIS-reprise" (xml:id), "SIS epidemiological model" (title)
+INFO    : successful application of /Users/slaverty/.ptx/xsl/pretext-html.xsl
+INFO    : 
+Success! Run `pretext view` to see the results.
+

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<h5 class="heading"><span class="type">Paragraph</span></h5>
+<div class="para logical">
+<div class="para">For the remainder of this section, we will study the logistic growth equation and variations. The logistic growth equation is given by,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{d^{}
+{N}}{d {t}^{}}=rN\Big(1-\frac{N}{K}\Big).
+\end{equation*}
+</div>
+<div class="para">Let <span class="process-math">\(N^*\)</span> be an equilibrium point, so that we can write <span class="process-math">\(N(t)=N^*+n(t).\)</span> We will derive a stability condition for an arbitrary equilibrium point, starting by identifying the dynamics of <span class="process-math">\(n(t)\text{,}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+\frac{d^{} {N}}{d {t}^{}}&amp;=\frac{d^{} {}}{d
+{t}^{}}\Big(N^*+n(t)\Big)\\ &amp;=0+\frac{d^{} {n}}{d
+{t}^{}}.\end{aligned}
+\end{equation*}
+</div>
+<div class="para">Now, substituting the formula for <span class="process-math">\(N(t)\)</span> and expanding,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned} \frac{d^{} {n}}{d {t}^{}}&amp;=
+\frac{d^{} {N}}{d {t}^{}}\\ &amp;=r(N^*+n)\Big(1-\frac{N^*+n}{K}\Big)\\
+&amp;=rN^*\Big(1-\frac{N^*+n}{K}\Big)+rn\Big (1-\frac{N^*+n}{K}\Big)\\
+&amp;=\cancel{rN^*\Big(1-\frac{N^*}{K}\Big)}
+-\frac{rN^*n}{K}+rn\Big(1-\frac{N^*}{K}\Big) -\cancel{\frac{rn^2}{K}}\\
+&amp;=r\Big(1-\frac{2N^*}{K}\Big)n\\ \frac{d^{} {n}}{d {t}^{}}&amp;=
+f'(N^*)n\end{aligned}
+\end{equation*}
+</div>
+<div class="para">In the last step we can see that the terms that remain are equivalent to the derivative of <span class="process-math">\(f(N)\text{,}\)</span> with respect to <span class="process-math">\(N\)</span> evaluated at <span class="process-math">\(N^*\text{.}\)</span> Here we linearize by substituting our formula for the solution and dropping al higher order terms in <span class="process-math">\(n(t)\text{.}\)</span> You could do this, more formally or generally, by Taylor series.</div>
+</div>
+<span class="incontext"><a href="sec-simple-1d-ode.html#p-56" class="internal">in-context</a></span>
+</body>
+</html>

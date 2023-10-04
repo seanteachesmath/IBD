@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<h3 class="heading"><span class="type">Paragraph</span></h3>
+<div class="para logical">
+<div class="para">Starting from seedling, the expected lifetime reproduction of a plant is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+ELR=s\sigma+s\sigma a + s\sigma a^2 + \dots .
+\end{equation*}
+</div>
+<div class="para">By definition <span class="process-math">\(a\)</span> is a weekly survival probability for adult plants, so <span class="process-math">\(a\leq1\text{.}\)</span> Keep this in mind as we press on:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+ELR &amp; = s\sigma+s\sigma a + s\sigma a^2 + \dots \\ 
+&amp; = s\sigma\left(1+a+a^2+\dots\right)\\
+&amp; = s\sigma \sum_{k=0}^\infty a^k
+\end{aligned}
+\end{equation*}
+</div>
+<div class="para">Knowing what we do about geometric series,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+ELR = s\sigma \sum_{k=0}^\infty a^k = s\sigma\left(\frac{1}{1-a}\right).
+\end{equation*}
+</div>
+<div class="para">So, <span class="process-math">\(ELR &gt;1\)</span> when <span class="process-math">\(s\sigma&gt;1-a\text{.}\)</span> This is identical to our ‘adult plant’-only model result,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+s\sigma+a&gt;1!
+\end{equation*}
+</div>
+</div>
+<span class="incontext"><a href="discrete-time-with-linear-algebra.html#p-227" class="internal">in-context</a></span>
+</body>
+</html>
