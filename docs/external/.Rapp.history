@@ -1,0 +1,2335 @@
+m4as <- read.delim("~/Documents/fa23zoom/m4as.txt")
+ccs
+m4as
+ccs <- cbind(ccs, sapply(ccs, function(x)substring(x, 1, 18)))
+ccs <- read.delim("~/Documents/fa23zoom/ccs.txt")#
+m4as <- read.delim("~/Documents/fa23zoom/m4as.txt")#
+#
+(ccs <- cbind(ccs, sapply(ccs, function(x)substring(x, 1, 18))))
+ccs <- read.delim("~/Documents/fa23zoom/ccs.txt", header=F)
+m4as <- read.delim("~/Documents/fa23zoom/m4as.txt", header=F)
+(ccs <- cbind(ccs, sapply(ccs, function(x)substring(x, 1, 18))))
+(m4as <- cbind(m4as, sapply(m4as, function(x)substring(x, 1, 18))))
+files <- merge(ccs, m4as, by = "V1")
+names(ccs)
+names(ccs) <- names(m4as) <- c("file", "code")
+files <- merge(ccs, m4as, by = "code")
+files
+ccs <- read.delim("~/Documents/fa23zoom/ccs.txt", header=F)#
+m4as <- read.delim("~/Documents/fa23zoom/m4as.txt", header=F)#
+#
+(ccs <- cbind(ccs, sapply(ccs, function(x)substring(x, 1, 18))))#
+(m4as <- cbind(m4as, sapply(m4as, function(x)substring(x, 1, 18))))#
+names(ccs) <- names(m4as) <- c("file", "code")#
+files <- merge(ccs, m4as, by = "code")#
+#
+files#
+#
+for(i in 1:nrow(files)){#
+cat("INFILE=",files[, "file.y"])#
+cat("SUBTITLES=",files[, "file.x"])#
+#
+cat("ffmpeg -i $INFILE -i $SUBTITLES -c copy -c:s mov_text \ ")#
+cat("  -metadata:s:s:0 language=eng",files[, "code"],".mp4")#
+#
+}
+cat("INFILE=",files[, "file.y"],\n)
+cat("INFILE=",files[, "file.y"],"\n")
+?cat
+ccs <- read.delim("~/Documents/fa23zoom/ccs.txt", header=F)#
+m4as <- read.delim("~/Documents/fa23zoom/m4as.txt", header=F)#
+#
+(ccs <- cbind(ccs, sapply(ccs, function(x)substring(x, 1, 18))))#
+(m4as <- cbind(m4as, sapply(m4as, function(x)substring(x, 1, 18))))#
+names(ccs) <- names(m4as) <- c("file", "code")#
+files <- merge(ccs, m4as, by = "code")#
+#
+files#
+#
+for(i in 1:nrow(files)){#
+cat("INFILE=",files[, "file.y"],"\n")#
+cat("SUBTITLES=",files[, "file.x"],"\n")#
+#
+cat("ffmpeg -i $INFILE -i $SUBTITLES -c copy -c:s mov_text \ ","\n")#
+cat("  -metadata:s:s:0 language=eng",files[, "code"],".mp4","\n\n")#
+#
+}
+ccs <- read.delim("~/Documents/fa23zoom/ccs.txt", header=F)#
+m4as <- read.delim("~/Documents/fa23zoom/m4as.txt", header=F)#
+#
+(ccs <- cbind(ccs, sapply(ccs, function(x)substring(x, 1, 18))))#
+(m4as <- cbind(m4as, sapply(m4as, function(x)substring(x, 1, 18))))#
+names(ccs) <- names(m4as) <- c("file", "code")#
+files <- merge(ccs, m4as, by = "code")#
+#
+files#
+#
+for(i in 1:nrow(files)){#
+cat("INFILE=",files[, "file.y"],"\n\n")#
+cat("SUBTITLES=",files[, "file.x"],"\n\n")#
+#
+cat("ffmpeg -i $INFILE -i $SUBTITLES -c copy -c:s mov_text \ ","\n\n")#
+cat("  -metadata:s:s:0 language=eng",files[, "code"],".mp4","\n\n\n")#
+#
+}
+ccs <- read.delim("~/Documents/fa23zoom/ccs.txt", header=F)#
+m4as <- read.delim("~/Documents/fa23zoom/m4as.txt", header=F)#
+#
+(ccs <- cbind(ccs, sapply(ccs, function(x)substring(x, 1, 18))))#
+(m4as <- cbind(m4as, sapply(m4as, function(x)substring(x, 1, 18))))#
+names(ccs) <- names(m4as) <- c("file", "code")#
+files <- merge(ccs, m4as, by = "code")#
+#
+files#
+#
+for(i in 1:nrow(files)){#
+cat("INFILE=",files[i, "file.y"],"\n\n")#
+cat("SUBTITLES=",files[i, "file.x"],"\n\n")#
+#
+cat("ffmpeg -i $INFILE -i $SUBTITLES -c copy -c:s mov_text \ ","\n\n")#
+cat("  -metadata:s:s:0 language=eng",files[i, "code"],".mp4","\n\n\n")#
+#
+}
+ccs <- read.delim("~/Documents/fa23zoom/ccs.txt", header=F)#
+m4as <- read.delim("~/Documents/fa23zoom/m4as.txt", header=F)#
+#
+(ccs <- cbind(ccs, sapply(ccs, function(x)substring(x, 1, 18))))#
+(m4as <- cbind(m4as, sapply(m4as, function(x)substring(x, 1, 18))))#
+names(ccs) <- names(m4as) <- c("file", "code")#
+files <- merge(ccs, m4as, by = "code")#
+#
+files#
+#
+for(i in 1:nrow(files)){#
+cat("INFILE=",files[i, "file.y"],"\n")#
+cat("SUBTITLES=",files[i, "file.x"],"\n")#
+#
+cat("ffmpeg -i $INFILE -i $SUBTITLES -c copy -c:s mov_text \ ","\n")#
+cat("  -metadata:s:s:0 language=eng",files[i, "code"],".mp4","\n\n")#
+#
+}
+ccs <- read.delim("~/Documents/fa23zoom/ccs.txt", header=F)#
+m4as <- read.delim("~/Documents/fa23zoom/m4as.txt", header=F)#
+#
+(ccs <- cbind(ccs, sapply(ccs, function(x)substring(x, 1, 18))))#
+(m4as <- cbind(m4as, sapply(m4as, function(x)substring(x, 1, 18))))#
+names(ccs) <- names(m4as) <- c("file", "code")#
+files <- merge(ccs, m4as, by = "code")#
+#
+files#
+#
+for(i in 1:nrow(files)){#
+cat("INFILE=./ccs/",files[i, "file.y"],"\n")#
+cat("SUBTITLES=./m4as/",files[i, "file.x"],"\n")#
+#
+cat("ffmpeg -i $INFILE -i $SUBTITLES -c copy -c:s mov_text \ ","\n")#
+cat("  -metadata:s:s:0 language=eng",files[i, "code"],".mp4","\n\n")#
+#
+}
+cat("SUBTITLES=./m4as/",files[i, "file.x"],"\n", sep = '')
+ccs <- read.delim("~/Documents/fa23zoom/ccs.txt", header=F)#
+m4as <- read.delim("~/Documents/fa23zoom/m4as.txt", header=F)#
+#
+(ccs <- cbind(ccs, sapply(ccs, function(x)substring(x, 1, 18))))#
+(m4as <- cbind(m4as, sapply(m4as, function(x)substring(x, 1, 18))))#
+names(ccs) <- names(m4as) <- c("file", "code")#
+files <- merge(ccs, m4as, by = "code")#
+#
+files#
+#
+for(i in 1:nrow(files)){#
+cat("INFILE=./ccs/",files[i, "file.y"],"\n", sep='')#
+cat("SUBTITLES=./m4as/",files[i, "file.x"],"\n", sep = '')#
+#
+cat("ffmpeg -i $INFILE -i $SUBTITLES -c copy -c:s mov_text \ ","\n")#
+cat("  -metadata:s:s:0 language=eng",files[i, "code"],".mp4","\n\n")#
+#
+}
+ccs <- read.delim("~/Documents/fa23zoom/ccs.txt", header=F)#
+m4as <- read.delim("~/Documents/fa23zoom/m4as.txt", header=F)#
+#
+(ccs <- cbind(ccs, sapply(ccs, function(x)substring(x, 1, 18))))#
+(m4as <- cbind(m4as, sapply(m4as, function(x)substring(x, 1, 18))))#
+names(ccs) <- names(m4as) <- c("file", "code")#
+files <- merge(ccs, m4as, by = "code")#
+#
+files#
+#
+for(i in 1:nrow(files)){#
+cat("INFILE=./ccs/",files[i, "file.y"],"\n", sep='')#
+cat("SUBTITLES=./m4as/",files[i, "file.x"],"\n", sep = '')#
+#
+cat("ffmpeg -i $INFILE -i $SUBTITLES -c copy -c:s mov_text \ ","\n")#
+cat("  -metadata:s:s:0 language=eng",files[i, "code"],".mp4","\n\n", sep = '')#
+#
+}
+ccs <- read.delim("~/Documents/fa23zoom/ccs.txt", header=F)#
+m4as <- read.delim("~/Documents/fa23zoom/m4as.txt", header=F)#
+#
+(ccs <- cbind(ccs, sapply(ccs, function(x)substring(x, 1, 18))))#
+(m4as <- cbind(m4as, sapply(m4as, function(x)substring(x, 1, 18))))#
+names(ccs) <- names(m4as) <- c("file", "code")#
+files <- merge(ccs, m4as, by = "code")#
+#
+files#
+#
+for(i in 1:nrow(files)){#
+cat("INFILE=ccs/",files[i, "file.y"],"\n", sep='')#
+cat("SUBTITLES=m4as/",files[i, "file.x"],"\n", sep = '')#
+#
+cat("ffmpeg -i $INFILE -i $SUBTITLES -c copy -c:s mov_text \ ","\n")#
+cat("  -metadata:s:s:0 language=eng",files[i, "code"],".mp4","\n\n", sep = '')#
+#
+}
+ccs <- read.delim("~/Documents/fa23zoom/ccs.txt", header=F)#
+m4as <- read.delim("~/Documents/fa23zoom/m4as.txt", header=F)#
+#
+(ccs <- cbind(ccs, sapply(ccs, function(x)substring(x, 1, 18))))#
+(m4as <- cbind(m4as, sapply(m4as, function(x)substring(x, 1, 18))))#
+names(ccs) <- names(m4as) <- c("file", "code")#
+files <- merge(ccs, m4as, by = "code")#
+#
+files#
+#
+for(i in 1:nrow(files)){#
+cat("INFILE=cc/",files[i, "file.y"],"\n", sep='')#
+cat("SUBTITLES=video/",files[i, "file.x"],"\n", sep = '')#
+#
+cat("ffmpeg -i $INFILE -i $SUBTITLES -c copy -c:s mov_text \ ","\n")#
+cat("  -metadata:s:s:0 language=eng",files[i, "code"],".mp4","\n\n", sep = '')#
+#
+}
+ccs <- read.delim("~/Documents/fa23zoom/ccs.txt", header=F)#
+m4as <- read.delim("~/Documents/fa23zoom/m4as.txt", header=F)#
+#
+(ccs <- cbind(ccs, sapply(ccs, function(x)substring(x, 1, 18))))#
+(m4as <- cbind(m4as, sapply(m4as, function(x)substring(x, 1, 18))))#
+names(ccs) <- names(m4as) <- c("file", "code")#
+files <- merge(ccs, m4as, by = "code")#
+#
+files#
+#
+for(i in 1:nrow(files)){#
+cat("INFILE=./cc/",files[i, "file.y"],"\n", sep='')#
+cat("SUBTITLES=./video/",files[i, "file.x"],"\n", sep = '')#
+#
+cat("ffmpeg -i $INFILE -i $SUBTITLES -c copy -c:s mov_text \ ","\n")#
+cat("  -metadata:s:s:0 language=eng",files[i, "code"],".mp4","\n\n", sep = '')#
+#
+}
+ccs <- read.delim("~/Documents/fa23zoom/ccs.txt", header=F)#
+m4as <- read.delim("~/Documents/fa23zoom/m4as.txt", header=F)#
+#
+(ccs <- cbind(ccs, sapply(ccs, function(x)substring(x, 1, 18))))#
+(m4as <- cbind(m4as, sapply(m4as, function(x)substring(x, 1, 18))))#
+names(ccs) <- names(m4as) <- c("file", "code")#
+files <- merge(ccs, m4as, by = "code")#
+#
+files#
+#
+for(i in 1:nrow(files)){#
+cat("INFILE=./cc/",files[i, "file.y"],"\n", sep='')#
+cat("SUBTITLES=./video/",files[i, "file.x"],"\n", sep = '')#
+#
+cat("ffmpeg -i $INFILE -i $SUBTITLES -c copy -c:s mov_text \\ ","\n")#
+cat("  -metadata:s:s:0 language=eng",files[i, "code"],".mp4","\n\n", sep = '')#
+#
+}
+ccs <- read.delim("~/Documents/fa23zoom/ccs.txt", header=F)#
+m4as <- read.delim("~/Documents/fa23zoom/m4as.txt", header=F)#
+#
+(ccs <- cbind(ccs, sapply(ccs, function(x)substring(x, 1, 18))))#
+(m4as <- cbind(m4as, sapply(m4as, function(x)substring(x, 1, 18))))#
+names(ccs) <- names(m4as) <- c("file", "code")#
+files <- merge(ccs, m4as, by = "code")#
+#
+files#
+#
+for(i in 1:nrow(files)){#
+cat("INFILE=/cc/",files[i, "file.y"],"\n", sep='')#
+cat("SUBTITLES=/video/",files[i, "file.x"],"\n", sep = '')#
+#
+cat("ffmpeg -i $INFILE -i $SUBTITLES -c copy -c:s mov_text \\ ","\n")#
+cat("  -metadata:s:s:0 language=eng",files[i, "code"],".mp4","\n\n", sep = '')#
+#
+}
+ccs <- read.delim("~/Documents/fa23zoom/ccs.txt", header=F)#
+m4as <- read.delim("~/Documents/fa23zoom/m4as.txt", header=F)#
+#
+(ccs <- cbind(ccs, sapply(ccs, function(x)substring(x, 1, 18))))#
+(m4as <- cbind(m4as, sapply(m4as, function(x)substring(x, 1, 18))))#
+names(ccs) <- names(m4as) <- c("file", "code")#
+files <- merge(ccs, m4as, by = "code")#
+#
+files#
+#
+for(i in 1:nrow(files)){#
+cat("INFILE=",files[i, "file.y"],"\n", sep='')#
+cat("SUBTITLES=",files[i, "file.x"],"\n", sep = '')#
+#
+cat("ffmpeg -i $INFILE -i $SUBTITLES -c copy -c:s mov_text \\ ","\n")#
+cat("  -metadata:s:s:0 language=eng",files[i, "code"],".mp4","\n\n", sep = '')#
+#
+}
+ccs <- read.delim("~/Documents/fa23zoom/ccs.txt", header=F)#
+m4as <- read.delim("~/Documents/fa23zoom/m4as.txt", header=F)#
+#
+(ccs <- cbind(ccs, sapply(ccs, function(x)substring(x, 1, 18))))#
+(m4as <- cbind(m4as, sapply(m4as, function(x)substring(x, 1, 18))))#
+names(ccs) <- names(m4as) <- c("file", "code")#
+files <- merge(ccs, m4as, by = "code")#
+#
+files#
+#
+for(i in 1:nrow(files)){#
+cat("INFILE=",files[i, "file.y"],"\n", sep='')#
+cat("SUBTITLES=",files[i, "file.x"],"\n", sep = '')#
+#
+cat("ffmpeg -i $INFILE -i $SUBTITLES -c copy -c:s mov_text -metadata:s:s:0 language=eng",files[i, "code"],".mp4","\n\n", sep = '')#
+#
+}
+ccs <- read.delim("~/Documents/fa23zoom/ccs.txt", header=F)#
+m4as <- read.delim("~/Documents/fa23zoom/m4as.txt", header=F)#
+#
+(ccs <- cbind(ccs, sapply(ccs, function(x)substring(x, 1, 18))))#
+(m4as <- cbind(m4as, sapply(m4as, function(x)substring(x, 1, 18))))#
+names(ccs) <- names(m4as) <- c("file", "code")#
+files <- merge(ccs, m4as, by = "code")#
+#
+files#
+#
+for(i in 1:nrow(files)){#
+cat("INFILE=",files[i, "file.y"],"\n", sep='')#
+cat("SUBTITLES=",files[i, "file.x"],"\n", sep = '')#
+#
+cat("ffmpeg -i $INFILE -i $SUBTITLES -c copy -c:s mov_text -metadata:s:s:0 language=eng ",files[i, "code"],".m4a","\n\n", sep = '')#
+#
+}
+ccs <- read.delim("~/Documents/fa23zoom/ccs.txt", header=F)#
+m4as <- read.delim("~/Documents/fa23zoom/m4as.txt", header=F)#
+#
+(ccs <- cbind(ccs, sapply(ccs, function(x)substring(x, 1, 18))))#
+(m4as <- cbind(m4as, sapply(m4as, function(x)substring(x, 1, 18))))#
+names(ccs) <- names(m4as) <- c("file", "code")#
+files <- merge(ccs, m4as, by = "code")#
+#
+files#
+#
+for(i in 1:nrow(files)){#
+cat("INFILE=",files[i, "file.y"],"\n", sep='')#
+cat("SUBTITLES=",files[i, "file.x"],"\n", sep = '')#
+#
+cat("ffmpeg -i $INFILE -i $SUBTITLES -c copy -c:s mov_text -metadata:s:s:0 language=eng ",files[i, "code"],".mp4","\n\n", sep = '')#
+#
+}
+ccs <- read.delim("~/Documents/fa23zoom/ccs.txt", header=F)#
+m4as <- read.delim("~/Documents/fa23zoom/m4as.txt", header=F)#
+#
+(ccs <- cbind(ccs, sapply(ccs, function(x)substring(x, 1, 18))))#
+(m4as <- cbind(m4as, sapply(m4as, function(x)substring(x, 1, 18))))#
+names(ccs) <- names(m4as) <- c("file", "code")#
+files <- merge(ccs, m4as, by = "code")#
+#
+files#
+#
+for(i in 1:nrow(files)){#
+cat("INFILE=",files[i, "file.y"],"\n", sep='')#
+cat("SUBTITLES=",files[i, "file.x"],"\n\n", sep = '')#
+#
+cat("ffmpeg -i $INFILE -i $SUBTITLES -c copy -c:s mov_text -metadata:s:s:0 language=eng ",files[i, "code"],".mp4","\n\n", sep = '')#
+#
+}
+f <- with(as.list(parms),function(x) r*x*(1-x/K))
+parms <- c(r = 0.1, K=100)#
+f <- with(as.list(parms),function(x) r*x*(1-x/K))
+plot(f, xlim = c(0, 120))
+arrows(i, 0, i, 0, cex = f(i))
+parms <- c(r = 0.1, K=100)#
+f <- with(as.list(parms),function(x) r*x*(1-x/K))#
+plot(f, xlim = c(0, 120))#
+for(i in seq(0, 120, by = 10)){#
+	arrows(i, 0, i+5, 0, cex = f(i))#
+}
+for(i in seq(0, 120, by = 10)){
+arrows(i, 0, i+5, 0, length = f(i))
+fmax <- with(as.list(parms), f(K/2))
+parms <- c(r = 0.1, K=100)#
+f <- with(as.list(parms),function(x) r*x*(1-x/K))#
+fmax <- with(as.list(parms), f(K/2))#
+plot(f, xlim = c(0, 120))#
+for(i in seq(0, 120, by = 10)){#
+	arrows(i, 0, i+5, 0, length = f(i)/fmax)#
+}
+parms <- c(r = 0.1, K=100)#
+f <- with(as.list(parms),function(x) r*x*(1-x/K))#
+fmax <- with(as.list(parms), f(K/2))#
+plot(f, xlim = c(0, 120))#
+for(i in seq(0, 120, by = 10)){#
+	arrows(i, 0, i+5, 0, length = f(i+5)/fmax)#
+}
+parms <- c(r = 0.1, K=100)#
+f <- with(as.list(parms),function(x) r*x*(1-x/K))#
+fmax <- with(as.list(parms), f(K/2))#
+plot(f, xlim = c(0, 120))#
+for(i in seq(0, 120, by = 10)){#
+	arrows(i+2.5, 0, i+7.5, 0, length = f(i+5)/fmax)#
+}
+arrows(i+2.5, 0, i+7.5, 0, length = f(i+5)/fmax, code = sign(f(i+5)))
+parms <- c(r = 0.1, K=100)#
+f <- with(as.list(parms),function(x) r*x*(1-x/K))#
+fmax <- with(as.list(parms), f(K/2))#
+plot(f, xlim = c(0, 120))#
+for(i in seq(0, 120, by = 10)){#
+	arrows(i+2.5, 0, i+7.5, 0, length = f(i+5)/fmax, code = sign(f(i+5)))#
+}
+parms <- c(r = 0.1, K=100)#
+f <- with(as.list(parms),function(x) r*x*(1-x/K))#
+fmax <- with(as.list(parms), f(K/2))#
+plot(f, xlim = c(0, 120))#
+for(i in seq(0, 120, by = 10)){#
+	arrows(i+2.5, 0, i+7.5, 0, length = f(i+5)/fmax, code = 1+sign(f(i+5)))#
+}
+parms <- c(r = 0.1, K=100)#
+f <- with(as.list(parms),function(x) r*x*(1-x/K))#
+fmax <- with(as.list(parms), f(K/2))#
+plot(f, xlim = c(0, 120))#
+for(i in seq(0, 120, by = 10)){#
+	arrows(i+2.5, 0, i+7.5, 0, length = abs(f(i+5))/fmax, code = 1+sign(f(i+5)))#
+}
+parms <- c(r = 0.1, K=100)#
+f <- with(as.list(parms),function(x) r*x*(1-x/K))#
+fmax <- with(as.list(parms), f(K/2))#
+plot(f, xlim = c(0, 120))#
+for(i in seq(0, 120, by = 10)){#
+	arrows(i+2.5, 0, i+7.5, 0, length = abs(f(i+5))/fmax, code = sign(f(i+5)))#
+}
+parms <- c(r = 0.1, K=100)#
+f <- with(as.list(parms),function(x) r*x*(1-x/K))#
+fmax <- with(as.list(parms), f(K/2))#
+plot(f, xlim = c(0, 120))#
+for(i in seq(0, 120, by = 10)){#
+	arrows(i+2.5, 0, i+7.5, 0, length = abs(f(i+5))/fmax)#
+}
+parms <- c(r = 0.1, K=100)#
+f <- with(as.list(parms),function(x) r*x*(1-x/K))#
+fmax <- with(as.list(parms), f(K/2))#
+plot(f, xlim = c(0, 120))#
+for(i in seq(0, 120, by = 10)){#
+	arrows(i+2.5, 0, i+7.5, 0, length = abs(f(i+5))/(5*fmax))#
+}
+parms <- c(r = 0.1, K=100)#
+f <- with(as.list(parms),function(x) r*x*(1-x/K))#
+fmax <- with(as.list(parms), f(K/2))#
+plot(f, xlim = c(0, 120))#
+for(i in seq(0, 120, by = 10)){#
+	arrows(i+2.5, 0, i+7.5, 0, length = abs(f(i+5))/(2.5*fmax))#
+}
+?arrows
+parms <- c(r = 0.1, K=100)#
+f <- with(as.list(parms),function(x) r*x*(1-x/K))#
+fmax <- with(as.list(parms), f(K/2))#
+plot(f, xlim = c(0, 120))#
+for(i in seq(0, 120, by = 10)){#
+	arrows(i+2.5, 0, i+7.5, 0, length = abs(f(i+5))/(2.5*fmax), code = 1+sign(f(i+5)))#
+}
+1+sign(f(i+5))
+parms <- c(r = 0.1, K=100)#
+f <- with(as.list(parms),function(x) r*x*(1-x/K))#
+fmax <- with(as.list(parms), f(K/2))#
+plot(f, xlim = c(0, 120))#
+for(i in seq(0, 120, by = 10)){#
+	arrows(i+2.5, 0, i+7.5, 0, length = abs(f(i+5))/(2.5*fmax), code = 2+sign(f(i+5)))#
+}
+arrows(i+2.5, 0, i+7.5, 0, length = abs(f(i+5))/(2.5*fmax), code = 2)
+arrows(i+2.5, 0, i+7.5, 0, length = abs(f(i+5))/(2.5*fmax), code = 2 s)
+parms <- c(r = 0.1, K=100)#
+f <- with(as.list(parms),function(x) r*x*(1-x/K))#
+fmax <- with(as.list(parms), f(K/2))#
+plot(f, xlim = c(0, 120))#
+for(i in seq(0, 120, by = 10)){#
+	arrows(i+2.5, 0, i+7.5, 0, length = abs(f(i+5))/(2.5*fmax), code = 2)#
+}
+parms <- c(r = 0.1, K=100)#
+f <- with(as.list(parms),function(x) r*x*(1-x/K))#
+fmax <- with(as.list(parms), f(K/2))#
+plot(f, xlim = c(0, 120))#
+for(i in seq(0, 120, by = 10)){#
+	arrows(i+2.5, 0, i+7.5, 0, length = abs(f(i+5))/(2.5*fmax), code = 1)#
+}
+parms <- c(r = 0.1, K=100)#
+f <- with(as.list(parms),function(x) r*x*(1-x/K))#
+fmax <- with(as.list(parms), f(K/2))#
+plot(f, xlim = c(0, 120))#
+for(i in seq(0, 120, by = 10)){#
+	arrows(i+2.5, 0, i+7.5, 0, length = abs(f(i+5))/(2.5*fmax), code = 1.5+sign(f(i+5)))#
+}
+print(1.5+sign(f(i+5)))
+for(i in seq(0, 120, by = 10)){#
+	arrows(i+2.5, 0, i+7.5, 0, length = abs(f(i+5))/(2.5*fmax), code = 1.5+sign(f(i+5)))#
+	print(1.5+sign(f(i+5)))#
+}
+print(1+sign(f(i+5)))
+parms <- c(r = 0.1, K=100)#
+f <- with(as.list(parms),function(x) r*x*(1-x/K))#
+fmax <- with(as.list(parms), f(K/2))#
+plot(f, xlim = c(0, 120))#
+for(i in seq(0, 120, by = 10)){#
+	arrows(i+2.5, 0, i+7.5, 0, length = abs(f(i+5))/(2.5*fmax), code = 1.5+0.5*sign(f(i+5)))#
+	print(1+sign(f(i+5)))#
+}
+parms <- c(r = 0.1, K=100)#
+f <- with(as.list(parms),function(x) r*x*(1-x/K))#
+#
+fmax <- with(as.list(parms), f(K/2))#
+plot(f, xlim = c(0, 120), axes=F)#
+for(i in seq(0, 120, by = 10)){#
+	arrows(i+2.5, 0, i+7.5, 0, length = abs(f(i+5))/(2.5*fmax), code = 1.5+0.5*sign(f(i+5)))#
+}
+axis(1, c(0, parms['K']), c(expression(0), expression(K)))
+parms <- c(r = 0.1, K=100)#
+f <- with(as.list(parms),function(x) r*x*(1-x/K))#
+#
+fmax <- with(as.list(parms), f(K/2))#
+plot(f, xlim = c(0, 120), axes=F)#
+for(i in seq(0, 120, by = 10)){#
+	arrows(i+2.5, 0, i+7.5, 0, length = abs(f(i+5))/(2.5*fmax), code = 1.5+0.5*sign(f(i+5)))#
+}#
+axis(1, c(0, parms['K']), c(expression(0), expression(K)))#
+axis(1, c(0), c(expression(0)))#
+box()
+parms <- c(r = 0.1, K=100)#
+f <- with(as.list(parms),function(x) r*x*(1-x/K))#
+#
+fmax <- with(as.list(parms), f(K/2))#
+plot(f, xlim = c(0, 120), axes=F)#
+abline(h=0)#
+for(i in seq(0, 120, by = 10)){#
+	arrows(i+2.5, 0, i+7.5, 0, length = abs(f(i+5))/(2.5*fmax), code = 1.5+0.5*sign(f(i+5)))#
+}#
+axis(1, c(0, parms['K']), c(expression(0), expression(K)))#
+axis(1, c(0), c(expression(0)))#
+box()
+polyroot(f)
+?polyroot
+par(mar=c(4.1, 4.1, 1.1, 1.1), xaxs = 'i', yaxs = 'i')#
+parms <- c(r = 0.1, K=100)#
+f <- with(as.list(parms),function(x) r*x*(1-x/K))#
+#
+fmax <- with(as.list(parms), f(K/2))#
+plot(f, xlim = c(0, 120), axes=F)#
+abline(h=0)#
+for(i in seq(0, 120, by = 10)){#
+	arrows(i+2.5, 0, i+7.5, 0, length = abs(f(i+5))/(2.5*fmax), code = 1.5+0.5*sign(f(i+5)))#
+}#
+axis(1, c(0, parms['K']), c(expression(0), expression(K)))#
+axis(1, c(0), c(expression(0)))#
+box()
+par(mar=c(4.1, 4.1, 1.1, 1.1), xaxs = 'i', yaxs = 'i')#
+parms <- c(r = 0.1, K=100)#
+f <- with(as.list(parms),function(x) r*x*(1-x/K))#
+#
+fmax <- with(as.list(parms), f(K/2))#
+fmin <- with(as.list(parms), f(K+20))#
+plot(f, xlim = c(0, parms['K']+20), ylim = c()axes=F)#
+abline(h=0)#
+for(i in seq(0, 120, by = 10)){#
+	arrows(i+2.5, 0, i+7.5, 0, length = abs(f(i+5))/(2.5*fmax), code = 1.5+0.5*sign(f(i+5)))#
+}#
+axis(1, c(0, parms['K']), c(expression(0), expression(K)))#
+axis(1, c(0), c(expression(0)))#
+box()
+par(mar=c(4.1, 4.1, 1.1, 1.1), xaxs = 'i', yaxs = 'i')#
+parms <- c(r = 0.1, K=100)#
+f <- with(as.list(parms),function(x) r*x*(1-x/K))#
+#
+fmax <- with(as.list(parms), f(K/2))#
+fmin <- with(as.list(parms), f(K+20))#
+plot(f, xlim = c(0, parms['K']+20), ylim = c(fmin, fmax), axes=F)#
+abline(h=0)#
+for(i in seq(0, 120, by = 10)){#
+	arrows(i+2.5, 0, i+7.5, 0, length = abs(f(i+5))/(2.5*fmax), code = 1.5+0.5*sign(f(i+5)))#
+}#
+axis(1, c(0, parms['K']), c(expression(0), expression(K)))#
+axis(1, c(0), c(expression(0)))#
+box()
+par(mar=c(4.1, 4.1, 1.1, 1.1), xaxs = 'i', yaxs = 'i')#
+parms <- c(r = 0.1, K=100)#
+f <- with(as.list(parms),function(x) r*x*(1-x/K))#
+#
+fmax <- with(as.list(parms), f(K/2))#
+fmin <- with(as.list(parms), f(K+20))#
+plot(f, xlim = c(0, parms['K']+20), ylim = c(fmin, 1.1*fmax), axes=F)#
+abline(h=0)#
+for(i in seq(0, 120, by = 10)){#
+	arrows(i+2.5, 0, i+7.5, 0, length = abs(f(i+5))/(2.5*fmax), code = 1.5+0.5*sign(f(i+5)))#
+}#
+axis(1, c(0, parms['K']), c(expression(0), expression(K)))#
+axis(1, c(0), c(expression(0)))#
+box()
+mtext(expression(N), 1, line=2, font=2, cex=2)
+mtext(expression(frac(dN,dt)), 1, line=2, font=2, cex=2)
+par(mar=c(4.1, 4.1, 1.1, 1.1), xaxs = 'i', yaxs = 'i')#
+parms <- c(r = 0.1, K=100)#
+f <- with(as.list(parms),function(x) r*x*(1-x/K))#
+#
+fmax <- with(as.list(parms), f(K/2))#
+fmin <- with(as.list(parms), f(K+20))#
+plot(f, xlim = c(0, parms['K']+20), ylim = c(fmin, 1.1*fmax), axes=F)#
+abline(h=0)#
+for(i in seq(0, 120, by = 10)){#
+	arrows(i+2.5, 0, i+7.5, 0, length = abs(f(i+5))/(2.5*fmax), code = 1.5+0.5*sign(f(i+5)))#
+}#
+axis(1, c(0, parms['K']), c(expression(0), expression(K)))#
+axis(1, c(0), c(expression(0)))#
+box()#
+mtext(expression(N), 1, line=2, font=2, cex=2)#
+mtext(expression(frac(dN,dt)), 2, line=2, font=2, cex=2)
+mtext(expression(frac(dN,dt)), 2, line=2, font=2, cex=2, las=1)
+par(mar=c(4.1, 4.1, 1.1, 1.1), xaxs = 'i', yaxs = 'i')#
+parms <- c(r = 0.1, K=100)#
+f <- with(as.list(parms),function(x) r*x*(1-x/K))#
+#
+fmax <- with(as.list(parms), f(K/2))#
+fmin <- with(as.list(parms), f(K+20))#
+plot(f, xlim = c(0, parms['K']+20), ylim = c(fmin, 1.1*fmax), axes=F)#
+abline(h=0)#
+for(i in seq(0, 120, by = 10)){#
+	arrows(i+2.5, 0, i+7.5, 0, length = abs(f(i+5))/(2.5*fmax), code = 1.5+0.5*sign(f(i+5)))#
+}#
+axis(1, c(0, parms['K']), c(expression(0), expression(K)))#
+axis(1, c(0), c(expression(0)))#
+box()#
+mtext(expression(N), 1, line=2, font=2, cex=2)#
+mtext(expression(frac(dN,dt)), 2, line=2, font=2, cex=2, las=1)
+par(mar=c(4.1, 4.1, 1.1, 1.1), xaxs = 'i', yaxs = 'i')#
+parms <- c(r = 0.1, K=100)#
+f <- with(as.list(parms),function(x) r*x*(1-x/K))#
+#
+fmax <- with(as.list(parms), f(K/2))#
+fmin <- with(as.list(parms), f(K+20))#
+plot(f, xlim = c(0, parms['K']+20), ylim = c(fmin, 1.1*fmax), axes=F, xlab = "", ylab="")#
+abline(h=0)#
+for(i in seq(0, 120, by = 10)){#
+	arrows(i+2.5, 0, i+7.5, 0, length = abs(f(i+5))/(2.5*fmax), code = 1.5+0.5*sign(f(i+5)))#
+}#
+axis(1, c(0, parms['K']), c(expression(0), expression(K)))#
+axis(1, c(0), c(expression(0)))#
+box()#
+mtext(expression(N), 1, line=2, font=2, cex=2)#
+mtext(expression(frac(dN,dt)), 2, line=2, font=2, cex=2, las=1)
+mtext(expression(frac(dN,dt)), 2, line=1, font=2, cex=2, las=1)
+par(mar=c(4.1, 4.1, 1.1, 1.1), xaxs = 'i', yaxs = 'i')#
+parms <- c(r = 0.1, K=100)#
+f <- with(as.list(parms),function(x) r*x*(1-x/K))#
+#
+fmax <- with(as.list(parms), f(K/2))#
+fmin <- with(as.list(parms), f(K+20))#
+plot(f, xlim = c(0, parms['K']+20), ylim = c(fmin, 1.1*fmax), axes=F, xlab = "", ylab="")#
+abline(h=0)#
+for(i in seq(0, 120, by = 10)){#
+	arrows(i+2.5, 0, i+7.5, 0, length = abs(f(i+5))/(2.5*fmax), code = 1.5+0.5*sign(f(i+5)))#
+}#
+axis(1, c(0, parms['K']), c(expression(0), expression(K)))#
+axis(1, c(0), c(expression(0)))#
+box()#
+mtext(expression(N), 1, line=2, font=2, cex=2)#
+mtext(expression(frac(dN,dt)), 2, line=1, font=2, cex=2, las=1)
+par(mar=c(4.1, 4.1, 1.1, 1.1), xaxs = 'i', yaxs = 'i')#
+parms <- c(r = 0.1, K=100)#
+f <- with(as.list(parms),function(x) r*x*(1-x/K))#
+#
+fmax <- with(as.list(parms), f(K/2))#
+fmin <- with(as.list(parms), f(K+20))#
+plot(f, xlim = c(0, parms['K']+20), ylim = c(fmin, 1.1*fmax), axes=F, xlab = "", ylab="", lwd = 2)#
+abline(h=0)#
+for(i in seq(0, 120, by = 10)){#
+	arrows(i+2.5, 0, i+7.5, 0, length = abs(f(i+5))/(2.5*fmax), code = 1.5+0.5*sign(f(i+5)))#
+}#
+axis(1, c(0, parms['K']), c(expression(0), expression(K)))#
+axis(1, c(0), c(expression(0)))#
+box()#
+mtext(expression(N), 1, line=2, font=2, cex=2)#
+mtext(expression(frac(dN,dt)), 2, line=1, font=2, cex=2, las=1)
+par(mar=c(4.1, 4.1, 1.1, 1.1), xaxs = 'i', yaxs = 'i')#
+parms <- c(r = 0.1, K=100)#
+f <- with(as.list(parms),function(x) r*x*(1-x/K))#
+eq <- with(as.list(parms), c(0, K))#
+fmax <- with(as.list(parms), f(K/2))#
+fmin <- with(as.list(parms), f(K+20))#
+plot(f, xlim = c(0, parms['K']+20), ylim = c(fmin, 1.1*fmax), axes=F, xlab = "", ylab="", lwd = 2)#
+abline(h=0)#
+points(eq, eq*0, pch = 25, bg = c("white", "black"), cex=1.5)#
+for(i in seq(0, 120, by = 10)){#
+	arrows(i+2.5, 0, i+7.5, 0, length = abs(f(i+5))/(2.5*fmax), code = 1.5+0.5*sign(f(i+5)))#
+}#
+axis(1, c(0, parms['K']), c(expression(0), expression(K)))#
+axis(1, c(0), c(expression(0)))#
+box()#
+mtext(expression(N), 1, line=2, font=2, cex=2)#
+mtext(expression(frac(dN,dt)), 2, line=1, font=2, cex=2, las=1)
+par(mar=c(4.1, 4.1, 1.1, 1.1), xaxs = 'i', yaxs = 'i')#
+parms <- c(r = 0.1, K=100)#
+f <- with(as.list(parms),function(x) r*x*(1-x/K))#
+eq <- with(as.list(parms), c(0, K))#
+fmax <- with(as.list(parms), f(K/2))#
+fmin <- with(as.list(parms), f(K+20))#
+plot(f, xlim = c(0, parms['K']+20), ylim = c(fmin, 1.1*fmax), axes=F, xlab = "", ylab="", lwd = 2)#
+abline(h=0)#
+points(eq, eq*0, pch = 21, bg = c("white", "black"), cex=1.5)#
+for(i in seq(0, 120, by = 10)){#
+	arrows(i+2.5, 0, i+7.5, 0, length = abs(f(i+5))/(2.5*fmax), code = 1.5+0.5*sign(f(i+5)))#
+}#
+axis(1, c(0, parms['K']), c(expression(0), expression(K)))#
+axis(1, c(0), c(expression(0)))#
+box()#
+mtext(expression(N), 1, line=2, font=2, cex=2)#
+mtext(expression(frac(dN,dt)), 2, line=1, font=2, cex=2, las=1)
+par(mar=c(4.1, 4.1, 1.1, 1.1), xaxs = 'i', yaxs = 'i')#
+parms <- c(r = 0.1, K=100)#
+f <- with(as.list(parms),function(x) r*x*(1-x/K))#
+eq <- with(as.list(parms), c(0, K))#
+fmax <- with(as.list(parms), f(K/2))#
+fmin <- with(as.list(parms), f(K+20))#
+plot(f, xlim = c(-5, parms['K']+20), ylim = c(fmin, 1.1*fmax), axes=F, xlab = "", ylab="", lwd = 2)#
+abline(h=0)#
+points(eq, eq*0, pch = 21, bg = c("white", "black"), cex=1.5)#
+for(i in seq(0, 120, by = 10)){#
+	arrows(i+2.5, 0, i+7.5, 0, length = abs(f(i+5))/(2.5*fmax), code = 1.5+0.5*sign(f(i+5)))#
+}#
+axis(1, c(0, parms['K']), c(expression(0), expression(K)))#
+axis(1, c(0), c(expression(0)))#
+box()#
+mtext(expression(N), 1, line=2, font=2, cex=2)#
+mtext(expression(frac(dN,dt)), 2, line=1, font=2, cex=2, las=1)
+par(mar=c(4.1, 4.1, 1.1, 1.1), yaxs = 'i')#
+parms <- c(r = 0.1, K=100)#
+f <- with(as.list(parms),function(x) r*x*(1-x/K))#
+eq <- with(as.list(parms), c(0, K))#
+fmax <- with(as.list(parms), f(K/2))#
+fmin <- with(as.list(parms), f(K+20))#
+plot(f, xlim = c(0, parms['K']+20), ylim = c(fmin, 1.1*fmax), axes=F, xlab = "", ylab="", lwd = 2)#
+abline(h=0)#
+points(eq, eq*0, pch = 21, bg = c("white", "black"), cex=1.5)#
+for(i in seq(0, 120, by = 10)){#
+	arrows(i+2.5, 0, i+7.5, 0, length = abs(f(i+5))/(2.5*fmax), code = 1.5+0.5*sign(f(i+5)))#
+}#
+axis(1, c(0, parms['K']), c(expression(0), expression(K)))#
+axis(1, c(0), c(expression(0)))#
+box()#
+mtext(expression(N), 1, line=2, font=2, cex=2)#
+mtext(expression(frac(dN,dt)), 2, line=1, font=2, cex=2, las=1)
+par(mar=c(4.1, 4.1, 1.1, 1.1), yaxs = 'i')#
+parms <- c(r = 0.1, K=100)#
+f <- with(as.list(parms),function(x) r*x*(1-x/K))#
+eq <- with(as.list(parms), c(0, K))#
+fmax <- with(as.list(parms), f(K/2))#
+fmin <- with(as.list(parms), f(K+20))#
+plot(f, xlim = c(0, parms['K']+20), ylim = c(fmin, 1.1*fmax), axes=F, xlab = "", ylab="", lwd = 2)#
+abline(h=0)#
+points(eq, eq*0, pch = 21, bg = c("white", "black"), cex=1.5)#
+for(i in seq(0, 120, by = 10)){#
+	arrows(i+2.5, 0, i+7.5, 0, length = abs(f(i+5))/(2.5*fmax), code = 1.5+0.5*sign(f(i+5)))#
+}#
+axis(1, c(0, parms['K']), c(expression(0), expression(K)), font = 2, cex = 1.5)#
+axis(1, c(0), c(expression(0)))#
+box()#
+mtext(expression(N), 1, line=2, font=2, cex=2)#
+mtext(expression(frac(dN,dt)), 2, line=1, font=2, cex=2, las=1)
+axis(2, c(0), c(expression(0)), font = 2, cex.label = 1.5)
+axis(2, c(0), c(expression(0)), font = 2, cex.axis = 1.5, las = 1)
+mtext(expression(frac(dN,dt)), 2, line=1, font=2, cex=2, las=1, pos = 1)
+mtext(expression(frac(dN,dt)), 2, line=1, font=2, cex=2, las=1, at = fmax/2)
+par(mar=c(4.1, 4.1, 1.1, 1.1), yaxs = 'i')#
+parms <- c(r = 0.1, K=100)#
+f <- with(as.list(parms),function(x) r*x*(1-x/K))#
+eq <- with(as.list(parms), c(0, K))#
+fmax <- with(as.list(parms), f(K/2))#
+fmin <- with(as.list(parms), f(K+20))#
+plot(f, xlim = c(0, parms['K']+20), ylim = c(fmin, 1.1*fmax), axes=F, xlab = "", ylab="", lwd = 2)#
+abline(h=0)#
+points(eq, eq*0, pch = 21, bg = c("white", "black"), cex=1.5)#
+for(i in seq(0, 120, by = 10)){#
+	arrows(i+2.5, 0, i+7.5, 0, length = abs(f(i+5))/(2.5*fmax), code = 1.5+0.5*sign(f(i+5)))#
+}#
+axis(1, c(0, parms['K']), c(expression(0), expression(K)), font = 2, cex.axis = 1.5)#
+axis(2, c(0), c(expression(0)), font = 2, cex.axis = 1.5, las = 1)#
+box()#
+mtext(expression(N), 1, line=2, font=2, cex=2)#
+mtext(expression(frac(dN,dt)), 2, line=1, font=2, cex=2, las=1, at = fmax/2)
+par(mar=c(4.1, 4.1, 1.1, 1.1), yaxs = 'i')#
+parms <- c(r = 0.1, K=100)#
+f <- with(as.list(parms),function(x) r*x*(1-x/K))#
+eq <- with(as.list(parms), c(0, K))#
+fmax <- with(as.list(parms), f(K/2))#
+fmin <- with(as.list(parms), f(K+20))#
+plot(f, xlim = c(0, parms['K']+20), ylim = c(fmin, 1.1*fmax), axes=F, xlab = "", ylab="", lwd = 2)#
+abline(h=0)#
+points(eq, eq*0, pch = 21, bg = c("white", "black"), cex=1.5)#
+for(i in seq(0, 120, by = 10)){#
+	arrows(i+2.5, 0, i+7.5, 0, length = abs(f(i+5))/(2.5*fmax), code = 1.5+0.5*sign(f(i+5)))#
+}#
+axis(1, c(0, parms['K']), c(expression(0), expression(K)), font = 2, cex.axis = 1.5)#
+axis(2, c(0), c(expression(0)), font = 2, cex.axis = 1.5, las = 1)#
+box()#
+mtext(expression(N), 1, line=2, font=2, cex=2)#
+mtext(expression(frac(dN,dt)), 2, line=1, font=2, cex=2, las=1, at = fmax/2)#
+dev.off()#
+#
+pdf("logistic-constant.pdf", height = 5, width = 5)#
+par(mar=c(4.1, 4.1, 1.1, 1.1), yaxs = 'i')#
+parms <- c(r = 0.1, K=100, h = 0.1)#
+f <- with(as.list(parms),function(x) r*x*(1-x/K) - h)#
+eq <- with(as.list(parms), K/2 + c(-sqrt(K^2/4-h*K/r), sqrt(K^2/4-h*K/r)))#
+fmax <- with(as.list(parms), f(K/2))#
+fmin <- with(as.list(parms), f(K+20))#
+plot(f, xlim = c(0, parms['K']+20), ylim = c(fmin, 1.1*fmax), axes=F, xlab = "", ylab="", lwd = 2)#
+abline(h=0)#
+points(eq, eq*0, pch = 21, bg = c("white", "black"), cex=1.5)#
+for(i in seq(0, 120, by = 10)){#
+	arrows(i+2.5, 0, i+7.5, 0, length = abs(f(i+5))/(2.5*fmax), code = 1.5+0.5*sign(f(i+5)))#
+}#
+axis(1, c(0, parms['K']), c(expression(0), expression(K)), font = 2, cex.axis = 1.5)#
+axis(2, c(0), c(expression(0)), font = 2, cex.axis = 1.5, las = 1)#
+box()#
+mtext(expression(N), 1, line=2, font=2, cex=2)#
+mtext(expression(frac(dN,dt)), 2, line=1, font=2, cex=2, las=1, at = fmax/2)
+par(mar=c(4.1, 4.1, 1.1, 1.1), yaxs = 'i')#
+parms <- c(r = 0.1, K=100, h = 0.1)#
+f <- with(as.list(parms),function(x) r*x*(1-x/K) - h)#
+eq <- with(as.list(parms), K/2 + c(-sqrt(K^2/4-h*K/r), sqrt(K^2/4-h*K/r)))#
+fmax <- with(as.list(parms), f(K/2))#
+fmin <- with(as.list(parms), f(K+20))#
+plot(f, xlim = c(0, parms['K']+20), ylim = c(fmin, 1.1*fmax), axes=F, xlab = "", ylab="", lwd = 2)#
+abline(h=0)#
+points(eq, eq*0, pch = 21, bg = c("white", "black"), cex=1.5)#
+for(i in seq(0, 120, by = 10)){#
+	arrows(i+2.5, 0, i+7.5, 0, length = abs(f(i+5))/(2.5*fmax), code = 1.5+0.5*sign(f(i+5)))#
+}#
+axis(1, c(0, parms['K']), c(expression(0), expression(K)), font = 2, cex.axis = 1.5)#
+axis(2, c(0), c(expression(0)), font = 2, cex.axis = 1.5, las = 1)#
+box()#
+mtext(expression(N), 1, line=2, font=2, cex=2)#
+mtext(expression(frac(dN,dt)), 2, line=1, font=2, cex=2, las=1, at = fmax/2)
+par(mar=c(4.1, 4.1, 1.1, 1.1), yaxs = 'i')#
+parms <- c(r = 0.1, K=100, h = 1)#
+f <- with(as.list(parms),function(x) r*x*(1-x/K) - h)#
+eq <- with(as.list(parms), K/2 + c(-sqrt(K^2/4-h*K/r), sqrt(K^2/4-h*K/r)))#
+fmax <- with(as.list(parms), f(K/2))#
+fmin <- with(as.list(parms), f(K+20))#
+plot(f, xlim = c(0, parms['K']+20), ylim = c(fmin, 1.1*fmax), axes=F, xlab = "", ylab="", lwd = 2)#
+abline(h=0)#
+points(eq, eq*0, pch = 21, bg = c("white", "black"), cex=1.5)#
+for(i in seq(0, 120, by = 10)){#
+	arrows(i+2.5, 0, i+7.5, 0, length = abs(f(i+5))/(2.5*fmax), code = 1.5+0.5*sign(f(i+5)))#
+}#
+axis(1, c(0, parms['K']), c(expression(0), expression(K)), font = 2, cex.axis = 1.5)#
+axis(2, c(0), c(expression(0)), font = 2, cex.axis = 1.5, las = 1)#
+box()#
+mtext(expression(N), 1, line=2, font=2, cex=2)#
+mtext(expression(frac(dN,dt)), 2, line=1, font=2, cex=2, las=1, at = fmax/2)
+for(h in c(0, 1, 2, 4)){#
+pdf(paste("logistic-constant-"hi,".pdf", sep=''), height = 5, width = 5)#
+par(mar=c(4.1, 4.1, 1.1, 1.1), yaxs = 'i')#
+parms <- c(r = 0.1, K=100, h = 1)#
+f <- with(as.list(parms),function(x) r*x*(1-x/K) - h)#
+eq <- with(as.list(parms), K/2 + c(-sqrt(K^2/4-h*K/r), sqrt(K^2/4-h*K/r)))#
+fmax <- with(as.list(parms), f(K/2))#
+fmin <- with(as.list(parms), f(K+20))#
+plot(f, xlim = c(0, parms['K']+20), ylim = c(fmin, 1.1*fmax), axes=F, xlab = "", ylab="", lwd = 2)#
+abline(h=0)#
+points(eq, eq*0, pch = 21, bg = c("white", "black"), cex=1.5)#
+for(i in seq(0, 120, by = 10)){#
+	arrows(i+2.5, 0, i+7.5, 0, length = abs(f(i+5))/(2.5*fmax), code = 1.5+0.5*sign(f(i+5)))#
+}#
+axis(1, c(0, parms['K']), c(expression(0), expression(K)), font = 2, cex.axis = 1.5)#
+axis(2, c(0), c(expression(0)), font = 2, cex.axis = 1.5, las = 1)#
+box()#
+mtext(expression(N), 1, line=2, font=2, cex=2)#
+mtext(expression(frac(dN,dt)), 2, line=1, font=2, cex=2, las=1, at = fmax/2)#
+dev.off()#
+}
+for(hi in c(0, 1, 2, 4)){#
+pdf(paste("logistic-constant-",hi,".pdf", sep=''), height = 5, width = 5)#
+par(mar=c(4.1, 4.1, 1.1, 1.1), yaxs = 'i')#
+parms <- c(r = 0.1, K=100, h = hi)#
+f <- with(as.list(parms),function(x) r*x*(1-x/K) - h)#
+eq <- with(as.list(parms), K/2 + c(-sqrt(K^2/4-h*K/r), sqrt(K^2/4-h*K/r)))#
+fmax <- with(as.list(parms), f(K/2))#
+fmin <- with(as.list(parms), f(K+20))#
+plot(f, xlim = c(0, parms['K']+20), ylim = c(fmin, 1.1*fmax), axes=F, xlab = "", ylab="", lwd = 2)#
+abline(h=0)#
+points(eq, eq*0, pch = 21, bg = c("white", "black"), cex=1.5)#
+for(i in seq(0, 120, by = 10)){#
+	arrows(i+2.5, 0, i+7.5, 0, length = abs(f(i+5))/(2.5*fmax), code = 1.5+0.5*sign(f(i+5)))#
+}#
+axis(1, c(0, parms['K']), c(expression(0), expression(K)), font = 2, cex.axis = 1.5)#
+axis(2, c(0), c(expression(0)), font = 2, cex.axis = 1.5, las = 1)#
+box()#
+mtext(expression(N), 1, line=2, font=2, cex=2)#
+mtext(expression(frac(dN,dt)), 2, line=1, font=2, cex=2, las=1, at = fmax/2)#
+dev.off()#
+}
+parms <- c(r = 0.1, K=100, h = 1)#
+#
+for(hi in c(0, 1, 2, parms['r']*parms['K']/4)){#
+pdf(paste("logistic-constant-",hi,".pdf", sep=''), height = 5, width = 5)#
+par(mar=c(4.1, 4.1, 1.1, 1.1), yaxs = 'i')#
+parms['h'] <- hi#
+f <- with(as.list(parms),function(x) r*x*(1-x/K) - h)#
+eq <- with(as.list(parms), K/2 + c(-sqrt(K^2/4-h*K/r), sqrt(K^2/4-h*K/r)))#
+fmax <- with(as.list(parms), f(K/2))#
+fmin <- with(as.list(parms), f(K+20))#
+plot(f, xlim = c(0, parms['K']+20), ylim = c(fmin, 1.1*fmax), axes=F, xlab = "", ylab="", lwd = 2)#
+abline(h=0)#
+points(eq, eq*0, pch = 21, bg = c("white", "black"), cex=1.5)#
+for(i in seq(0, 120, by = 10)){#
+	arrows(i+2.5, 0, i+7.5, 0, length = abs(f(i+5))/(2.5*fmax), code = 1.5+0.5*sign(f(i+5)))#
+}#
+axis(1, c(0, parms['K']), c(expression(0), expression(K)), font = 2, cex.axis = 1.5)#
+axis(2, c(0), c(expression(0)), font = 2, cex.axis = 1.5, las = 1)#
+box()#
+mtext(expression(N), 1, line=2, font=2, cex=2)#
+mtext(expression(frac(dN,dt)), 2, line=1, font=2, cex=2, las=1, at = fmax/2)#
+dev.off()#
+}
+i
+f(i+5)
+abs(f(i+5))
+fmax
+for(hi in c(0, 1, 2, parms['r']*parms['K']/4)){#
+pdf(paste("logistic-constant-",hi,".pdf", sep=''), height = 5, width = 5)#
+par(mar=c(4.1, 4.1, 1.1, 1.1), yaxs = 'i')#
+parms['h'] <- hi#
+f <- with(as.list(parms),function(x) r*x*(1-x/K) - h)#
+eq <- with(as.list(parms), K/2 + c(-sqrt(K^2/4-h*K/r), sqrt(K^2/4-h*K/r)))#
+fmax <- with(as.list(parms), f(K/2))#
+fmin <- with(as.list(parms), f(K+20))#
+plot(f, xlim = c(0, parms['K']+20), ylim = c(fmin, 1.1*fmax), axes=F, xlab = "", ylab="", lwd = 2)#
+abline(h=0)#
+points(eq, eq*0, pch = 21, bg = c("white", "black"), cex=1.5)#
+for(i in seq(0, 120, by = 10)){#
+	if(fmax>0)	arrows(i+2.5, 0, i+7.5, 0, length = abs(f(i+5))/(2.5*fmax), code = 1.5+0.5*sign(f(i+5)))#
+}#
+axis(1, c(0, parms['K']), c(expression(0), expression(K)), font = 2, cex.axis = 1.5)#
+axis(2, c(0), c(expression(0)), font = 2, cex.axis = 1.5, las = 1)#
+box()#
+mtext(expression(N), 1, line=2, font=2, cex=2)#
+mtext(expression(frac(dN,dt)), 2, line=1, font=2, cex=2, las=1, at = fmax/2)#
+dev.off()#
+}
+parms <- c(r = 0.1, K=100, h = 1)#
+#
+for(hi in c(0, 2, 3, 4, 2*parms['r']*parms['K']/4)){#
+pdf(paste("logistic-constant-",hi,".pdf", sep=''), height = 5, width = 5)#
+par(mar=c(4.1, 4.1, 1.1, 1.1), yaxs = 'i')#
+parms['h'] <- hi/2#
+f <- with(as.list(parms),function(x) r*x*(1-x/K) - h)#
+eq <- with(as.list(parms), K/2 + c(-sqrt(K^2/4-h*K/r), sqrt(K^2/4-h*K/r)))#
+fmax <- with(as.list(parms), f(K/2))#
+fmin <- with(as.list(parms), f(K+20))#
+plot(f, xlim = c(0, parms['K']+20), ylim = c(fmin, 1.1*fmax), axes=F, xlab = "", ylab="", lwd = 2)#
+abline(h=0)#
+points(eq, eq*0, pch = 21, bg = c("white", "black"), cex=1.5)#
+for(i in seq(0, 120, by = 10)){#
+	if(fmax>0)	arrows(i+2.5, 0, i+7.5, 0, length = abs(f(i+5))/(2.5*fmax), code = 1.5+0.5*sign(f(i+5)))#
+}#
+axis(1, c(0, parms['K']), c(expression(0), expression(K)), font = 2, cex.axis = 1.5)#
+axis(2, c(0), c(expression(0)), font = 2, cex.axis = 1.5, las = 1)#
+box()#
+mtext(expression(N), 1, line=2, font=2, cex=2)#
+mtext(expression(frac(dN,dt)), 2, line=1, font=2, cex=2, las=1, at = fmax/2)#
+dev.off()#
+}
+parms <- c(r = 0.1, K=100, h = 1)#
+#
+for(hi in c(0, 2, 3, 4, 2*parms['r']*parms['K']/4)){#
+pdf(paste("logistic-constant-",hi,".pdf", sep=''), height = 5, width = 5)#
+par(mar=c(4.1, 4.1, 1.1, 1.1), yaxs = 'i')#
+parms['h'] <- hi/2#
+f <- with(as.list(parms),function(x) r*x*(1-x/K) - h)#
+eq <- with(as.list(parms), K/2 + c(-sqrt(K^2/4-h*K/r), sqrt(K^2/4-h*K/r)))#
+fmax <- with(as.list(parms), f(K/2))#
+fmin <- with(as.list(parms), f(K+20))#
+plot(f, xlim = c(0, parms['K']+20), ylim = c(fmin, 1.2*fmax), axes=F, xlab = "", ylab="", lwd = 2)#
+abline(h=0)#
+points(eq, eq*0, pch = 21, bg = c("white", "black"), cex=1.5)#
+for(i in seq(0, 120, by = 10)){#
+	if(fmax>0)	arrows(i+2.5, 0, i+7.5, 0, length = abs(f(i+5))/(2.5*fmax), code = 1.5+0.5*sign(f(i+5)))#
+}#
+axis(1, c(0, parms['K']), c(expression(0), expression(K)), font = 2, cex.axis = 1.5)#
+axis(2, c(0), c(expression(0)), font = 2, cex.axis = 1.5, las = 1)#
+box()#
+mtext(expression(N), 1, line=2, font=2, cex=2)#
+mtext(expression(frac(dN,dt)), 2, line=1, font=2, cex=2, las=1, at = abs(fmax)/2)#
+dev.off()#
+}
+parms <- c(r = 0.1, K=100, h = 1)#
+#
+for(hi in c(0, 2, 3, 4, 2*parms['r']*parms['K']/4)){#
+pdf(paste("logistic-constant-",hi,".pdf", sep=''), height = 5, width = 5)#
+par(mar=c(4.1, 4.1, 1.1, 1.1), yaxs = 'i')#
+parms['h'] <- hi/2#
+f <- with(as.list(parms),function(x) r*x*(1-x/K) - h)#
+eq <- with(as.list(parms), K/2 + c(-sqrt(K^2/4-h*K/r), sqrt(K^2/4-h*K/r)))#
+fmax <- with(as.list(parms), f(K/2)+h/2)#
+fmin <- with(as.list(parms), f(K+20))#
+plot(f, xlim = c(0, parms['K']+20), ylim = c(fmin, 1.2*fmax), axes=F, xlab = "", ylab="", lwd = 2)#
+abline(h=0)#
+points(eq, eq*0, pch = 21, bg = c("white", "black"), cex=1.5)#
+for(i in seq(0, 120, by = 10)){#
+	if(fmax>0)	arrows(i+2.5, 0, i+7.5, 0, length = abs(f(i+5))/(2.5*fmax), code = 1.5+0.5*sign(f(i+5)))#
+}#
+axis(1, c(0, parms['K']), c(expression(0), expression(K)), font = 2, cex.axis = 1.5)#
+axis(2, c(0), c(expression(0)), font = 2, cex.axis = 1.5, las = 1)#
+box()#
+mtext(expression(N), 1, line=2, font=2, cex=2)#
+mtext(expression(frac(dN,dt)), 2, line=1, font=2, cex=2, las=1, at = abs(fmax)/2)#
+dev.off()#
+}
+parms <- c(r = 0.1, K=100, h = 1)#
+#
+for(hi in c(0, 2, 3, 4, 2*parms['r']*parms['K']/4)){#
+pdf(paste("logistic-constant-",hi,".pdf", sep=''), height = 5, width = 5)#
+par(mar=c(4.1, 4.1, 1.1, 1.1), yaxs = 'i')#
+parms['h'] <- hi/2#
+f <- with(as.list(parms),function(x) r*x*(1-x/K) - h)#
+eq <- with(as.list(parms), K/2 + c(-sqrt(K^2/4-h*K/r), sqrt(K^2/4-h*K/r)))#
+fmax <- with(as.list(parms), f(K/2)+h)#
+fmin <- with(as.list(parms), f(K+20))#
+plot(f, xlim = c(0, parms['K']+20), ylim = c(fmin, 1.2*fmax), axes=F, xlab = "", ylab="", lwd = 2)#
+abline(h=0)#
+points(eq, eq*0, pch = 21, bg = c("white", "black"), cex=1.5)#
+for(i in seq(0, 120, by = 10)){#
+	if(fmax>0)	arrows(i+2.5, 0, i+7.5, 0, length = abs(f(i+5))/(2.5*fmax), code = 1.5+0.5*sign(f(i+5)))#
+}#
+axis(1, c(0, parms['K']), c(expression(0), expression(K)), font = 2, cex.axis = 1.5)#
+axis(2, c(0), c(expression(0)), font = 2, cex.axis = 1.5, las = 1)#
+box()#
+mtext(expression(N), 1, line=2, font=2, cex=2)#
+mtext(expression(frac(dN,dt)), 2, line=1, font=2, cex=2, las=1, at = abs(fmax)/2)#
+dev.off()#
+}
+f(K/2)+h
+parms <- c(r = 0.1, K=100, h = 1)#
+#
+for(hi in c(0, 2, 3, 4, 2*parms['r']*parms['K']/4)){#
+pdf(paste("logistic-constant-",hi,".pdf", sep=''), height = 5, width = 5)#
+par(mar=c(4.1, 4.1, 1.1, 1.1), yaxs = 'i')#
+parms['h'] <- hi/2#
+f <- with(as.list(parms),function(x) r*x*(1-x/K) - h)#
+eq <- with(as.list(parms), K/2 + c(-sqrt(K^2/4-h*K/r), sqrt(K^2/4-h*K/r)))#
+fmax <- with(as.list(parms), f(K/2)+h)#
+fmin <- with(as.list(parms), f(K+20))#
+plot(f, xlim = c(0, parms['K']+20), ylim = c(fmin, 1.2*fmax), axes=T, xlab = "", ylab="", lwd = 2)#
+abline(h=0)#
+points(eq, eq*0, pch = 21, bg = c("white", "black"), cex=1.5)#
+for(i in seq(0, 120, by = 10)){#
+	if(fmax>0)	arrows(i+2.5, 0, i+7.5, 0, length = abs(f(i+5))/(2.5*fmax), code = 1.5+0.5*sign(f(i+5)))#
+}#
+axis(1, c(0, parms['K']), c(expression(0), expression(K)), font = 2, cex.axis = 1.5)#
+axis(2, c(0), c(expression(0)), font = 2, cex.axis = 1.5, las = 1)#
+box()#
+mtext(expression(N), 1, line=2, font=2, cex=2)#
+mtext(expression(frac(dN,dt)), 2, line=1, font=2, cex=2, las=1, at = abs(fmax)/2)#
+dev.off()#
+}
+parms <- c(r = 0.1, K=100, h = 1)#
+#
+for(hi in c(0, 2, 3, 4, 2*parms['r']*parms['K']/4)){#
+pdf(paste("logistic-constant-",hi,".pdf", sep=''), height = 5, width = 5)#
+par(mar=c(4.1, 4.1, 1.1, 1.1), yaxs = 'i')#
+parms['h'] <- hi/2#
+f <- with(as.list(parms),function(x) r*x*(1-x/K) - h)#
+eq <- with(as.list(parms), K/2 + c(-sqrt(K^2/4-h*K/r), sqrt(K^2/4-h*K/r)))#
+fmax <- with(as.list(parms), f(K/2)+h)#
+fmin <- with(as.list(parms), f(K+20)+h)#
+plot(f, xlim = c(0, parms['K']+20), ylim = c(fmin, 1.2*fmax), axes=T, xlab = "", ylab="", lwd = 2)#
+abline(h=0)#
+points(eq, eq*0, pch = 21, bg = c("white", "black"), cex=1.5)#
+for(i in seq(0, 120, by = 10)){#
+	if(fmax>0)	arrows(i+2.5, 0, i+7.5, 0, length = abs(f(i+5))/(2.5*fmax), code = 1.5+0.5*sign(f(i+5)))#
+}#
+axis(1, c(0, parms['K']), c(expression(0), expression(K)), font = 2, cex.axis = 1.5)#
+axis(2, c(0), c(expression(0)), font = 2, cex.axis = 1.5, las = 1)#
+box()#
+mtext(expression(N), 1, line=2, font=2, cex=2)#
+mtext(expression(frac(dN,dt)), 2, line=1, font=2, cex=2, las=1, at = abs(fmax)/2)#
+dev.off()#
+}
+parms <- c(r = 0.1, K=100, h = 1)#
+#
+for(hi in c(0, 2, 3, 4, 2*parms['r']*parms['K']/4)){#
+pdf(paste("logistic-constant-",hi,".pdf", sep=''), height = 5, width = 5)#
+par(mar=c(4.1, 4.1, 1.1, 1.1), yaxs = 'i')#
+parms['h'] <- hi/2#
+f <- with(as.list(parms),function(x) r*x*(1-x/K) - h)#
+eq <- with(as.list(parms), K/2 + c(-sqrt(K^2/4-h*K/r), sqrt(K^2/4-h*K/r)))#
+fmax <- with(as.list(parms), f(K/2)+h)#
+fmin <- with(as.list(parms), f(K+20)+h)#
+plot(f, xlim = c(0, parms['K']+20), ylim = c(fmin, 1.2*fmax), axes=F, xlab = "", ylab="", lwd = 2)#
+abline(h=0)#
+points(eq, eq*0, pch = 21, bg = c("white", "black"), cex=1.5)#
+for(i in seq(0, 120, by = 10)){#
+	if(fmax>0)	arrows(i+2.5, 0, i+7.5, 0, length = abs(f(i+5))/(2.5*fmax), code = 1.5+0.5*sign(f(i+5)))#
+}#
+axis(1, c(0, parms['K']), c(expression(0), expression(K)), font = 2, cex.axis = 1.5)#
+axis(2, c(0), c(expression(0)), font = 2, cex.axis = 1.5, las = 1)#
+box()#
+mtext(expression(N), 1, line=2, font=2, cex=2)#
+mtext(expression(frac(dN,dt)), 2, line=1, font=2, cex=2, las=1, at = abs(fmax)/2)#
+dev.off()#
+}
+parms <- c(r = 0.1, K=100, h = 1)#
+#
+for(hi in c(0, 2, 3, 4, 2*parms['r']*parms['K']/4)){#
+pdf(paste("logistic-constant-",hi,".pdf", sep=''), height = 5, width = 5)#
+par(mar=c(4.1, 4.1, 1.1, 1.1), yaxs = 'i')#
+parms['h'] <- hi/2#
+f <- with(as.list(parms),function(x) r*x*(1-x/K) - h)#
+eq <- with(as.list(parms), K/2 + c(-sqrt(K^2/4-h*K/r), sqrt(K^2/4-h*K/r)))#
+fmax <- with(as.list(parms), f(K/2)+h)#
+fmin <- with(as.list(parms), f(K+20)+h)#
+plot(f, xlim = c(0, parms['K']+20), ylim = c(fmin, 1.2*fmax), axes=F, xlab = "", ylab="", lwd = 2)#
+abline(h=0)#
+#
+for(i in seq(0, 120, by = 10)){#
+	if(fmax>0)	arrows(i+2.5, 0, i+7.5, 0, length = abs(f(i+5))/(2.5*fmax), code = 1.5+0.5*sign(f(i+5)))#
+}#
+points(eq, eq*0, pch = 21, bg = c("white", "black"), cex=1.5)#
+axis(1, c(0, parms['K']), c(expression(0), expression(K)), font = 2, cex.axis = 1.5)#
+axis(2, c(0), c(expression(0)), font = 2, cex.axis = 1.5, las = 1)#
+box()#
+mtext(expression(N), 1, line=2, font=2, cex=2)#
+mtext(expression(frac(dN,dt)), 2, line=1, font=2, cex=2, las=1, at = abs(fmax)/2)#
+dev.off()#
+}
+parms <- c(r = 0.1, K=100, h = 1)#
+#
+for(hi in c(0, 2, 3, 4, 2*parms['r']*parms['K']/4)){#
+png(paste("logistic-constant-",hi,".png", sep=''), height = 480, width = 480)#
+par(mar=c(4.1, 4.1, 1.1, 1.1), yaxs = 'i')#
+parms['h'] <- hi/2#
+f <- with(as.list(parms),function(x) r*x*(1-x/K) - h)#
+eq <- with(as.list(parms), K/2 + c(-sqrt(K^2/4-h*K/r), sqrt(K^2/4-h*K/r)))#
+fmax <- with(as.list(parms), f(K/2)+h)#
+fmin <- with(as.list(parms), f(K+20)+h)#
+plot(f, xlim = c(0, parms['K']+20), ylim = c(fmin, 1.2*fmax), axes=F, xlab = "", ylab="", lwd = 2)#
+abline(h=0)#
+#
+for(i in seq(0, 120, by = 10)){#
+	if(fmax>0)	arrows(i+2.5, 0, i+7.5, 0, length = abs(f(i+5))/(2.5*fmax), code = 1.5+0.5*sign(f(i+5)))#
+}#
+points(eq, eq*0, pch = 21, bg = c("white", "black"), cex=1.5)#
+axis(1, c(0, parms['K']), c(expression(0), expression(K)), font = 2, cex.axis = 1.5)#
+axis(2, c(0), c(expression(0)), font = 2, cex.axis = 1.5, las = 1)#
+box()#
+mtext(expression(N), 1, line=2, font=2, cex=2)#
+mtext(expression(frac(dN,dt)), 2, line=1, font=2, cex=2, las=1, at = abs(fmax)/2)#
+dev.off()#
+}
+parms <- c(r = 0.1, K=100, h = 1)#
+#
+for(hi in c(0, 2, 3, 4, 2*parms['r']*parms['K']/4)){#
+png(paste("logistic-prop-",hi,".png", sep=''), height = 480, width = 480)#
+par(mar=c(4.1, 4.1, 1.1, 1.1), yaxs = 'i')#
+parms['h'] <- hi/2#
+f <- with(as.list(parms),function(x) r*x*(1-x/K) - h*x)#
+eq <- with(as.list(parms), c(0, K*(1-h/r)))#
+fmax <- with(as.list(parms), f(K/2)+h)#
+fmin <- with(as.list(parms), f(K+20)+h)#
+plot(f, xlim = c(0, parms['K']+20), ylim = c(fmin, 1.2*fmax), axes=F, xlab = "", ylab="", lwd = 2)#
+abline(h=0)#
+#
+for(i in seq(0, 120, by = 10)){#
+	if(fmax>0)	arrows(i+2.5, 0, i+7.5, 0, length = abs(f(i+5))/(2.5*fmax), code = 1.5+0.5*sign(f(i+5)))#
+}#
+points(eq, eq*0, pch = 21, bg = c("white", "black"), cex=1.5)#
+axis(1, c(0, parms['K']), c(expression(0), expression(K)), font = 2, cex.axis = 1.5)#
+axis(2, c(0), c(expression(0)), font = 2, cex.axis = 1.5, las = 1)#
+box()#
+mtext(expression(N), 1, line=2, font=2, cex=2)#
+mtext(expression(frac(dN,dt)), 2, line=1, font=2, cex=2, las=1, at = abs(fmax)/2)#
+dev.off()#
+}
+parms <- c(r = 0.1, K=100, h = 0.01)#
+#
+for(hi in c(5, 4, 3, 1)){#
+png(paste("logistic-prop-",hi,".png", sep=''), height = 480, width = 480)#
+par(mar=c(4.1, 4.1, 1.1, 1.1), yaxs = 'i')#
+parms['h'] <- parms['r']/hi#
+f <- with(as.list(parms),function(x) r*x*(1-x/K) - h*x)#
+eq <- with(as.list(parms), c(0, K*(1-h/r)))#
+fmax <- with(as.list(parms), f(K/2)+h)#
+fmin <- with(as.list(parms), f(K+20)+h)#
+plot(f, xlim = c(0, parms['K']+20), ylim = c(fmin, 1.2*fmax), axes=F, xlab = "", ylab="", lwd = 2)#
+abline(h=0)#
+#
+for(i in seq(0, 120, by = 10)){#
+	if(fmax>0)	arrows(i+2.5, 0, i+7.5, 0, length = abs(f(i+5))/(2.5*fmax), code = 1.5+0.5*sign(f(i+5)))#
+}#
+points(eq, eq*0, pch = 21, bg = c("white", "black"), cex=1.5)#
+axis(1, c(0, parms['K']), c(expression(0), expression(K)), font = 2, cex.axis = 1.5)#
+axis(2, c(0), c(expression(0)), font = 2, cex.axis = 1.5, las = 1)#
+box()#
+mtext(expression(N), 1, line=2, font=2, cex=2)#
+mtext(expression(frac(dN,dt)), 2, line=1, font=2, cex=2, las=1, at = abs(fmax)/2)#
+dev.off()#
+}
+parms <- c(r = 0.1, K=100, h = 0.01)#
+#
+for(hi in c(5, 4, 3, 1)){#
+png(paste("logistic-prop-",hi,".png", sep=''), height = 480, width = 480)#
+par(mar=c(4.1, 4.1, 1.1, 1.1), yaxs = 'i')#
+parms['h'] <- parms['r']/hi#
+f <- with(as.list(parms),function(x) r*x*(1-x/K) - h*x)#
+eq <- with(as.list(parms), c(0, K*(1-h/r)))#
+fmax <- with(as.list(parms), f(K*(1-h/r)/2)+h*K*(1-h/r)/2)#
+fmin <- with(as.list(parms), f(K+20)+h*(K+20))#
+plot(f, xlim = c(0, parms['K']+20), ylim = c(fmin, 1.2*fmax), axes=T, xlab = "", ylab="", lwd = 2)#
+abline(h=0)#
+#
+for(i in seq(0, 120, by = 10)){#
+	if(fmax>0)	arrows(i+2.5, 0, i+7.5, 0, length = abs(f(i+5))/(2.5*fmax), code = 1.5+0.5*sign(f(i+5)))#
+}#
+points(eq, eq*0, pch = 21, bg = c("white", "black"), cex=1.5)#
+axis(1, c(0, parms['K']), c(expression(0), expression(K)), font = 2, cex.axis = 1.5)#
+axis(2, c(0), c(expression(0)), font = 2, cex.axis = 1.5, las = 1)#
+box()#
+mtext(expression(N), 1, line=2, font=2, cex=2)#
+mtext(expression(frac(dN,dt)), 2, line=1, font=2, cex=2, las=1, at = abs(fmax)/2)#
+dev.off()#
+}
+parms <- c(r = 0.1, K=100, h = 0.01)#
+#
+for(hi in c(10, 8, 6, 4, 2)){#
+png(paste("logistic-prop-",hi,".png", sep=''), height = 480, width = 480)#
+par(mar=c(4.1, 4.1, 1.1, 1.1), yaxs = 'i')#
+parms['h'] <- parms['r']/hi#
+f <- with(as.list(parms),function(x) r*x*(1-x/K) - h*x)#
+eq <- with(as.list(parms), c(0, K*(1-h/r)))#
+fmax <- with(as.list(parms), f(K*(1-h/r)/2)+h*K*(1-h/r)/2)#
+fmin <- with(as.list(parms), f(K+20)+h*(K+20))#
+plot(f, xlim = c(0, parms['K']+20), ylim = c(fmin, 1.2*fmax), axes=T, xlab = "", ylab="", lwd = 2)#
+abline(h=0)#
+#
+for(i in seq(0, 120, by = 10)){#
+	if(fmax>0)	arrows(i+2.5, 0, i+7.5, 0, length = abs(f(i+5))/(2.5*fmax), code = 1.5+0.5*sign(f(i+5)))#
+}#
+points(eq, eq*0, pch = 21, bg = c("white", "black"), cex=1.5)#
+axis(1, c(0, parms['K']), c(expression(0), expression(K)), font = 2, cex.axis = 1.5)#
+axis(2, c(0), c(expression(0)), font = 2, cex.axis = 1.5, las = 1)#
+box()#
+mtext(expression(N), 1, line=2, font=2, cex=2)#
+mtext(expression(frac(dN,dt)), 2, line=1, font=2, cex=2, las=1, at = abs(fmax)/2)#
+dev.off()#
+}
+parms <- c(r = 0.1, K=100, h = 0.01)#
+#
+for(hi in c(10, 8, 6, 4, 2)){#
+png(paste("logistic-prop-",hi,".png", sep=''), height = 480, width = 480)#
+par(mar=c(4.1, 4.1, 1.1, 1.1), yaxs = 'i')#
+parms['h'] <- parms['r']/hi#
+f <- with(as.list(parms),function(x) r*x*(1-x/K) - h*x)#
+eq <- with(as.list(parms), c(0, K*(1-h/r)))#
+fmax <- with(as.list(parms), f(K*(1-h/r)/2) + 0*h*K*(1-h/r)/2)#
+fmin <- with(as.list(parms), f(K+20) + 0*h*(K+20))#
+plot(f, xlim = c(0, parms['K']+20), ylim = c(fmin, 1.2*fmax), axes=T, xlab = "", ylab="", lwd = 2)#
+abline(h=0)#
+#
+for(i in seq(0, 120, by = 10)){#
+	if(fmax>0)	arrows(i+2.5, 0, i+7.5, 0, length = abs(f(i+5))/(2.5*fmax), code = 1.5+0.5*sign(f(i+5)))#
+}#
+points(eq, eq*0, pch = 21, bg = c("white", "black"), cex=1.5)#
+axis(1, c(0, parms['K']), c(expression(0), expression(K)), font = 2, cex.axis = 1.5)#
+axis(2, c(0), c(expression(0)), font = 2, cex.axis = 1.5, las = 1)#
+box()#
+mtext(expression(N), 1, line=2, font=2, cex=2)#
+mtext(expression(frac(dN,dt)), 2, line=1, font=2, cex=2, las=1, at = abs(fmax)/2)#
+dev.off()#
+}
+parms <- c(r = 0.1, K=100, h = 0.01)#
+#
+for(hi in c(10, 8, 6, 4, 2)){#
+png(paste("logistic-prop-",hi,".png", sep=''), height = 480, width = 480)#
+par(mar=c(4.1, 4.1, 1.1, 1.1), yaxs = 'i')#
+parms['h'] <- parms['r']/hi#
+f <- with(as.list(parms),function(x) r*x*(1-x/K) - h*x)#
+eq <- with(as.list(parms), c(0, K*(1-h/r)))#
+fmax <- with(as.list(parms), f(K*(1-h/r)/2) + h*K*(1-h/r)/2)#
+fmin <- with(as.list(parms), f(K+20) + h*(K+20))#
+plot(f, xlim = c(0, parms['K']+20), ylim = c(fmin, 1.2*fmax), axes=T, xlab = "", ylab="", lwd = 2)#
+abline(h=0)#
+#
+for(i in seq(0, 120, by = 10)){#
+	if(fmax>0)	arrows(i+2.5, 0, i+7.5, 0, length = abs(f(i+5))/(2.5*fmax), code = 1.5+0.5*sign(f(i+5)))#
+}#
+points(eq, eq*0, pch = 21, bg = c("white", "black"), cex=1.5)#
+axis(1, c(0, parms['K']), c(expression(0), expression(K)), font = 2, cex.axis = 1.5)#
+axis(2, c(0), c(expression(0)), font = 2, cex.axis = 1.5, las = 1)#
+box()#
+mtext(expression(N), 1, line=2, font=2, cex=2)#
+mtext(expression(frac(dN,dt)), 2, line=1, font=2, cex=2, las=1, at = abs(fmax)/2)#
+dev.off()#
+}
+for(hi in c(10, 8, 6, 4, 2)){#
+png(paste("logistic-prop-",hi,".png", sep=''), height = 480, width = 480)#
+par(mar=c(4.1, 4.1, 1.1, 1.1), yaxs = 'i')#
+parms['h'] <- parms['r']/hi#
+f <- with(as.list(parms),function(x) r*x*(1-x/K) - h*x)#
+eq <- with(as.list(parms), c(0, K*(1-h/r)))#
+fmax <- with(as.list(parms), f(K*(1-h/r)/2) + h*K*(1-h/r)/2)#
+fmin <- with(as.list(parms), f(K+20) + h*(K+20))#
+plot(f, xlim = c(0, parms['K']+20), ylim = c(fmin, 1.2*fmax), axes=T, xlab = "", ylab="", lwd = 2)#
+abline(h=0)#
+#
+for(i in seq(0, 120, by = 10)){#
+	if(fmax>0)	arrows(i+2.5, 0, i+7.5, 0, length = abs(f(i+5))/(2.5*fmax), code = 1.5+0.5*sign(f(i+5)))#
+	print(c(fmin, fmax))#
+}#
+points(eq, eq*0, pch = 21, bg = c("white", "black"), cex=1.5)#
+axis(1, c(0, parms['K']), c(expression(0), expression(K)), font = 2, cex.axis = 1.5)#
+axis(2, c(0), c(expression(0)), font = 2, cex.axis = 1.5, las = 1)#
+box()#
+mtext(expression(N), 1, line=2, font=2, cex=2)#
+mtext(expression(frac(dN,dt)), 2, line=1, font=2, cex=2, las=1, at = abs(fmax)/2)#
+dev.off()#
+}
+parms <- c(r = 0.1, K=100, h = 0.01)#
+#
+for(hi in c(10, 8, 6, 4, 2)){#
+png(paste("logistic-prop-",hi,".png", sep=''), height = 480, width = 480)#
+par(mar=c(4.1, 4.1, 1.1, 1.1), yaxs = 'i')#
+parms['h'] <- parms['r']/hi#
+f <- with(as.list(parms),function(x) r*x*(1-x/K) - h*x)#
+eq <- with(as.list(parms), c(0, K*(1-h/r)))#
+fmax <- with(as.list(parms), f(K*(1-h/r)/2) + 0*h*K*(1-h/r)/2)#
+fmin <- with(as.list(parms), f(K+20) + h*(K+20))#
+plot(f, xlim = c(0, parms['K']+20), ylim = c(fmin, 1.2*fmax), axes=T, xlab = "", ylab="", lwd = 2)#
+abline(h=0)#
+#
+for(i in seq(0, 120, by = 10)){#
+	if(fmax>0)	arrows(i+2.5, 0, i+7.5, 0, length = abs(f(i+5))/(2.5*fmax), code = 1.5+0.5*sign(f(i+5)))#
+	print(c(fmin, fmax))#
+}#
+points(eq, eq*0, pch = 21, bg = c("white", "black"), cex=1.5)#
+axis(1, c(0, parms['K']), c(expression(0), expression(K)), font = 2, cex.axis = 1.5)#
+axis(2, c(0), c(expression(0)), font = 2, cex.axis = 1.5, las = 1)#
+box()#
+mtext(expression(N), 1, line=2, font=2, cex=2)#
+mtext(expression(frac(dN,dt)), 2, line=1, font=2, cex=2, las=1, at = abs(fmax)/2)#
+dev.off()#
+}
+parms <- c(r = 0.1, K=100, h = 0.01)#
+#
+for(hi in c(10, 8, 6, 4, 2)){#
+png(paste("logistic-prop-",hi,".png", sep=''), height = 480, width = 480)#
+par(mar=c(4.1, 4.1, 1.1, 1.1), yaxs = 'i')#
+parms['h'] <- parms['r']/hi#
+f <- with(as.list(parms),function(x) r*x*(1-x/K) - h*x)#
+eq <- with(as.list(parms), c(0, K*(1-h/r)))#
+fmax <- with(as.list(parms), f(K*(1-h/r)/2) + K*(h-r)^2/(4*r))#
+fmin <- with(as.list(parms), f(K+20) + h*(K+20))#
+plot(f, xlim = c(0, parms['K']+20), ylim = c(fmin, 1.2*fmax), axes=T, xlab = "", ylab="", lwd = 2)#
+abline(h=0)#
+#
+for(i in seq(0, 120, by = 10)){#
+	if(fmax>0)	arrows(i+2.5, 0, i+7.5, 0, length = abs(f(i+5))/(2.5*fmax), code = 1.5+0.5*sign(f(i+5)))#
+	print(c(fmin, fmax))#
+}#
+points(eq, eq*0, pch = 21, bg = c("white", "black"), cex=1.5)#
+axis(1, c(0, parms['K']), c(expression(0), expression(K)), font = 2, cex.axis = 1.5)#
+axis(2, c(0), c(expression(0)), font = 2, cex.axis = 1.5, las = 1)#
+box()#
+mtext(expression(N), 1, line=2, font=2, cex=2)#
+mtext(expression(frac(dN,dt)), 2, line=1, font=2, cex=2, las=1, at = abs(fmax)/2)#
+dev.off()#
+}
+parms <- c(r = 0.1, K=100, h = 0.01)#
+#
+for(hi in c(10, 8, 6, 4, 2)){#
+png(paste("logistic-prop-",hi,".png", sep=''), height = 480, width = 480)#
+par(mar=c(4.1, 4.1, 1.1, 1.1), yaxs = 'i')#
+parms['h'] <- parms['r']/hi#
+f <- with(as.list(parms),function(x) r*x*(1-x/K) - h*x)#
+eq <- with(as.list(parms), c(0, K*(1-h/r)))#
+fmax <- with(as.list(parms), f(K*(1-h/r)/2) + K*(h-r)^2/(4*r))#
+fmin <- with(as.list(parms), f(K+20) + h*(K+20))#
+plot(f, xlim = c(0, parms['K']+20), ylim = c(-3, 5), axes=F, xlab = "", ylab="", lwd = 2)#
+abline(h=0)#
+#
+for(i in seq(0, 120, by = 10)){#
+	if(fmax>0)	arrows(i+2.5, 0, i+7.5, 0, length = abs(f(i+5))/(2.5*fmax), code = 1.5+0.5*sign(f(i+5)))#
+	print(c(fmin, fmax))#
+}#
+points(eq, eq*0, pch = 21, bg = c("white", "black"), cex=1.5)#
+axis(1, c(0, parms['K']), c(expression(0), expression(K)), font = 2, cex.axis = 1.5)#
+axis(2, c(0), c(expression(0)), font = 2, cex.axis = 1.5, las = 1)#
+box()#
+mtext(expression(N), 1, line=2, font=2, cex=2)#
+mtext(expression(frac(dN,dt)), 2, line=1, font=2, cex=2, las=1, at = abs(fmax)/2)#
+dev.off()#
+}
+parms <- c(r = 0.1, K=100, h = 0.01)#
+#
+for(hi in c(10, 8, 6, 4, 2)){#
+png(paste("logistic-prop-",hi,".png", sep=''), height = 480, width = 480)#
+par(mar=c(4.1, 4.1, 1.1, 1.1), yaxs = 'i')#
+parms['h'] <- parms['r']/hi#
+f <- with(as.list(parms),function(x) r*x*(1-x/K) - h*x)#
+eq <- with(as.list(parms), c(0, K*(1-h/r)))#
+fmax <- 4.5#
+fmin <- -3#
+plot(f, xlim = c(0, parms['K']+20), ylim = c(fmin, 1.2*fmax), axes=T, xlab = "", ylab="", lwd = 2)#
+abline(h=0)#
+#
+for(i in seq(0, 120, by = 10)){#
+	if(fmax>0)	arrows(i+2.5, 0, i+7.5, 0, length = abs(f(i+5))/(2.5*fmax), code = 1.5+0.5*sign(f(i+5)))#
+	print(c(fmin, fmax))#
+}#
+points(eq, eq*0, pch = 21, bg = c("white", "black"), cex=1.5)#
+axis(1, c(0, parms['K']), c(expression(0), expression(K)), font = 2, cex.axis = 1.5)#
+axis(2, c(0), c(expression(0)), font = 2, cex.axis = 1.5, las = 1)#
+box()#
+mtext(expression(N), 1, line=2, font=2, cex=2)#
+mtext(expression(frac(dN,dt)), 2, line=1, font=2, cex=2, las=1, at = abs(fmax)/2)#
+dev.off()#
+}
+parms <- c(r = 0.1, K=100, h = 0.01)#
+#
+for(hi in c(10, 8, 6, 4, 2, 1)){#
+png(paste("logistic-prop-",hi,".png", sep=''), height = 480, width = 480)#
+par(mar=c(4.1, 4.1, 1.1, 1.1), yaxs = 'i')#
+parms['h'] <- parms['r']/hi#
+f <- with(as.list(parms),function(x) r*x*(1-x/K) - h*x)#
+eq <- with(as.list(parms), c(0, K*(1-h/r)))#
+fmax <- 4.5#
+fmin <- -3#
+plot(f, xlim = c(0, parms['K']+20), ylim = c(fmin, 1.2*fmax), axes=T, xlab = "", ylab="", lwd = 2)#
+abline(h=0)#
+#
+for(i in seq(0, 120, by = 10)){#
+	if(fmax>0)	arrows(i+2.5, 0, i+7.5, 0, length = abs(f(i+5))/(2.5*fmax), code = 1.5+0.5*sign(f(i+5)))#
+}#
+points(eq, eq*0, pch = 21, bg = c("white", "black"), cex=1.5)#
+axis(1, c(0, parms['K']), c(expression(0), expression(K)), font = 2, cex.axis = 1.5)#
+axis(2, c(0), c(expression(0)), font = 2, cex.axis = 1.5, las = 1)#
+box()#
+mtext(expression(N), 1, line=2, font=2, cex=2)#
+mtext(expression(frac(dN,dt)), 2, line=1, font=2, cex=2, las=1, at = abs(fmax)/2)#
+dev.off()#
+}
+parms <- c(r = 0.1, K=100, h = 0.01)#
+#
+for(hi in c(10, 8, 6, 4, 2, 1)){#
+png(paste("logistic-prop-",hi,".png", sep=''), height = 480, width = 480)#
+par(mar=c(4.1, 4.1, 1.1, 1.1), yaxs = 'i')#
+parms['h'] <- parms['r']/hi#
+f <- with(as.list(parms),function(x) r*x*(1-x/K) - h*x)#
+eq <- with(as.list(parms), c(0, K*(1-h/r)))#
+fmax <- 4.5#
+fmin <- -3#
+plot(f, xlim = c(0, parms['K']+20), ylim = c(fmin, 1.2*fmax), axes=F, xlab = "", ylab="", lwd = 2)#
+abline(h=0)#
+print(parms['h'])#
+for(i in seq(0, 120, by = 10)){#
+	if(fmax>0)	arrows(i+2.5, 0, i+7.5, 0, length = abs(f(i+5))/(2.5*fmax), code = 1.5+0.5*sign(f(i+5)))#
+}#
+points(eq, eq*0, pch = 21, bg = c("white", "black"), cex=1.5)#
+axis(1, c(0, parms['K']), c(expression(0), expression(K)), font = 2, cex.axis = 1.5)#
+axis(2, c(0), c(expression(0)), font = 2, cex.axis = 1.5, las = 1)#
+box()#
+mtext(expression(N), 1, line=2, font=2, cex=2)#
+mtext(expression(frac(dN,dt)), 2, line=1, font=2, cex=2, las=1, at = abs(fmax)/2)#
+dev.off()#
+}
+parms[c("r", "K")]
+dev.of
+dev.off)
+dev.off())
+dev.off()
+plot(with(as.list(parms[c("r", "K")]), function(h)K/2 - sqrt(K^2/4-h*K/r)), xlim = c(0, parms['r']*parms['K']/4))
+plot(NULL, xlim = c(0, 3), ylim = c(0, parms['K']))
+plot(with(as.list(parms[c("r", "K")]), function(h)K/2 - sqrt(K^2/4-h*K/r)), xlim = c(0, parms['r']*parms['K']/4), add=T)
+plot(with(as.list(parms[c("r", "K")]), function(h)K/2 + sqrt(K^2/4-h*K/r)), xlim = c(0, parms['r']*parms['K']/4), add=T)
+plot(with(as.list(parms[c("r", "K")]), function(h)K/2 - sqrt(K^2/4-h*K/r)), xlim = c(0, parms['r']*parms['K']/4), add=T, lwd=2, lty = 2)
+plot(NULL, xlim = c(0, 3), ylim = c(0, parms['K']))#
+plot(with(as.list(parms[c("r", "K")]), function(h)K/2 - sqrt(K^2/4-h*K/r)), xlim = c(0, parms['r']*parms['K']/4), add=T, lwd=2, lty = 2)#
+plot(with(as.list(parms[c("r", "K")]), function(h)K/2 + sqrt(K^2/4-h*K/r)), xlim = c(0, parms['r']*parms['K']/4), add=T, lwd=2)
+axis(2, c(0, parms['K']), c(expression(0), expression(K)), font = 2, cex.axis = 1.5)
+mtext(expression(N^*), 2, line=2, font=2, cex=2)
+mtext(expression(N^'*'), 2, line=2, font=2, cex=2)
+mtext(expression(N^'*'), 2, line=2, font=2, cex=2, las = 1)
+axis(1, c(0, parms['r']*parms['K']/4), c(expression(0), expression(h[crit]==frac(r*K, 4))), font = 2, cex.axis = 1.5, las = 1)
+plot(NULL, xlim = c(0, 3), ylim = c(0, parms['K']), xlab="", ylab="", axes=F)#
+plot(with(as.list(parms[c("r", "K")]), function(h)K/2 - sqrt(K^2/4-h*K/r)), xlim = c(0, parms['r']*parms['K']/4), add=T, lwd=2, lty = 2)#
+plot(with(as.list(parms[c("r", "K")]), function(h)K/2 + sqrt(K^2/4-h*K/r)), xlim = c(0, parms['r']*parms['K']/4), add=T, lwd=2)#
+#
+axis(2, c(0, parms['K']), c(expression(0), expression(K)), font = 2, cex.axis = 1.5, las = 1)#
+axis(1, c(0, parms['r']*parms['K']/4), c(expression(0), expression(h[crit]==frac(r*K, 4))), font = 2, cex.axis = 1.5, las = 1)#
+box()#
+mtext(expression(N^'*'), 2, line=2, font=2, cex=2, las = 1)#
+mtext(expression(h)), 2, line=1, font=2, cex=2, las=1, at = 3)
+par(mar=c(4.1, 4.1, 1.1, 1.1), yaxs = 'i')
+plot(NULL, xlim = c(0, 4), ylim = c(0, parms['K']), xlab="", ylab="", axes=F)#
+plot(with(as.list(parms[c("r", "K")]), function(h)K/2 - sqrt(K^2/4-h*K/r)), xlim = c(0, parms['r']*parms['K']/4), add=T, lwd=2, lty = 2)#
+plot(with(as.list(parms[c("r", "K")]), function(h)K/2 + sqrt(K^2/4-h*K/r)), xlim = c(0, parms['r']*parms['K']/4), add=T, lwd=2)#
+#
+axis(2, c(0, parms['K']), c(expression(0), expression(K)), font = 2, cex.axis = 1.5, las = 1)#
+axis(1, c(0, parms['r']*parms['K']/4), c(expression(0), expression(h[crit])), font = 2, cex.axis = 1.5, las = 1)#
+box()#
+mtext(expression(N^'*'), 2, line=2, font=2, cex=2, las = 1)#
+mtext(expression(h)), 2, line=1, font=2, cex=2, las=1, at = 3)
+mtext(expression(h)), 1, line=1, font=2, cex=2, las=1, at = 3)
+mtext(expression(h), 1, line=1, font=2, cex=2, las=1, at = 3)
+mtext(expression(h), 1, line=1, font=2, cex=2, las=1, at = 4)
+par(mar=c(4.1, 4.1, 1.1, 1.1), xaxs = 'i', yaxs = 'i')
+par(mar=c(4.1, 4.1, 1.1, 1.1), xaxs = 'i', yaxs = 'i')#
+plot(NULL, xlim = c(0, 4), ylim = c(0, parms['K']), xlab="", ylab="", axes=F)#
+plot(with(as.list(parms[c("r", "K")]), function(h)K/2 - sqrt(K^2/4-h*K/r)), xlim = c(0, parms['r']*parms['K']/4), add=T, lwd=2, lty = 2)#
+plot(with(as.list(parms[c("r", "K")]), function(h)K/2 + sqrt(K^2/4-h*K/r)), xlim = c(0, parms['r']*parms['K']/4), add=T, lwd=2)#
+#
+axis(2, c(0, parms['K']), c(expression(0), expression(K)), font = 2, cex.axis = 1.5, las = 1)#
+axis(1, c(0, parms['r']*parms['K']/4), c(expression(0), expression(h[crit])), font = 2, cex.axis = 1.5, las = 1)#
+box()#
+mtext(expression(N^'*'), 2, line=2, font=2, cex=2, las = 1)#
+mtext(expression(h), 1, line=1, font=2, cex=2, las=1, at = 4)
+png("bif-const.png", height = 480, width = 480) box()
+par(mar=c(4.1, 4.1, 1.1, 1.1), xaxs = 'i')#
+plot(NULL, xlim = c(0, 4), ylim = c(0, parms['K']), xlab="", ylab="", axes=F)#
+plot(with(as.list(parms[c("r", "K")]), function(h)K/2 - sqrt(K^2/4-h*K/r)), xlim = c(0, parms['r']*parms['K']/4), add=T, lwd=2, lty = 2)#
+plot(with(as.list(parms[c("r", "K")]), function(h)K/2 + sqrt(K^2/4-h*K/r)), xlim = c(0, parms['r']*parms['K']/4), add=T, lwd=2)#
+#
+axis(2, c(0, parms['K']), c(expression(0), expression(K)), font = 2, cex.axis = 1.5, las = 1)#
+axis(1, c(0, parms['r']*parms['K']/4), c(expression(0), expression(h[crit])), font = 2, cex.axis = 1.5, las = 1)#
+box()#
+mtext(expression(N^'*'), 2, line=2, font=2, cex=2, las = 1)#
+mtext(expression(h), 1, line=1, font=2, cex=2, las=1, at = 4)
+par(mar=c(4.1, 4.1, 1.1, 1.1), xaxs = 'i')
+plot(NULL, xlim = c(0, 4), ylim = c(0, parms['K']), xlab="", ylab="", axes=F)
+plot(with(as.list(parms[c("r", "K")]), function(h)K*(1-h/r)), xlim = c(0, 2*parms['r']), add=T, lwd=2, lty = 2)
+plot(NULL, xlim = c(0, 2*parms['r']), ylim = c(0, parms['K']), xlab="", ylab="", axes=F)
+plot(with(as.list(parms[c("r", "K")]), function(h)K*(1-h/r)), xlim = c(0, parms['r']), add=T, lwd=2, lty = 2)
+plot(with(as.list(parms[c("r", "K")]), function(h)0*h, xlim = c(0, parms['r']), add=T, lwd=2, lty = 2)
+plot(with(as.list(parms[c("r", "K")]), function(h)K*(1-h/r)), xlim = c(0, parms['r']), add=T, lwd=2)
+plot(with(as.list(parms[c("r", "K")]), function(h)0*h), xlim = c(0, parms['r']), add=T, lwd=2, lty = 2)
+plot(with(as.list(parms[c("r", "K")]), function(h)K*(1-h/r)), xlim = c(parms['r'], 2*parms['r']), add=T, lwd=2, lty = 2)
+plot(with(as.list(parms[c("r", "K")]), function(h)0*h), xlim = c(0, parms['r']*parms['K']/4), add=T, lwd=2)
+plot(with(as.list(parms[c("r", "K")]), function(h)0*h), xlim = c(parms['r'], 2*parms['r']), add=T, lwd=2)
+par(mar=c(4.1, 4.1, 1.1, 1.1), xaxs = 'i')#
+plot(NULL, xlim = c(0, 2*parms['r']), ylim = c(0, parms['K']), xlab="", ylab="", axes=F)#
+plot(with(as.list(parms[c("r", "K")]), function(h)K*(1-h/r)), xlim = c(0, parms['r']), add=T, lwd=2)#
+plot(with(as.list(parms[c("r", "K")]), function(h)0*h), xlim = c(0, parms['r']), add=T, lwd=2, lty = 2)#
+plot(with(as.list(parms[c("r", "K")]), function(h)K*(1-h/r)), xlim = c(parms['r'], 2*parms['r']), add=T, lwd=2, lty = 2)#
+plot(with(as.list(parms[c("r", "K")]), function(h)0*h), xlim = c(parms['r'], 2*parms['r']), add=T, lwd=2)
+par(mar=c(4.1, 4.1, 1.1, 1.1), xaxs = 'i')#
+plot(NULL, xlim = c(0, 2*parms['r']), ylim = c(0, parms['K']), xlab="", ylab="", axes=F)#
+plot(with(as.list(parms[c("r", "K")]), function(h)K*(1-h/r)), xlim = c(0, parms['r']), add=T, lwd=2)#
+plot(with(as.list(parms[c("r", "K")]), function(h)0*h), xlim = c(0, parms['r']), add=T, lwd=2, lty = 2)#
+plot(with(as.list(parms[c("r", "K")]), function(h)K*(1-h/r)), xlim = c(parms['r'], 2*parms['r']), add=T, lwd=2, lty = 2)#
+plot(with(as.list(parms[c("r", "K")]), function(h)0*h), xlim = c(parms['r'], 2*parms['r']), add=T, lwd=2)#
+#
+axis(2, c(0, parms['K']), c(expression(0), expression(K)), font = 2, cex.axis = 1.5, las = 1)#
+axis(1, c(0, parms['r']*parms['K']/4), c(expression(0), expression(h[crit])), font = 2, cex.axis = 1.5, las = 1)
+plot(NULL, xlim = c(0, 2*parms['r']), ylim = c(-1, parms['K']), xlab="", ylab="", axes=F)
+plot(with(as.list(parms[c("r", "K")]), function(h)K*(1-h/r)), xlim = c(0, parms['r']), add=T, lwd=3)
+plot(with(as.list(parms[c("r", "K")]), function(h)0*h), xlim = c(0, parms['r']), add=T, lwd=3, lty = 2)
+plot(with(as.list(parms[c("r", "K")]), function(h)K*(1-h/r)), xlim = c(parms['r'], 2*parms['r']), add=T, lwd=3, lty = 2)
+plot(with(as.list(parms[c("r", "K")]), function(h)0*h), xlim = c(parms['r'], 2*parms['r']), add=T, lwd=3)
+axis(2, c(0, parms['K']), c(expression(0), expression(K)), font = 2, cex.axis = 1.5, las = 1)
+axis(1, c(0, parms['r']*parms['K']/4), c(expression(0), expression(h[crit])), font = 2, cex.axis = 1.5, las = 1)
+box()
+par(mar=c(4.1, 4.1, 1.1, 1.1), xaxs = 'i')#
+plot(NULL, xlim = c(0, 2*parms['r']), ylim = c(-2, parms['K']), xlab="", ylab="", axes=F)#
+plot(with(as.list(parms[c("r", "K")]), function(h)K*(1-h/r)), xlim = c(0, parms['r']), add=T, lwd=3)#
+plot(with(as.list(parms[c("r", "K")]), function(h)0*h), xlim = c(0, parms['r']), add=T, lwd=3, lty = 2)#
+plot(with(as.list(parms[c("r", "K")]), function(h)K*(1-h/r)), xlim = c(parms['r'], 2*parms['r']), add=T, lwd=3, lty = 2)#
+plot(with(as.list(parms[c("r", "K")]), function(h)0*h), xlim = c(parms['r'], 2*parms['r']), add=T, lwd=3)#
+#
+axis(2, c(0, parms['K']), c(expression(0), expression(K)), font = 2, cex.axis = 1.5, las = 1)#
+axis(1, c(0, parms['r']*parms['K']/4), c(expression(0), expression(h[crit])), font = 2, cex.axis = 1.5, las = 1)#
+box()
+par(mar=c(4.1, 4.1, 1.1, 1.1), xaxs = 'i')#
+plot(NULL, xlim = c(0, 2*parms['r']), ylim = c(-2, parms['K']), xlab="", ylab="", axes=F)#
+plot(with(as.list(parms[c("r", "K")]), function(h)K*(1-h/r)), xlim = c(0, parms['r']), add=T, lwd=3)#
+plot(with(as.list(parms[c("r", "K")]), function(h)0*h), xlim = c(0, parms['r']), add=T, lwd=3, lty = 3)#
+plot(with(as.list(parms[c("r", "K")]), function(h)K*(1-h/r)), xlim = c(parms['r'], 2*parms['r']), add=T, lwd=3, lty = 3)#
+plot(with(as.list(parms[c("r", "K")]), function(h)0*h), xlim = c(parms['r'], 2*parms['r']), add=T, lwd=3)#
+#
+axis(2, c(0, parms['K']), c(expression(0), expression(K)), font = 2, cex.axis = 1.5, las = 1)#
+axis(1, c(0, parms['r']*parms['K']/4), c(expression(0), expression(h[crit])), font = 2, cex.axis = 1.5, las = 1)
+par(mar=c(4.1, 4.1, 1.1, 1.1), xaxs = 'i')#
+plot(NULL, xlim = c(0, 2*parms['r']), ylim = c(-10, parms['K']), xlab="", ylab="", axes=F)#
+plot(with(as.list(parms[c("r", "K")]), function(h)K*(1-h/r)), xlim = c(0, parms['r']), add=T, lwd=3)#
+plot(with(as.list(parms[c("r", "K")]), function(h)0*h), xlim = c(0, parms['r']), add=T, lwd=3, lty = 3)#
+plot(with(as.list(parms[c("r", "K")]), function(h)K*(1-h/r)), xlim = c(parms['r'], 2*parms['r']), add=T, lwd=3, lty = 3)#
+plot(with(as.list(parms[c("r", "K")]), function(h)0*h), xlim = c(parms['r'], 2*parms['r']), add=T, lwd=3)#
+#
+axis(2, c(0, parms['K']), c(expression(0), expression(K)), font = 2, cex.axis = 1.5, las = 1)#
+axis(1, c(0, parms['r']*parms['K']/4), c(expression(0), expression(h[crit])), font = 2, cex.axis = 1.5, las = 1)#
+box()
+mtext(expression(N^'*'), 2, line=2, font=2, cex=2, las = 1)#
+mtext(expression(h), 1, line=1, font=2, cex=2, las=1, at = 4)
+mtext(expression(h), 1, line=1, font=2, cex=2, las=1, at = 2*parms['r'])
+axis(1, c(0, parms['r']), c(expression(0), expression(h[crit])), font = 2, cex.axis = 1.5, las = 1)
+plot(with(as.list(parms[c("r", "K")]), function(h)0*h), xlim = c(parms['r'], 2*parms['r']), add=T, lwd=3, col = "blue")
+plot(with(as.list(parms[c("r", "K")]), function(h)K*(1-h/r)), xlim = c(parms['r'], 2*parms['r']), add=T, lwd=3, lty = 3, col = "red")
+plot(with(as.list(parms[c("r", "K")]), function(h)0*h), xlim = c(0, parms['r']), add=T, lwd=3, lty = 3, col = "red")
+plot(with(as.list(parms[c("r", "K")]), function(h)K*(1-h/r)), xlim = c(0, parms['r']), add=T, lwd=3, col = 'blue')
+legend("topright", c("Stable", "Unstable"), lwd=3, lty = c(1, 3), col = c("blue", "red"))
+legend("topright", c("Stable", "Unstable"), lwd=3, lty = c(1, 3), col = c("blue", "red"), cex = 1.5)
+par(mar=c(4.1, 4.1, 1.1, 1.1), xaxs = 'i')#
+plot(NULL, xlim = c(0, 4), ylim = c(0, parms['K']), xlab="", ylab="", axes=F)#
+plot(with(as.list(parms[c("r", "K")]), function(h)K/2 + sqrt(K^2/4-h*K/r)), xlim = c(0, parms['r']*parms['K']/4), add=T, lwd=3, col = "blue")#
+#
+plot(with(as.list(parms[c("r", "K")]), function(h)K/2 - sqrt(K^2/4-h*K/r)), xlim = c(0, parms['r']*parms['K']/4), add=T, lwd=3, lty = 3, col = "red")#
+legend("topright", c("Stable", "Unstable"), lwd=3, lty = c(1, 3), col = c("blue", "red"), cex = 1.5)#
+#
+axis(2, c(0, parms['K']), c(expression(0), expression(K)), font = 2, cex.axis = 1.5, las = 1)#
+axis(1, c(0, parms['r']*parms['K']/4), c(expression(0), expression(h[crit])), font = 2, cex.axis = 1.5, las = 1)#
+box()#
+mtext(expression(N^'*'), 2, line=2, font=2, cex=2, las = 1)#
+mtext(expression(h), 1, line=1, font=2, cex=2, las=1, at = 4)
+png("bif-prop.png", height = 480, width = 480)#
+par(mar=c(4.1, 4.1, 1.1, 1.1), xaxs = 'i')#
+plot(NULL, xlim = c(0, 2*parms['r']), ylim = c(-10, parms['K']), xlab="", ylab="", axes=F)#
+plot(with(as.list(parms[c("r", "K")]), function(h)K*(1-h/r)), xlim = c(0, parms['r']), add=T, lwd=3, col = 'blue')#
+plot(with(as.list(parms[c("r", "K")]), function(h)0*h), xlim = c(0, parms['r']), add=T, lwd=3, lty = 3, col = "red")#
+plot(with(as.list(parms[c("r", "K")]), function(h)K*(1-h/r)), xlim = c(parms['r'], 2*parms['r']), add=T, lwd=3, lty = 3, col = "red")#
+plot(with(as.list(parms[c("r", "K")]), function(h)0*h), xlim = c(parms['r'], 2*parms['r']), add=T, lwd=3, col = "blue")#
+#
+legend("topright", c("Stable", "Unstable"), lwd=3, lty = c(1, 3), col = c("blue", "red"), cex = 1.5)#
+axis(2, c(0, parms['K']), c(expression(0), expression(K)), font = 2, cex.axis = 1.5, las = 1)#
+axis(1, c(0, parms['r']), c(expression(0), expression(h[crit])), font = 2, cex.axis = 1.5, las = 1)#
+box()#
+mtext(expression(N^'*'), 2, line=2, font=2, cex=2, las = 1)#
+mtext(expression(h), 1, line=1, font=2, cex=2, las=1, at = 2*parms['r'])#
+dev.off()
+png("bif-const.png", height = 480, width = 480)#
+par(mar=c(4.1, 4.1, 1.1, 1.1), xaxs = 'i')#
+plot(NULL, xlim = c(0, 4), ylim = c(0, parms['K']), xlab="", ylab="", axes=F)#
+plot(with(as.list(parms[c("r", "K")]), function(h)K/2 + sqrt(K^2/4-h*K/r)), xlim = c(0, parms['r']*parms['K']/4), add=T, lwd=3, col = "blue")#
+#
+plot(with(as.list(parms[c("r", "K")]), function(h)K/2 - sqrt(K^2/4-h*K/r)), xlim = c(0, parms['r']*parms['K']/4), add=T, lwd=3, lty = 3, col = "red")#
+legend("topright", c("Stable", "Unstable"), lwd=3, lty = c(1, 3), col = c("blue", "red"), cex = 1.5)#
+#
+axis(2, c(0, parms['K']), c(expression(0), expression(K)), font = 2, cex.axis = 1.5, las = 1)#
+axis(1, c(0, parms['r']*parms['K']/4), c(expression(0), expression(h[crit])), font = 2, cex.axis = 1.5, las = 1)#
+box()#
+mtext(expression(N^'*'), 2, line=2, font=2, cex=2, las = 1)#
+mtext(expression(h), 1, line=1, font=2, cex=2, las=1, at = 4)#
+dev.off()
+setwd("~/Github/IBD/assets/")
+setwd("~/Github/IBD/assets/")#
+pdf("logistic.pdf", height = 5, width = 5)#
+par(mar=c(4.1, 4.1, 1.1, 1.1), yaxs = 'i')#
+parms <- c(r = 0.1, K=100)#
+f <- with(as.list(parms),function(x) r*x*(1-x/K))#
+eq <- with(as.list(parms), c(0, K))#
+fmax <- with(as.list(parms), f(K/2))#
+fmin <- with(as.list(parms), f(K+20))#
+plot(f, xlim = c(0, parms['K']+20), ylim = c(fmin, 1.1*fmax), axes=F, xlab = "", ylab="", lwd = 2)#
+abline(h=0)#
+points(eq, eq*0, pch = 21, bg = c("white", "black"), cex=1.5)#
+for(i in seq(0, 120, by = 10)){#
+	arrows(i+2.5, 0, i+7.5, 0, length = abs(f(i+5))/(2.5*fmax), code = 1.5+0.5*sign(f(i+5)))#
+}#
+axis(1, c(0, parms['K']), c(expression(0), expression(K)), font = 2, cex.axis = 1.5)#
+axis(2, c(0), c(expression(0)), font = 2, cex.axis = 1.5, las = 1)#
+box()#
+mtext(expression(N), 1, line=2, font=2, cex=2)#
+mtext(expression(frac(dN,dt)), 2, line=1, font=2, cex=2, las=1, at = fmax/2)#
+dev.off()#
+#
+parms <- c(r = 0.1, K=100, h = 1)#
+#
+for(hi in c(0, 2, 3, 4, 2*parms['r']*parms['K']/4)){#
+png(paste("logistic-constant-",hi,".png", sep=''), height = 680, width = 680)#
+par(mar=c(4.1, 4.1, 1.1, 1.1), yaxs = 'i')#
+parms['h'] <- hi/2#
+f <- with(as.list(parms),function(x) r*x*(1-x/K) - h)#
+eq <- with(as.list(parms), K/2 + c(-sqrt(K^2/4-h*K/r), sqrt(K^2/4-h*K/r)))#
+fmax <- with(as.list(parms), f(K/2)+h)#
+fmin <- with(as.list(parms), f(K+20)+h)#
+plot(f, xlim = c(0, parms['K']+20), ylim = c(fmin, 1.2*fmax), axes=F, xlab = "", ylab="", lwd = 2)#
+abline(h=0)#
+#
+for(i in seq(0, 120, by = 10)){#
+	if(fmax>0)	arrows(i+2.5, 0, i+7.5, 0, length = abs(f(i+5))/(2.5*fmax), code = 1.5+0.5*sign(f(i+5)))#
+}#
+points(eq, eq*0, pch = 21, bg = c("white", "black"), cex=1.5)#
+axis(1, c(0, parms['K']), c(expression(0), expression(K)), font = 2, cex.axis = 1.5)#
+axis(2, c(0), c(expression(0)), font = 2, cex.axis = 1.5, las = 1)#
+box()#
+mtext(expression(N), 1, line=2, font=2, cex=2)#
+mtext(expression(frac(dN,dt)), 2, line=1, font=2, cex=2, las=1, at = abs(fmax)/2)#
+dev.off()#
+}#
+parms <- c(r = 0.1, K=100, h = 0.01)#
+#
+for(hi in c(10, 6, 4, 2)){#
+png(paste("logistic-prop-",hi,".png", sep=''), height = 680, width = 680)#
+par(mar=c(4.1, 4.1, 1.1, 1.1), yaxs = 'i')#
+parms['h'] <- parms['r']/hi#
+f <- with(as.list(parms),function(x) r*x*(1-x/K) - h*x)#
+eq <- with(as.list(parms), c(0, K*(1-h/r)))#
+fmax <- 4.5#
+fmin <- -3#
+plot(f, xlim = c(0, parms['K']+20), ylim = c(fmin, 1.2*fmax), axes=F, xlab = "", ylab="", lwd = 2)#
+abline(h=0)#
+print(parms['h'])#
+for(i in seq(0, 120, by = 10)){#
+	if(fmax>0)	arrows(i+2.5, 0, i+7.5, 0, length = abs(f(i+5))/(2.5*fmax), code = 1.5+0.5*sign(f(i+5)))#
+}#
+points(eq, eq*0, pch = 21, bg = c("white", "black"), cex=1.5)#
+axis(1, c(0, parms['K']), c(expression(0), expression(K)), font = 2, cex.axis = 1.5)#
+axis(2, c(0), c(expression(0)), font = 2, cex.axis = 1.5, las = 1)#
+box()#
+mtext(expression(N), 1, line=2, font=2, cex=2)#
+mtext(expression(frac(dN,dt)), 2, line=1, font=2, cex=2, las=1, at = abs(fmax)/2)#
+dev.off()#
+}#
+#
+png("bif-const.png", height = 680, width = 680)#
+par(mar=c(4.1, 4.1, 1.1, 1.1), xaxs = 'i')#
+plot(NULL, xlim = c(0, 4), ylim = c(0, parms['K']), xlab="", ylab="", axes=F)#
+plot(with(as.list(parms[c("r", "K")]), function(h)K/2 + sqrt(K^2/4-h*K/r)), xlim = c(0, parms['r']*parms['K']/4), add=T, lwd=3, col = "blue")#
+#
+plot(with(as.list(parms[c("r", "K")]), function(h)K/2 - sqrt(K^2/4-h*K/r)), xlim = c(0, parms['r']*parms['K']/4), add=T, lwd=3, lty = 3, col = "red")#
+legend("topright", c("Stable", "Unstable"), lwd=3, lty = c(1, 3), col = c("blue", "red"), cex = 1.5)#
+#
+axis(2, c(0, parms['K']), c(expression(0), expression(K)), font = 2, cex.axis = 1.5, las = 1)#
+axis(1, c(0, parms['r']*parms['K']/4), c(expression(0), expression(h[crit])), font = 2, cex.axis = 1.5, las = 1)#
+box()#
+mtext(expression(N^'*'), 2, line=2, font=2, cex=2, las = 1)#
+mtext(expression(h), 1, line=1, font=2, cex=2, las=1, at = 4)#
+dev.off()#
+#
+png("bif-prop.png", height = 680, width = 680)#
+par(mar=c(4.1, 4.1, 1.1, 1.1), xaxs = 'i')#
+plot(NULL, xlim = c(0, 2*parms['r']), ylim = c(-10, parms['K']), xlab="", ylab="", axes=F)#
+plot(with(as.list(parms[c("r", "K")]), function(h)K*(1-h/r)), xlim = c(0, parms['r']), add=T, lwd=3, col = 'blue')#
+plot(with(as.list(parms[c("r", "K")]), function(h)0*h), xlim = c(0, parms['r']), add=T, lwd=3, lty = 3, col = "red")#
+plot(with(as.list(parms[c("r", "K")]), function(h)K*(1-h/r)), xlim = c(parms['r'], 2*parms['r']), add=T, lwd=3, lty = 3, col = "red")#
+plot(with(as.list(parms[c("r", "K")]), function(h)0*h), xlim = c(parms['r'], 2*parms['r']), add=T, lwd=3, col = "blue")#
+#
+legend("topright", c("Stable", "Unstable"), lwd=3, lty = c(1, 3), col = c("blue", "red"), cex = 1.5)#
+axis(2, c(0, parms['K']), c(expression(0), expression(K)), font = 2, cex.axis = 1.5, las = 1)#
+axis(1, c(0, parms['r']), c(expression(0), expression(h[crit])), font = 2, cex.axis = 1.5, las = 1)#
+box()#
+mtext(expression(N^'*'), 2, line=2, font=2, cex=2, las = 1)#
+mtext(expression(h), 1, line=1, font=2, cex=2, las=1, at = 2*parms['r'])#
+dev.off()
+library(deSolve)
+harvestMod <- function(t, x, parms)  {#
+  with(as.list(c(parms, x)), {#
+    dN <- r*N*(1 - N/K) - h*N#
+    res <- list(c(dN))})}#
+#
+parms <- c(r = 0.1, K = 100, h = 0.00)#
+times <- seq(0, 1000, by = 0.1)#
+xstart <- c(N = 10)#
+out <- as.data.frame(lsoda(y = xstart, times = times, func = harvestMod, parms = parms))#
+#
+plot(out, type = 'l', ylim = c(0, 1000))
+times <- seq(0, 100, by = 0.1)
+plot(out, type = 'l', ylim = c(0, 120))
+lines(out, col = "red")
+plot(out, type = 'l', ylim = c(0, 120), lwd = 3)#
+xstart <- c(N = 120)#
+out <- as.data.frame(lsoda(y = xstart, times = times, func = harvestMod, parms = parms))#
+lines(out, col = "red", lwd=3)#
+xstart <- c(N = parms['K']/2)#
+out <- as.data.frame(lsoda(y = xstart, times = times, func = harvestMod, parms = parms))#
+lines(out, col = "blue", lwd = 3)
+parms['K']
+xstart <- c(N = 10)
+plot(out, type = 'l', ylim = c(0, 120), lwd = 3)
+xstart <- c(N = 120)
+lines(out, col = "red", lwd=3)
+xstart <- c(N = parms['K']/2)
+parms['K']/2
+xstart <- c(N = as.numeric(parms['K']/2))
+out <- as.data.frame(lsoda(y = xstart, times = times, func = harvestMod, parms = parms))
+lines(out, col = "blue", lwd = 3)
+plot(out, type = 'l', ylim = c(0, 120), lwd = 3, las = 1)
+plot(out, type = 'l', ylim = c(0, 120), lwd = 3, las = 1, xlab="", ylab="", cex.axis=1.5)
+plot(out, type = 'l', ylim = c(0, 120), lwd = 3, las = 1, xlab="", ylab="", cex.axis=1.3)
+par(mar=c(4.1, 4.1, 1.1, 1.1), xaxs = 'i')#
+plot(out, type = 'l', ylim = c(0, 120), lwd = 3, las = 1, xlab="", ylab="", cex.axis=1.3)#
+xstart <- c(N = 120)#
+out <- as.data.frame(lsoda(y = xstart, times = times, func = harvestMod, parms = parms))#
+lines(out, col = "red", lwd=3)#
+xstart <- c(N = as.numeric(parms['K']/2))#
+out <- as.data.frame(lsoda(y = xstart, times = times, func = harvestMod, parms = parms))#
+lines(out, col = "blue", lwd = 3)
+mtext(expression(t), 1, line = 2)
+mtext(expression(t), 1, line = 2, cex=2)
+mtext(expression(N(t)), 2, line = 2, cex=2)
+par(mar=c(4.1, 5.1, 1.1, 1.1), xaxs = 'i')#
+plot(out, type = 'l', ylim = c(0, 120), lwd = 3, las = 1, xlab="", ylab="", cex.axis=1.1)#
+mtext(expression(t), 1, line = 2, cex=2)#
+mtext(expression(N(t)), 2, line = 2, cex=2)#
+#
+xstart <- c(N = 120#
+out <- as.data.frame(lsoda(y = xstart, times = times, func = harvestMod, parms = parms))#
+lines(out, col = "red", lwd=3)#
+xstart <- c(N = as.numeric(parms['K']/2))#
+out <- as.data.frame(lsoda(y = xstart, times = times, func = harvestMod, parms = parms))#
+lines(out, col = "blue", lwd = 3)
+harvestMod <- function(t, x, parms)  {#
+  with(as.list(c(parms, x)), {#
+    dN <- r*N*(1 - N/K) - h*N#
+    res <- list(c(dN))})}#
+#
+parms <- c(r = 0.1, K = 100, h = 0.00)#
+times <- seq(0, 100, by = 0.1)#
+xstart <- c(N = 10)#
+out <- as.data.frame(lsoda(y = xstart, times = times, func = harvestMod, parms = parms))#
+#
+par(mar=c(4.1, 5.1, 1.1, 1.1), xaxs = 'i')#
+plot(out, type = 'l', ylim = c(0, 120), lwd = 3, las = 1, xlab="", ylab="", cex.axis=1.1)#
+mtext(expression(t), 1, line = 2, cex=2)#
+mtext(expression(N(t)), 2, line = 2, cex=2)#
+#
+xstart <- c(N = 120)#
+out <- as.data.frame(lsoda(y = xstart, times = times, func = harvestMod, parms = parms))#
+lines(out, col = "red", lwd=3)#
+xstart <- c(N = as.numeric(parms['K']/2))#
+out <- as.data.frame(lsoda(y = xstart, times = times, func = harvestMod, parms = parms))#
+lines(out, col = "blue", lwd = 3)
+lines(out, col = "gray", lwd=3)
+lines(out, col = "gray", lwd = 3)
+parms <- c(r = 0.1, K = 100, h = 0.00)#
+times <- seq(0, 100, by = 0.1)#
+xstart <- c(N = 10)#
+out <- as.data.frame(lsoda(y = xstart, times = times, func = harvestMod, parms = parms))#
+png("logistic-sol.png", heigh = 680, width = 680)#
+par(mar=c(4.1, 5.1, 1.1, 1.1), xaxs = 'i')#
+plot(out, type = 'l', ylim = c(0, 120), lwd = 3, las = 1, xlab="", ylab="", cex.axis=1.1)#
+mtext(expression(t), 1, line = 2, cex=2)#
+mtext(expression(N(t)), 2, line = 2, cex=2)#
+#
+xstart <- c(N = 120)#
+out <- as.data.frame(lsoda(y = xstart, times = times, func = harvestMod, parms = parms))#
+lines(out, col = "gray", lwd=3)#
+xstart <- c(N = as.numeric(parms['K']/2))#
+out <- as.data.frame(lsoda(y = xstart, times = times, func = harvestMod, parms = parms))#
+lines(out, col = "gray", lwd = 3)#
+abline(h= parms['K'], col = "blue", lwd = 3)#
+abline(h= 0, col = "red", lwd = 3)#
+#
+dev.off()
+png("logistic-sol.png", heigh = 680, width = 680)#
+par(mar=c(4.1, 5.1, 1.1, 1.1), xaxs = 'i', yaxs='i')#
+plot(out, type = 'l', ylim = c(0, 120), lwd = 3, las = 1, xlab="", ylab="", cex.axis=1.1)#
+mtext(expression(t), 1, line = 2, cex=2)#
+mtext(expression(N(t)), 2, line = 2.5, cex=2)#
+#
+xstart <- c(N = 120)#
+out <- as.data.frame(lsoda(y = xstart, times = times, func = harvestMod, parms = parms))#
+lines(out, col = "gray", lwd=3)#
+xstart <- c(N = as.numeric(parms['K']/2))#
+out <- as.data.frame(lsoda(y = xstart, times = times, func = harvestMod, parms = parms))#
+lines(out, col = "gray", lwd = 3)#
+abline(h= parms['K'], col = "blue", lwd = 3)#
+abline(h= 0, col = "red", lwd = 3)#
+#
+dev.off()
+plot(out, type = 'l', ylim = c(0, 120), lwd = 3, las = 1, xlab="", ylab="", cex.axis=1.1)
+png("logistic-sol.png", heigh = 680, width = 680)#
+par(mar=c(4.1, 5.1, 1.1, 1.1), xaxs = 'i', yaxs='i')#
+xstart <- c(N = 10)#
+out <- as.data.frame(lsoda(y = xstart, times = times, func = harvestMod, parms = parms))#
+plot(out, type = 'l', ylim = c(0, 120), lwd = 3, las = 1, xlab="", ylab="", cex.axis=1.1)#
+mtext(expression(t), 1, line = 2, cex=2)#
+mtext(expression(N(t)), 2, line = 2.5, cex=2)#
+#
+xstart <- c(N = 120)#
+out <- as.data.frame(lsoda(y = xstart, times = times, func = harvestMod, parms = parms))#
+lines(out, col = "gray", lwd=3)#
+xstart <- c(N = as.numeric(parms['K']/2))#
+out <- as.data.frame(lsoda(y = xstart, times = times, func = harvestMod, parms = parms))#
+lines(out, col = "gray", lwd = 3)#
+abline(h= parms['K'], col = "blue", lwd = 3)#
+abline(h= 0, col = "red", lwd = 3)#
+#
+dev.off()
+for(hi in c(0, 2, 3, 4, 2*parms['r']*parms['K']/4)){#
+png(paste("logistic-constant-sol-",hi,".png", sep=''), height = 680, width = 680)#
+par(mar=c(4.1, 4.1, 1.1, 1.1), yaxs = 'i')#
+parms['h'] <- hi/2#
+par(mar=c(4.1, 5.1, 1.1, 1.1), xaxs = 'i', yaxs='i')#
+xstart <- c(N = 10)#
+out <- as.data.frame(lsoda(y = xstart, times = times, func = harvestMod, parms = parms))#
+plot(out, type = 'l', ylim = c(0, 120), lwd = 3, las = 1, xlab="", ylab="", cex.axis=1.1)#
+mtext(expression(t), 1, line = 2, cex=2)#
+mtext(expression(N(t)), 2, line = 2.5, cex=2)#
+#
+xstart <- c(N = 120)#
+out <- as.data.frame(lsoda(y = xstart, times = times, func = harvestMod, parms = parms))#
+lines(out, col = "gray", lwd=3)#
+xstart <- c(N = as.numeric(parms['K']/2))#
+out <- as.data.frame(lsoda(y = xstart, times = times, func = harvestMod, parms = parms))#
+lines(out, col = "gray", lwd = 3)#
+abline(h= parms['K'], col = "blue", lwd = 3)#
+abline(h= 0, col = "red", lwd = 3)#
+#
+dev.off()#
+}
+harvestModC <- function(t, x, parms)  {#
+  with(as.list(c(parms, x)), {#
+    dN <- r*N*(1 - N/K) - h#
+    res <- list(c(dN))})}#
+for(hi in c(0, 2, 3, 4, 2*parms['r']*parms['K']/4)){#
+png(paste("logistic-constant-sol-",hi,".png", sep=''), height = 680, width = 680)#
+par(mar=c(4.1, 4.1, 1.1, 1.1), yaxs = 'i')#
+parms['h'] <- hi/2#
+par(mar=c(4.1, 5.1, 1.1, 1.1), xaxs = 'i', yaxs='i')#
+xstart <- c(N = 10)#
+out <- as.data.frame(lsoda(y = xstart, times = times, func = harvestModC, parms = parms))#
+plot(out, type = 'l', ylim = c(0, 120), lwd = 3, las = 1, xlab="", ylab="", cex.axis=1.1)#
+mtext(expression(t), 1, line = 2, cex=2)#
+mtext(expression(N(t)), 2, line = 2.5, cex=2)#
+#
+xstart <- c(N = 120)#
+out <- as.data.frame(lsoda(y = xstart, times = times, func = harvestModC, parms = parms))#
+lines(out, col = "gray", lwd=3)#
+xstart <- c(N = as.numeric(parms['K']/2))#
+out <- as.data.frame(lsoda(y = xstart, times = times, func = harvestModC, parms = parms))#
+lines(out, col = "gray", lwd = 3)#
+abline(h= parms['K'], col = "blue", lwd = 3)#
+abline(h= 0, col = "red", lwd = 3)#
+#
+dev.off()#
+}
+abline(h= with(as.list(parms),K/2 + sqrt(K^2/4-h*K/r)), col = "blue", lwd = 3)
+harvestModC <- function(t, x, parms)  {#
+  with(as.list(c(parms, x)), {#
+    dN <- r*N*(1 - N/K) - h#
+    res <- list(c(dN))})}#
+for(hi in c(0, 2, 3, 4, 2*parms['r']*parms['K']/4)){#
+png(paste("logistic-constant-sol-",hi,".png", sep=''), height = 680, width = 680)#
+par(mar=c(4.1, 4.1, 1.1, 1.1), yaxs = 'i')#
+parms['h'] <- hi/2#
+par(mar=c(4.1, 5.1, 1.1, 1.1), xaxs = 'i', yaxs='i')#
+xstart <- c(N = 10)#
+out <- as.data.frame(lsoda(y = xstart, times = times, func = harvestModC, parms = parms))#
+plot(out, type = 'l', ylim = c(0, 120), lwd = 3, las = 1, xlab="", ylab="", cex.axis=1.1)#
+mtext(expression(t), 1, line = 2, cex=2)#
+mtext(expression(N(t)), 2, line = 2.5, cex=2)#
+#
+xstart <- c(N = 120)#
+out <- as.data.frame(lsoda(y = xstart, times = times, func = harvestModC, parms = parms))#
+lines(out, col = "gray", lwd=3)#
+xstart <- c(N = as.numeric(parms['K']/2))#
+out <- as.data.frame(lsoda(y = xstart, times = times, func = harvestModC, parms = parms))#
+lines(out, col = "gray", lwd = 3)#
+abline(h = with(as.list(parms),K/2 + sqrt(K^2/4-h*K/r)), col = "blue", lwd = 3)#
+abline(h = with(as.list(parms),K/2 - sqrt(K^2/4-h*K/r)), col = "red", lwd = 3)#
+#
+dev.off()#
+}
+png(paste("logistic-constant-sol-",hi,".png", sep=''), height = 680, width = 680)#
+par(mar=c(4.1, 4.1, 1.1, 1.1), yaxs = 'i')#
+parms['h'] <- hi/2#
+par(mar=c(4.1, 5.1, 1.1, 1.1), xaxs = 'i', yaxs='i')#
+xstart <- c(N = 10)#
+out <- as.data.frame(stepping(y = xstart, times = times, func = harvestModC, parms = parms))#
+plot(out, type = 'l', ylim = c(0, 120), lwd = 3, las = 1, xlab="", ylab="", cex.axis=1.1)#
+mtext(expression(t), 1, line = 2, cex=2)#
+mtext(expression(N(t)), 2, line = 2.5, cex=2)#
+#
+xstart <- c(N = 120)#
+out <- as.data.frame(stepping(y = xstart, times = times, func = harvestModC, parms = parms))#
+lines(out, col = "gray", lwd=3)#
+xstart <- c(N = as.numeric(parms['K']/2))#
+out <- as.data.frame(stepping(y = xstart, times = times, func = harvestModC, parms = parms))#
+lines(out, col = "gray", lwd = 3)#
+abline(h = with(as.list(parms),K/2 + sqrt(K^2/4-h*K/r)), col = "blue", lwd = 3)#
+abline(h = with(as.list(parms),K/2 - sqrt(K^2/4-h*K/r)), col = "red", lwd = 3)#
+#
+dev.off()#
+}
+harvestModC <- function(t, x, parms)  {#
+  with(as.list(c(parms, x)), {#
+    dN <- r*N*(1 - N/K) - h#
+    res <- list(c(dN))})}#
+for(hi in c(0, 2, 3, 4, 2*parms['r']*parms['K']/4)){#
+png(paste("logistic-constant-sol-",hi,".png", sep=''), height = 680, width = 680)#
+par(mar=c(4.1, 4.1, 1.1, 1.1), yaxs = 'i')#
+parms['h'] <- hi/2#
+par(mar=c(4.1, 5.1, 1.1, 1.1), xaxs = 'i', yaxs='i')#
+xstart <- c(N = 10)#
+out <- as.data.frame(stepping(y = xstart, times = times, func = harvestModC, parms = parms))#
+plot(out, type = 'l', ylim = c(0, 120), lwd = 3, las = 1, xlab="", ylab="", cex.axis=1.1)#
+mtext(expression(t), 1, line = 2, cex=2)#
+mtext(expression(N(t)), 2, line = 2.5, cex=2)#
+#
+xstart <- c(N = 120)#
+out <- as.data.frame(stepping(y = xstart, times = times, func = harvestModC, parms = parms))#
+lines(out, col = "gray", lwd=3)#
+xstart <- c(N = as.numeric(parms['K']/2))#
+out <- as.data.frame(stepping(y = xstart, times = times, func = harvestModC, parms = parms))#
+lines(out, col = "gray", lwd = 3)#
+abline(h = with(as.list(parms),K/2 + sqrt(K^2/4-h*K/r)), col = "blue", lwd = 3)#
+abline(h = with(as.list(parms),K/2 - sqrt(K^2/4-h*K/r)), col = "red", lwd = 3)#
+#
+dev.off()#
+}
+stepping <- function(y0, times, model, p, ...) {#
+  for (i in 2:length(times)) {#
+    o <- odf(y = y0, times[c(i-1, i)], func = model, p = p, ...)#
+    if (i == 2) {#
+      out <- o[1,]#
+    }#
+    if (any(o[1, -1] * o[2, -1] < 0)) break #
+    y0 <- o[2, -1]#
+    out <- rbind(out, o[2,])#
+  }#
+  out
+}
+stepping <- function(y0, times, model, p, ...) {#
+  for (i in 2:length(times)) {#
+    o <- ode(y = y0, times[c(i-1, i)], func = model, p = p, ...)#
+    if (i == 2) {#
+      out <- o[1,]#
+    }#
+    if (any(o[1, -1] * o[2, -1] < 0)) break #
+    y0 <- o[2, -1]#
+    out <- rbind(out, o[2,])#
+  }#
+  out#
+}
+harvestModC <- function(t, x, parms)  {#
+  with(as.list(c(parms, x)), {#
+    dN <- r*N*(1 - N/K) - h#
+    res <- list(c(dN))})}
+out <- as.data.frame(stepping(y = xstart, times = times, func = harvestModC, parms = parms))
+stepping(y = xstart, times = times, func = harvestModC, parms = parms)
+stepping(y = xstart, times = times, harvestModC, parms = parms)
+stepping <- function(y0, times, model, p, ...) {#
+  for (i in 2:length(times)) {#
+    o <- lsoda(y = y0, times[c(i-1, i)], func = model, p = p, ...)#
+    if (i == 2) {#
+      out <- o[1,]#
+    }#
+    if (any(o[1, -1] * o[2, -1] < 0)) break #
+    y0 <- o[2, -1]#
+    out <- rbind(out, o[2,])#
+  }#
+  out#
+}
+out <- as.data.frame(stepping(y = xstart, times = times, harvestModC, parms = parms))
+out <- as.data.frame(stepping(xstart, times, harvestModC, parms))
+out
+for(hi in c(0, 2, 3, 4, 2*parms['r']*parms['K']/4)){#
+png(paste("logistic-constant-sol-",hi,".png", sep=''), height = 680, width = 680)#
+par(mar=c(4.1, 4.1, 1.1, 1.1), yaxs = 'i')#
+parms['h'] <- hi/2#
+par(mar=c(4.1, 5.1, 1.1, 1.1), xaxs = 'i', yaxs='i')#
+xstart <- c(N = 10)#
+out <- as.data.frame(stepping(xstart, times, harvestModC, parms))#
+plot(out, type = 'l', ylim = c(0, 120), lwd = 3, las = 1, xlab="", ylab="", cex.axis=1.1)#
+mtext(expression(t), 1, line = 2, cex=2)#
+mtext(expression(N(t)), 2, line = 2.5, cex=2)#
+#
+xstart <- c(N = 120)#
+out <- as.data.frame(stepping(y = xstart, times = times, func = harvestModC, parms = parms))#
+lines(out, col = "gray", lwd=3)#
+xstart <- c(N = as.numeric(parms['K']/2))#
+out <- as.data.frame(stepping(y = xstart, times = times, func = harvestModC, parms = parms))#
+lines(out, col = "gray", lwd = 3)#
+abline(h = with(as.list(parms),K/2 + sqrt(K^2/4-h*K/r)), col = "blue", lwd = 3)#
+abline(h = with(as.list(parms),K/2 - sqrt(K^2/4-h*K/r)), col = "red", lwd = 3)#
+#
+dev.off()#
+}
+for(hi in c(0, 2, 3, 4, 2*parms['r']*parms['K']/4)){#
+png(paste("logistic-constant-sol-",hi,".png", sep=''), height = 680, width = 680)#
+par(mar=c(4.1, 4.1, 1.1, 1.1), yaxs = 'i')#
+parms['h'] <- hi/2#
+par(mar=c(4.1, 5.1, 1.1, 1.1), xaxs = 'i', yaxs='i')#
+xstart <- c(N = 10)#
+out <- as.data.frame(stepping(xstart, times, harvestModC, parms))#
+plot(out, type = 'l', ylim = c(0, 120), lwd = 3, las = 1, xlab="", ylab="", cex.axis=1.1)#
+mtext(expression(t), 1, line = 2, cex=2)#
+mtext(expression(N(t)), 2, line = 2.5, cex=2)#
+#
+xstart <- c(N = 120)#
+out <- as.data.frame(stepping(xstart, times, harvestModC, parms))#
+lines(out, col = "gray", lwd=3)#
+xstart <- c(N = as.numeric(parms['K']/2))#
+out <- as.data.frame(stepping(xstart, times, harvestModC, parms))#
+lines(out, col = "gray", lwd = 3)#
+abline(h = with(as.list(parms),K/2 + sqrt(K^2/4-h*K/r)), col = "blue", lwd = 3)#
+abline(h = with(as.list(parms),K/2 - sqrt(K^2/4-h*K/r)), col = "red", lwd = 3)#
+#
+dev.off()#
+}
+for(hi in c(0, 2, 3, 4, 2*parms['r']*parms['K']/4)){#
+png(paste("logistic-constant-sol-",hi,".png", sep=''), height = 680, width = 680)#
+par(mar=c(4.1, 4.1, 1.1, 1.1), yaxs = 'i')#
+parms['h'] <- hi/2#
+par(mar=c(4.1, 5.1, 1.1, 1.1), xaxs = 'i', yaxs='i')#
+xstart <- c(N = 10)#
+out <- as.data.frame(stepping(xstart, times, harvestModC, parms))#
+plot(out, type = 'l', xlim=range(times), ylim = c(0, 120), lwd = 3, las = 1, xlab="", ylab="", cex.axis=1.1)#
+mtext(expression(t), 1, line = 2, cex=2)#
+mtext(expression(N(t)), 2, line = 2.5, cex=2)#
+#
+xstart <- c(N = 120)#
+out <- as.data.frame(stepping(xstart, times, harvestModC, parms))#
+lines(out, col = "gray", lwd=3)#
+xstart <- c(N = as.numeric(parms['K']/2))#
+out <- as.data.frame(stepping(xstart, times, harvestModC, parms))#
+lines(out, col = "gray", lwd = 3)#
+abline(h = with(as.list(parms),K/2 + sqrt(K^2/4-h*K/r)), col = "blue", lwd = 3)#
+abline(h = with(as.list(parms),K/2 - sqrt(K^2/4-h*K/r)), col = "red", lwd = 3)#
+#
+dev.off()#
+}
+harvestModP <- function(t, x, parms)  {#
+  with(as.list(c(parms, x)), {#
+    dN <- r*N*(1 - N/K) - h*N#
+    res <- list(c(dN))})}#
+for(hi in c(10, 6, 4, 2)){#
+png(paste("logistic-prop-sol-",hi,".png", sep=''), height = 680, width = 680)#
+par(mar=c(4.1, 4.1, 1.1, 1.1), yaxs = 'i')#
+parms['h'] <- parms['r']/hi#
+#
+par(mar=c(4.1, 5.1, 1.1, 1.1), xaxs = 'i', yaxs='i')#
+xstart <- c(N = 10)#
+out <- as.data.frame(lsoda(xstart, times, harvestModP, parms))#
+plot(out, type = 'l', xlim=range(times), ylim = c(0, 120), lwd = 3, las = 1, xlab="", ylab="", cex.axis=1.1)#
+mtext(expression(t), 1, line = 2, cex=2)#
+mtext(expression(N(t)), 2, line = 2.5, cex=2)#
+#
+xstart <- c(N = 120)#
+out <- as.data.frame(lsoda(xstart, times, harvestModP, parms))#
+lines(out, col = "gray", lwd=3)#
+xstart <- c(N = as.numeric(parms['K']/2))#
+out <- as.data.frame(lsoda(xstart, times, harvestModP, parms))#
+lines(out, col = "gray", lwd = 3)#
+abline(h = with(as.list(parms),K/2 + sqrt(K^2/4-h*K/r)), col = "blue", lwd = 3)#
+abline(h = with(as.list(parms),K/2 - sqrt(K^2/4-h*K/r)), col = "red", lwd = 3)#
+#
+dev.off()#
+}
+for(hi in c(10, 6, 4, 2)){#
+png(paste("logistic-prop-sol-",hi,".png", sep=''), height = 680, width = 680)#
+par(mar=c(4.1, 4.1, 1.1, 1.1), yaxs = 'i')#
+parms['h'] <- parms['r']/hi#
+#
+par(mar=c(4.1, 5.1, 1.1, 1.1), xaxs = 'i', yaxs='i')#
+xstart <- c(N = 10)#
+out <- as.data.frame(lsoda(xstart, times, harvestModP, parms))#
+plot(out, type = 'l', xlim=range(times), ylim = c(0, 120), lwd = 3, las = 1, xlab="", ylab="", cex.axis=1.1)#
+mtext(expression(t), 1, line = 2, cex=2)#
+mtext(expression(N(t)), 2, line = 2.5, cex=2)#
+#
+xstart <- c(N = 120)#
+out <- as.data.frame(lsoda(xstart, times, harvestModP, parms))#
+lines(out, col = "gray", lwd=3)#
+xstart <- c(N = as.numeric(parms['K']/2))#
+out <- as.data.frame(lsoda(xstart, times, harvestModP, parms))#
+lines(out, col = "gray", lwd = 3)#
+abline(h = with(as.list(parms),K*(1-h/r)), col = "blue", lwd = 3)#
+abline(h = 0, col = "red", lwd = 3)#
+#
+dev.off()#
+}
+setwd("~/Github/IBD/assets/")#
+pdf("logistic.pdf", height = 5, width = 5)#
+par(mar=c(4.1, 4.1, 1.1, 1.1), yaxs = 'i')#
+parms <- c(r = 0.1, K=100)#
+f <- with(as.list(parms),function(x) r*x*(1-x/K))#
+eq <- with(as.list(parms), c(0, K))#
+fmax <- with(as.list(parms), f(K/2))#
+fmin <- with(as.list(parms), f(K+20))#
+plot(f, xlim = c(0, parms['K']+20), ylim = c(fmin, 1.1*fmax), axes=F, xlab = "", ylab="", lwd = 2)#
+abline(h=0)#
+points(eq, eq*0, pch = 21, bg = c("white", "black"), cex=1.5)#
+for(i in seq(0, 120, by = 10)){#
+	arrows(i+2.5, 0, i+7.5, 0, length = abs(f(i+5))/(2.5*fmax), code = 1.5+0.5*sign(f(i+5)))#
+}#
+axis(1, c(0, parms['K']), c(expression(0), expression(K)), font = 2, cex.axis = 1.5)#
+axis(2, c(0), c(expression(0)), font = 2, cex.axis = 1.5, las = 1)#
+box()#
+mtext(expression(N), 1, line=2, font=2, cex=2)#
+mtext(expression(frac(dN,dt)), 2, line=1, font=2, cex=2, las=1, at = fmax/2)#
+dev.off()#
+#
+parms <- c(r = 0.1, K=100, h = 1)#
+#
+for(hi in c(0, 2, 3, 4, 2*parms['r']*parms['K']/4)){#
+png(paste("logistic-constant-",hi,".png", sep=''), height = 680, width = 680)#
+par(mar=c(4.1, 4.1, 1.1, 1.1), yaxs = 'i')#
+parms['h'] <- hi/2#
+f <- with(as.list(parms),function(x) r*x*(1-x/K) - h)#
+eq <- with(as.list(parms), K/2 + c(-sqrt(K^2/4-h*K/r), sqrt(K^2/4-h*K/r)))#
+fmax <- with(as.list(parms), f(K/2)+h)#
+fmin <- with(as.list(parms), f(K+20)+h)#
+plot(f, xlim = c(0, parms['K']+20), ylim = c(fmin, 1.2*fmax), axes=F, xlab = "", ylab="", lwd = 2)#
+abline(h=0)#
+#
+for(i in seq(0, 120, by = 10)){#
+	if(fmax>0)	arrows(i+2.5, 0, i+7.5, 0, length = abs(f(i+5))/(2.5*fmax), code = 1.5+0.5*sign(f(i+5)))#
+}#
+points(eq, eq*0, pch = 21, bg = c("white", "black"), cex=1.5)#
+axis(1, c(0, parms['K']), c(expression(0), expression(K)), font = 2, cex.axis = 1.5)#
+axis(2, c(0), c(expression(0)), font = 2, cex.axis = 1.5, las = 1)#
+box()#
+mtext(expression(N), 1, line=2, font=2, cex=2)#
+mtext(expression(frac(dN,dt)), 2, line=1, font=2, cex=2, las=1, at = abs(fmax)/2)#
+dev.off()#
+}#
+parms <- c(r = 0.1, K=100, h = 0.01)#
+#
+for(hi in c(10, 6, 4, 1)){#
+png(paste("logistic-prop-",hi,".png", sep=''), height = 680, width = 680)#
+par(mar=c(4.1, 4.1, 1.1, 1.1), yaxs = 'i')#
+parms['h'] <- parms['r']/hi#
+f <- with(as.list(parms),function(x) r*x*(1-x/K) - h*x)#
+eq <- with(as.list(parms), c(0, K*(1-h/r)))#
+fmax <- 4.5#
+fmin <- -3#
+plot(f, xlim = c(0, parms['K']+20), ylim = c(fmin, 1.2*fmax), axes=F, xlab = "", ylab="", lwd = 2)#
+abline(h=0)#
+print(parms['h'])#
+for(i in seq(0, 120, by = 10)){#
+	if(fmax>0)	arrows(i+2.5, 0, i+7.5, 0, length = abs(f(i+5))/(2.5*fmax), code = 1.5+0.5*sign(f(i+5)))#
+}#
+points(eq, eq*0, pch = 21, bg = c("white", "black"), cex=1.5)#
+axis(1, c(0, parms['K']), c(expression(0), expression(K)), font = 2, cex.axis = 1.5)#
+axis(2, c(0), c(expression(0)), font = 2, cex.axis = 1.5, las = 1)#
+box()#
+mtext(expression(N), 1, line=2, font=2, cex=2)#
+mtext(expression(frac(dN,dt)), 2, line=1, font=2, cex=2, las=1, at = abs(fmax)/2)#
+dev.off()#
+}#
+#
+png("bif-const.png", height = 680, width = 680)#
+par(mar=c(4.1, 4.1, 1.1, 1.1), xaxs = 'i')#
+plot(NULL, xlim = c(0, 4), ylim = c(0, parms['K']), xlab="", ylab="", axes=F)#
+plot(with(as.list(parms[c("r", "K")]), function(h)K/2 + sqrt(K^2/4-h*K/r)), xlim = c(0, parms['r']*parms['K']/4), add=T, lwd=3, col = "blue")#
+#
+plot(with(as.list(parms[c("r", "K")]), function(h)K/2 - sqrt(K^2/4-h*K/r)), xlim = c(0, parms['r']*parms['K']/4), add=T, lwd=3, lty = 3, col = "red")#
+legend("topright", c("Stable", "Unstable"), lwd=3, lty = c(1, 3), col = c("blue", "red"), cex = 1.5)#
+#
+axis(2, c(0, parms['K']), c(expression(0), expression(K)), font = 2, cex.axis = 1.5, las = 1)#
+axis(1, c(0, parms['r']*parms['K']/4), c(expression(0), expression(h[crit])), font = 2, cex.axis = 1.5, las = 1)#
+box()#
+mtext(expression(N^'*'), 2, line=2, font=2, cex=2, las = 1)#
+mtext(expression(h), 1, line=1, font=2, cex=2, las=1, at = 4)#
+dev.off()#
+#
+png("bif-prop.png", height = 680, width = 680)#
+par(mar=c(4.1, 4.1, 1.1, 1.1), xaxs = 'i')#
+plot(NULL, xlim = c(0, 2*parms['r']), ylim = c(-10, parms['K']), xlab="", ylab="", axes=F)#
+plot(with(as.list(parms[c("r", "K")]), function(h)K*(1-h/r)), xlim = c(0, parms['r']), add=T, lwd=3, col = 'blue')#
+plot(with(as.list(parms[c("r", "K")]), function(h)0*h), xlim = c(0, parms['r']), add=T, lwd=3, lty = 3, col = "red")#
+plot(with(as.list(parms[c("r", "K")]), function(h)K*(1-h/r)), xlim = c(parms['r'], 2*parms['r']), add=T, lwd=3, lty = 3, col = "red")#
+plot(with(as.list(parms[c("r", "K")]), function(h)0*h), xlim = c(parms['r'], 2*parms['r']), add=T, lwd=3, col = "blue")#
+#
+legend("topright", c("Stable", "Unstable"), lwd=3, lty = c(1, 3), col = c("blue", "red"), cex = 1.5)#
+axis(2, c(0, parms['K']), c(expression(0), expression(K)), font = 2, cex.axis = 1.5, las = 1)#
+axis(1, c(0, parms['r']), c(expression(0), expression(h[crit])), font = 2, cex.axis = 1.5, las = 1)#
+box()#
+mtext(expression(N^'*'), 2, line=2, font=2, cex=2, las = 1)#
+mtext(expression(h), 1, line=1, font=2, cex=2, las=1, at = 2*parms['r'])#
+dev.off()#
+#
+library(deSolve)#
+harvestMod <- function(t, x, parms)  {#
+  with(as.list(c(parms, x)), {#
+    dN <- r*N*(1 - N/K) - h#
+    res <- list(c(dN))})}#
+#
+parms <- c(r = 0.1, K = 100, h = 0.00)#
+times <- seq(0, 100, by = 0.1)#
+png("logistic-sol.png", heigh = 680, width = 680)#
+par(mar=c(4.1, 5.1, 1.1, 1.1), xaxs = 'i', yaxs='i')#
+xstart <- c(N = 10)#
+out <- as.data.frame(lsoda(y = xstart, times = times, func = harvestMod, parms = parms))#
+plot(out, type = 'l', ylim = c(0, 120), lwd = 3, las = 1, xlab="", ylab="", cex.axis=1.1)#
+mtext(expression(t), 1, line = 2, cex=2)#
+mtext(expression(N(t)), 2, line = 2.5, cex=2)#
+#
+xstart <- c(N = 120)#
+out <- as.data.frame(lsoda(y = xstart, times = times, func = harvestMod, parms = parms))#
+lines(out, col = "gray", lwd=3)#
+xstart <- c(N = as.numeric(parms['K']/2))#
+out <- as.data.frame(lsoda(y = xstart, times = times, func = harvestMod, parms = parms))#
+lines(out, col = "gray", lwd = 3)#
+abline(h= parms['K'], col = "blue", lwd = 3)#
+abline(h= 0, col = "red", lwd = 3)#
+#
+dev.off()#
+#
+stepping <- function(y0, times, model, p, ...) {#
+  for (i in 2:length(times)) {#
+    o <- lsoda(y = y0, times[c(i-1, i)], func = model, p = p, ...)#
+    if (i == 2) {#
+      out <- o[1,]#
+    }#
+    if (any(o[1, -1] * o[2, -1] < 0)) break #
+    y0 <- o[2, -1]#
+    out <- rbind(out, o[2,])#
+  }#
+  out#
+}#
+harvestModC <- function(t, x, parms)  {#
+  with(as.list(c(parms, x)), {#
+    dN <- r*N*(1 - N/K) - h#
+    res <- list(c(dN))})}#
+for(hi in c(0, 2, 3, 4, 2*parms['r']*parms['K']/4)){#
+png(paste("logistic-constant-sol-",hi,".png", sep=''), height = 680, width = 680)#
+par(mar=c(4.1, 4.1, 1.1, 1.1), yaxs = 'i')#
+parms['h'] <- hi/2#
+par(mar=c(4.1, 5.1, 1.1, 1.1), xaxs = 'i', yaxs='i')#
+xstart <- c(N = 10)#
+out <- as.data.frame(stepping(xstart, times, harvestModC, parms))#
+plot(out, type = 'l', xlim=range(times), ylim = c(0, 120), lwd = 3, las = 1, xlab="", ylab="", cex.axis=1.1)#
+mtext(expression(t), 1, line = 2, cex=2)#
+mtext(expression(N(t)), 2, line = 2.5, cex=2)#
+#
+xstart <- c(N = 120)#
+out <- as.data.frame(stepping(xstart, times, harvestModC, parms))#
+lines(out, col = "gray", lwd=3)#
+xstart <- c(N = as.numeric(parms['K']/2))#
+out <- as.data.frame(stepping(xstart, times, harvestModC, parms))#
+lines(out, col = "gray", lwd = 3)#
+abline(h = with(as.list(parms),K/2 + sqrt(K^2/4-h*K/r)), col = "blue", lwd = 3)#
+abline(h = with(as.list(parms),K/2 - sqrt(K^2/4-h*K/r)), col = "red", lwd = 3)#
+#
+dev.off()#
+}#
+#
+harvestModP <- function(t, x, parms)  {#
+  with(as.list(c(parms, x)), {#
+    dN <- r*N*(1 - N/K) - h*N#
+    res <- list(c(dN))})}#
+for(hi in c(10, 6, 4, 1)){#
+png(paste("logistic-prop-sol-",hi,".png", sep=''), height = 680, width = 680)#
+par(mar=c(4.1, 4.1, 1.1, 1.1), yaxs = 'i')#
+parms['h'] <- parms['r']/hi#
+#
+par(mar=c(4.1, 5.1, 1.1, 1.1), xaxs = 'i', yaxs='i')#
+xstart <- c(N = 10)#
+out <- as.data.frame(lsoda(xstart, times, harvestModP, parms))#
+plot(out, type = 'l', xlim=range(times), ylim = c(0, 120), lwd = 3, las = 1, xlab="", ylab="", cex.axis=1.1)#
+mtext(expression(t), 1, line = 2, cex=2)#
+mtext(expression(N(t)), 2, line = 2.5, cex=2)#
+#
+xstart <- c(N = 120)#
+out <- as.data.frame(lsoda(xstart, times, harvestModP, parms))#
+lines(out, col = "gray", lwd=3)#
+xstart <- c(N = as.numeric(parms['K']/2))#
+out <- as.data.frame(lsoda(xstart, times, harvestModP, parms))#
+lines(out, col = "gray", lwd = 3)#
+abline(h = with(as.list(parms),K*(1-h/r)), col = "blue", lwd = 3)#
+abline(h = 0, col = "red", lwd = 3)#
+#
+dev.off()#
+}
+parms['r']/c(10, 6, 4, 1)

@@ -11,25 +11,28 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h3 class="heading"><span class="type">Paragraph</span></h3>
+<h5 class="heading"><span class="type">Paragraph</span></h5>
 <div class="para logical">
-<div class="para">First, we hope to compute equilibria. We can start by solving when each of the equations is equal to zero (i.e., when individual quantities are unchanging). Setting</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/fig-pred-prey-pp.html">
+<div class="para">First, for <span class="process-math">\(r_+ =  5\)</span> we have</div>
+<div class="displaymath process-math">
 \begin{equation*}
-\frac{d^{} {X}}{d {t}^{}}=0\Rightarrow
-(r-mY)X=0.
+\begin{pmatrix} (1 - (-1))\amp -2\\
+3 \amp (-4 -(-1))
+\end{pmatrix} \cdot \begin{pmatrix}u_+\\v_+\end{pmatrix} = 0
 \end{equation*}
 </div>
-<div class="para">This equation implies that <span class="process-math">\(X\)</span> is unchanging along the lines <span class="process-math">\(X=0\)</span> and <span class="process-math">\(Y=\frac{r}{m}\)</span> in the <span class="process-math">\((X,
-Y)\)</span>-plane. Additionally, setting</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/fig-pred-prey-pp.html">
+<div class="para">which corresponds to the system of equations</div>
+<div class="displaymath process-math">
 \begin{equation*}
-\frac{d^{} {Y}}{d
-{t}^{}}=0\Rightarrow (nX-s)Y=0.
+\begin{cases} 2 u_+ + -2v_+ \amp = 0\\
+3 u_+  -3 v_+ \amp = 0
+\end{cases}
 \end{equation*}
 </div>
-<div class="para">This equation implies that <span class="process-math">\(Y\)</span> is unchanging along the lines <span class="process-math">\(Y=0\)</span> and <span class="process-math">\(X=\frac{s}{n}\)</span> in the <span class="process-math">\((X, Y)\)</span>-plane. Equilibria require both equations be satisfied simultaneously, thus opposite nullclines must intersect so that <em class="emphasis">both</em> of <span class="process-math">\(X\)</span> and <span class="process-math">\(Y\)</span> are unchanging. We will jump ahead and plot <em class="emphasis">everything</em> in <a href="" class="xref" data-knowl="./knowl/fig-pred-prey-pp.html" title="Figure 3.3.1">Figure 3.3.1</a>, this includes trajectories in the phase plane and ‘direction arrows.’</div>
+<div class="para">The setup is very similar for the second eigenvalue, and solving these both we have <span class="process-math">\(r_+ = -1\)</span> with <span class="process-math">\(u_+ = 1\)</span> and <span class="process-math">\(v_+ = 1\)</span> and <span class="process-math">\(r_- = -2\)</span> with <span class="process-math">\(u_-
+= 2\)</span> and <span class="process-math">\(v_- = 3\text{.}\)</span>
 </div>
-<span class="incontext"><a href="two-dim-ecology.html#p-97" class="internal">in-context</a></span>
+</div>
+<span class="incontext"><a href="systems-intro.html#p-97" class="internal">in-context</a></span>
 </body>
 </html>

@@ -1,1 +1,1 @@
-{"source/main.ptx": ["intro-bio-dynamics", "frontmatter", "preface-disclaimer", "preface-motto", "preface-themes"], "source/fall2023/intro.ptx": ["introduction", "what-is-modeling", "sec-simple-1d-ode"]}
+{"source/main.ptx": ["intro-bio-dynamics", "frontmatter", "preface-disclaimer", "preface-motto", "preface-themes"], "source/fall2023/intro.ptx": ["introduction", "what-is-modeling", "sec-simple-1d-ode"], "source/fall2023/systems.ptx": ["systems", "systems-intro", "sec-nonlinear-systems"]}
