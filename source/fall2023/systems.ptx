@@ -288,7 +288,7 @@ system given by <me>\begin{cases}
 <solution>
 <figure xml:id="fig-linear-complex-centers">
 <image xml:id="image-nullclines-arrows-linear-centers"  source="centers.png" width = "100%"/>
-<caption>Nullclines and a few arrows for the phase plane corresponding to this linear system in which the equilibrium is a center. This one is hard to diagnose from the arrows alone, even after you add a few more off of the nullclines. The information from the trace, determinant, and eigenvalues is essential to making the distinction of thwether these are closed orbits or unstable or stable spirals.</caption>
+<caption>Nullclines and a few arrows for the phase plane corresponding to this linear system in which the equilibrium is a center. This one is hard to diagnose from the arrows alone, even after you add a few more off of the nullclines. The information from the trace, determinant, and eigenvalues is essential to making the distinction of whether these are closed orbits (i.e., centers) or unstable or stable spirals.</caption>
 </figure>
 </solution>
 
