@@ -90,7 +90,7 @@ have one pair of eigenvalue and eigenvector for each solution from the quadratic
 Find nullclines, equilibria, and sketch sample solutions for the linear
 system given by <me>\begin{cases}
 \dfrac{dx}{dt} \amp = x+2y\\
-\dfrac{dy}{dt} \amp = 4x+3y
+\dfrac{dy}{dt} \amp = 3x-4y
 \end{cases}</me>
 </statement>
 </example>
@@ -516,8 +516,6 @@ Consider <me>\begin{cases}
 <p>
 Ecological competition between two species for a shared resource is a classic model.
 </p>
-
-
 </introduction>
 
 <p>
@@ -589,6 +587,7 @@ Consider <me>\begin{cases}
 </section>
 
 <exercises>
+<p>I would not actually attempt any of these.</p>
 <exercise>
 <statement>
 What if the prey population in a predator-prey model grew according to logistic growth rather than exponential growth in the absence of its predator?
