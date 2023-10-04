@@ -232,7 +232,7 @@ var ptx_lunr_docs = [
   "type": "Exercises",
   "number": "2.3",
   "title": "Exercises",
-  "body": " What if the prey population in a predator-prey model grew according to logistic growth rather than exponential growth in the absence of its predator?  What if the prey population from the predator-prey model were subject to the Allee effect, that is, the \"single species\" part of its equation paralleled ? Try to find the nontrivial nullcline for each and contemplate how many distinct phase planes are possible.  What if both populations from the competition model were subject to the Allee effect, that is, the \"single species\" parts of the model paralleled ? Try to find the nontrivial nullcline for each and contemplate how many distinct phase planes are possible.  "
+  "body": " I would not actually attempt any of these.  What if the prey population in a predator-prey model grew according to logistic growth rather than exponential growth in the absence of its predator?  What if the prey population from the predator-prey model were subject to the Allee effect, that is, the \"single species\" part of its equation paralleled ? Try to find the nontrivial nullcline for each and contemplate how many distinct phase planes are possible.  What if both populations from the competition model were subject to the Allee effect, that is, the \"single species\" parts of the model paralleled ? Try to find the nontrivial nullcline for each and contemplate how many distinct phase planes are possible.  "
 },
 {
   "id": "exercise-1",
