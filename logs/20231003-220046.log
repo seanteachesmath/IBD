@@ -1,0 +1,19 @@
+INFO    : PreTeXt project found in `/Users/seanlaverty/GitHub/IBD`.
+INFO    : Preparing to build into /Users/seanlaverty/GitHub/IBD/output/web.
+INFO    : discovering source file's directory name: /Users/seanlaverty/GitHub/IBD/source
+INFO    : verifying and expanding input directory: /Users/seanlaverty/GitHub/IBD/source/../generated-assets
+INFO    : input directory expanded to absolute path: /Users/seanlaverty/GitHub/IBD/generated-assets
+INFO    : verifying and expanding input directory: /Users/seanlaverty/GitHub/IBD/source/../assets
+INFO    : input directory expanded to absolute path: /Users/seanlaverty/GitHub/IBD/assets
+INFO    : Runestone Services (via PreTeXt repository): version 7.1.2
+INFO    : Runestone Services (using newer, via online CDN query): version 7.1.7
+INFO    : converting /Users/seanlaverty/GitHub/IBD/source/main.ptx to HTML in /var/folders/cv/57f7pbds3y7_pq476q9b438r0000gn/T/tmp2wh3tyvq
+INFO    : XSL conversion of /Users/seanlaverty/GitHub/IBD/source/main.ptx by /Users/seanlaverty/.ptx/xsl/pretext-html.xsl
+INFO    : comprehensive messages, warnings, and errors:
+INFO    :     * PTX:WARNING: A section containing subsections needs to have other content inside an <introduction> and/or  <conclusion>.
+INFO    :     *              located within: "systems-intro" (xml:id), "Introduction to 2D
+systems" (title)
+INFO    : successful application of /Users/seanlaverty/.ptx/xsl/pretext-html.xsl
+INFO    : 
+Success! Run `pretext view` to see the results.
+

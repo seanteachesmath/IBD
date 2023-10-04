@@ -116,6 +116,105 @@ var ptx_lunr_docs = [
   "number": "1.2.8",
   "title": "",
   "body": " Bifurcation diagram for the logistic growth model with proporational harvesting. Stable equilibria are shown in solid blue and unstable equilibria are shown in dotted red.   "
+},
+{
+  "id": "systems-intro",
+  "level": "1",
+  "url": "systems-intro.html",
+  "type": "Section",
+  "number": "2.1",
+  "title": "Introduction to 2D systems",
+  "body": " Introduction to 2D systems   To achieve our goals, a little bit from the theory of differential equations is helpful. Ultimately we will linearize a nonlinear system near equilibrium using the Jacobian matrix.   Consider the generic 2D linear system For the choice and (sorry about using the letter , but it becomes standard in the next step), we can establish some important information about solutions. Much of this is linked to properties of . Two important properties of this matrix are the trace  and the determinant    We begin by assuming that solutions to the system are exponential, for example, for some vector of unknown constants Now we differentiate and substitute, Equating these, Moving all terms to one side, Or, where is the identity matrix.  The exponential can never be zero, so we are looking for solutions to , which are given by the eigenvector and eigenvalue of the matrix . Eigenvalues are given by solutions to or We solve for .  The equation can be written and solved for and then the eigenvector. Notice that the equation can be rewritten in terms of the matrix properties referenced above, The trace and determinant show up once again. By the quadratic formula Frome here a lot could happen, depending on the entries of the matrix and the resulting trace and determinant. Roots, , could be  Real and distinct, opposite sign  Real and distinct, same sign  Real and repeated  Complex  Purely imaginary,  roughly in the order you might expect them based on past experience with the quadratic formula. What follows is the most economical summary I can provide of one of my favorite chapters in ordinary differential equations.   Real and distinct eigenvalues of opposite sign   As we will see in this section, this situation corresponds to phase plane dynamics corresponding to a saddle at the equilibrium.  Real and distinct roots is probably the simplest case to introduce. Let's call those solutions and , eventually we will need numbers, but first it's worth pointing out how we find the corresponding eigenvectors. We find those by solving The subscripts indicate that in the case of real and distinct roots we will have one solution for each solution from the quadratic formula.    Find nullclines, equilibria, and sketch sample solutions for the linear system given by     Real and distinct eigenvalues of opposite sign  Consider the matrix . The trace is and the determinant is . Find both eigenvalues and corresponding eigenvectors.   Eigenvalues are solutions to or Substituting the eigenvalues one at a time, we can solve for entries in each eigenvector.  First, for we have which corresponds to the system of equations The setup is very similar for the second eigenvalue, and solving these both we have with and and with and .  In the phase plane, the eigenvectors represent what are called straight-line solutions.    The conclusion to means that for the linear system of differential equations ... we can write solutions for any initial condition in terms of unknowns and as    Some solutions will start on the first eigenvalue (this means an initial condition whose values are some constant multiple of those of the first eigenvector.) The contribution of the second eigenvector will be zero, and solutions will grow exponentially away from the origin along the first eigenvector. Others will start on the second eigenvalue (this means an initial condition whose values are some constant multiple of those of the second eigenvector.) The contribution of the first eigenvector will be zero, and solutions will decay exponentially towards the the origin along the second eigenvector. For all other initial conditions we have a contribution from both, but with the contribution of the first eigenvector growing and the contribution of the second decaying exponentially over time. We call this dynamic in the phase plane a saddle .  For example, with the initial condition and , we have and . The solution grows exponentially in proportion to the vector.   Use the trace and determinant of each matrix to find eigenvalues and eigenvectors.         Real and distinct eigenvalues of the same sign  As we will see in this section, this situation corresponds to phase plane dynamics corresponding to a node at the equilibrium. Solutions will grow away from equilibrium if both roots are of positie sign and grow towards the equilibrium if both roots are of negative sign. This is due to the exponential nature of the solutions.    Find nullclines, equilibria, and sketch sample solutions for the linear system given by     Real and distinct eigenvalues of same sign  Consider the matrix . The trace is and the determinant is . Find both eigenvalues and corresponding eigenvectors.   Eigenvalues are solutions to or which gives solutions and . Substituting the eigenvalues one at a time, we can solve for entries in each eigenvector.  First, for we have which corresponds to the system of equations The setup is very similar for the second eigenvalue, and solving these both we have with and and with and .    The conclusion to means that with the initial condition and , we have and . The solution grows exponentially from the equilibrium at the origin along the vector. With the initial condition and , we have and . The solution decays exponentially towards the equilibrium at the origin along the vector.   Try to construct a real-valued matrix with distinct eigenvalues of the same sign, either both positive or both negative. Then, using those as coefficients in a first-order linear system of differential equations, sketch the nullclines and phase plane.         Real and repeated eigenvalues   This happens to be a borderline case that takes a bit of work, but fortunately doesn't play a major role in most applications. From the solution to the quadratic, this happens when or, solving for , This is along the curve that separates real and complex solutions.     Complex eigenvalues   By the quadratic formula, any complex roots must be distinct, but some may be purely imaginary with no real part. Recall, we are trying to solve for . We are interested in cases where from the quadratic formula is negative and the square root imaginary.   Since our main goal is to assess local stability of eqiulibria in nonlinear models by linearizing, we won't go so far here as writing explicit general solutions to the linear problems.    Find nullclines, equilibria, and sketch sample solutions for the linear system given by     Real and distinct eigenvalues of same sign  Consider the matrix . The trace is and the determinant is . Find both eigenvalues and corresponding eigenvectors.   Eigenvalues are solutions to or which gives solutions and . Substituting the eigenvalues one at a time, we can solve for entries in each eigenvector.  First, for we have which corresponds to the system of equations The setup is very similar for the second eigenvalue, and solving these both we have with and and with and .    The conclusion to might be surprising. If you're aware of the complex plane, you might think we can graph these. Unfortunately the complex plane has a real axis and an imaginary axis. Or phase plane has two real axes corresponding to model variables. So, as it is, we can't visualize complex eigenvalues in the same way as real ones.  This means that we no longer start with real-valued solutions. Recall that we guessed that , was a part of our solution, but now we have complex-valued exponentials since for real numbers and . Taking just this part, we have . By Euler's formula, we can write these as real-valued solutions that involve products of trigonometric and exponential functions. Solutions will be purely trigonometric (closed periodic orbits) if the real part of the eigenvalues is zero, and otherwise be damped or growing oscillations in the phase plane if the real part is negative or positive, respectively. The trigonometric part comes from writing using Euler's formula. Since our goal here is just to lern about the linearized system, it won't be especially helpful to pursue analytical solutions any longer at this point.   Try to construct a real-valued matrix with complex or purely-imaginary eigenvalues. Then, using those as coefficients in a first-order linear system of differential equations, sketch the nullclines and phase plane.        "
+},
+{
+  "id": "ex-real-distinct-opposite-plane",
+  "level": "2",
+  "url": "systems-intro.html#ex-real-distinct-opposite-plane",
+  "type": "Example",
+  "number": "2.1.1",
+  "title": "",
+  "body": " Find nullclines, equilibria, and sketch sample solutions for the linear system given by   "
+},
+{
+  "id": "ex-real-distinct-opposite",
+  "level": "2",
+  "url": "systems-intro.html#ex-real-distinct-opposite",
+  "type": "Example",
+  "number": "2.1.2",
+  "title": "Real and distinct eigenvalues of opposite sign.",
+  "body": " Real and distinct eigenvalues of opposite sign  Consider the matrix . The trace is and the determinant is . Find both eigenvalues and corresponding eigenvectors.   Eigenvalues are solutions to or Substituting the eigenvalues one at a time, we can solve for entries in each eigenvector.  First, for we have which corresponds to the system of equations The setup is very similar for the second eigenvalue, and solving these both we have with and and with and .  In the phase plane, the eigenvectors represent what are called straight-line solutions.   "
+},
+{
+  "id": "ex-saddles",
+  "level": "2",
+  "url": "systems-intro.html#ex-saddles",
+  "type": "Example",
+  "number": "2.1.3",
+  "title": "",
+  "body": " Use the trace and determinant of each matrix to find eigenvalues and eigenvectors.      "
+},
+{
+  "id": "ex-real-distinct-same-plane",
+  "level": "2",
+  "url": "systems-intro.html#ex-real-distinct-same-plane",
+  "type": "Example",
+  "number": "2.1.4",
+  "title": "",
+  "body": " Find nullclines, equilibria, and sketch sample solutions for the linear system given by   "
+},
+{
+  "id": "ex-real-distinct-same",
+  "level": "2",
+  "url": "systems-intro.html#ex-real-distinct-same",
+  "type": "Example",
+  "number": "2.1.5",
+  "title": "Real and distinct eigenvalues of same sign.",
+  "body": " Real and distinct eigenvalues of same sign  Consider the matrix . The trace is and the determinant is . Find both eigenvalues and corresponding eigenvectors.   Eigenvalues are solutions to or which gives solutions and . Substituting the eigenvalues one at a time, we can solve for entries in each eigenvector.  First, for we have which corresponds to the system of equations The setup is very similar for the second eigenvalue, and solving these both we have with and and with and .   "
+},
+{
+  "id": "ex-nodes",
+  "level": "2",
+  "url": "systems-intro.html#ex-nodes",
+  "type": "Example",
+  "number": "2.1.6",
+  "title": "",
+  "body": " Try to construct a real-valued matrix with distinct eigenvalues of the same sign, either both positive or both negative. Then, using those as coefficients in a first-order linear system of differential equations, sketch the nullclines and phase plane.      "
+},
+{
+  "id": "ex-complex-imaginary-plane",
+  "level": "2",
+  "url": "systems-intro.html#ex-complex-imaginary-plane",
+  "type": "Example",
+  "number": "2.1.7",
+  "title": "",
+  "body": " Find nullclines, equilibria, and sketch sample solutions for the linear system given by   "
+},
+{
+  "id": "ex-complex-imaginary",
+  "level": "2",
+  "url": "systems-intro.html#ex-complex-imaginary",
+  "type": "Example",
+  "number": "2.1.8",
+  "title": "Real and distinct eigenvalues of same sign.",
+  "body": " Real and distinct eigenvalues of same sign  Consider the matrix . The trace is and the determinant is . Find both eigenvalues and corresponding eigenvectors.   Eigenvalues are solutions to or which gives solutions and . Substituting the eigenvalues one at a time, we can solve for entries in each eigenvector.  First, for we have which corresponds to the system of equations The setup is very similar for the second eigenvalue, and solving these both we have with and and with and .   "
+},
+{
+  "id": "ex-spirals-centers",
+  "level": "2",
+  "url": "systems-intro.html#ex-spirals-centers",
+  "type": "Example",
+  "number": "2.1.9",
+  "title": "",
+  "body": " Try to construct a real-valued matrix with complex or purely-imaginary eigenvalues. Then, using those as coefficients in a first-order linear system of differential equations, sketch the nullclines and phase plane.      "
+},
+{
+  "id": "sec-nonlinear-systems",
+  "level": "1",
+  "url": "sec-nonlinear-systems.html",
+  "type": "Section",
+  "number": "2.2",
+  "title": "Nonlinear systems",
+  "body": " Nonlinear systems   Below we highlight a few classical first-order, nonlinear systems of two differential equations and apply phase plane and Jacobian analysis to get a more complete picture of the dynamics that each model can produce.    SIS epidemiological model   The SI (or SIS) model that allows for the transmission of a mild infection through a closed population is a nice way to introduce 2D models.   Consider This model tracks the populations of individuals in two classes of a population of size . Since there are only two classes, . Differentiating gives in words, the total population size is constant. We can actually replace one of our differential equations with an algebraic constraint given by . This gives us a chance to write our 2D system in 1D, meaning that this model may not actually require any of our new tools. We have With a little rewriting, this becomes . Looking closely, aside from the letters being different, this is exactly the form of the logistic growth model with proportional harvesting from . We could completely analyze this with steps that parallel our work back there. The threshold quantity for stability relates the parameters , , and . Note that wasn't originally in our model, but was introduced in the steps to eliminate the equation for . There was no reason we would have known to do this, but it turned out that there was no reason we couldn't do it.     Predator-prey   Predator-prey dynamics between two species is a classic model.   Consider    Predator-Prey nullclines    Predator-Prey phase plane and equilibria    Predator-Prey Jacobian    Summary of Predator-Prey analysis     Competition   Ecological competition between two species for a shared resource is a classic model.   Consider    Competition nullclines    Competition phase plane and equilibria    Competition Jacobian    Summary of Competition analysis     SIS epidemiological model   The SI (or SIS) model that allows for the transmission of a mild infection through a closed population is a nice way to introduce 2D models.   Consider    SIS nullclines  Since the right-hand side of the -equation factors as , -nullclines are both and . Since the right-hand side of the -equation factors similarly, its nullclines are overlapping.    SIS phase plane and equilibria  Since equilibria are found anywhere opposite nullclines intersect, the entire -axis is a line of equilibrium points as is the vertical line at . This is actually a bit strange, and is the result of some surprising algebraic constraints hidden in the model.   SIS Jacobian    Summary of SIS analysis    "
 }
 ]
 
@@ -123,6 +222,7 @@ var ptx_lunr_idx = lunr(function () {
   this.ref('id')
   this.field('title')
   this.field('body')
+  this.metadataWhitelist = ['position']
 
   ptx_lunr_docs.forEach(function (doc) {
     this.add(doc)

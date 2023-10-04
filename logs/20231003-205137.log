@@ -1,0 +1,15 @@
+INFO    : PreTeXt project found in `/Users/seanlaverty/GitHub/IBD`.
+WARNING : Using CLI version 2.0.3 but project's `requirements.txt`
+WARNING : is configured to use 1.7.5. Consider either installing
+WARNING : CLI version 1.7.5 or running `pretext init --refresh`
+WARNING : to update `requirements.txt` to match 2.0.3.
+ERROR   : XInclude Error caused build to fail:
+ERROR   : /Users/seanlaverty/GitHub/IBD/source/fall2023/systems.ptx:8:17:FATAL:PARSER:ERR_NAME_REQUIRED: xmlParseEntityRef: no name
+/Users/seanlaverty/GitHub/IBD/source/fall2023/systems.ptx:9:17:FATAL:PARSER:ERR_NAME_REQUIRED: xmlParseEntityRef: no name
+/Users/seanlaverty/GitHub/IBD/source/fall2023/systems.ptx:15:27:FATAL:PARSER:ERR_ENTITYREF_SEMICOL_MISSING: EntityRef: expecting ';'
+/Users/seanlaverty/GitHub/IBD/source/fall2023/systems.ptx:15:32:FATAL:PARSER:ERR_ENTITYREF_SEMICOL_MISSING: EntityRef: expecting ';'
+/Users/seanlaverty/GitHub/IBD/source/main.ptx:105:0:ERROR:XINCLUDE:XINCLUDE_NO_FALLBACK: could not load /Users/seanlaverty/GitHub/IBD/source/fall2023/systems.ptx, and no fallback was found
+CRITICAL: XML syntax for source file is invalid
+INFO    : ------------------------
+INFO    : While running pretext, the following errors occurred:
+

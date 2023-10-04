@@ -11,8 +11,54 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">Looking at our definition of <span class="process-math">\(r=b-m\text{,}\)</span> if the mortality rate outweighs the birth rate the net, or intrinsic, growth rate is negative (in these cases it is sometimes useful to explicitly write a negative sign in the differential equation). Otherwise, if births outweigh mortality, it is positive. Like before, we will plot the right hand side of our model as a function of the population size. Rather than calling it a ’cobwebbing diagram’ we will call this a ‘phase-line diagram’. Unlike before this is a graph of “change vs. size” not “next vs. now.”</div>
-<span class="incontext"><a href="continuous-time-models-derivations.html#p-77" class="internal">in-context</a></span>
+<h3 class="heading"><span class="type">Paragraph</span></h3>
+<div class="para logical">
+<div class="para">We begin by assuming that solutions to the system are exponential, for example,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{pmatrix}x(t)\\y(t)\end{pmatrix} = 
+\begin{pmatrix}u\\v\end{pmatrix}\cdot e^{rt},
+\end{equation*}
+</div>
+<div class="para">for some vector of unknown constants</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{pmatrix}u\\v\end{pmatrix}.
+\end{equation*}
+</div>
+<div class="para">Now we differentiate and substitute,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\dfrac{d}{dt}\left(\begin{pmatrix}x\\y\end{pmatrix}\right) = 
+\begin{pmatrix}u\\v\end{pmatrix}\cdot re^{rt}. 
+\end{equation*}
+</div>
+<div class="para">Equating these,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{pmatrix}u\\v\end{pmatrix}\cdot re^{rt} =
+\begin{pmatrix}a\amp b\\c\amp d\end{pmatrix}\cdot
+\begin{pmatrix}u\\v\end{pmatrix}\cdot e^{rt} 
+\end{equation*}
+</div>
+<div class="para">Moving all terms to one side,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+0 = \begin{pmatrix}a\amp b\\c\amp d\end{pmatrix}\cdot
+\begin{pmatrix}u\\v\end{pmatrix}\cdot e^{rt} -
+\begin{pmatrix}u\\v\end{pmatrix}\cdot re^{rt}.
+\end{equation*}
+</div>
+<div class="para">Or,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+0 =
+\left(\begin{pmatrix}a\amp b\\c\amp d\end{pmatrix} -
+rI\right)\begin{pmatrix}u\\v\end{pmatrix}\cdot e^{rt},
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(I\)</span> is the <span class="process-math">\(2\times2\)</span> identity matrix.</div>
+</div>
+<span class="incontext"><a href="systems-intro.html#p-77" class="internal">in-context</a></span>
 </body>
 </html>

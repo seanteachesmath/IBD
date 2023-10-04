@@ -1,0 +1,533 @@
+<?xml version='1.0' encoding='UTF-8'?> <chapter xml:id="systems">
+<title>Introduction</title>
+
+<section xml:id="systems-intro">
+<title>Introduction to 2D systems</title>
+
+<introduction> <p>To achieve our goals, a little bit
+from the theory of differential equations is helpful. Ultimately we will
+linearize a nonlinear system near equilibrium using
+the Jacobian matrix.</p>
+</introduction>
+
+<p>Consider the generic 2D linear system
+<me>\begin{cases} \dfrac{dx}{dt} \amp = f(x, y)\\ \dfrac{dg}{dt} \amp =
+g(x, y) \end{cases}</me> For the choice <m>f(x, y) = ax+by</m> and
+<m>g(x,y) = cx+dy</m> (sorry about using the letter <m>d</m>, but it
+becomes standard in the next step), we can establish some important
+information about solutions. Much of this is linked to properties of
+<me>A = \left(\begin{array}{cc}a\amp b\\c\amp d\end{array}\right)</me>. 
+Two important properties of this matrix are the <em>trace</em>
+<me>\tau = \operatorname{Tr}(A) = a + d,</me> and the
+<em>determinant</em> <me>\Delta = \operatorname{Det}(A) =
+ad-bc.</me> </p>
+
+<p>We begin by assuming that solutions to the system are exponential,
+for example, <me>\begin{pmatrix}x(t)\\y(t)\end{pmatrix} = 
+\begin{pmatrix}u\\v\end{pmatrix}\cdot e^{rt},</me> for some vector of
+unknown constants <me>\begin{pmatrix}u\\v\end{pmatrix}.</me> Now we
+differentiate and substitute,
+
+<me>\dfrac{d}{dt}\left(\begin{pmatrix}x\\y\end{pmatrix}\right) = 
+\begin{pmatrix}u\\v\end{pmatrix}\cdot re^{rt}. </me> Equating these,
+<me>  \begin{pmatrix}u\\v\end{pmatrix}\cdot re^{rt} =
+\begin{pmatrix}a\amp b\\c\amp d\end{pmatrix}\cdot
+\begin{pmatrix}u\\v\end{pmatrix}\cdot e^{rt} </me> Moving all terms to
+one side, <me>  0 = \begin{pmatrix}a\amp b\\c\amp d\end{pmatrix}\cdot
+\begin{pmatrix}u\\v\end{pmatrix}\cdot e^{rt} -
+\begin{pmatrix}u\\v\end{pmatrix}\cdot re^{rt}.</me> Or, <me>  0 =
+\left(\begin{pmatrix}a\amp b\\c\amp d\end{pmatrix} -
+rI\right)\begin{pmatrix}u\\v\end{pmatrix}\cdot e^{rt},</me> where
+<m>I</m> is the <m>2\times2</m> identity matrix.</p>
+
+<p>The exponential can never be zero, so we are looking for solutions to
+<me> 0 = \left(\begin{pmatrix}a\amp b\\c\amp d\end{pmatrix} -
+rI\right)\begin{pmatrix}u\\v\end{pmatrix}</me>, which are given by the
+eigenvector and eigenvalue of the matrix <m>A</m>.
+
+Eigenvalues are given by solutions to <m>\operatorname{det}(A-rI)=0</m>
+or <me>\operatorname{det}\begin{pmatrix}a-r\amp b\\c\amp
+d-r\end{pmatrix} = 0.</me> We solve <m>(a-r)(d-r)-bc=0</m> for
+<m>r</m>. </p>
+
+<p>The equation can be written <m>r^2 - (a + d)r + ad-bc = 0</m> and
+solved for <m>r</m> and then the eigenvector. Notice that the equation
+can be rewritten in terms of the matrix properties referenced above,
+<me>r^2 - \tau r + \Delta = 0.</me> The trace and determinant show up
+once again. By the quadratic formula <me>r = \dfrac{\tau \pm
+\sqrt{(-\tau)^2-4\Delta}}{2}.</me>  Frome here a lot could happen, depending
+on the entries of the matrix and the resulting trace and determinant. 
+Roots, <m>r</m>, could be 
+<ul> 
+<li><p>Real and distinct, opposite sign</p></li>
+<li><p>Real and distinct, same sign</p></li>
+<li><p>Real and repeated</p></li> 
+<li><p>Complex</p></li>
+ <li><p>Purely imaginary,</p></li> 
+</ul> roughly in the order you might expect them based on past experience with the quadratic formula.
+ What follows is the most economical summary I can provide of one of my favorite chapters in ordinary differential
+equations. </p>
+
+<subsection xml:id="subsec-real-distinct-opposite">
+<title>Real and distinct eigenvalues of opposite sign</title>
+<introduction>
+<p>As we will see in this section, this situation corresponds to phase
+plane dynamics corresponding to a <em>saddle</em> at the equilibrium.</p>
+
+<p> Real and distinct roots is probably the simplest case to introduce.
+Let's call those solutions <m>r_+</m> and <m>r_-</m>, eventually we will
+need numbers, but first it's worth pointing out how we find the
+corresponding eigenvectors.  We find those by solving <me> 0 =
+\begin{pmatrix}a - r_\pm\amp b\\c\amp d -
+r_\pm\end{pmatrix}\begin{pmatrix}u_\pm\\v_\pm\end{pmatrix}.</me> The
+subscripts indicate that in the case of real and distinct roots we will
+have one solution for each solution from the quadratic formula. 
+</p>
+</introduction>
+
+<example xml:id = "ex-real-distinct-opposite-plane">
+<statement>
+Find nullclines, equilibria, and sketch sample solutions for the linear
+system given by <me>\begin{cases}
+\dfrac{dx}{dt} \amp = x+2y\\
+\dfrac{dy}{dt} \amp = 4x+3y
+\end{cases}</me>
+</statement>
+</example>
+
+<example xml:id = "ex-real-distinct-opposite">
+<title>Real and distinct eigenvalues of opposite sign</title>
+<statement>
+Consider the matrix <me>\begin{pmatrix}1\amp 2\\4\amp 3\end{pmatrix}</me>.  The trace is <m>\tau = 1 + 3 = 4</m> and the determinant is <m>\Delta = (1)(3)-(2)(4) = -5</m>. Find both eigenvalues and corresponding eigenvectors.
+</statement>
+<solution>
+<p> Eigenvalues are solutions to <me>r^2-4r-5=0,</me> or <me>r_\pm = \dfrac{4\pm\sqrt{16-4(-5)}}{2} = \dfrac{4\pm\sqrt{36}}{2} = 2\pm3 = 5, -1.</me>  Substituting the eigenvalues one at a time, we can solve for entries in each eigenvector.</p>
+
+<p> First, for <m>r_+ =  5</m> we have 
+<me>\begin{pmatrix}(1 - 5)\amp 2\\3\amp (4 - 5)\end{pmatrix}\cdot \begin{pmatrix}u_+\\v_+\end{pmatrix} = 0</me> which corresponds to the system of equations
+<me>\begin{cases} -4 u_+ + 2v_+ \amp = 0\\
+ 3 u_+  -1 v_+ \amp = 0\\
+ \end{cases}</me>
+The setup is very similar for the second eigenvalue, and solving these
+both we have <m>r_+ = 5</m> with <m>u_+ = 1</m>
+and <m>v_+ = 2</m> and <m>r_- = -1</m> with <m>u_-
+= -1</m> and <m>v_- = 1</m>.
+</p>
+<p>In the phase plane, the eigenvectors represent what are called straight-line solutions.</p>
+</solution>
+
+</example>
+
+<p>The conclusion to <xref ref="ex-real-distinct-opposite"/> means that for the
+linear system of differential equations ... we can write solutions for
+any initial condition in terms of unknowns <m>c_+ </m> and <m>c_-</m> as
+<me>\begin{pmatrix}x(t)\\y(t)\end{pmatrix} =
+c_+\begin{pmatrix}u_+\\v_+\end{pmatrix}e^{r_{+}t} +
+c_-\begin{pmatrix}u_-\\v_-\end{pmatrix}e^{r_{-}t}</me> <!--Since
+<m>r_+\gt0</m> the solution will grow in proportion to the corresponding
+eigenvector, while the contribution of the eigenvector corresponding to
+<m>r_-\lt 0></m> will decay exponentially.--> </p>
+
+<p>Some solutions will start on the first eigenvalue (this means an
+initial condition <m>(x_0,y_0)</m> whose values are some constant
+multiple of those of the first eigenvector.) The contribution of the
+second eigenvector will be zero, and solutions will grow exponentially
+away from the origin along the first eigenvector. Others will start on the second eigenvalue (this means an
+initial condition <m>(x_0,y_0)</m> whose values are some constant
+multiple of those of the second eigenvector.) The contribution of the
+first eigenvector will be zero, and solutions will decay exponentially
+towards the the origin along the second eigenvector. For all other
+initial conditions we have a contribution from both, but with the
+contribution of the first eigenvector growing and the contribution of
+the second decaying exponentially over time.  We call this dynamic in the phase plane a <em>saddle</em>.</p>
+
+<p>For example, with the initial condition <m>x_0 = 3</m> and <m>y_0=6</m>, we have <m>c_+ = 3</m> and <m>c_- = 0</m>. The solution grows exponentially in proportion to the vector.</p>
+
+<example xml:id = "ex-saddles">
+<statement>Use the trace and determinant of each matrix to find eigenvalues and eigenvectors.
+<ul>
+<li><p><m>A = \begin{pmatrix} 2\amp4\\3\amp1\end{pmatrix}</m></p></li>
+<li><p><m>A = \begin{pmatrix} 1\amp2\\3\amp4\end{pmatrix}</m></p></li>
+</ul>
+</statement>
+</example>
+</subsection>
+
+<subsection xml:id="subsec-real-distinct-same">
+<title>Real and distinct eigenvalues of the same sign</title>
+<introduction><p>As we will see in this section, this situation corresponds to phase
+plane dynamics corresponding to a <em>node</em> at the equilibrium. 
+Solutions will grow away from equilibrium if both roots are of positie
+sign and grow towards the equilibrium if both roots are of negative
+sign. This is due to the exponential nature of the solutions.
+</p></introduction>
+<!--<introduction>
+<p> Real and distinct roots is probably the simplest case to introduce.
+Let's call those solutions <m>r_+</m> and <m>r_-</m>, eventually we will
+need numbers, but first it's worth pointing out how we find the
+corresponding eigenvectors.  We find those by solving <me> 0 =
+\begin{pmatrix}a - r_\pm\amp b\\c\amp d -
+r_\pm\end{pmatrix}\begin{pmatrix}u_\pm\\v_\pm\end{pmatrix}.</me> The
+subscripts indicate that in the case of real and distinct roots we will
+have one solution for each solution from the quadratic formula. 
+</p></introduction>-->
+
+<example xml:id = "ex-real-distinct-same-plane">
+<statement>
+Find nullclines, equilibria, and sketch sample solutions for the linear
+system given by <me>\begin{cases}
+\dfrac{dx}{dt} \amp = x-2y\\
+\dfrac{dy}{dt} \amp = 4x-3y
+\end{cases}.</me>
+</statement>
+</example>
+
+
+
+<example xml:id = "ex-real-distinct-same">
+<title>Real and distinct eigenvalues of same sign</title>
+<statement>
+Consider the matrix <me>\begin{pmatrix}1\amp -2\\
+3\amp -4\end{pmatrix}</me>.  The trace is <m>\tau = 1 - 4 = -3</m> and the
+determinant is <m>\Delta = (1)(-4)-(-2)(3) = 2</m>. Find both
+eigenvalues and corresponding eigenvectors.
+</statement>
+<solution>
+<p> Eigenvalues are solutions to <me>r^2+3r+2=0,</me> or which gives
+solutions <m>r_+ = -1</m> and <m>r_- = -2</m>. Substituting the
+eigenvalues one at a time, we can solve for entries in each
+eigenvector.</p>
+
+<p> First, for <m>r_+ =  5</m> we have 
+<me>\begin{pmatrix} (1 - (-1))\amp -2\\
+3 \amp (-4 -(-1))
+\end{pmatrix} \cdot \begin{pmatrix}u_+\\v_+\end{pmatrix} = 0</me> 
+which corresponds to the system of equations
+<me>\begin{cases} 2 u_+ + -2v_+ \amp = 0\\
+ 3 u_+  -3 v_+ \amp = 0
+ \end{cases}</me>
+The setup is very similar for the second eigenvalue, and solving these
+both we have <m>r_+ = -1</m> with <m>u_+ = 1</m>
+and <m>v_+ = 1</m> and <m>r_- = -2</m> with <m>u_-
+= 2</m> and <m>v_- = 3</m>.
+</p>
+</solution>
+</example>
+
+<p>The conclusion to <xref ref="ex-real-distinct-same"/> means that
+with the initial condition <m>x_0 = 3</m> and <m>y_0=3</m>, we have
+<m>c_+ = 3</m> and <m>c_- = 0</m>. The solution grows exponentially from
+the equilibrium at the origin along the vector.  With the initial
+condition <m>x_0 = 4</m> and <m>y_0=6</m>, we have <m>c_+ = 0</m> and
+<m>c_- = 2</m>. The solution decays exponentially towards the
+equilibrium at the origin along the vector.</p>
+
+<example xml:id = "ex-nodes">
+<statement>Try to construct a real-valued matrix with distinct eigenvalues of the same sign, either both positive or both negative.  Then, using those as coefficients in a first-order linear system of differential equations, sketch the nullclines and phase plane.
+<ul>
+<li><p><m>A = \begin{pmatrix} \phantom{a}\amp \phantom{a}\\\phantom{a}\amp \phantom{a}\end{pmatrix}</m></p></li>
+<li><p><m>A = \begin{pmatrix} \phantom{a}\amp \phantom{a}\\\phantom{a}\amp \phantom{a}\end{pmatrix}</m></p></li>
+</ul>
+</statement>
+</example>
+
+</subsection>
+
+
+
+<subsection xml:id="subsec-real-repeated">
+<title>Real and repeated eigenvalues</title>
+<introduction>
+<p> This happens to be a borderline case that takes a bit of work, but
+fortunately doesn't play a major role in most applications.  From the
+solution to the quadratic, this happens when <m>0 = (-\tau)^2 -
+4\Delta</m> or, solving for <m>\Delta</m>, <me>\Delta =
+\frac{\tau^2}{4}.</me>  This is along the curve that separates real and complex solutions.
+</p>
+</introduction>
+</subsection>
+
+
+<subsection xml:id="subsec-complex">
+<title>Complex eigenvalues</title>
+<introduction>
+<p>By the quadratic formula, any complex roots must be distinct, but
+some may be purely imaginary with no real part.
+Recall, we are trying to solve <me>r^2 - \tau r + \Delta = 0</me> for
+<m>r</m>. We are interested in cases where <m>(-\tau)^2-4\Delta</m>
+from the quadratic formula is negative and the square root imaginary.  
+<me>r = \dfrac{\tau \pm \sqrt{(-\tau)^2-4\Delta}}{2}.</me>
+</p>
+<p>Since our main goal is to assess local stability of eqiulibria in
+nonlinear models by linearizing, we won't go so far here as writing
+explicit general solutions to the linear problems.</p>
+</introduction>
+
+<example xml:id = "ex-complex-imaginary-plane">
+<statement>
+Find nullclines, equilibria, and sketch sample solutions for the linear
+system given by <me>\begin{cases}
+\dfrac{dx}{dt} \amp = x+2y\\
+\dfrac{dy}{dt} \amp = -x-y
+\end{cases}.</me>
+</statement>
+</example>
+
+
+
+<example xml:id = "ex-complex-imaginary">
+<title>Real and distinct eigenvalues of same sign</title>
+<statement>
+Consider the matrix <me>\begin{pmatrix}1\amp 2\\
+-1\amp -1\end{pmatrix}</me>.  The trace is <m>\tau = 1 - 1 = 0</m> and the
+determinant is <m>\Delta = (1)(-1)-(2)(-1) = 1</m>. Find both
+eigenvalues and corresponding eigenvectors.
+</statement>
+<solution>
+<p> Eigenvalues are solutions to <me>r^2+1=0,</me> or which gives
+solutions <m>r_+ = i</m> and <m>r_- = -i</m>. Substituting the
+eigenvalues one at a time, we can solve for entries in each
+eigenvector.</p>
+
+<p> First, for <m>r_+ =  i</m> we have 
+<me>\begin{pmatrix} (1 - i)\amp 2\\
+-1 \amp (-1 -i)
+\end{pmatrix} \cdot \begin{pmatrix}u_+\\v_+\end{pmatrix} = 0</me> 
+which corresponds to the system of equations
+<me>\begin{cases} 2 u_+ + -2v_+ \amp = 0\\
+ 3 u_+  -3 v_+ \amp = 0
+ \end{cases}</me>
+The setup is very similar for the second eigenvalue, and solving these
+both we have <m>r_+ = -1</m> with <m>u_+ = -1-i</m>
+and <m>v_+ = 1</m> and <m>r_- = -i</m> with <m>u_-
+= -1+i</m> and <m>v_- = 1</m>.
+</p>
+</solution>
+</example>
+
+<p>The conclusion to <xref ref="ex-complex-imaginary"/> might be
+surprising. If you're aware of the complex plane, you might think we can
+graph these. Unfortunately the complex plane has a real axis and an
+imaginary axis. Or phase plane has two real axes corresponding to model
+variables. So, as it is, we can't visualize complex eigenvalues in the
+same way as real ones.
+</p>
+
+<p>This means that
+we no longer start with real-valued solutions.  Recall that we guessed
+that <m>e^{rt}</m>, was a part of our solution, but now we have
+complex-valued exponentials since <m>r = \lambda + \mu i</m> for real numbers <m>\lambda</m> and <m>\mu</m>.  
+Taking just this part, we have <me>e^{(\lambda + \mu i)t} = e^{\lambda t}\cdot e^{\mu i t}</me>.
+By Euler's formula, we can write these as real-valued solutions that
+involve products of trigonometric and exponential functions.  Solutions
+will be purely trigonometric (closed periodic orbits) if the real part
+of the eigenvalues is zero, and otherwise be damped or growing
+oscillations in the phase plane if the real part is negative or
+positive, respectively.  The trigonometric part comes from writing
+<me>e^{\mu i t} = \cos(\mu t) + i\sin(\mu t)</me> using Euler's formula.
+Since our goal here is just to lern about the linearized system, it
+won't be especially helpful to pursue analytical solutions any longer at this
+point.
+</p>
+
+<example xml:id = "ex-spirals-centers">
+<statement>Try to construct a real-valued matrix with complex or purely-imaginary eigenvalues.  Then, using those as coefficients in a first-order linear system of differential equations, sketch the nullclines and phase plane.
+<ul>
+<li><p><m>A = \begin{pmatrix} \phantom{a}\amp \phantom{a}\\\phantom{a}\amp \phantom{a}\end{pmatrix}</m></p></li>
+<li><p><m>A = \begin{pmatrix} \phantom{a}\amp \phantom{a}\\\phantom{a}\amp \phantom{a}\end{pmatrix}</m></p></li>
+</ul>
+</statement>
+</example>
+
+
+</subsection>
+
+
+</section>
+
+<section xml:id="sec-nonlinear-systems">
+<title>Nonlinear systems</title>
+<introduction>
+<p>
+Below we highlight a few classical first-order, nonlinear systems of two differential equations and apply phase plane and Jacobian analysis to get a more complete picture of the dynamics that each model can produce.
+</p>
+</introduction>
+
+<subsection xml:id = "subsec-SIS">
+<title>SIS epidemiological model</title>
+<introduction>
+<p>
+The SI (or SIS) model that allows for the transmission of a mild infection through a closed population is a nice way to introduce 2D models.
+</p>
+</introduction>
+
+<p>
+Consider <me>\begin{cases}
+\dfrac{dS}{dt} \amp = \gamma I - \beta S I\\
+\dfrac{dI}{dt} \amp = \beta S I - \gamma I
+\end{cases}</me> 
+This model tracks the populations of individuals in two classes of a
+population of size <m>N</m>.  Since there are only two classes, <m>N =
+S+ I</m>.  Differentiating gives <me>\dfrac{dN}{dt} = \dfrac{dS}{dt} +
+\dfrac{dI}{dt} = 0,</me> in words, the total population size is
+constant. We can actually replace one of our differential equations with
+an algebraic constraint given by <m>S = N - I</m>. This gives us a
+chance to write our 2D system in 1D, meaning that this model may not
+actually require any of our new tools.  We have <me>\dfrac{dI}{dt} =
+\beta (N-I)I-\gamma I.</me>
+With a little rewriting, this becomes <me>\dfrac{dI}{dt} = \beta N
+I\left(1-\frac{I}{N}\right)-\gamma I</me>.  Looking closely, aside from
+the letters being different, this is exactly the form of the logistic
+growth model with proportional harvesting from <xref ref =
+'logistic-prop-harvest'/>. We could completely analyze this with steps
+that parallel our work back there.  The threshold quantity for stability
+relates the parameters <m>\beta</m>, <m>N</m>, and <m>\gamma</m>.  Note
+that <m>N</m> wasn't originally in our model, but was introduced in the
+steps to eliminate the equation for <m>S</m>.  There was no reason we
+would have known to do this, but it turned out that there was no reason
+we couldn't do it.
+ </p>
+<!--><subsubsection xml:id="subsubsec-SIS-null">
+<title>SIS nullclines</title>
+<p>Since the right-hand side of the <m>S<m>-equation factors as <m>(\gamma - \beta S)I</m>, <m>S</m>-nullclines are both <m>I = 0 </m> and <m>S = \dfrac{\gamma}{\beta}</m>.  Since the right-hand side of the <m>I</m>-equation factors similarly, its nullclines are overlapping.</p>
+</subsubsection>
+
+<subsubsection xml:id="subsubsec-SIS-equilibrium">
+<title>SIS phase plane and equilibria</title>
+<p>Since equilibria are found anywhere opposite nullclines intersect, the entire <m>S</m>-axis is a line of equilibrium points as is the vertical line at <m>S=\frac{\gamma}{\beta}</m>. This is actually a bit strange, and is the result of some surprising algebraic constraints hidden in the model.
+</subsubsection>
+
+<subsubsection xml:id="subsubsec-SIS-jacobian">
+<title>SIS Jacobian</title>
+</subsubsection>
+
+<subsubsection xml:id="subsubsec-SIS-summary">
+<title>Summary of SIS analysis</title>
+</subsubsection>-->
+
+</subsection>
+
+
+<subsection xml:id = "subsec-pred-prey">
+<title>Predator-prey</title>
+<introduction>
+<p>
+Predator-prey dynamics between two species is a classic model.
+</p>
+</introduction>
+
+<p>
+Consider <me>\begin{cases}
+\dfrac{dB}{dt} \amp = r_BB - pBC\\
+\dfrac{dC}{dt} \amp = \epsilon p B C - m P
+\end{cases}</me> 
+</p>
+
+<subsubsection xml:id="subsubsec-pred-prey-null">
+<title>Predator-Prey nullclines</title>
+</subsubsection>
+
+<subsubsection xml:id="subsubsec-pred-prey-equilibrium">
+<title>Predator-Prey phase plane and equilibria</title>
+</subsubsection>
+
+<subsubsection xml:id="subsubsec-pred-prey-jacobian">
+<title>Predator-Prey Jacobian</title>
+</subsubsection>
+
+<subsubsection xml:id="subsubsec-pred-prey-summary">
+<title>Summary of Predator-Prey analysis</title>
+</subsubsection>
+
+</subsection>
+
+
+<subsection xml:id = "subsec-competition">
+<title>Competition</title>
+<introduction>
+<p>
+Ecological competition between two species for a shared resource is a classic model.
+</p>
+</introduction>
+
+<p>
+Consider <me>\begin{cases}
+\dfrac{dB}{dt} \amp = r_B B\left(1-\dfrac{B}{K_{B}}\right) - \alpha B F\\
+\dfrac{dF}{dt} \amp = r_F F\left(1-\dfrac{F}{K_{F}}\right) - \gamma B F
+\end{cases}</me> 
+</p>
+<subsubsection xml:id="subsubsec-competition-null">
+<title>Competition nullclines</title>
+</subsubsection>
+
+<subsubsection xml:id="subsubsec-competition-equilibrium">
+<title>Competition phase plane and equilibria</title>
+</subsubsection>
+
+<subsubsection xml:id="subsubsec-competition-jacobian">
+<title>Competition Jacobian</title>
+</subsubsection>
+
+<subsubsection xml:id="subsubsec-competition-summary">
+<title>Summary of Competition analysis</title>
+</subsubsection>
+
+
+</subsection>
+
+
+<subsection xml:id = "subsec-SIS-reprise">
+<title>SIS epidemiological model</title>
+<introduction>
+<p>
+The SI (or SIS) model that allows for the transmission of a mild infection through a closed population is a nice way to introduce 2D models.
+</p>
+</introduction>
+
+<p>
+Consider <me>\begin{cases}
+\dfrac{dS}{dt} \amp = \gamma I - \beta S I\\
+\dfrac{dI}{dt} \amp = \beta S I - \gamma I
+\end{cases}</me> 
+</p>
+
+<subsubsection xml:id="subsubsec-SIS-null">
+<title>SIS nullclines</title>
+<p>Since the right-hand side of the <m>S</m>-equation factors as <m>(\gamma - \beta S)I</m>, <m>S</m>-nullclines are both <m>I = 0 </m> and <m>S = \dfrac{\gamma}{\beta}</m>.  Since the right-hand side of the <m>I</m>-equation factors similarly, its nullclines are overlapping.</p>
+</subsubsection>
+
+<subsubsection xml:id="subsubsec-SIS-equilibrium">
+<title>SIS phase plane and equilibria</title>
+<p>Since equilibria are found anywhere opposite nullclines intersect, the entire <m>S</m>-axis is a line of equilibrium points as is the vertical line at <m>S=\frac{\gamma}{\beta}</m>. This is actually a bit strange, and is the result of some surprising algebraic constraints hidden in the model.
+</p></subsubsection>
+
+<subsubsection xml:id="subsubsec-SIS-jacobian">
+<title>SIS Jacobian</title>
+</subsubsection>
+
+<subsubsection xml:id="subsubsec-SIS-summary">
+<title>Summary of SIS analysis</title>
+</subsubsection>
+
+</subsection>
+
+
+</section>
+
+
+</chapter>
+
+<!--><solution>
+<p> Eigenvalues are solutions to <me>r^2-5r-2=0,</me> or <me>r_\pm = \dfrac{5\pm\sqrt{25-4(-2)}}{2} = \dfrac{5}{2}\pm\dfrac{\sqrt{33}}{2}.</me>  Substituting the eigenvalues one at a time, we can solve for entries in each eigenvector.</p>
+
+<p> First, for <m>r_+ =  \dfrac{5}{2}+\dfrac{\sqrt{33}}{2}</m> we have 
+<me>\begin{pmatrix}1 - \left(\dfrac{5}{2}+\dfrac{\sqrt{33}}{2}\right)\amp 2\\3\amp 4 - \left(\dfrac{5}{2}+\dfrac{\sqrt{33}}{2}\right)\end{pmatrix}\cdot \begin{pmatrix}u_+\\v_+\end{pmatrix} = 0</me> which corresponds to the system of equations
+<me>\begin{cases} \left(1 - \left(\dfrac{5}{2}+\dfrac{\sqrt{33}}{2}\right)\right) u_+ + 2v_+ \amp = 0\\
+ 3 u_+  \left(4 - \left(\dfrac{5}{2}+\dfrac{\sqrt{33}}{2}\right)\right)v_+ \amp = 0\\
+ \end{cases}</me>
+The setup is very similar for the second eigenvalue, and solving these
+both we have <m>r_+ \approx 5.37228</m> with <m>u_+ \approx 0.457427</m>
+and <m>v_+ \approx 1</m> and <m>r_- \approx -0.372281</m> with <m>u_-
+\approx -1.45743</m> and <m>v_- \approx 1</m>.
+</p>
+</solution>-->

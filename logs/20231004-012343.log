@@ -1,0 +1,14 @@
+INFO    : PreTeXt project found in `/Users/seanlaverty/GitHub/IBD`.
+ERROR   : XInclude Error caused build to fail:
+ERROR   : /Users/seanlaverty/GitHub/IBD/source/fall2023/systems.ptx:478:280:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: m line 478 and p
+/Users/seanlaverty/GitHub/IBD/source/fall2023/systems.ptx:479:17:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: m line 478 and subsubsection
+/Users/seanlaverty/GitHub/IBD/source/fall2023/systems.ptx:484:17:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: p line 483 and subsubsection
+/Users/seanlaverty/GitHub/IBD/source/fall2023/systems.ptx:494:14:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: subsubsection line 481 and subsection
+/Users/seanlaverty/GitHub/IBD/source/fall2023/systems.ptx:497:11:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: p line 478 and section
+/Users/seanlaverty/GitHub/IBD/source/fall2023/systems.ptx:500:11:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: subsubsection line 476 and chapter
+/Users/seanlaverty/GitHub/IBD/source/fall2023/systems.ptx:515:15:FATAL:PARSER:ERR_TAG_NOT_FINISHED: Premature end of data in tag subsection line 461
+/Users/seanlaverty/GitHub/IBD/source/main.ptx:106:0:ERROR:XINCLUDE:XINCLUDE_NO_FALLBACK: could not load /Users/seanlaverty/GitHub/IBD/source/fall2023/systems.ptx, and no fallback was found
+CRITICAL: XML syntax for source file is invalid
+INFO    : ------------------------
+INFO    : While running pretext, the following errors occurred:
+

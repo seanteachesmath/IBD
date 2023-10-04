@@ -1,0 +1,13 @@
+INFO    : PreTeXt project found in `/Users/seanlaverty/GitHub/IBD`.
+ERROR   : XInclude Error caused build to fail:
+ERROR   : /Users/seanlaverty/GitHub/IBD/source/fall2023/systems.ptx:89:46:ERROR:VALID:DTD_ID_REDEFINED: ID ex-real-distinct-opposite already defined
+/Users/seanlaverty/GitHub/IBD/source/fall2023/systems.ptx:144:14:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: example line 87 and subsection
+/Users/seanlaverty/GitHub/IBD/source/fall2023/systems.ptx:218:14:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: example line 170 and subsection
+/Users/seanlaverty/GitHub/IBD/source/fall2023/systems.ptx:234:11:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: example line 162 and section
+/Users/seanlaverty/GitHub/IBD/source/fall2023/systems.ptx:237:11:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: subsection line 146 and chapter
+/Users/seanlaverty/GitHub/IBD/source/fall2023/systems.ptx:252:15:FATAL:PARSER:ERR_TAG_NOT_FINISHED: Premature end of data in tag example line 83
+/Users/seanlaverty/GitHub/IBD/source/main.ptx:106:0:ERROR:XINCLUDE:XINCLUDE_NO_FALLBACK: could not load /Users/seanlaverty/GitHub/IBD/source/fall2023/systems.ptx, and no fallback was found
+CRITICAL: XML syntax for source file is invalid
+INFO    : ------------------------
+INFO    : While running pretext, the following errors occurred:
+

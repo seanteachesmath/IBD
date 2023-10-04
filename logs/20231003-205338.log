@@ -1,0 +1,9 @@
+INFO    : PreTeXt project found in `/Users/seanlaverty/GitHub/IBD`.
+ERROR   : XInclude Error caused build to fail:
+ERROR   : /Users/seanlaverty/GitHub/IBD/source/fall2023/systems.ptx:8:17:FATAL:PARSER:ERR_NAME_REQUIRED: xmlParseEntityRef: no name
+/Users/seanlaverty/GitHub/IBD/source/fall2023/systems.ptx:9:17:FATAL:PARSER:ERR_NAME_REQUIRED: xmlParseEntityRef: no name
+/Users/seanlaverty/GitHub/IBD/source/main.ptx:105:0:ERROR:XINCLUDE:XINCLUDE_NO_FALLBACK: could not load /Users/seanlaverty/GitHub/IBD/source/fall2023/systems.ptx, and no fallback was found
+CRITICAL: XML syntax for source file is invalid
+INFO    : ------------------------
+INFO    : While running pretext, the following errors occurred:
+

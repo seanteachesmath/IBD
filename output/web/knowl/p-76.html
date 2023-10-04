@@ -11,17 +11,37 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h4 class="heading"><span class="type">Paragraph</span></h4>
+<h3 class="heading"><span class="type">Paragraph</span></h3>
 <div class="para logical">
-<div class="para">We can read this differential equation as</div>
+<div class="para">Consider the generic 2D linear system</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\text{the change in
-}N(t)\text{ is proportional to }N(t).
+\begin{cases} \dfrac{dx}{dt} \amp = f(x, y)\\ \dfrac{dg}{dt} \amp =
+g(x, y) \end{cases}
 \end{equation*}
 </div>
-<div class="para">Unlike before this change can just as easily be positive or negative. When the change (derivative of a function) is positive, we know from calculus that the function is increasing. When the change is negative, we know that the function is decreasing.</div>
+<div class="para">For the choice <span class="process-math">\(f(x, y) = ax+by\)</span> and <span class="process-math">\(g(x,y) = cx+dy\)</span> (sorry about using the letter <span class="process-math">\(d\text{,}\)</span> but it becomes standard in the next step), we can establish some important information about solutions. Much of this is linked to properties of</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A = \left(\begin{array}{cc}a\amp b\\c\amp d\end{array}\right)\text{.}
+\end{equation*}
 </div>
-<span class="incontext"><a href="continuous-time-models-derivations.html#p-76" class="internal">in-context</a></span>
+<div class="para">Two important properties of this matrix are the <em class="emphasis">trace</em>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\tau = \operatorname{Tr}(A) = a + d,
+\end{equation*}
+</div>
+<div class="para">and the <em class="emphasis">determinant</em>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\Delta = \operatorname{Det}(A) =
+ad-bc.
+\end{equation*}
+</div>
+</div>
+<span class="incontext"><a href="systems-intro.html#p-76" class="internal">in-context</a></span>
 </body>
 </html>

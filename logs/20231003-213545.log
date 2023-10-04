@@ -1,0 +1,10 @@
+INFO    : PreTeXt project found in `/Users/seanlaverty/GitHub/IBD`.
+ERROR   : XInclude Error caused build to fail:
+ERROR   : /Users/seanlaverty/GitHub/IBD/source/fall2023/systems.ptx:39:5:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: section line 4 and p
+/Users/seanlaverty/GitHub/IBD/source/fall2023/systems.ptx:55:11:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: chapter line 2 and section
+/Users/seanlaverty/GitHub/IBD/source/fall2023/systems.ptx:57:1:FATAL:PARSER:ERR_DOCUMENT_END: Extra content at the end of the document
+/Users/seanlaverty/GitHub/IBD/source/main.ptx:106:0:ERROR:XINCLUDE:XINCLUDE_NO_FALLBACK: could not load /Users/seanlaverty/GitHub/IBD/source/fall2023/systems.ptx, and no fallback was found
+CRITICAL: XML syntax for source file is invalid
+INFO    : ------------------------
+INFO    : While running pretext, the following errors occurred:
+
