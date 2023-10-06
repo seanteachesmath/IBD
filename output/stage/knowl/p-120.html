@@ -12,17 +12,16 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para logical">
-<div class="para">Consider</div>
-<div class="displaymath process-math">
+<div class="para logical"><div class="displaymath process-math">
 \begin{equation*}
-\begin{cases}
-\dfrac{dB}{dt} \amp = r_B B\left(1-\dfrac{B}{K_{B}}\right) - \alpha B F\\
-\dfrac{dF}{dt} \amp = r_F F\left(1-\dfrac{F}{K_{F}}\right) - \gamma B F
-\end{cases}
+\begin{aligned}
+\text{change in }S &amp; = +\text{(gain from recovery)} &amp;&amp;-\text{(loss to infection)}\\
+\frac{dS}{dt}&amp;= + \gamma I &amp;&amp; - {\beta I} S\\
+\text{change in }I &amp; =  + \text{(gain from infection)}&amp;&amp; -\text{(loss to recovery)}\\
+\frac{dI}{dt}&amp;= + \beta IS &amp;&amp; -{\gamma} I
+\end{aligned}
 \end{equation*}
-</div>
-</div>
+</div></div>
 <span class="incontext"><a href="sec-nonlinear-systems.html#p-120" class="internal">in-context</a></span>
 </body>
 </html>

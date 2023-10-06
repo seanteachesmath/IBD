@@ -13,28 +13,22 @@
 <body class="ignore-math">
 <h3 class="heading"><span class="type">Paragraph</span></h3>
 <div class="para logical">
-<div class="para">The equation can be written <span class="process-math">\(r^2 - (a + d)r + ad-bc = 0\)</span> and solved for <span class="process-math">\(r\)</span> and then the eigenvector. Notice that the equation can be rewritten in terms of the matrix properties referenced above,</div>
+<div class="para">The exponential can never be zero, so we are looking for solutions to</div>
 <div class="displaymath process-math">
 \begin{equation*}
-r^2 - \tau r + \Delta = 0.
+0 = \left(\begin{pmatrix}a\amp b\\c\amp d\end{pmatrix} -
+rI\right)\begin{pmatrix}u\\v\end{pmatrix}\text{,}
 \end{equation*}
 </div>
-<div class="para">The trace and determinant show up once again. By the quadratic formula</div>
+<div class="para">which are given by the eigenvector and eigenvalue of the matrix <span class="process-math">\(A\text{.}\)</span> Eigenvalues are given by solutions to <span class="process-math">\(\operatorname{det}(A-rI)=0\)</span> or</div>
 <div class="displaymath process-math">
 \begin{equation*}
-r = \dfrac{\tau \pm
-\sqrt{(-\tau)^2-4\Delta}}{2}.
+\operatorname{det}\begin{pmatrix}a-r\amp b\\c\amp
+d-r\end{pmatrix} = 0.
 \end{equation*}
 </div>
-<div class="para">Frome here a lot could happen, depending on the entries of the matrix and the resulting trace and determinant. Roots, <span class="process-math">\(r\text{,}\)</span> could be</div>
-<ul class="disc">
-<li><div class="para">Real and distinct, opposite sign</div></li>
-<li><div class="para">Real and distinct, same sign</div></li>
-<li><div class="para">Real and repeated</div></li>
-<li><div class="para">Complex</div></li>
-<li><div class="para">Purely imaginary,</div></li>
-</ul>
-<div class="para">roughly in the order you might expect them based on past experience with the quadratic formula. What follows is the most economical summary I can provide of one of my favorite chapters in ordinary differential equations.</div>
+<div class="para">We solve <span class="process-math">\((a-r)(d-r)-bc=0\)</span> for <span class="process-math">\(r\text{.}\)</span>
+</div>
 </div>
 <span class="incontext"><a href="systems-intro.html#p-79" class="internal">in-context</a></span>
 </body>

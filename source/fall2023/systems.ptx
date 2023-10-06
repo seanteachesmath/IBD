@@ -550,19 +550,15 @@ Consider <me>\begin{cases}
 </subsection>
 
 <subsection xml:id = "subsec-mod-pred-prey">
-<title>Predator-prey</title>
+<title>Modified Predator-prey</title>
 <introduction>
 <p>
-Predator-prey dynamics between two species is a classic model.
-</p>
-</introduction>
-
-<p>
-Consider <me>\begin{cases}
+Predator-prey dynamics between two species is a classic model.  Consider the following modification with a logistically-growing prey population <me>\begin{cases}
 \dfrac{dB}{dt} \amp = r B\left(1-\dfrac{B}{K}\right) - p B C\\
 \dfrac{dC}{dt} \amp = \epsilon p B C - m C
 \end{cases}</me> 
 </p>
+</introduction>
 
 <subsubsection xml:id="subsubsec-mod-pred-prey-null">
 <title>Predator-Prey nullclines</title>
@@ -586,7 +582,7 @@ Otherwise, if <m>K \gt \frac{m}{\epsilon p}</m>, the <m>B</m>nullcline crosses t
 <subsubsection xml:id="subsubsec-mod-pred-prey-jacobian">
 <title>Predator-Prey Jacobian</title>
 <introduction><p></p></introduction>
-<p>For this model, the Jacobian is <me>J(B, C) = \begin{pmatrix} r_{B} - p C \amp -p B\\\epsilon p C \amp \epsilon p B - m\end{pmatrix}</me> </p>
+<p>For this model, the Jacobian is <me>J(B, C) = \begin{pmatrix} r_{B} - p C \amp -p B\\\epsilon p C \amp \epsilon p B - m\end{pmatrix}</me>. </p>
 </subsubsection>
 
 <subsubsection xml:id="subsubsec-mod-pred-prey-summary">

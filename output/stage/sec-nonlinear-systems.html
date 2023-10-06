@@ -163,12 +163,12 @@ window.MathJax = {
 </ul>
 </li>
 <li class="toc-item toc-subsection">
-<div class="toc-title-box"><a href="sec-nonlinear-systems.html#subsec-competition" class="internal"><span class="codenumber">2.2.3</span> <span class="title">Competition</span></a></div>
+<div class="toc-title-box"><a href="sec-nonlinear-systems.html#subsec-mod-pred-prey" class="internal"><span class="codenumber">2.2.3</span> <span class="title">Modified Predator-prey</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec-nonlinear-systems.html#subsubsec-competition-null" class="internal"><span class="codenumber">2.2.3.1</span> <span class="title">Competition nullclines</span></a></div></li>
-<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec-nonlinear-systems.html#subsubsec-competition-equilibrium" class="internal"><span class="codenumber">2.2.3.2</span> <span class="title">Competition phase plane and equilibria</span></a></div></li>
-<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec-nonlinear-systems.html#subsubsec-competition-jacobian" class="internal"><span class="codenumber">2.2.3.3</span> <span class="title">Competition Jacobian</span></a></div></li>
-<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec-nonlinear-systems.html#subsubsec-competition-summary" class="internal"><span class="codenumber">2.2.3.4</span> <span class="title">Summary of Competition analysis</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec-nonlinear-systems.html#subsubsec-mod-pred-prey-null" class="internal"><span class="codenumber">2.2.3.1</span> <span class="title">Predator-Prey nullclines</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec-nonlinear-systems.html#subsubsec-mod-pred-prey-equilibrium" class="internal"><span class="codenumber">2.2.3.2</span> <span class="title">Predator-Prey phase plane and equilibria</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec-nonlinear-systems.html#subsubsec-mod-pred-prey-jacobian" class="internal"><span class="codenumber">2.2.3.3</span> <span class="title">Predator-Prey Jacobian</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec-nonlinear-systems.html#subsubsec-mod-pred-prey-summary" class="internal"><span class="codenumber">2.2.3.4</span> <span class="title">Summary of Predator-Prey analysis</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-subsection">
@@ -189,12 +189,12 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-nonlinear-systems"><h2 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">2.2</span><span class="space"> </span><span class="title">Nonlinear systems</span>
 </h2>
-<section class="introduction" id="introduction-10"><div class="para" id="p-110">Below we highlight a few classical first-order, nonlinear systems of two differential equations and apply phase plane and Jacobian analysis to get a more complete picture of the dynamics that each model can produce.</div></section><section class="subsection" id="subsec-SIS"><h3 class="heading hide-type">
+<section class="introduction" id="introduction-10"><div class="para" id="p-116">Below we highlight a few classical first-order, nonlinear systems of two differential equations and apply phase plane and Jacobian analysis to get a more complete picture of the dynamics that each model can produce.</div></section><section class="subsection" id="subsec-SIS"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">2.2.1</span><span class="space"> </span><span class="title">SI epidemiological model</span>
 </h3>
-<section class="introduction" id="introduction-11"><div class="para" id="p-111">The SI (or SIS) model that allows for the transmission of a mild infection through a closed population is a nice way to introduce 2D models.</div></section><div class="para" id="p-112">Consider a mild infection circulating among members of a population, where the ‘healthy’ individuals are susceptible to the infection (<span class="process-math">\(S\)</span>) and the ‘infectious’ individuals are capable of transmitting the infection to others (<span class="process-math">\(I\)</span>).</div>
+<section class="introduction" id="introduction-11"><div class="para" id="p-117">The SI (or SIS) model that allows for the transmission of a mild infection through a closed population is a nice way to introduce 2D models.</div></section><div class="para" id="p-118">Consider a mild infection circulating among members of a population, where the ‘healthy’ individuals are susceptible to the infection (<span class="process-math">\(S\)</span>) and the ‘infectious’ individuals are capable of transmitting the infection to others (<span class="process-math">\(I\)</span>).</div>
 <figure class="figure figure-like" id="fig-epi"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/image-epi.svg" role="img" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.2.1<span class="period">.</span></span><span class="space"> </span>An <span class="process-math">\(SI(S)\)</span> model for transmission of a mild infection in a closed population.</figcaption></figure><div class="para logical" id="p-113">
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.2.1<span class="period">.</span></span><span class="space"> </span>An <span class="process-math">\(SI(S)\)</span> model for transmission of a mild infection in a closed population.</figcaption></figure><div class="para logical" id="p-119">
 <div class="para">Much like in class we will build a word model as we go.</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -206,7 +206,7 @@ window.MathJax = {
 </div>
 <div class="para">and replace the terms with symbols. Our ‘first’ term is ‘loss to recovery’ in the <span class="process-math">\(I\)</span> equation. We can think of <span class="process-math">\(\delta\)</span> as the leaving rate from the <span class="process-math">\(I\)</span> compartment, much like <span class="process-math">\(m\)</span> was the ‘leaving rate from the living’ (i.e., dying) compartment of a population model. Everything, in this model, that leaves one compartment enters another (i.e., there are no ‘leaks’). We can also argue for the infection rate as follows, since infection is only transmitted directly and by infectious hosts, we might expect that the rate that <span class="process-math">\(S\)</span> individuals gain infection is proportional to the density (individuals per hectare) of infectious individuals, <span class="process-math">\(I\text{.}\)</span> In fact here, we assume that the infection rate is a linearly increasing function of <span class="process-math">\(I\text{.}\)</span> There are plenty of other models of transmission, some we will study in the homework, others later in the semester, still more in our projects.</div>
 </div>
-<div class="para logical" id="p-114"><div class="displaymath process-math">
+<div class="para logical" id="p-120"><div class="displaymath process-math">
 \begin{equation*}
 \begin{aligned}
 \text{change in }S &amp; = +\text{(gain from recovery)} &amp;&amp;-\text{(loss to infection)}\\
@@ -216,7 +216,7 @@ window.MathJax = {
 \end{aligned}
 \end{equation*}
 </div></div>
-<div class="para logical" id="p-115">
+<div class="para logical" id="p-121">
 <div class="para"> This model tracks the populations of individuals in two classes of a population of size <span class="process-math">\(N\text{.}\)</span>  Since there are only two classes, <span class="process-math">\(N =
 S+ I\text{.}\)</span>  Differentiating gives</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/sub-proportional-harvesting.html">
@@ -240,15 +240,16 @@ I\left(1-\frac{I}{N}\right)-\gamma I\text{.}
 \end{equation*}
 </div>
 <div class="para">Looking closely, aside from the letters being different, this is exactly the form of the logistic growth model with proportional harvesting from <a href="sec-simple-1d-ode.html#sub-proportional-harvesting" class="internal" title="Subsection 1.2.3: Logistic growth with proportional harvesting">Subsection 1.2.3</a>. We could completely analyze this with steps that parallel our work back there.  The threshold quantity for stability relates the parameters <span class="process-math">\(\beta\text{,}\)</span> <span class="process-math">\(N\text{,}\)</span> and <span class="process-math">\(\gamma\text{.}\)</span>  Note that <span class="process-math">\(N\)</span> wasn’t originally in our model, but was introduced in the steps to eliminate the equation for <span class="process-math">\(S\text{.}\)</span>  There was no reason we would have known to do this, but it turned out that there was no reason we couldn’t do it.</div>
-</div></section><section class="subsection" id="subsec-pred-prey"><h3 class="heading hide-type">
+</div>
+<section class="conclusion" id="conclusion-6"><div class="para" id="p-122"></div></section></section><section class="subsection" id="subsec-pred-prey"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">2.2.2</span><span class="space"> </span><span class="title">Predator-prey</span>
 </h3>
-<section class="introduction" id="introduction-12"><div class="para" id="p-116">Predator-prey dynamics between two species is a classic model.</div></section><div class="para logical" id="p-117">
+<section class="introduction" id="introduction-12"><div class="para" id="p-123">Predator-prey dynamics between two species is a classic model.</div></section><div class="para logical" id="p-124">
 <div class="para">Consider</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \begin{cases}
-\dfrac{dB}{dt} \amp = r_BB - pBC\\
+\dfrac{dB}{dt} \amp = r B - p B C\\
 \dfrac{dC}{dt} \amp = \epsilon p B C - m C
 \end{cases}
 \end{equation*}
@@ -256,12 +257,14 @@ I\left(1-\frac{I}{N}\right)-\gamma I\text{.}
 </div>
 <section class="subsubsection" id="subsubsec-pred-prey-null"><h4 class="heading hide-type">
 <span class="type">Subsubsection</span><span class="space"> </span><span class="codenumber">2.2.2.1</span><span class="space"> </span><span class="title">Predator-Prey nullclines</span>
-</h4></section><section class="subsubsection" id="subsubsec-pred-prey-equilibrium"><h4 class="heading hide-type">
+</h4>
+<section class="introduction" id="introduction-13"><div class="para" id="p-125"></div></section></section><section class="subsubsection" id="subsubsec-pred-prey-equilibrium"><h4 class="heading hide-type">
 <span class="type">Subsubsection</span><span class="space"> </span><span class="codenumber">2.2.2.2</span><span class="space"> </span><span class="title">Predator-Prey phase plane and equilibria</span>
-</h4></section><section class="subsubsection" id="subsubsec-pred-prey-jacobian"><h4 class="heading hide-type">
+</h4>
+<section class="introduction" id="introduction-14"><div class="para" id="p-126"></div></section></section><section class="subsubsection" id="subsubsec-pred-prey-jacobian"><h4 class="heading hide-type">
 <span class="type">Subsubsection</span><span class="space"> </span><span class="codenumber">2.2.2.3</span><span class="space"> </span><span class="title">Predator-Prey Jacobian</span>
 </h4>
-<div class="para logical" id="p-118">
+<section class="introduction" id="introduction-15"><div class="para" id="p-127"></div></section><div class="para logical" id="p-128">
 <div class="para">For this model, the Jacobian is</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -270,41 +273,45 @@ J(B, C) = \begin{pmatrix} r_{B} - p C \amp -p B\\\epsilon p C \amp \epsilon p B 
 </div>
 </div></section><section class="subsubsection" id="subsubsec-pred-prey-summary"><h4 class="heading hide-type">
 <span class="type">Subsubsection</span><span class="space"> </span><span class="codenumber">2.2.2.4</span><span class="space"> </span><span class="title">Summary of Predator-Prey analysis</span>
-</h4></section></section><section class="subsection" id="subsec-competition"><h3 class="heading hide-type">
-<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">2.2.3</span><span class="space"> </span><span class="title">Competition</span>
+</h4>
+<section class="introduction" id="introduction-16"><div class="para" id="p-129"></div></section></section><section class="conclusion" id="conclusion-7"><div class="para" id="p-130"></div></section></section><section class="subsection" id="subsec-mod-pred-prey"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">2.2.3</span><span class="space"> </span><span class="title">Modified Predator-prey</span>
 </h3>
-<section class="introduction" id="introduction-13"><div class="para" id="p-119">Ecological competition between two species for a shared resource is a classic model.</div></section><div class="para logical" id="p-120">
-<div class="para">Consider</div>
+<section class="introduction" id="introduction-17"><div class="para logical" id="p-131">
+<div class="para">Predator-prey dynamics between two species is a classic model.  Consider the following modification with a logistically-growing prey population</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \begin{cases}
-\dfrac{dB}{dt} \amp = r_B B\left(1-\dfrac{B}{K_{B}}\right) - \alpha B F\\
-\dfrac{dF}{dt} \amp = r_F F\left(1-\dfrac{F}{K_{F}}\right) - \gamma B F
+\dfrac{dB}{dt} \amp = r B\left(1-\dfrac{B}{K}\right) - p B C\\
+\dfrac{dC}{dt} \amp = \epsilon p B C - m C
 \end{cases}
 \end{equation*}
 </div>
-</div>
-<section class="subsubsection" id="subsubsec-competition-null"><h4 class="heading hide-type">
-<span class="type">Subsubsection</span><span class="space"> </span><span class="codenumber">2.2.3.1</span><span class="space"> </span><span class="title">Competition nullclines</span>
-</h4></section><section class="subsubsection" id="subsubsec-competition-equilibrium"><h4 class="heading hide-type">
-<span class="type">Subsubsection</span><span class="space"> </span><span class="codenumber">2.2.3.2</span><span class="space"> </span><span class="title">Competition phase plane and equilibria</span>
-</h4></section><section class="subsubsection" id="subsubsec-competition-jacobian"><h4 class="heading hide-type">
-<span class="type">Subsubsection</span><span class="space"> </span><span class="codenumber">2.2.3.3</span><span class="space"> </span><span class="title">Competition Jacobian</span>
+</div></section><section class="subsubsection" id="subsubsec-mod-pred-prey-null"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span><span class="space"> </span><span class="codenumber">2.2.3.1</span><span class="space"> </span><span class="title">Predator-Prey nullclines</span>
 </h4>
-<div class="para logical" id="p-121">
+<section class="introduction" id="introduction-18"><div class="para" id="p-132"></div></section><div class="para" id="p-133">To find <span class="process-math">\(B\)</span>-nullclines, we set <span class="process-math">\(0 = B\left(r \left(1-\dfrac{B}{K}\right) - p C\right)\)</span> to get either <span class="process-math">\(B = 0\)</span> or <span class="process-math">\(C = \frac{r}{p} \left(1-\dfrac{B}{K}\right)\text{.}\)</span>  The nontrivial nullcline is a line with a vertical intercept of <span class="process-math">\(\dfrac{r}{p}\)</span> and a horizontal intercept of <span class="process-math">\(B=K\)</span> in the <span class="process-math">\(BC\)</span>-plane.</div>
+<div class="para" id="p-134">To find <span class="process-math">\(C\)</span>-nullclines, we set <span class="process-math">\(0 = C\left(\epsilon p B - m\right)\)</span> to get either <span class="process-math">\(C = 0\)</span> or <span class="process-math">\(B = \frac{m}{\epsilon p}\text{.}\)</span>  The nontrivial nullcline is a vertical line at <span class="process-math">\(B = \dfrac{m}{\epsilon p}\text{.}\)</span>
+</div></section><section class="subsubsection" id="subsubsec-mod-pred-prey-equilibrium"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span><span class="space"> </span><span class="codenumber">2.2.3.2</span><span class="space"> </span><span class="title">Predator-Prey phase plane and equilibria</span>
+</h4>
+<section class="introduction" id="introduction-19"><div class="para" id="p-135">Where opposite nullclines cross, we have equilibria, but the number of equilibria depends on how <span class="process-math">\(K\)</span> and <span class="process-math">\(\frac{m}{\epsilon p}\)</span> compare. If <span class="process-math">\(K \lt \frac{m}{\epsilon p}\text{,}\)</span> the <span class="process-math">\(B\)</span>nullcline crosses the horizontal axis before intersecting the vertical <span class="process-math">\(C\)</span> nullcline and there are only two equilibria, at <span class="process-math">\((B^*, C^*) = (0, 0)\)</span> and <span class="process-math">\(B^*, C^*) = (K, 0)\text{.}\)</span> Otherwise, if <span class="process-math">\(K \gt \frac{m}{\epsilon p}\text{,}\)</span> the <span class="process-math">\(B\)</span>nullcline crosses the vertical <span class="process-math">\(C\)</span>-nullcline before intersecting the horizontal axis at <span class="process-math">\(K\)</span> and a third equilibrium emerges, at <span class="process-math">\((B^*, C^*) = \left(\dfrac{m}{\epsilon p}, \dfrac{r}{p}\left(1-\dfrac{m}{\epsilon p K}\right)\right)\text{.}\)</span>  The previous equilibria remain.</div></section></section><section class="subsubsection" id="subsubsec-mod-pred-prey-jacobian"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span><span class="space"> </span><span class="codenumber">2.2.3.3</span><span class="space"> </span><span class="title">Predator-Prey Jacobian</span>
+</h4>
+<section class="introduction" id="introduction-20"><div class="para" id="p-136"></div></section><div class="para logical" id="p-137">
 <div class="para">For this model, the Jacobian is</div>
 <div class="displaymath process-math">
 \begin{equation*}
-J(B, F) = \begin{pmatrix} r_B - \dfrac{2r_B}{K_B} - \alpha F \amp -\alpha B\\ -\gamma F \amp
-r_F - \dfrac{2r_{F}}{K_{F}} - \gamma B \end{pmatrix}
+J(B, C) = \begin{pmatrix} r_{B} - p C \amp -p B\\\epsilon p C \amp \epsilon p B - m\end{pmatrix}\text{.}
 \end{equation*}
 </div>
-</div></section><section class="subsubsection" id="subsubsec-competition-summary"><h4 class="heading hide-type">
-<span class="type">Subsubsection</span><span class="space"> </span><span class="codenumber">2.2.3.4</span><span class="space"> </span><span class="title">Summary of Competition analysis</span>
-</h4></section></section><section class="subsection" id="subsec-SIS-reprise"><h3 class="heading hide-type">
+</div></section><section class="subsubsection" id="subsubsec-mod-pred-prey-summary"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span><span class="space"> </span><span class="codenumber">2.2.3.4</span><span class="space"> </span><span class="title">Summary of Predator-Prey analysis</span>
+</h4>
+<section class="introduction" id="introduction-21"><div class="para" id="p-138"></div></section></section><section class="conclusion" id="conclusion-8"><div class="para" id="p-139"></div></section></section><section class="subsection" id="subsec-SIS-reprise"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">2.2.4</span><span class="space"> </span><span class="title">SIS epidemiological model</span>
 </h3>
-<section class="introduction" id="introduction-14"><div class="para" id="p-122">The SI (or SIS) model that allows for the transmission of a mild infection through a closed population is a nice way to introduce 2D models.</div></section><div class="para logical" id="p-123">
+<section class="introduction" id="introduction-22"><div class="para" id="p-140"></div></section><section class="introduction" id="introduction-23"><div class="para" id="p-141">The SI (or SIS) model that allows for the transmission of a mild infection through a closed population is a nice way to introduce 2D models.</div></section><div class="para logical" id="p-142">
 <div class="para">Consider</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -318,13 +325,13 @@ r_F - \dfrac{2r_{F}}{K_{F}} - \gamma B \end{pmatrix}
 <section class="subsubsection" id="subsubsec-SIS-null"><h4 class="heading hide-type">
 <span class="type">Subsubsection</span><span class="space"> </span><span class="codenumber">2.2.4.1</span><span class="space"> </span><span class="title">SIS nullclines</span>
 </h4>
-<div class="para" id="p-124">Since the right-hand side of the <span class="process-math">\(S\)</span>-equation factors as <span class="process-math">\((\gamma - \beta S)I\text{,}\)</span> <span class="process-math">\(S\)</span>-nullclines are both <span class="process-math">\(I = 0 \)</span> and <span class="process-math">\(S = \dfrac{\gamma}{\beta}\text{.}\)</span>  Since the right-hand side of the <span class="process-math">\(I\)</span>-equation factors similarly, its nullclines are overlapping.</div></section><section class="subsubsection" id="subsubsec-SIS-equilibrium"><h4 class="heading hide-type">
+<section class="introduction" id="introduction-24"><div class="para" id="p-143"></div></section><div class="para" id="p-144">Since the right-hand side of the <span class="process-math">\(S\)</span>-equation factors as <span class="process-math">\((\gamma - \beta S)I\text{,}\)</span> <span class="process-math">\(S\)</span>-nullclines are both <span class="process-math">\(I = 0 \)</span> and <span class="process-math">\(S = \dfrac{\gamma}{\beta}\text{.}\)</span>  Since the right-hand side of the <span class="process-math">\(I\)</span>-equation factors similarly, its nullclines are overlapping.</div></section><section class="subsubsection" id="subsubsec-SIS-equilibrium"><h4 class="heading hide-type">
 <span class="type">Subsubsection</span><span class="space"> </span><span class="codenumber">2.2.4.2</span><span class="space"> </span><span class="title">SIS phase plane and equilibria</span>
 </h4>
-<div class="para" id="p-125">Since equilibria are found anywhere opposite nullclines intersect, the entire <span class="process-math">\(S\)</span>-axis is a line of equilibrium points as is the vertical line at <span class="process-math">\(S=\frac{\gamma}{\beta}\text{.}\)</span> This is actually a bit strange, and is the result of some surprising algebraic constraints hidden in the model.</div></section><section class="subsubsection" id="subsubsec-SIS-jacobian"><h4 class="heading hide-type">
+<section class="introduction" id="introduction-25"><div class="para" id="p-145"></div></section><div class="para" id="p-146">Since equilibria are found anywhere opposite nullclines intersect, the entire <span class="process-math">\(S\)</span>-axis is a line of equilibrium points as is the vertical line at <span class="process-math">\(S=\frac{\gamma}{\beta}\text{.}\)</span> This is actually a bit strange, and is the result of some surprising algebraic constraints hidden in the model.</div></section><section class="subsubsection" id="subsubsec-SIS-jacobian"><h4 class="heading hide-type">
 <span class="type">Subsubsection</span><span class="space"> </span><span class="codenumber">2.2.4.3</span><span class="space"> </span><span class="title">SIS Jacobian</span>
 </h4>
-<div class="para logical" id="p-126">
+<section class="introduction" id="introduction-26"><div class="para" id="p-147"></div></section><div class="para logical" id="p-148">
 <div class="para">For this model, the Jacobian is</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -333,7 +340,8 @@ J(S, I) = \begin{pmatrix} -\beta I \amp \gamma - \beta S\\\beta I \amp \beta S -
 </div>
 </div></section><section class="subsubsection" id="subsubsec-SIS-summary"><h4 class="heading hide-type">
 <span class="type">Subsubsection</span><span class="space"> </span><span class="codenumber">2.2.4.4</span><span class="space"> </span><span class="title">Summary of SIS analysis</span>
-</h4></section></section></section></div>
+</h4>
+<section class="introduction" id="introduction-27"><div class="para" id="p-149"></div></section></section><section class="conclusion" id="conclusion-9"><div class="para" id="p-150"></div></section></section><section class="conclusion" id="conclusion-10"><div class="para" id="p-151"></div></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="systems-intro.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="exercises-1.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
