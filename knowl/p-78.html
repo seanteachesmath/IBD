@@ -13,22 +13,51 @@
 <body class="ignore-math">
 <h3 class="heading"><span class="type">Paragraph</span></h3>
 <div class="para logical">
-<div class="para">The exponential can never be zero, so we are looking for solutions to</div>
+<div class="para">We begin by assuming that solutions to the system are exponential, for example,</div>
 <div class="displaymath process-math">
 \begin{equation*}
-0 = \left(\begin{pmatrix}a\amp b\\c\amp d\end{pmatrix} -
-rI\right)\begin{pmatrix}u\\v\end{pmatrix}\text{,}
+\begin{pmatrix}x(t)\\y(t)\end{pmatrix} = 
+\begin{pmatrix}u\\v\end{pmatrix}\cdot e^{rt},
 \end{equation*}
 </div>
-<div class="para">which are given by the eigenvector and eigenvalue of the matrix <span class="process-math">\(A\text{.}\)</span> Eigenvalues are given by solutions to <span class="process-math">\(\operatorname{det}(A-rI)=0\)</span> or</div>
+<div class="para">for some vector of unknown constants</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\operatorname{det}\begin{pmatrix}a-r\amp b\\c\amp
-d-r\end{pmatrix} = 0.
+\begin{pmatrix}u\\v\end{pmatrix}.
 \end{equation*}
 </div>
-<div class="para">We solve <span class="process-math">\((a-r)(d-r)-bc=0\)</span> for <span class="process-math">\(r\text{.}\)</span>
+<div class="para">Now we differentiate and substitute,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\dfrac{d}{dt}\left(\begin{pmatrix}x(t)\\y(t)\end{pmatrix}\right) = \dfrac{d}{dt}\left(\begin{pmatrix}u\\v\end{pmatrix}e^{rt}\right) = 
+\begin{pmatrix}u\\v\end{pmatrix}\cdot re^{rt}. 
+\end{equation*}
 </div>
+<div class="para">Equating these,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\underbrace{\begin{pmatrix}u\\v\end{pmatrix}\cdot re^{rt}}_{\begin{pmatrix}\frac{dx}{dt}\\\frac{dy}{dt}\end{pmatrix}} =
+\underbrace{\begin{pmatrix}a\amp b\\c\amp d\end{pmatrix}\cdot
+\begin{pmatrix}u\\v\end{pmatrix}\cdot e^{rt}}_{\begin{pmatrix}a\amp b\\c\amp d\end{pmatrix}\cdot \begin{pmatrix}x\\y\end{pmatrix}} 
+\end{equation*}
+</div>
+<div class="para">Moving all terms to one side,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+0 = \begin{pmatrix}a\amp b\\c\amp d\end{pmatrix}\cdot
+\begin{pmatrix}u\\v\end{pmatrix}\cdot e^{rt} -
+\begin{pmatrix}u\\v\end{pmatrix}\cdot re^{rt}.
+\end{equation*}
+</div>
+<div class="para">Or,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+0 =
+\left(\begin{pmatrix}a\amp b\\c\amp d\end{pmatrix} -
+rI\right)\begin{pmatrix}u\\v\end{pmatrix}\cdot e^{rt},
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(I\)</span> is the <span class="process-math">\(2\times2\)</span> identity matrix.</div>
 </div>
 <span class="incontext"><a href="systems-intro.html#p-78" class="internal">in-context</a></span>
 </body>

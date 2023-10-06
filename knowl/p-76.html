@@ -16,29 +16,21 @@
 <div class="para">Consider the generic 2D linear system</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\begin{cases} \dfrac{dx}{dt} \amp = f(x, y)\\ \dfrac{dg}{dt} \amp =
+\begin{cases} \dfrac{dx}{dt} \amp = f(x, y)\\ \dfrac{dy}{dt} \amp =
 g(x, y) \end{cases}
 \end{equation*}
 </div>
-<div class="para">For the choice <span class="process-math">\(f(x, y) = ax+by\)</span> and <span class="process-math">\(g(x,y) = cx+dy\)</span> (sorry about using the letter <span class="process-math">\(d\text{,}\)</span> but it becomes standard in the next step), we can establish some important information about solutions. Much of this is linked to properties of</div>
+<div class="para">For the choice <span class="process-math">\(f(x, y) = ax+by\)</span> and <span class="process-math">\(g(x,y) = cx+dy\)</span> (sorry about using the letter <span class="process-math">\(d\text{,}\)</span> but it becomes standard in the next step), it looks like</div>
 <div class="displaymath process-math">
 \begin{equation*}
-A = \left(\begin{array}{cc}a\amp b\\c\amp d\end{array}\right)\text{.}
+\begin{cases} 
+\dfrac{dx}{dt} \amp = ax+by\\ \dfrac{dy}{dt} \amp = cx+dy \end{cases}\text{.}
 \end{equation*}
 </div>
-<div class="para">Two important properties of this matrix are the <em class="emphasis">trace</em>
-</div>
+<div class="para">It is convenient to express this in matrix-vector form,</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\tau = \operatorname{Tr}(A) = a + d,
-\end{equation*}
-</div>
-<div class="para">and the <em class="emphasis">determinant</em>
-</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\Delta = \operatorname{Det}(A) =
-ad-bc.
+\begin{pmatrix}\frac{dx}{dt}\\\frac{dy}{dt}\end{pmatrix} = \begin{pmatrix}a\amp b\\c\amp d\end{pmatrix}\cdot \begin{pmatrix}x\\y\end{pmatrix}.
 \end{equation*}
 </div>
 </div>

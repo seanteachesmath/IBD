@@ -163,12 +163,12 @@ window.MathJax = {
 </ul>
 </li>
 <li class="toc-item toc-subsection">
-<div class="toc-title-box"><a href="sec-nonlinear-systems.html#subsec-competition" class="internal"><span class="codenumber">2.2.3</span> <span class="title">Competition</span></a></div>
+<div class="toc-title-box"><a href="sec-nonlinear-systems.html#subsec-mod-pred-prey" class="internal"><span class="codenumber">2.2.3</span> <span class="title">Modified Predator-prey</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec-nonlinear-systems.html#subsubsec-competition-null" class="internal"><span class="codenumber">2.2.3.1</span> <span class="title">Competition nullclines</span></a></div></li>
-<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec-nonlinear-systems.html#subsubsec-competition-equilibrium" class="internal"><span class="codenumber">2.2.3.2</span> <span class="title">Competition phase plane and equilibria</span></a></div></li>
-<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec-nonlinear-systems.html#subsubsec-competition-jacobian" class="internal"><span class="codenumber">2.2.3.3</span> <span class="title">Competition Jacobian</span></a></div></li>
-<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec-nonlinear-systems.html#subsubsec-competition-summary" class="internal"><span class="codenumber">2.2.3.4</span> <span class="title">Summary of Competition analysis</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec-nonlinear-systems.html#subsubsec-mod-pred-prey-null" class="internal"><span class="codenumber">2.2.3.1</span> <span class="title">Predator-Prey nullclines</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec-nonlinear-systems.html#subsubsec-mod-pred-prey-equilibrium" class="internal"><span class="codenumber">2.2.3.2</span> <span class="title">Predator-Prey phase plane and equilibria</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec-nonlinear-systems.html#subsubsec-mod-pred-prey-jacobian" class="internal"><span class="codenumber">2.2.3.3</span> <span class="title">Predator-Prey Jacobian</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec-nonlinear-systems.html#subsubsec-mod-pred-prey-summary" class="internal"><span class="codenumber">2.2.3.4</span> <span class="title">Summary of Predator-Prey analysis</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-subsection">
@@ -193,14 +193,29 @@ window.MathJax = {
 <div class="para">Consider the generic 2D linear system</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\begin{cases} \dfrac{dx}{dt} \amp = f(x, y)\\ \dfrac{dg}{dt} \amp =
+\begin{cases} \dfrac{dx}{dt} \amp = f(x, y)\\ \dfrac{dy}{dt} \amp =
 g(x, y) \end{cases}
 \end{equation*}
 </div>
-<div class="para">For the choice <span class="process-math">\(f(x, y) = ax+by\)</span> and <span class="process-math">\(g(x,y) = cx+dy\)</span> (sorry about using the letter <span class="process-math">\(d\text{,}\)</span> but it becomes standard in the next step), we can establish some important information about solutions. Much of this is linked to properties of</div>
+<div class="para">For the choice <span class="process-math">\(f(x, y) = ax+by\)</span> and <span class="process-math">\(g(x,y) = cx+dy\)</span> (sorry about using the letter <span class="process-math">\(d\text{,}\)</span> but it becomes standard in the next step), it looks like</div>
 <div class="displaymath process-math">
 \begin{equation*}
-A = \left(\begin{array}{cc}a\amp b\\c\amp d\end{array}\right)\text{.}
+\begin{cases} 
+\dfrac{dx}{dt} \amp = ax+by\\ \dfrac{dy}{dt} \amp = cx+dy \end{cases}\text{.}
+\end{equation*}
+</div>
+<div class="para">It is convenient to express this in matrix-vector form,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{pmatrix}\frac{dx}{dt}\\\frac{dy}{dt}\end{pmatrix} = \begin{pmatrix}a\amp b\\c\amp d\end{pmatrix}\cdot \begin{pmatrix}x\\y\end{pmatrix}.
+\end{equation*}
+</div>
+</div>
+<div class="para logical" id="p-77">
+<div class="para">We can establish some important information about solutions linked to properties of the matrix of coefficients</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A = \begin{pmatrix}a\amp b\\c\amp d\end{pmatrix}\text{.}
 \end{equation*}
 </div>
 <div class="para">Two important properties of this matrix are the <em class="emphasis">trace</em>
@@ -219,7 +234,7 @@ ad-bc.
 \end{equation*}
 </div>
 </div>
-<div class="para logical" id="p-77">
+<div class="para logical" id="p-78">
 <div class="para">We begin by assuming that solutions to the system are exponential, for example,</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -236,16 +251,16 @@ ad-bc.
 <div class="para">Now we differentiate and substitute,</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\dfrac{d}{dt}\left(\begin{pmatrix}x\\y\end{pmatrix}\right) = 
+\dfrac{d}{dt}\left(\begin{pmatrix}x(t)\\y(t)\end{pmatrix}\right) = \dfrac{d}{dt}\left(\begin{pmatrix}u\\v\end{pmatrix}e^{rt}\right) = 
 \begin{pmatrix}u\\v\end{pmatrix}\cdot re^{rt}. 
 \end{equation*}
 </div>
 <div class="para">Equating these,</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\begin{pmatrix}u\\v\end{pmatrix}\cdot re^{rt} =
-\begin{pmatrix}a\amp b\\c\amp d\end{pmatrix}\cdot
-\begin{pmatrix}u\\v\end{pmatrix}\cdot e^{rt} 
+\underbrace{\begin{pmatrix}u\\v\end{pmatrix}\cdot re^{rt}}_{\begin{pmatrix}\frac{dx}{dt}\\\frac{dy}{dt}\end{pmatrix}} =
+\underbrace{\begin{pmatrix}a\amp b\\c\amp d\end{pmatrix}\cdot
+\begin{pmatrix}u\\v\end{pmatrix}\cdot e^{rt}}_{\begin{pmatrix}a\amp b\\c\amp d\end{pmatrix}\cdot \begin{pmatrix}x\\y\end{pmatrix}} 
 \end{equation*}
 </div>
 <div class="para">Moving all terms to one side,</div>
@@ -266,7 +281,7 @@ rI\right)\begin{pmatrix}u\\v\end{pmatrix}\cdot e^{rt},
 </div>
 <div class="para">where <span class="process-math">\(I\)</span> is the <span class="process-math">\(2\times2\)</span> identity matrix.</div>
 </div>
-<div class="para logical" id="p-78">
+<div class="para logical" id="p-79">
 <div class="para">The exponential can never be zero, so we are looking for solutions to</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -284,7 +299,7 @@ d-r\end{pmatrix} = 0.
 <div class="para">We solve <span class="process-math">\((a-r)(d-r)-bc=0\)</span> for <span class="process-math">\(r\text{.}\)</span>
 </div>
 </div>
-<div class="para logical" id="p-79">
+<div class="para logical" id="p-80">
 <div class="para">The equation can be written <span class="process-math">\(r^2 - (a + d)r + ad-bc = 0\)</span> and solved for <span class="process-math">\(r\)</span> and then the eigenvector. Notice that the equation can be rewritten in terms of the matrix properties referenced above,</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -300,18 +315,18 @@ r = \dfrac{\tau \pm
 </div>
 <div class="para">Frome here a lot could happen, depending on the entries of the matrix and the resulting trace and determinant. Roots, <span class="process-math">\(r\text{,}\)</span> could be</div>
 <ul class="disc">
-<li id="li-14"><div class="para" id="p-80">Real and distinct, opposite sign</div></li>
-<li id="li-15"><div class="para" id="p-81">Real and distinct, same sign</div></li>
-<li id="li-16"><div class="para" id="p-82">Real and repeated</div></li>
-<li id="li-17"><div class="para" id="p-83">Complex</div></li>
-<li id="li-18"><div class="para" id="p-84">Purely imaginary,</div></li>
+<li id="li-14"><div class="para" id="p-81">Real and distinct, opposite sign</div></li>
+<li id="li-15"><div class="para" id="p-82">Real and distinct, same sign</div></li>
+<li id="li-16"><div class="para" id="p-83">Real and repeated</div></li>
+<li id="li-17"><div class="para" id="p-84">Complex</div></li>
+<li id="li-18"><div class="para" id="p-85">Purely imaginary,</div></li>
 </ul>
 <div class="para">roughly in the order you might expect them based on past experience with the quadratic formula. What follows is the most economical summary I can provide of one of my favorite chapters in ordinary differential equations.</div>
 </div>
 <section class="subsection" id="subsec-real-distinct-opposite"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">2.1.1</span><span class="space"> </span><span class="title">Real and distinct eigenvalues of opposite sign</span>
 </h3>
-<section class="introduction" id="introduction-6"><div class="para" id="p-85">As we will see in this section, this situation corresponds to phase plane dynamics corresponding to a <em class="emphasis">saddle</em> at the equilibrium.</div> <div class="para logical" id="p-86">
+<section class="introduction" id="introduction-6"><div class="para" id="p-86">As we will see in this section, this situation corresponds to phase plane dynamics corresponding to a <em class="emphasis">saddle</em> at the equilibrium.</div> <div class="para logical" id="p-87">
 <div class="para">Real and distinct roots is probably the simplest case to introduce. Let’s call those solutions <span class="process-math">\(r_+\)</span> and <span class="process-math">\(r_-\text{,}\)</span> eventually we will need numbers, but first it’s worth pointing out how we find the corresponding eigenvectors.  We find those by solving</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -343,7 +358,7 @@ r_\pm\end{pmatrix}\begin{pmatrix}u_\pm\\v_\pm\end{pmatrix}.
 \end{equation*}
 </div>The trace is <span class="process-math">\(\tau = 1 + 3 = 4\)</span> and the determinant is <span class="process-math">\(\Delta = (1)(3)-(2)(4) = -5\text{.}\)</span> Find both eigenvalues and corresponding eigenvectors.<div class="solutions">
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-2" id="solution-2"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-2"><div class="solution solution-like">
-<div class="para logical" id="p-87">
+<div class="para logical" id="p-88">
 <div class="para">Eigenvalues are solutions to</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -357,7 +372,7 @@ r_\pm = \dfrac{4\pm\sqrt{16-4(-5)}}{2} = \dfrac{4\pm\sqrt{36}}{2} = 2\pm3 = 5, -
 \end{equation*}
 </div>
 <div class="para">Substituting the eigenvalues one at a time, we can solve for entries in each eigenvector.</div>
-</div> <div class="para logical" id="p-88">
+</div> <div class="para logical" id="p-89">
 <div class="para">First, for <span class="process-math">\(r_+ =  5\)</span> we have</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -375,10 +390,11 @@ r_\pm = \dfrac{4\pm\sqrt{16-4(-5)}}{2} = \dfrac{4\pm\sqrt{36}}{2} = 2\pm3 = 5, -
 <div class="para">The setup is very similar for the second eigenvalue, and solving these both we have <span class="process-math">\(r_+ = 5\)</span> with <span class="process-math">\(u_+ = 1\)</span> and <span class="process-math">\(v_+ = 2\)</span> and <span class="process-math">\(r_- = -1\)</span> with <span class="process-math">\(u_-
 = -1\)</span> and <span class="process-math">\(v_- = 1\text{.}\)</span>
 </div>
-</div> <div class="para" id="p-89">In the phase plane, the eigenvectors represent what are called straight-line solutions.</div>
+</div> <div class="para" id="p-90">In the phase plane, the eigenvectors represent what are called straight-line solutions. For example, in <a href="" class="xref" data-knowl="./knowl/fig-linear-saddle.html" title="Figure 2.1.2">Figure 2.1.2</a> we would have unstable straight-line solutions that grow away from <span class="process-math">\((0,0)\)</span> in both directions along along the line passing through the point <span class="process-math">\((1,2)\text{.}\)</span>  Similarly we have stable straight-line solutions that decay towards <span class="process-math">\((0,0)\)</span> on a line that passes through the point <span class="process-math">\((-1, 1)\text{.}\)</span>
+</div>
 </div></div>
 </div></article></div>
-<div class="para logical" id="p-90">
+<div class="para logical" id="p-91">
 <div class="para">The conclusion to <a href="" class="xref" data-knowl="./knowl/ex-real-distinct-opposite.html" title="Example 2.1.3: Real and distinct eigenvalues of opposite sign">Example 2.1.3</a> means that for the linear system of differential equations ... we can write solutions for any initial condition in terms of unknowns <span class="process-math">\(c_+ \)</span> and <span class="process-math">\(c_-\)</span> as</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/ex-real-distinct-opposite.html">
 \begin{equation*}
@@ -388,17 +404,18 @@ c_-\begin{pmatrix}u_-\\v_-\end{pmatrix}e^{r_{-}t}
 \end{equation*}
 </div>
 </div>
-<div class="para" id="p-91">Some solutions will start on the first eigenvalue (this means an initial condition <span class="process-math">\((x_0,y_0)\)</span> whose values are some constant multiple of those of the first eigenvector.) The contribution of the second eigenvector will be zero, and solutions will grow exponentially away from the origin along the first eigenvector. Others will start on the second eigenvalue (this means an initial condition <span class="process-math">\((x_0,y_0)\)</span> whose values are some constant multiple of those of the second eigenvector.) The contribution of the first eigenvector will be zero, and solutions will decay exponentially towards the the origin along the second eigenvector. For all other initial conditions we have a contribution from both, but with the contribution of the first eigenvector growing and the contribution of the second decaying exponentially over time.  We call this dynamic in the phase plane a <em class="emphasis">saddle</em>.</div>
-<div class="para" id="p-92">For example, with the initial condition <span class="process-math">\(x_0 = 3\)</span> and <span class="process-math">\(y_0=6\text{,}\)</span> we have <span class="process-math">\(c_+ = 3\)</span> and <span class="process-math">\(c_- = 0\text{.}\)</span> The solution grows exponentially in proportion to the vector.</div>
+<div class="para" id="p-92">Some solutions will start on the first eigenvalue (this means an initial condition <span class="process-math">\((x_0,y_0)\)</span> whose values are some constant multiple of those of the first eigenvector.) The contribution of the second eigenvector will be zero, and solutions will grow exponentially away from the origin along the first eigenvector. Others will start on the second eigenvalue (this means an initial condition <span class="process-math">\((x_0,y_0)\)</span> whose values are some constant multiple of those of the second eigenvector.) The contribution of the first eigenvector will be zero, and solutions will decay exponentially towards the the origin along the second eigenvector. For all other initial conditions we have a contribution from both, but with the contribution of the first eigenvector growing and the contribution of the second decaying exponentially over time.  We call this dynamic in the phase plane a <em class="emphasis">saddle</em>.</div>
+<div class="para" id="p-93">For example, with the initial condition <span class="process-math">\(x_0 = 3\)</span> and <span class="process-math">\(y_0=6\text{,}\)</span> we have <span class="process-math">\(c_+ = 3\)</span> and <span class="process-math">\(c_- = 0\text{.}\)</span> The solution grows exponentially in proportion to the vector.</div>
 <article class="example example-like" id="ex-saddles"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex-saddles"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.1.4</span><span class="period">.</span>
 </h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-saddles"><article class="example example-like">Use the trace and determinant of each matrix to find eigenvalues and eigenvectors. <ul class="disc">
-<li id="li-19"><div class="para" id="p-93"><span class="process-math">\(\displaystyle A = \begin{pmatrix} 2\amp4\\3\amp1\end{pmatrix}\)</span></div></li>
-<li id="li-20"><div class="para" id="p-94"><span class="process-math">\(\displaystyle A = \begin{pmatrix} 1\amp2\\3\amp4\end{pmatrix}\)</span></div></li>
-</ul></article></div></section><section class="subsection" id="subsec-real-distinct-same"><h3 class="heading hide-type">
+<li id="li-19"><div class="para" id="p-94"><span class="process-math">\(\displaystyle A = \begin{pmatrix} 2\amp4\\3\amp1\end{pmatrix}\)</span></div></li>
+<li id="li-20"><div class="para" id="p-95"><span class="process-math">\(\displaystyle A = \begin{pmatrix} 1\amp2\\3\amp4\end{pmatrix}\)</span></div></li>
+</ul></article></div>
+<section class="conclusion" id="conclusion-1"><div class="para" id="p-96"></div></section></section><section class="subsection" id="subsec-real-distinct-same"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">2.1.2</span><span class="space"> </span><span class="title">Real and distinct eigenvalues of the same sign</span>
 </h3>
-<section class="introduction" id="introduction-7"><div class="para" id="p-95">As we will see in this section, this situation corresponds to phase plane dynamics corresponding to a <em class="emphasis">node</em> at the equilibrium. Solutions will grow away from equilibrium if both roots are of positie sign and grow towards the equilibrium if both roots are of negative sign. This is due to the exponential nature of the solutions.</div></section><article class="example example-like" id="ex-real-distinct-same-plane"><a href="" data-knowl="" class="id-ref example-knowl original has-image" data-refid="hk-ex-real-distinct-same-plane"><h4 class="heading">
+<section class="introduction" id="introduction-7"><div class="para" id="p-97">As we will see in this section, this situation corresponds to phase plane dynamics corresponding to a <em class="emphasis">node</em> at the equilibrium. Solutions will grow away from equilibrium if both roots are of positie sign and grow towards the equilibrium if both roots are of negative sign. This is due to the exponential nature of the solutions.</div></section><article class="example example-like" id="ex-real-distinct-same-plane"><a href="" data-knowl="" class="id-ref example-knowl original has-image" data-refid="hk-ex-real-distinct-same-plane"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.1.5</span><span class="period">.</span>
 </h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-real-distinct-same-plane"><article class="example example-like">Find nullclines, equilibria, and sketch sample solutions for the linear system given by<div class="displaymath process-math">
 \begin{equation*}
@@ -421,7 +438,7 @@ c_-\begin{pmatrix}u_-\\v_-\end{pmatrix}e^{r_{-}t}
 \end{equation*}
 </div>The trace is <span class="process-math">\(\tau = 1 - 4 = -3\)</span> and the determinant is <span class="process-math">\(\Delta = (1)(-4)-(-2)(3) = 2\text{.}\)</span> Find both eigenvalues and corresponding eigenvectors.<div class="solutions">
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-4" id="solution-4"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-4"><div class="solution solution-like">
-<div class="para logical" id="p-96">
+<div class="para logical" id="p-98">
 <div class="para">Eigenvalues are solutions to</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -429,7 +446,7 @@ r^2+3r+2=0,
 \end{equation*}
 </div>
 <div class="para">or which gives solutions <span class="process-math">\(r_+ = -1\)</span> and <span class="process-math">\(r_- = -2\text{.}\)</span> Substituting the eigenvalues one at a time, we can solve for entries in each eigenvector.</div>
-</div> <div class="para logical" id="p-97">
+</div> <div class="para logical" id="p-99">
 <div class="para">First, for <span class="process-math">\(r_+ =  5\)</span> we have</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -452,16 +469,17 @@ r^2+3r+2=0,
 </div>
 </div></div>
 </div></article></div>
-<div class="para" id="p-98">The conclusion to <a href="" class="xref" data-knowl="./knowl/ex-real-distinct-same.html" title="Example 2.1.7: Real and distinct eigenvalues of same sign">Example 2.1.7</a> means that with the initial condition <span class="process-math">\(x_0 = 3\)</span> and <span class="process-math">\(y_0=3\text{,}\)</span> we have <span class="process-math">\(c_+ = 3\)</span> and <span class="process-math">\(c_- = 0\text{.}\)</span> The solution grows exponentially from the equilibrium at the origin along the vector.  With the initial condition <span class="process-math">\(x_0 = 4\)</span> and <span class="process-math">\(y_0=6\text{,}\)</span> we have <span class="process-math">\(c_+ = 0\)</span> and <span class="process-math">\(c_- = 2\text{.}\)</span> The solution decays exponentially towards the equilibrium at the origin along the vector.</div>
+<div class="para" id="p-100">The conclusion to <a href="" class="xref" data-knowl="./knowl/ex-real-distinct-same.html" title="Example 2.1.7: Real and distinct eigenvalues of same sign">Example 2.1.7</a> means that with the initial condition <span class="process-math">\(x_0 = 3\)</span> and <span class="process-math">\(y_0=3\text{,}\)</span> we have <span class="process-math">\(c_+ = 3\)</span> and <span class="process-math">\(c_- = 0\text{.}\)</span> The solution grows exponentially from the equilibrium at the origin along the vector.  With the initial condition <span class="process-math">\(x_0 = 4\)</span> and <span class="process-math">\(y_0=6\text{,}\)</span> we have <span class="process-math">\(c_+ = 0\)</span> and <span class="process-math">\(c_- = 2\text{.}\)</span> The solution decays exponentially towards the equilibrium at the origin along the vector.</div>
 <article class="example example-like" id="ex-nodes"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex-nodes"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.1.8</span><span class="period">.</span>
 </h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-nodes"><article class="example example-like">Try to construct a real-valued matrix with distinct eigenvalues of the same sign, either both positive or both negative.  Then, using those as coefficients in a first-order linear system of differential equations, sketch the nullclines and phase plane. <ul class="disc">
-<li id="li-21"><div class="para" id="p-99"><span class="process-math">\(\displaystyle A = \begin{pmatrix} \phantom{a}\amp \phantom{a}\\\phantom{a}\amp \phantom{a}\end{pmatrix}\)</span></div></li>
-<li id="li-22"><div class="para" id="p-100"><span class="process-math">\(\displaystyle A = \begin{pmatrix} \phantom{a}\amp \phantom{a}\\\phantom{a}\amp \phantom{a}\end{pmatrix}\)</span></div></li>
-</ul></article></div></section><section class="subsection" id="subsec-real-repeated"><h3 class="heading hide-type">
+<li id="li-21"><div class="para" id="p-101"><span class="process-math">\(\displaystyle A = \begin{pmatrix} \phantom{a}\amp \phantom{a}\\\phantom{a}\amp \phantom{a}\end{pmatrix}\)</span></div></li>
+<li id="li-22"><div class="para" id="p-102"><span class="process-math">\(\displaystyle A = \begin{pmatrix} \phantom{a}\amp \phantom{a}\\\phantom{a}\amp \phantom{a}\end{pmatrix}\)</span></div></li>
+</ul></article></div>
+<section class="conclusion" id="conclusion-2"><div class="para" id="p-103"></div></section></section><section class="subsection" id="subsec-real-repeated"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">2.1.3</span><span class="space"> </span><span class="title">Real and repeated eigenvalues</span>
 </h3>
-<section class="introduction" id="introduction-8"><div class="para logical" id="p-101">
+<section class="introduction" id="introduction-8"><div class="para logical" id="p-104">
 <div class="para">This happens to be a borderline case that takes a bit of work, but fortunately doesn’t play a major role in most applications.  From the solution to the quadratic, this happens when <span class="process-math">\(0 = (-\tau)^2 -
 4\Delta\)</span> or, solving for <span class="process-math">\(\Delta\text{,}\)</span>
 </div>
@@ -472,10 +490,10 @@ r^2+3r+2=0,
 \end{equation*}
 </div>
 <div class="para">This is along the curve that separates real and complex solutions.</div>
-</div></section></section><section class="subsection" id="subsec-complex"><h3 class="heading hide-type">
+</div></section><section class="conclusion" id="conclusion-3"><div class="para" id="p-105"></div></section></section><section class="subsection" id="subsec-complex"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">2.1.4</span><span class="space"> </span><span class="title">Complex eigenvalues</span>
 </h3>
-<section class="introduction" id="introduction-9"><div class="para logical" id="p-102">
+<section class="introduction" id="introduction-9"><div class="para logical" id="p-106">
 <div class="para">By the quadratic formula, any complex roots must be distinct, but some may be purely imaginary with no real part. Recall, we are trying to solve</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -488,7 +506,7 @@ r^2 - \tau r + \Delta = 0
 r = \dfrac{\tau \pm \sqrt{(-\tau)^2-4\Delta}}{2}.
 \end{equation*}
 </div>
-</div> <div class="para" id="p-103">Since our main goal is to assess local stability of eqiulibria in nonlinear models by linearizing, we won’t go so far here as writing explicit general solutions to the linear problems.</div></section><article class="example example-like" id="ex-complex-imaginary-plane"><a href="" data-knowl="" class="id-ref example-knowl original has-image" data-refid="hk-ex-complex-imaginary-plane"><h4 class="heading">
+</div> <div class="para" id="p-107">Since our main goal is to assess local stability of eqiulibria in nonlinear models by linearizing, we won’t go so far here as writing explicit general solutions to the linear problems.</div></section><article class="example example-like" id="ex-complex-imaginary-plane"><a href="" data-knowl="" class="id-ref example-knowl original has-image" data-refid="hk-ex-complex-imaginary-plane"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.1.9</span><span class="period">.</span>
 </h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-complex-imaginary-plane"><article class="example example-like">Find nullclines, equilibria, and sketch sample solutions for the linear system given by<div class="displaymath process-math">
 \begin{equation*}
@@ -511,7 +529,7 @@ r = \dfrac{\tau \pm \sqrt{(-\tau)^2-4\Delta}}{2}.
 \end{equation*}
 </div>The trace is <span class="process-math">\(\tau = 1 - 1 = 0\)</span> and the determinant is <span class="process-math">\(\Delta = (1)(-1)-(2)(-1) = 1\text{.}\)</span> Find both eigenvalues and corresponding eigenvectors.<div class="solutions">
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-6" id="solution-6"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-6"><div class="solution solution-like">
-<div class="para logical" id="p-104">
+<div class="para logical" id="p-108">
 <div class="para">Eigenvalues are solutions to</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -519,7 +537,7 @@ r^2+1=0,
 \end{equation*}
 </div>
 <div class="para">or which gives solutions <span class="process-math">\(r_+ = i\)</span> and <span class="process-math">\(r_- = -i\text{.}\)</span> Substituting the eigenvalues one at a time, we can solve for entries in each eigenvector.</div>
-</div> <div class="para logical" id="p-105">
+</div> <div class="para logical" id="p-109">
 <div class="para">First, for <span class="process-math">\(r_+ =  i\)</span> we have</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -542,8 +560,8 @@ r^2+1=0,
 </div>
 </div></div>
 </div></article></div>
-<div class="para" id="p-106">The conclusion to <a href="" class="xref" data-knowl="./knowl/ex-complex-imaginary.html" title="Example 2.1.11: Real and distinct eigenvalues of same sign">Example 2.1.11</a> might be surprising. If you’re aware of the complex plane, you might think we can graph these. Unfortunately the complex plane has a real axis and an imaginary axis. Or phase plane has two real axes corresponding to model variables. So, as it is, we can’t visualize complex eigenvalues in the same way as real ones.</div>
-<div class="para logical" id="p-107">
+<div class="para" id="p-110">The conclusion to <a href="" class="xref" data-knowl="./knowl/ex-complex-imaginary.html" title="Example 2.1.11: Real and distinct eigenvalues of same sign">Example 2.1.11</a> might be surprising. If you’re aware of the complex plane, you might think we can graph these. Unfortunately the complex plane has a real axis and an imaginary axis. Or phase plane has two real axes corresponding to model variables. So, as it is, we can’t visualize complex eigenvalues in the same way as real ones.</div>
+<div class="para logical" id="p-111">
 <div class="para">This means that we no longer start with real-valued solutions.  Recall that we guessed that <span class="process-math">\(e^{rt}\text{,}\)</span> was a part of our solution, but now we have complex-valued exponentials since <span class="process-math">\(r = \lambda + \mu i\)</span> for real numbers <span class="process-math">\(\lambda\)</span> and <span class="process-math">\(\mu\text{.}\)</span> Taking just this part, we have</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -561,9 +579,10 @@ e^{\mu i t} = \cos(\mu t) + i\sin(\mu t)
 <article class="example example-like" id="ex-spirals-centers"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex-spirals-centers"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.1.12</span><span class="period">.</span>
 </h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-spirals-centers"><article class="example example-like">Try to construct a real-valued matrix with complex or purely-imaginary eigenvalues.  Then, using those as coefficients in a first-order linear system of differential equations, sketch the nullclines and phase plane. <ul class="disc">
-<li id="li-23"><div class="para" id="p-108"><span class="process-math">\(\displaystyle A = \begin{pmatrix} \phantom{a}\amp \phantom{a}\\\phantom{a}\amp \phantom{a}\end{pmatrix}\)</span></div></li>
-<li id="li-24"><div class="para" id="p-109"><span class="process-math">\(\displaystyle A = \begin{pmatrix} \phantom{a}\amp \phantom{a}\\\phantom{a}\amp \phantom{a}\end{pmatrix}\)</span></div></li>
-</ul></article></div></section></section></div>
+<li id="li-23"><div class="para" id="p-112"><span class="process-math">\(\displaystyle A = \begin{pmatrix} \phantom{a}\amp \phantom{a}\\\phantom{a}\amp \phantom{a}\end{pmatrix}\)</span></div></li>
+<li id="li-24"><div class="para" id="p-113"><span class="process-math">\(\displaystyle A = \begin{pmatrix} \phantom{a}\amp \phantom{a}\\\phantom{a}\amp \phantom{a}\end{pmatrix}\)</span></div></li>
+</ul></article></div>
+<section class="conclusion" id="conclusion-4"><div class="para" id="p-114"></div></section></section><section class="conclusion" id="conclusion-5"><div class="para" id="p-115"></div></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="systems.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-nonlinear-systems.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
