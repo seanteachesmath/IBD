@@ -13,51 +13,27 @@
 <body class="ignore-math">
 <h3 class="heading"><span class="type">Paragraph</span></h3>
 <div class="para logical">
-<div class="para">We begin by assuming that solutions to the system are exponential, for example,</div>
+<div class="para">We can establish some important information about solutions linked to properties of the matrix of coefficients</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\begin{pmatrix}x(t)\\y(t)\end{pmatrix} = 
-\begin{pmatrix}u\\v\end{pmatrix}\cdot e^{rt},
+A = \begin{pmatrix}a\amp b\\c\amp d\end{pmatrix}\text{.}
 \end{equation*}
 </div>
-<div class="para">for some vector of unknown constants</div>
+<div class="para">Two important properties of this matrix are the <em class="emphasis">trace</em>
+</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\begin{pmatrix}u\\v\end{pmatrix}.
+\tau = \operatorname{Tr}(A) = a + d,
 \end{equation*}
 </div>
-<div class="para">Now we differentiate and substitute,</div>
+<div class="para">and the <em class="emphasis">determinant</em>
+</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\dfrac{d}{dt}\left(\begin{pmatrix}x\\y\end{pmatrix}\right) = 
-\begin{pmatrix}u\\v\end{pmatrix}\cdot re^{rt}. 
+\Delta = \operatorname{Det}(A) =
+ad-bc.
 \end{equation*}
 </div>
-<div class="para">Equating these,</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\begin{pmatrix}u\\v\end{pmatrix}\cdot re^{rt} =
-\begin{pmatrix}a\amp b\\c\amp d\end{pmatrix}\cdot
-\begin{pmatrix}u\\v\end{pmatrix}\cdot e^{rt} 
-\end{equation*}
-</div>
-<div class="para">Moving all terms to one side,</div>
-<div class="displaymath process-math">
-\begin{equation*}
-0 = \begin{pmatrix}a\amp b\\c\amp d\end{pmatrix}\cdot
-\begin{pmatrix}u\\v\end{pmatrix}\cdot e^{rt} -
-\begin{pmatrix}u\\v\end{pmatrix}\cdot re^{rt}.
-\end{equation*}
-</div>
-<div class="para">Or,</div>
-<div class="displaymath process-math">
-\begin{equation*}
-0 =
-\left(\begin{pmatrix}a\amp b\\c\amp d\end{pmatrix} -
-rI\right)\begin{pmatrix}u\\v\end{pmatrix}\cdot e^{rt},
-\end{equation*}
-</div>
-<div class="para">where <span class="process-math">\(I\)</span> is the <span class="process-math">\(2\times2\)</span> identity matrix.</div>
 </div>
 <span class="incontext"><a href="systems-intro.html#p-77" class="internal">in-context</a></span>
 </body>

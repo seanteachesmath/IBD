@@ -10,13 +10,16 @@ linearize a nonlinear system near equilibrium using
 the Jacobian matrix.</p>
 </introduction>
 
-<p>Consider the generic 2D linear system
-<me>\begin{cases} \dfrac{dx}{dt} \amp = f(x, y)\\ \dfrac{dg}{dt} \amp =
+<p>Consider the generic 2D linear system 
+<me>\begin{cases} \dfrac{dx}{dt} \amp = f(x, y)\\ \dfrac{dy}{dt} \amp =
 g(x, y) \end{cases}</me> For the choice <m>f(x, y) = ax+by</m> and
 <m>g(x,y) = cx+dy</m> (sorry about using the letter <m>d</m>, but it
-becomes standard in the next step), we can establish some important
-information about solutions. Much of this is linked to properties of
-<me>A = \left(\begin{array}{cc}a\amp b\\c\amp d\end{array}\right)</me>. 
+becomes standard in the next step), it looks like <me>\begin{cases} 
+\dfrac{dx}{dt} \amp = ax+by\\ \dfrac{dy}{dt} \amp = cx+dy \end{cases}</me>. It is convenient to express this in matrix-vector form, 
+<me>\begin{pmatrix}\frac{dx}{dt}\\\frac{dy}{dt}\end{pmatrix} = \begin{pmatrix}a\amp b\\c\amp d\end{pmatrix}\cdot \begin{pmatrix}x\\y\end{pmatrix}.</me>
+</p>
+<p>We can establish some important information about solutions linked to properties of the matrix of coefficients 
+<me>A = \begin{pmatrix}a\amp b\\c\amp d\end{pmatrix}</me>. 
 Two important properties of this matrix are the <em>trace</em>
 <me>\tau = \operatorname{Tr}(A) = a + d,</me> and the
 <em>determinant</em> <me>\Delta = \operatorname{Det}(A) =
@@ -28,11 +31,11 @@ for example, <me>\begin{pmatrix}x(t)\\y(t)\end{pmatrix} =
 unknown constants <me>\begin{pmatrix}u\\v\end{pmatrix}.</me> Now we
 differentiate and substitute,
 
-<me>\dfrac{d}{dt}\left(\begin{pmatrix}x\\y\end{pmatrix}\right) = 
+<me>\dfrac{d}{dt}\left(\begin{pmatrix}x(t)\\y(t)\end{pmatrix}\right) = \dfrac{d}{dt}\left(\begin{pmatrix}u\\v\end{pmatrix}e^{rt}\right) = 
 \begin{pmatrix}u\\v\end{pmatrix}\cdot re^{rt}. </me> Equating these,
-<me>  \begin{pmatrix}u\\v\end{pmatrix}\cdot re^{rt} =
-\begin{pmatrix}a\amp b\\c\amp d\end{pmatrix}\cdot
-\begin{pmatrix}u\\v\end{pmatrix}\cdot e^{rt} </me> Moving all terms to
+<me>  \underbrace{\begin{pmatrix}u\\v\end{pmatrix}\cdot re^{rt}}_{\begin{pmatrix}\frac{dx}{dt}\\\frac{dy}{dt}\end{pmatrix}} =
+\underbrace{\begin{pmatrix}a\amp b\\c\amp d\end{pmatrix}\cdot
+\begin{pmatrix}u\\v\end{pmatrix}\cdot e^{rt}}_{\begin{pmatrix}a\amp b\\c\amp d\end{pmatrix}\cdot \begin{pmatrix}x\\y\end{pmatrix}} </me> Moving all terms to
 one side, <me>  0 = \begin{pmatrix}a\amp b\\c\amp d\end{pmatrix}\cdot
 \begin{pmatrix}u\\v\end{pmatrix}\cdot e^{rt} -
 \begin{pmatrix}u\\v\end{pmatrix}\cdot re^{rt}.</me> Or, <me>  0 =
@@ -120,7 +123,7 @@ both we have <m>r_+ = 5</m> with <m>u_+ = 1</m>
 and <m>v_+ = 2</m> and <m>r_- = -1</m> with <m>u_-
 = -1</m> and <m>v_- = 1</m>.
 </p>
-<p>In the phase plane, the eigenvectors represent what are called straight-line solutions.</p>
+<p>In the phase plane, the eigenvectors represent what are called straight-line solutions. For example, in <xref ref = "fig-linear-saddle"/> we would have unstable straight-line solutions that grow away from <m>(0,0)</m> in both directions along along the line passing through the point <m>(1,2)</m>.  Similarly we have stable straight-line solutions that decay towards <m>(0,0)</m> on a line that passes through the point <m>(-1, 1)</m>.</p>
 </solution>
 
 </example>
@@ -158,6 +161,8 @@ the second decaying exponentially over time.  We call this dynamic in the phase 
 </ul>
 </statement>
 </example>
+<conclusion><p></p></conclusion>
+
 </subsection>
 
 <subsection xml:id="subsec-real-distinct-same">
@@ -243,6 +248,7 @@ equilibrium at the origin along the vector.</p>
 </ul>
 </statement>
 </example>
+<conclusion><p></p></conclusion>
 
 </subsection>
 
@@ -258,6 +264,9 @@ solution to the quadratic, this happens when <m>0 = (-\tau)^2 -
 \frac{\tau^2}{4}.</me>  This is along the curve that separates real and complex solutions.
 </p>
 </introduction>
+
+<conclusion><p></p></conclusion>
+
 </subsection>
 
 
@@ -361,9 +370,11 @@ point.
 </statement>
 </example>
 
+<conclusion><p></p></conclusion>
 
 </subsection>
 
+<conclusion><p></p></conclusion>
 
 </section>
 
@@ -494,6 +505,8 @@ we couldn't do it.
 <title>Summary of SIS analysis</title>
 </subsubsection>-->
 
+<conclusion><p></p></conclusion>
+
 </subsection>
 
 
@@ -507,32 +520,84 @@ Predator-prey dynamics between two species is a classic model.
 
 <p>
 Consider <me>\begin{cases}
-\dfrac{dB}{dt} \amp = r_BB - pBC\\
+\dfrac{dB}{dt} \amp = r B - p B C\\
 \dfrac{dC}{dt} \amp = \epsilon p B C - m C
 \end{cases}</me> 
 </p>
 
 <subsubsection xml:id="subsubsec-pred-prey-null">
 <title>Predator-Prey nullclines</title>
+<introduction><p></p></introduction>
 </subsubsection>
 
 <subsubsection xml:id="subsubsec-pred-prey-equilibrium">
 <title>Predator-Prey phase plane and equilibria</title>
+<introduction><p></p></introduction>
 </subsubsection>
 
 <subsubsection xml:id="subsubsec-pred-prey-jacobian">
 <title>Predator-Prey Jacobian</title>
+<introduction><p></p></introduction>
 <p>For this model, the Jacobian is <me>J(B, C) = \begin{pmatrix} r_{B} - p C \amp -p B\\\epsilon p C \amp \epsilon p B - m\end{pmatrix}</me> </p>
 </subsubsection>
 
 <subsubsection xml:id="subsubsec-pred-prey-summary">
 <title>Summary of Predator-Prey analysis</title>
+<introduction><p></p></introduction>
 </subsubsection>
 
+<conclusion><p></p></conclusion>
 </subsection>
 
+<subsection xml:id = "subsec-mod-pred-prey">
+<title>Predator-prey</title>
+<introduction>
+<p>
+Predator-prey dynamics between two species is a classic model.
+</p>
+</introduction>
 
-<subsection xml:id = "subsec-competition">
+<p>
+Consider <me>\begin{cases}
+\dfrac{dB}{dt} \amp = r B\left(1-\dfrac{B}{K}\right) - p B C\\
+\dfrac{dC}{dt} \amp = \epsilon p B C - m C
+\end{cases}</me> 
+</p>
+
+<subsubsection xml:id="subsubsec-mod-pred-prey-null">
+<title>Predator-Prey nullclines</title>
+<introduction><p></p></introduction>
+<p>To find <m>B</m>-nullclines, we set <m>0 = B\left(r \left(1-\dfrac{B}{K}\right) - p C\right)</m> to get either <m>B = 0</m> or
+<m>C = \frac{r}{p} \left(1-\dfrac{B}{K}\right)</m>.  The nontrivial nullcline is a line with a vertical intercept of <m>\dfrac{r}{p}</m> and a horizontal intercept of <m>B=K</m> in the <m>BC</m>-plane.
+</p>
+<p>To find <m>C</m>-nullclines, we set <m>0 = C\left(\epsilon p B - m\right)</m> to get either <m>C = 0</m> or
+<m>B = \frac{m}{\epsilon p}</m>.  The nontrivial nullcline is a vertical line at <m>B = \dfrac{m}{\epsilon p}</m>.
+</p>
+</subsubsection>
+
+<subsubsection xml:id="subsubsec-mod-pred-prey-equilibrium">
+<title>Predator-Prey phase plane and equilibria</title>
+<introduction><p>Where opposite nullclines cross, we have equilibria, but the number of equilibria depends on how <m>K</m> and <m>\frac{m}{\epsilon p}</m> compare. 
+If <m>K \lt \frac{m}{\epsilon p}</m>, the <m>B</m>nullcline crosses the horizontal axis before intersecting the vertical <m>C</m> nullcline and there are only two equilibria, at <m>(B^*, C^*) = (0, 0)</m> and <m>B^*, C^*) = (K, 0)</m>.
+Otherwise, if <m>K \gt \frac{m}{\epsilon p}</m>, the <m>B</m>nullcline crosses the vertical <m>C</m>-nullcline before intersecting the horizontal axis at <m>K</m> and a third equilibrium emerges, at <m>(B^*, C^*) = \left(\dfrac{m}{\epsilon p}, \dfrac{r}{p}\left(1-\dfrac{m}{\epsilon p K}\right)\right)</m>.  The previous equilibria remain.
+</p></introduction>
+</subsubsection>
+
+<subsubsection xml:id="subsubsec-mod-pred-prey-jacobian">
+<title>Predator-Prey Jacobian</title>
+<introduction><p></p></introduction>
+<p>For this model, the Jacobian is <me>J(B, C) = \begin{pmatrix} r_{B} - p C \amp -p B\\\epsilon p C \amp \epsilon p B - m\end{pmatrix}</me> </p>
+</subsubsection>
+
+<subsubsection xml:id="subsubsec-mod-pred-prey-summary">
+<title>Summary of Predator-Prey analysis</title>
+<introduction><p></p></introduction>
+</subsubsection>
+
+<conclusion><p></p></conclusion>
+</subsection>
+
+<!--><subsection xml:id = "subsec-competition">
 <title>Competition</title>
 <introduction>
 <p>
@@ -548,28 +613,34 @@ Consider <me>\begin{cases}
 </p>
 <subsubsection xml:id="subsubsec-competition-null">
 <title>Competition nullclines</title>
+<introduction><p></p></introduction>
 </subsubsection>
 
 <subsubsection xml:id="subsubsec-competition-equilibrium">
 <title>Competition phase plane and equilibria</title>
+<introduction><p></p></introduction>
 </subsubsection>
 
 <subsubsection xml:id="subsubsec-competition-jacobian">
 <title>Competition Jacobian</title>
+<introduction><p></p></introduction>
 <p>For this model, the Jacobian is <me>J(B, F) = \begin{pmatrix} r_B - \dfrac{2r_B}{K_B} - \alpha F \amp -\alpha B\\ -\gamma F \amp
 r_F - \dfrac{2r_{F}}{K_{F}} - \gamma B \end{pmatrix}</me> </p>
 </subsubsection>
 
 <subsubsection xml:id="subsubsec-competition-summary">
 <title>Summary of Competition analysis</title>
+<introduction><p></p></introduction>
 </subsubsection>
 
+<conclusion><p></p></conclusion>
 
-</subsection>
+</subsection>-->
 
 
 <subsection xml:id = "subsec-SIS-reprise">
 <title>SIS epidemiological model</title>
+<introduction><p></p></introduction>
 <introduction>
 <p>
 The SI (or SIS) model that allows for the transmission of a mild infection through a closed population is a nice way to introduce 2D models.
@@ -585,31 +656,38 @@ Consider <me>\begin{cases}
 
 <subsubsection xml:id="subsubsec-SIS-null">
 <title>SIS nullclines</title>
+<introduction><p></p></introduction>
 <p>Since the right-hand side of the <m>S</m>-equation factors as <m>(\gamma - \beta S)I</m>, <m>S</m>-nullclines are both <m>I = 0 </m> and <m>S = \dfrac{\gamma}{\beta}</m>.  Since the right-hand side of the <m>I</m>-equation factors similarly, its nullclines are overlapping.</p>
 </subsubsection>
 
 <subsubsection xml:id="subsubsec-SIS-equilibrium">
 <title>SIS phase plane and equilibria</title>
+<introduction><p></p></introduction>
 <p>Since equilibria are found anywhere opposite nullclines intersect, the entire <m>S</m>-axis is a line of equilibrium points as is the vertical line at <m>S=\frac{\gamma}{\beta}</m>. This is actually a bit strange, and is the result of some surprising algebraic constraints hidden in the model.
 </p></subsubsection>
 
 <subsubsection xml:id="subsubsec-SIS-jacobian">
 <title>SIS Jacobian</title>
+<introduction><p></p></introduction>
 <p>For this model, the Jacobian is <me>J(S, I) = \begin{pmatrix} -\beta I \amp \gamma - \beta S\\\beta I \amp \beta S - \gamma\end{pmatrix}</me> </p>
 </subsubsection>
 
 <subsubsection xml:id="subsubsec-SIS-summary">
 <title>Summary of SIS analysis</title>
+<introduction><p></p></introduction>
 </subsubsection>
+
+<conclusion><p></p></conclusion>
 
 </subsection>
 
 
-
+<conclusion><p></p></conclusion>
 </section>
 
 <exercises>
-<p>I would not actually attempt any of these.</p>
+<introduction><p> I would not actually attempt any of these.</p></introduction>
+
 <exercise>
 <statement>
 What if the prey population in a predator-prey model grew according to logistic growth rather than exponential growth in the absence of its predator?
@@ -627,8 +705,9 @@ What if the prey population from the predator-prey model were subject to the All
 What if both populations from the competition model were subject to the Allee effect, that is, the "single species" parts of the model paralleled <me>\dfrac{dN}{dt} = rN\left(\frac{N}{K_{0}} - 1\right)\left(1-\frac{N}{K}\right)</me>?  Try to find the nontrivial nullcline for each and contemplate how many distinct phase planes are possible.
 </statement>
 </exercise>
-
+<conclusion><p></p></conclusion>
 </exercises>
+<conclusion><p></p></conclusion>
 </chapter>
 
 <!--><solution>

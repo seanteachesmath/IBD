@@ -12,7 +12,21 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">The SI (or SIS) model that allows for the transmission of a mild infection through a closed population is a nice way to introduce 2D models.</div>
-<span class="incontext"><a href="sec-nonlinear-systems.html#p-111" class="internal">in-context</a></span>
+<div class="para logical">
+<div class="para">This means that we no longer start with real-valued solutions.  Recall that we guessed that <span class="process-math">\(e^{rt}\text{,}\)</span> was a part of our solution, but now we have complex-valued exponentials since <span class="process-math">\(r = \lambda + \mu i\)</span> for real numbers <span class="process-math">\(\lambda\)</span> and <span class="process-math">\(\mu\text{.}\)</span> Taking just this part, we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+e^{(\lambda + \mu i)t} = e^{\lambda t}\cdot e^{\mu i t}\text{.}
+\end{equation*}
+</div>
+<div class="para">By Euler’s formula, we can write these as real-valued solutions that involve products of trigonometric and exponential functions.  Solutions will be purely trigonometric (closed periodic orbits) if the real part of the eigenvalues is zero, and otherwise be damped or growing oscillations in the phase plane if the real part is negative or positive, respectively.  The trigonometric part comes from writing</div>
+<div class="displaymath process-math">
+\begin{equation*}
+e^{\mu i t} = \cos(\mu t) + i\sin(\mu t)
+\end{equation*}
+</div>
+<div class="para">using Euler’s formula. Since our goal here is just to lern about the linearized system, it won’t be especially helpful to pursue analytical solutions any longer at this point.</div>
+</div>
+<span class="incontext"><a href="systems-intro.html#p-111" class="internal">in-context</a></span>
 </body>
 </html>
