@@ -538,7 +538,7 @@ Consider <me>\begin{cases}
 <subsubsection xml:id="subsubsec-pred-prey-jacobian">
 <title>Predator-Prey Jacobian</title>
 <introduction><p></p></introduction>
-<p>For this model, the Jacobian is <me>J(B, C) = \begin{pmatrix} r_{B} - p C \amp -p B\\\epsilon p C \amp \epsilon p B - m\end{pmatrix}</me> </p>
+<p>For this model, the Jacobian is <me>J(B, C) = \begin{pmatrix} r - p C \amp -p B\\\epsilon p C \amp \epsilon p B - m\end{pmatrix}</me> </p>
 </subsubsection>
 
 <subsubsection xml:id="subsubsec-pred-prey-summary">
@@ -560,8 +560,12 @@ Predator-prey dynamics between two species is a classic model.  Consider the fol
 </p>
 </introduction>
 
+<figure xml:id="fig-student-board">
+<caption>Student work, outlined below, in the analysis of the modified predator-prey model.</caption> <image
+ source="IMG_5999.jpg"/> </figure>
+ 
 <subsubsection xml:id="subsubsec-mod-pred-prey-null">
-<title>Predator-Prey nullclines</title>
+<title>Modified Predator-Prey nullclines</title>
 <introduction><p></p></introduction>
 <p>To find <m>B</m>-nullclines, we set <m>0 = B\left(r \left(1-\dfrac{B}{K}\right) - p C\right)</m> to get either <m>B = 0</m> or
 <m>C = \frac{r}{p} \left(1-\dfrac{B}{K}\right)</m>.  The nontrivial nullcline is a line with a vertical intercept of <m>\dfrac{r}{p}</m> and a horizontal intercept of <m>B=K</m> in the <m>BC</m>-plane.
@@ -572,21 +576,27 @@ Predator-prey dynamics between two species is a classic model.  Consider the fol
 </subsubsection>
 
 <subsubsection xml:id="subsubsec-mod-pred-prey-equilibrium">
-<title>Predator-Prey phase plane and equilibria</title>
+<title>Modified Predator-Prey phase plane and equilibria</title>
 <introduction><p>Where opposite nullclines cross, we have equilibria, but the number of equilibria depends on how <m>K</m> and <m>\frac{m}{\epsilon p}</m> compare. 
-If <m>K \lt \frac{m}{\epsilon p}</m>, the <m>B</m>nullcline crosses the horizontal axis before intersecting the vertical <m>C</m> nullcline and there are only two equilibria, at <m>(B^*, C^*) = (0, 0)</m> and <m>B^*, C^*) = (K, 0)</m>.
-Otherwise, if <m>K \gt \frac{m}{\epsilon p}</m>, the <m>B</m>nullcline crosses the vertical <m>C</m>-nullcline before intersecting the horizontal axis at <m>K</m> and a third equilibrium emerges, at <m>(B^*, C^*) = \left(\dfrac{m}{\epsilon p}, \dfrac{r}{p}\left(1-\dfrac{m}{\epsilon p K}\right)\right)</m>.  The previous equilibria remain.
+If <m>K \lt \frac{m}{\epsilon p}</m>, the <m>B</m>-nullcline crosses the horizontal axis before intersecting the vertical <m>C</m>-nullcline and there are only two equilibria, at <m>(B^*, C^*) = (0, 0)</m> and <m>B^*, C^*) = (K, 0)</m>.
+Otherwise, if <m>K \gt \frac{m}{\epsilon p}</m>, the <m>B</m>-nullcline crosses the vertical <m>C</m>-nullcline before intersecting the horizontal axis at <m>K</m> and a third equilibrium emerges, at <m>(B^*, C^*) = \left(\dfrac{m}{\epsilon p}, \dfrac{r}{p}\left(1-\dfrac{m}{\epsilon p K}\right)\right)</m>.  The previous equilibria remain.
 </p></introduction>
 </subsubsection>
 
 <subsubsection xml:id="subsubsec-mod-pred-prey-jacobian">
-<title>Predator-Prey Jacobian</title>
+<title>Modified Predator-Prey Jacobian</title>
 <introduction><p></p></introduction>
-<p>For this model, the Jacobian is <me>J(B, C) = \begin{pmatrix} r_{B} - p C \amp -p B\\\epsilon p C \amp \epsilon p B - m\end{pmatrix}</me>. </p>
+<p>For this model, the Jacobian is <me>J(B, C) = \begin{pmatrix} r - \frac{2rB}{K} - p C \amp -p B\\\epsilon p C \amp \epsilon p B - m\end{pmatrix}</me>. At each equilibrium,
+<ul>
+<li><p>At <m>(B^*, C^*) = (0, 0)</m> we have <me>J(0, 0) = \begin{pmatrix} r \amp 0\\0 \amp - m\end{pmatrix}</me>, for which <m>\tau = r-m</m> and <m>\Delta = -rm</m>. Since the determinant is negative, the trace is irrelevant and the equilibrium is a saddle.</p></li>
+<li><p>At <m>(B^*, C^*) = (K, 0)</m> we have <me>J(K, 0) = \begin{pmatrix} -r \amp -p K\\0 \amp \epsilon p K - m\end{pmatrix}</me>,  for which <m>\tau = -r + \epsilon p K - m</m> and <m>\Delta = -r(\epsilon p K - m)</m>. This is a saddle if <m>\epsilon p K - m \gt 0</m> or <m>K \gt \dfrac{m}{\epsilon p}</m>. Otherwise, if <m>\epsilon p K - m \lt 0</m> or <m>K \lt \dfrac{m}{\epsilon p}</m>, the determinant is positive and the trace is negative, indicating a stable node or spiral.  Since this equilibrium is on the horizontal axis, reality suggests that it must be a stable node, not spiral - otherwise solutions would take on positive and negative values to spiral towards the equilibrium. Additionally, solutions could not cross the horizontal axis (a <m>C</m>-nullcline) with vertical motion.</p></li>
+<li><p>At <m>(B^*, C^*) = \left(\dfrac{m}{\epsilon p}, \dfrac{r}{p}\left(1-\dfrac{m}{\epsilon p K}\right)\right)</m>, which is positive provided <m>K\gt \frac{m}{\epsilon p}</m>. Under this condition we have <me>J(B^*, C^*) = \begin{pmatrix} -\dfrac{rm}{\epsilon p K} \amp -\dfrac{m}{\epsilon}\\r\left(\epsilon - \dfrac{m}{p K}\right) \amp 0\end{pmatrix}</me> for which <m>\tau = -\dfrac{rm}{\epsilon p K}</m> and <m>\Delta = rm\left(1-\dfrac{m}{\epsilon p K}\right)</m>. The trace is negative, so the nontrivial equilibrium will be stable provided the determinant is positive.  The determinant is positive provided <m>K\gt \frac{m}{\epsilon p}</m>, which is the condition under which this equilibrium is positive. Interestingly </p></li>
+
+</ul> </p>
 </subsubsection>
 
 <subsubsection xml:id="subsubsec-mod-pred-prey-summary">
-<title>Summary of Predator-Prey analysis</title>
+<title>Summary of Modified Predator-Prey analysis</title>
 <introduction><p></p></introduction>
 </subsubsection>
 

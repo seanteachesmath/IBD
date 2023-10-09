@@ -165,10 +165,10 @@ window.MathJax = {
 <li class="toc-item toc-subsection">
 <div class="toc-title-box"><a href="sec-nonlinear-systems.html#subsec-mod-pred-prey" class="internal"><span class="codenumber">2.2.3</span> <span class="title">Modified Predator-prey</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec-nonlinear-systems.html#subsubsec-mod-pred-prey-null" class="internal"><span class="codenumber">2.2.3.1</span> <span class="title">Predator-Prey nullclines</span></a></div></li>
-<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec-nonlinear-systems.html#subsubsec-mod-pred-prey-equilibrium" class="internal"><span class="codenumber">2.2.3.2</span> <span class="title">Predator-Prey phase plane and equilibria</span></a></div></li>
-<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec-nonlinear-systems.html#subsubsec-mod-pred-prey-jacobian" class="internal"><span class="codenumber">2.2.3.3</span> <span class="title">Predator-Prey Jacobian</span></a></div></li>
-<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec-nonlinear-systems.html#subsubsec-mod-pred-prey-summary" class="internal"><span class="codenumber">2.2.3.4</span> <span class="title">Summary of Predator-Prey analysis</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec-nonlinear-systems.html#subsubsec-mod-pred-prey-null" class="internal"><span class="codenumber">2.2.3.1</span> <span class="title">Modified Predator-Prey nullclines</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec-nonlinear-systems.html#subsubsec-mod-pred-prey-equilibrium" class="internal"><span class="codenumber">2.2.3.2</span> <span class="title">Modified Predator-Prey phase plane and equilibria</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec-nonlinear-systems.html#subsubsec-mod-pred-prey-jacobian" class="internal"><span class="codenumber">2.2.3.3</span> <span class="title">Modified Predator-Prey Jacobian</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec-nonlinear-systems.html#subsubsec-mod-pred-prey-summary" class="internal"><span class="codenumber">2.2.3.4</span> <span class="title">Summary of Modified Predator-Prey analysis</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-subsection">
@@ -268,7 +268,7 @@ I\left(1-\frac{I}{N}\right)-\gamma I\text{.}
 <div class="para">For this model, the Jacobian is</div>
 <div class="displaymath process-math">
 \begin{equation*}
-J(B, C) = \begin{pmatrix} r_{B} - p C \amp -p B\\\epsilon p C \amp \epsilon p B - m\end{pmatrix}
+J(B, C) = \begin{pmatrix} r - p C \amp -p B\\\epsilon p C \amp \epsilon p B - m\end{pmatrix}
 \end{equation*}
 </div>
 </div></section><section class="subsubsection" id="subsubsec-pred-prey-summary"><h4 class="heading hide-type">
@@ -287,31 +287,62 @@ J(B, C) = \begin{pmatrix} r_{B} - p C \amp -p B\\\epsilon p C \amp \epsilon p B 
 \end{cases}
 \end{equation*}
 </div>
-</div></section><section class="subsubsection" id="subsubsec-mod-pred-prey-null"><h4 class="heading hide-type">
-<span class="type">Subsubsection</span><span class="space"> </span><span class="codenumber">2.2.3.1</span><span class="space"> </span><span class="title">Predator-Prey nullclines</span>
+</div></section><figure class="figure figure-like" id="fig-student-board"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/IMG_5999.jpg" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.2.2<span class="period">.</span></span><span class="space"> </span>Student work, outlined below, in the analysis of the modified predator-prey model.</figcaption></figure><section class="subsubsection" id="subsubsec-mod-pred-prey-null"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span><span class="space"> </span><span class="codenumber">2.2.3.1</span><span class="space"> </span><span class="title">Modified Predator-Prey nullclines</span>
 </h4>
 <section class="introduction" id="introduction-18"><div class="para" id="p-132"></div></section><div class="para" id="p-133">To find <span class="process-math">\(B\)</span>-nullclines, we set <span class="process-math">\(0 = B\left(r \left(1-\dfrac{B}{K}\right) - p C\right)\)</span> to get either <span class="process-math">\(B = 0\)</span> or <span class="process-math">\(C = \frac{r}{p} \left(1-\dfrac{B}{K}\right)\text{.}\)</span>  The nontrivial nullcline is a line with a vertical intercept of <span class="process-math">\(\dfrac{r}{p}\)</span> and a horizontal intercept of <span class="process-math">\(B=K\)</span> in the <span class="process-math">\(BC\)</span>-plane.</div>
 <div class="para" id="p-134">To find <span class="process-math">\(C\)</span>-nullclines, we set <span class="process-math">\(0 = C\left(\epsilon p B - m\right)\)</span> to get either <span class="process-math">\(C = 0\)</span> or <span class="process-math">\(B = \frac{m}{\epsilon p}\text{.}\)</span>  The nontrivial nullcline is a vertical line at <span class="process-math">\(B = \dfrac{m}{\epsilon p}\text{.}\)</span>
 </div></section><section class="subsubsection" id="subsubsec-mod-pred-prey-equilibrium"><h4 class="heading hide-type">
-<span class="type">Subsubsection</span><span class="space"> </span><span class="codenumber">2.2.3.2</span><span class="space"> </span><span class="title">Predator-Prey phase plane and equilibria</span>
+<span class="type">Subsubsection</span><span class="space"> </span><span class="codenumber">2.2.3.2</span><span class="space"> </span><span class="title">Modified Predator-Prey phase plane and equilibria</span>
 </h4>
-<section class="introduction" id="introduction-19"><div class="para" id="p-135">Where opposite nullclines cross, we have equilibria, but the number of equilibria depends on how <span class="process-math">\(K\)</span> and <span class="process-math">\(\frac{m}{\epsilon p}\)</span> compare. If <span class="process-math">\(K \lt \frac{m}{\epsilon p}\text{,}\)</span> the <span class="process-math">\(B\)</span>nullcline crosses the horizontal axis before intersecting the vertical <span class="process-math">\(C\)</span> nullcline and there are only two equilibria, at <span class="process-math">\((B^*, C^*) = (0, 0)\)</span> and <span class="process-math">\(B^*, C^*) = (K, 0)\text{.}\)</span> Otherwise, if <span class="process-math">\(K \gt \frac{m}{\epsilon p}\text{,}\)</span> the <span class="process-math">\(B\)</span>nullcline crosses the vertical <span class="process-math">\(C\)</span>-nullcline before intersecting the horizontal axis at <span class="process-math">\(K\)</span> and a third equilibrium emerges, at <span class="process-math">\((B^*, C^*) = \left(\dfrac{m}{\epsilon p}, \dfrac{r}{p}\left(1-\dfrac{m}{\epsilon p K}\right)\right)\text{.}\)</span>  The previous equilibria remain.</div></section></section><section class="subsubsection" id="subsubsec-mod-pred-prey-jacobian"><h4 class="heading hide-type">
-<span class="type">Subsubsection</span><span class="space"> </span><span class="codenumber">2.2.3.3</span><span class="space"> </span><span class="title">Predator-Prey Jacobian</span>
+<section class="introduction" id="introduction-19"><div class="para" id="p-135">Where opposite nullclines cross, we have equilibria, but the number of equilibria depends on how <span class="process-math">\(K\)</span> and <span class="process-math">\(\frac{m}{\epsilon p}\)</span> compare. If <span class="process-math">\(K \lt \frac{m}{\epsilon p}\text{,}\)</span> the <span class="process-math">\(B\)</span>-nullcline crosses the horizontal axis before intersecting the vertical <span class="process-math">\(C\)</span>-nullcline and there are only two equilibria, at <span class="process-math">\((B^*, C^*) = (0, 0)\)</span> and <span class="process-math">\(B^*, C^*) = (K, 0)\text{.}\)</span> Otherwise, if <span class="process-math">\(K \gt \frac{m}{\epsilon p}\text{,}\)</span> the <span class="process-math">\(B\)</span>-nullcline crosses the vertical <span class="process-math">\(C\)</span>-nullcline before intersecting the horizontal axis at <span class="process-math">\(K\)</span> and a third equilibrium emerges, at <span class="process-math">\((B^*, C^*) = \left(\dfrac{m}{\epsilon p}, \dfrac{r}{p}\left(1-\dfrac{m}{\epsilon p K}\right)\right)\text{.}\)</span>  The previous equilibria remain.</div></section></section><section class="subsubsection" id="subsubsec-mod-pred-prey-jacobian"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span><span class="space"> </span><span class="codenumber">2.2.3.3</span><span class="space"> </span><span class="title">Modified Predator-Prey Jacobian</span>
 </h4>
 <section class="introduction" id="introduction-20"><div class="para" id="p-136"></div></section><div class="para logical" id="p-137">
 <div class="para">For this model, the Jacobian is</div>
 <div class="displaymath process-math">
 \begin{equation*}
-J(B, C) = \begin{pmatrix} r_{B} - p C \amp -p B\\\epsilon p C \amp \epsilon p B - m\end{pmatrix}\text{.}
+J(B, C) = \begin{pmatrix} r - \frac{2rB}{K} - p C \amp -p B\\\epsilon p C \amp \epsilon p B - m\end{pmatrix}\text{.}
 \end{equation*}
 </div>
+<div class="para">At each equilibrium,</div>
+<ul class="disc">
+<li id="li-25"><div class="para logical" id="p-138">
+<div class="para">At <span class="process-math">\((B^*, C^*) = (0, 0)\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+J(0, 0) = \begin{pmatrix} r \amp 0\\0 \amp - m\end{pmatrix}\text{,}
+\end{equation*}
+</div>
+<div class="para">for which <span class="process-math">\(\tau = r-m\)</span> and <span class="process-math">\(\Delta = -rm\text{.}\)</span> Since the determinant is negative, the trace is irrelevant and the equilibrium is a saddle.</div>
+</div></li>
+<li id="li-26"><div class="para logical" id="p-139">
+<div class="para">At <span class="process-math">\((B^*, C^*) = (K, 0)\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+J(K, 0) = \begin{pmatrix} -r \amp -p K\\0 \amp \epsilon p K - m\end{pmatrix}\text{,}
+\end{equation*}
+</div>
+<div class="para">for which <span class="process-math">\(\tau = -r + \epsilon p K - m\)</span> and <span class="process-math">\(\Delta = -r(\epsilon p K - m)\text{.}\)</span> This is a saddle if <span class="process-math">\(\epsilon p K - m \gt 0\)</span> or <span class="process-math">\(K \gt \dfrac{m}{\epsilon p}\text{.}\)</span> Otherwise, if <span class="process-math">\(\epsilon p K - m \lt 0\)</span> or <span class="process-math">\(K \lt \dfrac{m}{\epsilon p}\text{,}\)</span> the determinant is positive and the trace is negative, indicating a stable node or spiral.  Since this equilibrium is on the horizontal axis, reality suggests that it must be a stable node, not spiral - otherwise solutions would take on positive and negative values to spiral towards the equilibrium. Additionally, solutions could not cross the horizontal axis (a <span class="process-math">\(C\)</span>-nullcline) with vertical motion.</div>
+</div></li>
+<li id="li-27"><div class="para logical" id="p-140">
+<div class="para">At <span class="process-math">\((B^*, C^*) = \left(\dfrac{m}{\epsilon p}, \dfrac{r}{p}\left(1-\dfrac{m}{\epsilon p K}\right)\right)\text{,}\)</span> which is positive provided <span class="process-math">\(K\gt \frac{m}{\epsilon p}\text{.}\)</span> Under this condition we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+J(B^*, C^*) = \begin{pmatrix} -\dfrac{rm}{\epsilon p K} \amp -\dfrac{m}{\epsilon}\\r\left(\epsilon - \dfrac{m}{p K}\right) \amp 0\end{pmatrix}
+\end{equation*}
+</div>
+<div class="para">for which <span class="process-math">\(\tau = -\dfrac{rm}{\epsilon p K}\)</span> and <span class="process-math">\(\Delta = rm\left(1-\dfrac{m}{\epsilon p K}\right)\text{.}\)</span> The trace is negative, so the nontrivial equilibrium will be stable provided the determinant is positive.  The determinant is positive provided <span class="process-math">\(K\gt \frac{m}{\epsilon p}\text{,}\)</span> which is the condition under which this equilibrium is positive.</div>
+</div></li>
+</ul>
 </div></section><section class="subsubsection" id="subsubsec-mod-pred-prey-summary"><h4 class="heading hide-type">
-<span class="type">Subsubsection</span><span class="space"> </span><span class="codenumber">2.2.3.4</span><span class="space"> </span><span class="title">Summary of Predator-Prey analysis</span>
+<span class="type">Subsubsection</span><span class="space"> </span><span class="codenumber">2.2.3.4</span><span class="space"> </span><span class="title">Summary of Modified Predator-Prey analysis</span>
 </h4>
-<section class="introduction" id="introduction-21"><div class="para" id="p-138"></div></section></section><section class="conclusion" id="conclusion-8"><div class="para" id="p-139"></div></section></section><section class="subsection" id="subsec-SIS-reprise"><h3 class="heading hide-type">
+<section class="introduction" id="introduction-21"><div class="para" id="p-141"></div></section></section><section class="conclusion" id="conclusion-8"><div class="para" id="p-142"></div></section></section><section class="subsection" id="subsec-SIS-reprise"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">2.2.4</span><span class="space"> </span><span class="title">SIS epidemiological model</span>
 </h3>
-<section class="introduction" id="introduction-22"><div class="para" id="p-140"></div></section><section class="introduction" id="introduction-23"><div class="para" id="p-141">The SI (or SIS) model that allows for the transmission of a mild infection through a closed population is a nice way to introduce 2D models.</div></section><div class="para logical" id="p-142">
+<section class="introduction" id="introduction-22"><div class="para" id="p-143"></div></section><section class="introduction" id="introduction-23"><div class="para" id="p-144">The SI (or SIS) model that allows for the transmission of a mild infection through a closed population is a nice way to introduce 2D models.</div></section><div class="para logical" id="p-145">
 <div class="para">Consider</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -325,13 +356,13 @@ J(B, C) = \begin{pmatrix} r_{B} - p C \amp -p B\\\epsilon p C \amp \epsilon p B 
 <section class="subsubsection" id="subsubsec-SIS-null"><h4 class="heading hide-type">
 <span class="type">Subsubsection</span><span class="space"> </span><span class="codenumber">2.2.4.1</span><span class="space"> </span><span class="title">SIS nullclines</span>
 </h4>
-<section class="introduction" id="introduction-24"><div class="para" id="p-143"></div></section><div class="para" id="p-144">Since the right-hand side of the <span class="process-math">\(S\)</span>-equation factors as <span class="process-math">\((\gamma - \beta S)I\text{,}\)</span> <span class="process-math">\(S\)</span>-nullclines are both <span class="process-math">\(I = 0 \)</span> and <span class="process-math">\(S = \dfrac{\gamma}{\beta}\text{.}\)</span>  Since the right-hand side of the <span class="process-math">\(I\)</span>-equation factors similarly, its nullclines are overlapping.</div></section><section class="subsubsection" id="subsubsec-SIS-equilibrium"><h4 class="heading hide-type">
+<section class="introduction" id="introduction-24"><div class="para" id="p-146"></div></section><div class="para" id="p-147">Since the right-hand side of the <span class="process-math">\(S\)</span>-equation factors as <span class="process-math">\((\gamma - \beta S)I\text{,}\)</span> <span class="process-math">\(S\)</span>-nullclines are both <span class="process-math">\(I = 0 \)</span> and <span class="process-math">\(S = \dfrac{\gamma}{\beta}\text{.}\)</span>  Since the right-hand side of the <span class="process-math">\(I\)</span>-equation factors similarly, its nullclines are overlapping.</div></section><section class="subsubsection" id="subsubsec-SIS-equilibrium"><h4 class="heading hide-type">
 <span class="type">Subsubsection</span><span class="space"> </span><span class="codenumber">2.2.4.2</span><span class="space"> </span><span class="title">SIS phase plane and equilibria</span>
 </h4>
-<section class="introduction" id="introduction-25"><div class="para" id="p-145"></div></section><div class="para" id="p-146">Since equilibria are found anywhere opposite nullclines intersect, the entire <span class="process-math">\(S\)</span>-axis is a line of equilibrium points as is the vertical line at <span class="process-math">\(S=\frac{\gamma}{\beta}\text{.}\)</span> This is actually a bit strange, and is the result of some surprising algebraic constraints hidden in the model.</div></section><section class="subsubsection" id="subsubsec-SIS-jacobian"><h4 class="heading hide-type">
+<section class="introduction" id="introduction-25"><div class="para" id="p-148"></div></section><div class="para" id="p-149">Since equilibria are found anywhere opposite nullclines intersect, the entire <span class="process-math">\(S\)</span>-axis is a line of equilibrium points as is the vertical line at <span class="process-math">\(S=\frac{\gamma}{\beta}\text{.}\)</span> This is actually a bit strange, and is the result of some surprising algebraic constraints hidden in the model.</div></section><section class="subsubsection" id="subsubsec-SIS-jacobian"><h4 class="heading hide-type">
 <span class="type">Subsubsection</span><span class="space"> </span><span class="codenumber">2.2.4.3</span><span class="space"> </span><span class="title">SIS Jacobian</span>
 </h4>
-<section class="introduction" id="introduction-26"><div class="para" id="p-147"></div></section><div class="para logical" id="p-148">
+<section class="introduction" id="introduction-26"><div class="para" id="p-150"></div></section><div class="para logical" id="p-151">
 <div class="para">For this model, the Jacobian is</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -341,7 +372,7 @@ J(S, I) = \begin{pmatrix} -\beta I \amp \gamma - \beta S\\\beta I \amp \beta S -
 </div></section><section class="subsubsection" id="subsubsec-SIS-summary"><h4 class="heading hide-type">
 <span class="type">Subsubsection</span><span class="space"> </span><span class="codenumber">2.2.4.4</span><span class="space"> </span><span class="title">Summary of SIS analysis</span>
 </h4>
-<section class="introduction" id="introduction-27"><div class="para" id="p-149"></div></section></section><section class="conclusion" id="conclusion-9"><div class="para" id="p-150"></div></section></section><section class="conclusion" id="conclusion-10"><div class="para" id="p-151"></div></section></section></div>
+<section class="introduction" id="introduction-27"><div class="para" id="p-152"></div></section></section><section class="conclusion" id="conclusion-9"><div class="para" id="p-153"></div></section></section><section class="conclusion" id="conclusion-10"><div class="para" id="p-154"></div></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="systems-intro.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="exercises-1.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
