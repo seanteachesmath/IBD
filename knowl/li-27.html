@@ -11,10 +11,42 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="li"><h4 class="heading">
+<article class="li"><h5 class="heading">
 <span class="type">Item</span><span class="period">.</span>
-</h4>
-<div class="para">constant contact (frequency dependent) assumes that <span class="process-math">\(\beta(N)=\beta_0\)</span>
-</div></article><span class="incontext"><a href="parameters-rates-and-units-prelude-to-chemical-kinetics.html#li-27" class="internal">in-context</a></span>
+</h5>
+<div class="para logical">
+<div class="para">At <span class="process-math">\((B^*, C^*) = \left(\dfrac{m}{\epsilon p}, \dfrac{r}{p}\left(1-\dfrac{m}{\epsilon p K}\right)\right)\text{,}\)</span> which is positive provided <span class="process-math">\(K\gt \frac{m}{\epsilon p}\text{.}\)</span> Under this condition we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+J(B^*, C^*) = \begin{pmatrix} -\dfrac{rm}{\epsilon p K} \amp -\dfrac{m}{\epsilon}\\r\left(\epsilon - \dfrac{m}{p K}\right) \amp 0\end{pmatrix}
+\end{equation*}
+</div>
+<div class="para">for which <span class="process-math">\(\tau = -\dfrac{rm}{\epsilon p K}\)</span> and <span class="process-math">\(\Delta = rm\left(1-\dfrac{m}{\epsilon p K}\right)\text{.}\)</span> The trace is negative, so the nontrivial equilibrium will be stable provided the determinant is positive.  The determinant is positive provided <span class="process-math">\(K\gt \frac{m}{\epsilon p}\text{,}\)</span> which is the condition under which this equilibrium is positive. Interestingly this equilibrium can be a stable node or a stable spiral (or the degenerate in-between case) depending on the value of <span class="process-math">\(r\text{.}\)</span> We can <em class="emphasis">carefully</em> inspect the quantity</div>
+<div class="displaymath process-math">
+\begin{align*}
+\tau^2-4\Delta \amp = \left(-\dfrac{rm}{\epsilon p K}\right)^2 - 4rm\left(1-\dfrac{m}{\epsilon p K}\right)\\
+\amp = \dfrac{rm}{\epsilon p K}\left(\dfrac{rm}{\epsilon p K} - 4\left(\epsilon p K-m\right)\right)\text{.}
+\end{align*}
+</div>
+<div class="para">This will lead to a stable spiral if</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\dfrac{rm}{\epsilon p K} - 4\left(\epsilon p K - m\right) \lt 0\text{.}
+\end{equation*}
+</div>
+<div class="para">This involves many of the parameters we’ve focused on so far, but now also <span class="process-math">\(r\text{.}\)</span>  In particular,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\dfrac{rm}{\epsilon p K} - 4\left(\epsilon p K - m\right)\lt 0
+\end{equation*}
+</div>
+<div class="para">if</div>
+<div class="displaymath process-math">
+\begin{equation*}
+r \lt 4\epsilon p K\left(\frac{\epsilon p K}{m} - 1\right)\text{.}
+\end{equation*}
+</div>
+<div class="para">If <span class="process-math">\(r\)</span> exceeds this, the dynamics will be a stable node (no oscillations).  Keep in mind that due to earlier assumptions of this case (the existence of the equilibrium itself, it is given that <span class="process-math">\(K\gt \frac{m}{\epsilon p}\)</span>).</div>
+</div></article><span class="incontext"><a href="sec-nonlinear-systems.html#li-27" class="internal">in-context</a></span>
 </body>
 </html>
