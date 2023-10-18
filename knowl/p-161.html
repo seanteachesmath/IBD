@@ -12,7 +12,30 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">More sophisticated approaches, using generating functions (special power series) let us calculate the mean extinction time for a given problem.</div>
-<span class="incontext"><a href="birth-death-processes-and-the-gillespie-algorithm.html#p-161" class="internal">in-context</a></span>
+<div class="para logical">
+<div class="para">A very famous model is called the logistic map, given by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x_{t+1} =
+rx_{t}(1-x_{t})\text{.}
+\end{equation*}
+</div>
+<div class="para">This <em class="emphasis">somewhat</em> parallels the continuous logistic growth differential equation in its structure.  This is more explicit if we instead write</div>
+<div class="displaymath process-math">
+\begin{equation*}
+N_{t+1} =
+rN_{t}\left(1-\dfrac{N_{t}}{K}\right)\text{.}
+\end{equation*}
+</div>
+<div class="para">Then we can let <span class="process-math">\(x_{t} =
+\dfrac{N_{t}}{K}\)</span> or <span class="process-math">\(N_{t} = Kx_{t}\text{.}\)</span>  Substituting we have <span class="process-math">\(Kx_{t+1} = rKx_{t}(1-x_{t})\)</span> and after dividing the common <span class="process-math">\(K\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x_{t+1} = rx_{t}(1-x_{t})\text{,}
+\end{equation*}
+</div>
+<div class="para">which matches the more common version stated earlier.</div>
+</div>
+<span class="incontext"><a href="what-is-dtds.html#p-161" class="internal">in-context</a></span>
 </body>
 </html>

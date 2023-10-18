@@ -11,39 +11,17 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h4 class="heading"><span class="type">Paragraph</span></h4>
+<h3 class="heading"><span class="type">Paragraph</span></h3>
 <div class="para logical">
-<div class="para">Given that we can identify the event that occurs, our next task is to identify the time until the event occurs. Here we assume that he events occur at a constant rate</div>
+<div class="para">A discrete-time dynamical system (DTDS), also known as a recurrence relation or difference equation, is a way of generating a sequence of numbers by repeatedly applying a calculation. The mechanics are similar to the way we might calculate the Fibonacci or Pingala numbers starting from <span class="process-math">\(F_0
+= 0\)</span> and <span class="process-math">\(F_1 = 1\)</span> and continuing for <span class="process-math">\(n \geq 2\)</span> with</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\lambda=(r+\mu)n,
+F_{n} = F_{n-1} + F_{n-2}\text{.}
 \end{equation*}
 </div>
-<div class="para">and that the time until the next event, <span class="process-math">\(T\text{,}\)</span> is exponentially distributed with parameter <span class="process-math">\(\lambda\text{.}\)</span> Thus,</div>
-<div class="displaymath process-math">
-\begin{equation*}
-T\sim\exp(\lambda).
-\end{equation*}
+<div class="para">Though this was an early example of a mathematical model, and is well-described elsewhere, we will now look in other directions that have more biological relevance.</div>
 </div>
-<div class="para">We can easily sample numbers from certain distributions. To sample exponentially distributed random numbers, we take advantage of its cumulative distribution function, <span class="process-math">\(F(t)=1-\exp(-\lambda t)\text{.}\)</span> We pick a uniform random number <span class="process-math">\(r_2\)</span> and solve for <span class="process-math">\(t\)</span> using <span class="process-math">\(r_2=F(t)\)</span> to find our even time.</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\begin{aligned} r_2 &amp; =
-F(t)\\ &amp;= 1-\exp(-\lambda t)\\ \exp(-\lambda t) &amp; = 1-r_2\\
--\lambda t &amp; =\ln(1-r_2)\\ t &amp;
-=-\frac{\ln(1-r_2)}{\lambda}\end{aligned}
-\end{equation*}
-</div>
-<div class="para">Importantly, since <span class="process-math">\(r_2\)</span> is a random number so is <span class="process-math">\(1-r_2\text{.}\)</span> In slight abuse of notation, we relabel the argument of <span class="process-math">\(\ln(\cdot)\text{,}\)</span> which is <span class="process-math">\(1-r_2\text{,}\)</span> by <span class="process-math">\(r_2\text{,}\)</span>
-</div>
-<div class="displaymath process-math">
-\begin{equation*}
-t =-\frac{\ln(r_2)}{\lambda}.
-\end{equation*}
-</div>
-<div class="para">Since <span class="process-math">\(r_2\in(0,1)\text{,}\)</span> the logarithm is negative, so the negative in front ensures a positive event time <span class="process-math">\(t\text{.}\)</span>
-</div>
-</div>
-<span class="incontext"><a href="birth-death-processes-and-the-gillespie-algorithm.html#p-158" class="internal">in-context</a></span>
+<span class="incontext"><a href="what-is-dtds.html#p-158" class="internal">in-context</a></span>
 </body>
 </html>
