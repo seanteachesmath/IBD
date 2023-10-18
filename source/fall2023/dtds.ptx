@@ -1,0 +1,180 @@
+<chapter xml:id="introduction-single-dtds">
+<title>Discrete-time dynamical systems</title>
+
+<section xml:id="what-is-dtds">
+<title>What is a discrete-time dynamical system?</title>
+<introduction>
+<p>
+A discrete-time dynamical system (DTDS), also known as a recurrence
+relation or difference equation, is a way of generating a sequence of
+numbers by repeatedly applying a calculation. The mechanics are similar
+to the way we might calculate the Fibonacci or Pingala numbers starting from <m>F_0
+= 0</m> and <m>F_1 = 1</m> and continuing for <m>n \geq 2</m> with
+<me>F_{n} = F_{n-1} + F_{n-2}</me>.  Though this was an early example of
+a mathematical model, and is well-described elsewhere, we will now look in other directions that have more biological relevance.
+</p>
+</introduction>
+
+<subsection xml:id = "sub-geometric-decay">
+<title>A linear DTDS</title>
+<introduction>
+<p>
+Suppose the amount of a radioactive medical tracer decays by <m>11\%</m>
+per hour (in other words <m>89\%</m> persists into the next hour). If we take <m>x_{t}</m>
+to be the amount at hour <m>t</m>, the DTDS is given by <me>x_{t+1} =
+0.89x_{t}</me> starting from the initial amount <m>x_{0}</m>.  This
+means <m>x_{1} = 0.89 x_{0}</m> and <m>x_{2} = 0.89 x_{1}</m>.  Since we
+already know <m>x_{1}</m> in terms of <m>x_0</m>, we can write <m>x_{2}
+= (0.89)^2x_{0}</m>.  This pattern extends to a <em>solution</em> of the
+form <me>x_{t} = (0.89)^{t}x_{0}</me>.  In terms of <m>t</m>-dependence,
+this is an exponential function, the form is a constant to a variable
+power, but in discrete time we call this pattern geometric decay (or growth).
+</p>
+</introduction>
+
+<p>By defining a function <m>x(t)</m> that is exact with <m>x_{t}</m> at
+integer values and interpolates between, we can establish an important
+connection between discrete and continuous dynamics.
+Noticing that we can write <m>0.89 = e^{\ln(0.89)}</m>, then raising
+each side to the power <m>t</m>, we have <me>(0.89)^{t} =
+e^{\ln(0.89)t}</me>.  Now multiplying each side by the initial condition
+<m>x_{0}</m>, we have that <m>x_{t} = (0.89)^{t}x_{0}</m> Similarly,
+<m>x(t) = x_{0}e^{\ln(0.89)t}</m>. These are identical at integer values
+of <m>t</m> and the exponential smoothly interpolates the geometric at
+times in between the integer values.  Additionally this gives a
+connection between the discrete growth factor, here <m>0.89</m>, and the
+exponential (decay) rate <m>\ln(0.89) \approx -0.1165</m>.
+</p>
+
+<figure xml:id="fig-geom-exp"> <caption>Cobwebbing diagram and solution for the
+radioactive decay problem and initial condition <m>x_{0} = 0.8</m> in blue.</caption>
+<sidebyside>
+<figure> <caption>The solution in a cobwebbing diagram.</caption> <image
+source="cobwebbed-decay.png"/> </figure> 
+<figure> <caption>The solution plotted against time with points
+representing the true solution defined discretely and the curve
+representing the exponential that interpolates the true
+solution.</caption>
+<image source="solution-decay.png"/> </figure> 
+</sidebyside> </figure>
+
+</subsection>
+
+<subsection xml:id = "sub-logistic-map">
+<title>The logistic map</title>
+<introduction>
+<p>
+A very famous model is called the logistic map, given by <me>x_{t+1} =
+rx_{t}(1-x_{t})</me>. This <em>somewhat</em> parallels the continuous
+logistic growth differential equation in its structure.  This is more
+explicit if we instead write  <me>N_{t+1} =
+rN_{t}\left(1-\dfrac{N_{t}}{K}\right)</me>.  Then we can let <m>x_{t} =
+\dfrac{N_{t}}{K}</m> or <m> N_{t} = Kx_{t}</m>.  Substituting we have
+<m>Kx_{t+1} = rKx_{t}(1-x_{t})</m> and after dividing the common
+<m>K</m> we have <me>x_{t+1} = rx_{t}(1-x_{t})</me>, which matches the more common version stated earlier.
+</p>
+</introduction>
+
+
+
+<example xml:id = "ex-logistic-r">
+<title>The parameter <m>r</m></title>
+<statement>
+The model is defined for <m>0 \leq x_{t} \leq 1</m>.  To ensure that
+<m>0 \leq x_{t+1} \leq 1</m> we have to be careful with the choice of
+<m>r</m>.  Use calculus to find the maximum <m>r</m>-value to ensure
+that the function doesn't exceed one in value.  You are welcome to write
+the function as <m>f(x) = rx(1-x)</m> prior to beginning  your analysis.
+</statement>
+</example>
+
+<p>
+Below are a few cobwebbing diagrams and solutions plotted against time for a
+variety of choices of <m>r</m>.  By moving from the updating function
+horizontally to the diagonal line in the cobwebbing diagram, we are able to swap the horizontal
+and vertical coordinates and as a result able to use the most recent
+output value as the next input value to the updating function. Following
+from the initial value, each time we hit the updating function on the
+cobwebbing diagram, we append a new value to our solution.
+</p>
+
+<figure xml:id="fig-logistic-map-a"> <caption>Cobwebbing diagram and solution for the
+logistic map with parameter <m>r = 0.5</m> and two choices of initial
+conditions (<m>x_{0} = 0.6</m> in blue and <m>x_{0} = 0.9</m> in
+blue).</caption>
+<sidebyside>
+<figure> <caption>The solution in a cobwebbing diagram.</caption> <image
+source="05-cobweb.png"/> </figure> 
+<figure> <caption>The solution plotted against time.</caption>
+<image source="05-sol.png"/> </figure> 
+</sidebyside> </figure>
+
+
+<figure xml:id="fig-logistic-map-b"> <caption>Cobwebbing diagram and solution for the
+logistic map with parameter <m>r = 1.5</m> and two choices of initial
+conditions (<m>x_{0} = 0.6</m> in blue and <m>x_{0} = 0.9</m> in
+blue).</caption>
+<sidebyside>
+<figure> <caption>The solution in a cobwebbing diagram.</caption> <image
+source="15-cobweb.png"/> </figure> 
+<figure> <caption>The solution plotted against time.</caption>
+<image source="15-sol.png"/> </figure> 
+</sidebyside> </figure>
+
+<p>In <xref ref= "fig-logistic-map-c"/> we start to see the slightest hint of oscillations near the equilibrium.</p>
+<figure xml:id="fig-logistic-map-c"> <caption>Cobwebbing diagram and solution for the
+logistic map with parameter <m>r = 2.1</m> and two choices of initial
+conditions (<m>x_{0} = 0.6</m> in blue and <m>x_{0} = 0.9</m> in
+blue).</caption>
+<sidebyside>
+<figure> <caption>The solution in a cobwebbing diagram.</caption> <image
+source="21-cobweb.png"/> </figure> 
+<figure> <caption>The solution plotted against time.</caption>
+<image source="21-sol.png"/> </figure> 
+</sidebyside> </figure>
+
+<figure xml:id="fig-logistic-map-d"> <caption>Cobwebbing diagram and solution for the
+logistic map with parameter <m>r = 2.5</m> and two choices of initial
+conditions (<m>x_{0} = 0.6</m> in blue and <m>x_{0} = 0.9</m> in
+blue).</caption>
+<sidebyside>
+<figure> <caption>The solution in a cobwebbing diagram.</caption> <image
+source="25-cobweb.png"/> </figure> 
+<figure> <caption>The solution plotted against time.</caption>
+<image source="25-sol.png"/> </figure> 
+</sidebyside> </figure>
+
+<p>For parameters in between the choices shown in <xref ref =
+"fig-logistic-map-e"/> and <xref ref = "fig-logistic-map-f"/> there are
+a number of interesting dynamics possible, for example cycles between 4
+distinct values.</p>
+
+<figure xml:id="fig-logistic-map-e"> <caption>Cobwebbing diagram and solution for the
+logistic map with parameter <m>r = 3.1</m> and two choices of initial
+conditions (<m>x_{0} = 0.6</m> in blue and <m>x_{0} = 0.9</m> in
+blue).</caption>
+<sidebyside>
+<figure> <caption>The solution in a cobwebbing diagram.</caption> <image
+source="31-cobweb.png"/> </figure> 
+<figure> <caption>The solution plotted against time.</caption>
+<image source="31-sol.png"/> </figure> 
+</sidebyside> </figure>
+
+
+<figure xml:id="fig-logistic-map-f"> <caption>Cobwebbing diagram and solution for the
+logistic map with parameter <m>r = 3.9</m> and two choices of initial
+conditions (<m>x_{0} = 0.6</m> in blue and <m>x_{0} = 0.9</m> in
+blue).</caption>
+<sidebyside>
+<figure> <caption>The solution in a cobwebbing diagram.</caption> <image
+source="39-cobweb.png"/> </figure> 
+<figure> <caption>The solution plotted against time.</caption>
+<image source="39-sol.png"/> </figure> 
+</sidebyside> </figure>
+
+</subsection>
+
+</section>
+
+</chapter>
+

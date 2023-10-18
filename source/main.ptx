@@ -104,8 +104,11 @@ assigned, first <latex/>, then <c>R</c>, then <c>sage</c>.
 
         <xi:include href="./fall2023/intro.ptx" />
 
-        <xi:include href="./fall2023/systems.ptx" />
-
+        <xi:include href="./fall2023/odes.ptx" />
+        
+        <xi:include href="./fall2023/dtds.ptx" />
+        
+        
 <!-->        <xi:include href="./fall2023/system-de.ptx" />-->
 
 <!-->        <xi:include href="./single_DE/main.ptx" />
