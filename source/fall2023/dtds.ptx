@@ -33,8 +33,7 @@ power, but in discrete time we call this pattern geometric decay (or growth).
 </introduction>
 
 <p>By defining a function <m>x(t)</m> that is exact with <m>x_{t}</m> at
-integer values and interpolates between, we can establish an important
-connection between discrete and continuous dynamics.
+integer <m>t</m>-values and interpolates between them, we can establish an important connection between discrete and continuous dynamics.
 Noticing that we can write <m>0.89 = e^{\ln(0.89)}</m>, then raising
 each side to the power <m>t</m>, we have <me>(0.89)^{t} =
 e^{\ln(0.89)t}</me>.  Now multiplying each side by the initial condition
