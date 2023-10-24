@@ -12,7 +12,23 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">Now that we have identified both our event and the event eating time, <span class="process-math">\(t\text{,}\)</span> we simply update our state and repeat the process for until we reach either a fixed number of events, a fixed final time, or a population that becomes extinct (or reaches some other pre-specified condition). An example solution to the birth-death process is plotted in <a href="" class="xref" data-knowl="./knowl/fig-stoch-sample.html" title="Figure 5.3.4">Figure 5.3.4</a>, where unlike in <a href="" class="xref" data-knowl="./knowl/fig-in-class-sim.html" title="Figure 5.3.1">Figure 5.3.1</a> the rate of birth is non-zero.</div>
-<span class="incontext"><a href="birth-death-processes-and-the-gillespie-algorithm.html#p-159" class="internal">in-context</a></span>
+<div class="para logical">
+<div class="para">Suppose the amount of a radioactive medical tracer decays by <span class="process-math">\(11\%\)</span> per hour (in other words <span class="process-math">\(89\%\)</span> persists into the next hour). If we take <span class="process-math">\(x_{t}\)</span> to be the amount at hour <span class="process-math">\(t\text{,}\)</span> the DTDS is given by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x_{t+1} =
+0.89x_{t}
+\end{equation*}
+</div>
+<div class="para">starting from the initial amount <span class="process-math">\(x_{0}\text{.}\)</span>  This means <span class="process-math">\(x_{1} = 0.89 x_{0}\)</span> and <span class="process-math">\(x_{2} = 0.89 x_{1}\text{.}\)</span>  Since we already know <span class="process-math">\(x_{1}\)</span> in terms of <span class="process-math">\(x_0\text{,}\)</span> we can write <span class="process-math">\(x_{2}
+= (0.89)^2x_{0}\text{.}\)</span>  This pattern extends to a <em class="emphasis">solution</em> of the form</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x_{t} = (0.89)^{t}x_{0}\text{.}
+\end{equation*}
+</div>
+<div class="para">In terms of <span class="process-math">\(t\)</span>-dependence, this is an exponential function, the form is a constant to a variable power, but in discrete time we call this pattern geometric decay (or growth).</div>
+</div>
+<span class="incontext"><a href="what-is-dtds.html#p-159" class="internal">in-context</a></span>
 </body>
 </html>
