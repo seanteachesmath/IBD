@@ -106,7 +106,7 @@ window.MathJax = {
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="linear-algebra.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="linear-algebra.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\require{cancel}\require{genfrac}
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="linear-algebra.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="linear-algebra.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\require{cancel}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
@@ -138,7 +138,7 @@ window.MathJax = {
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="systems.html" class="internal"><span class="codenumber">2</span> <span class="title">Introduction</span></a></div>
+<div class="toc-title-box"><a href="systems.html" class="internal"><span class="codenumber">2</span> <span class="title">Continuous-time dynamical systems</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="systems-intro.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Introduction to 2D systems</span></a></div>
@@ -187,33 +187,37 @@ window.MathJax = {
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="introduction-single-dtds.html" class="internal"><span class="codenumber">3</span> <span class="title">Discrete-time dynamical systems</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-section">
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
 <div class="toc-title-box"><a href="what-is-dtds.html" class="internal"><span class="codenumber">3.1</span> <span class="title">What is a discrete-time dynamical system?</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="what-is-dtds.html#sub-geometric-decay" class="internal"><span class="codenumber">3.1.1</span> <span class="title">A linear DTDS</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="what-is-dtds.html#sub-logistic-map" class="internal"><span class="codenumber">3.1.2</span> <span class="title">The logistic map</span></a></div></li>
 </ul>
-</li></ul>
 </li>
-<li class="toc-item toc-chapter contains-active">
-<div class="toc-title-box"><a href="linear-algebra.html" class="internal"><span class="codenumber">4</span> <span class="title">Linear algebra essentials</span></a></div>
-<ul class="structural toc-item-list contains-active"><li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-linear-algebra.html" class="internal"><span class="codenumber">4.1</span> <span class="title">What is linear algebra?</span></a></div></li></ul>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-linear-systems-dtds.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Linear systems of difference equations</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="exercises-2.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-appendix contains-active">
+<div class="toc-title-box"><a href="linear-algebra.html" class="internal"><span class="codenumber">A</span> <span class="title">Linear algebra essentials</span></a></div>
+<ul class="structural toc-item-list contains-active"><li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-linear-algebra.html" class="internal"><span class="codenumber">A.1</span> <span class="title">What is linear algebra?</span></a></div></li></ul>
 </li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-linear-algebra"><h2 class="heading hide-type">
-<span class="type">Section</span><span class="space"> </span><span class="codenumber">4.1</span><span class="space"> </span><span class="title">What is linear algebra?</span>
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">A.1</span><span class="space"> </span><span class="title">What is linear algebra?</span>
 </h2>
-<section class="introduction" id="introduction-32"><div class="para logical" id="p-165">
+<section class="introduction" id="introduction-34"><div class="para logical" id="p-182">
 <div class="para">Consider the system of two linear equations</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \begin{cases} 5x + 3y = 26\\ 2x+6y=20
-\end{cases},
+\end{cases}
 \end{equation*}
 </div>
-<div class="para">where <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> represent the cost per item of two distinct items purchased by two customers and <span class="process-math">\(26\)</span> and <span class="process-math">\(20\)</span> their total costs, respectively. The coefficients are the numbers of each item purchased by each customer.  The goal is to use information like this to determine the currently unknown to us costs for each item.  A helpful visual is to solve for both equations as linear functions of <span class="process-math">\(y\)</span> and identify where the graphs of the lines intersect.</div>
-</div></section><div class="para logical" id="p-166">
-<div class="para">Without linear algebra we can solve and substitute until we’ve identified all variables, or manipulate entire equations simultaneously.  Solving the first equation for <span class="process-math">\(x\text{,}\)</span> we have</div>
+<div class="para">where <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> represent the cost per item of two distinct items purchased by two customers and <span class="process-math">\(26\)</span> and <span class="process-math">\(20\)</span> their total costs, respectively. The coefficients are the numbers of each item purchased by each customer. The goal is to use information like this to determine the currently unknown to us costs for each item. A helpful visual is to solve for both equations as linear functions of <span class="process-math">\(y\)</span> and identify where the graphs of the lines intersect.</div>
+</div></section><div class="para logical" id="p-183">
+<div class="para">Without linear algebra we can solve and substitute until we’ve identified all variables, or manipulate entire equations simultaneously. Solving the first equation for <span class="process-math">\(x\text{,}\)</span> we have</div>
 <div class="displaymath process-math">
 \begin{equation*}
 y = \frac{26- 5x}{3}
@@ -230,10 +234,22 @@ y = \frac{26- 5x}{3}
 2\text{.}\)</span>
 </div>
 </div>
-<div class="para" id="p-167">Instead, if we multiply the second equation by <span class="process-math">\(\nicefrac{1}{2}\text{,}\)</span> we get <span class="process-math">\(\nicefrac{1}{2}(2x+6y)
-=\nicefrac{1}{2}(20)\)</span> which is <span class="process-math">\(x+3y = 10\text{.}\)</span>  Subtract that from both sides of the first equation, \begin{alignat*} 5x+3y \amp= \amp\amp\phantom{-}26\\ - (x+3y) \amp\phantom{=} \amp\amp-10\\ \hline 4x - 0y \amp= \amp\amp16 \end{alignat*} Notice this completely eliminates the <span class="process-math">\(y\)</span>-variable and we have <span class="process-math">\(x = 4\)</span> as the solution. Substituting this back in to each original equation for <span class="process-math">\(x\)</span> we find <span class="process-math">\(y = 2\text{.}\)</span>  Alternatively we could have multiplied the second equation by <span class="process-math">\(\nicefrac{5}{2}\)</span> and used that to eliminate <span class="process-math">\(y\)</span> and solve for <span class="process-math">\(y\text{.}\)</span>
+<div class="para logical" id="p-184">
+<div class="para">Instead, if we multiply the second equation by <span class="process-math">\(\frac{1}{2}\text{,}\)</span> we get <span class="process-math">\(\frac{1}{2}(2x+6y)
+=\frac{1}{2}(20)\)</span> which is <span class="process-math">\(x+3y = 10\text{.}\)</span> Subtract that from both sides of the first equation,</div>
+<div class="displaymath process-math" id="md-3">
+\begin{align*}
+5x+3y \amp =
+\amp \amp \phantom{-}26\\
+- (x+3y) \amp \phantom{=} \amp \amp -10\\
+\hline\\
+4x - 0y \amp = \amp \amp 16
+\end{align*}
 </div>
-<div class="para logical" id="p-168">
+<div class="para">Notice this completely eliminates the <span class="process-math">\(y\)</span>-variable and we have <span class="process-math">\(x = 4\)</span> as the solution. Substituting this back in to each original equation for <span class="process-math">\(x\)</span> we find <span class="process-math">\(y = 2\text{.}\)</span> Alternatively we could have multiplied the second equation by <span class="process-math">\(\frac{5}{2}\)</span> and used that to eliminate <span class="process-math">\(y\)</span> and solve for <span class="process-math">\(x\text{.}\)</span>
+</div>
+</div>
+<div class="para logical" id="p-185">
 <div class="para">We can introduce a matrix-vector equation</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -249,10 +265,10 @@ x\\y
 \end{pmatrix}.
 \end{equation*}
 </div>
-<div class="para">We take the numbers in the first row, rotate 90 degrees, align with the <span class="process-math">\(x\)</span> and <span class="process-math">\(y\text{,}\)</span> multiply and add, in order to get back the entry of the first row on the right-hand side, here <span class="process-math">\(26\text{.}\)</span>  Above when dealing with \emph{scalar} variables like <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> whose coefficients were scalars, we could eliminate multiplication with division.  For example, to solve <span class="process-math">\(4x = 16\)</span> we divide each size by <span class="process-math">\(4\)</span> or multiply each side by the multiplicative inverse of <span class="process-math">\(4\text{,}\)</span> it’s reciprocal <span class="process-math">\(\nicefrac{1}{4}\text{.}\)</span>
+<div class="para">We take the numbers in the first row, rotate 90 degrees, align with the <span class="process-math">\(x\)</span> and <span class="process-math">\(y\text{,}\)</span> multiply and add, in order to get back the entry of the first row on the right-hand side, here <span class="process-math">\(26\text{.}\)</span> Above when dealing with <em class="emphasis">scalar</em> variables like <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> whose coefficients were scalars, we could eliminate multiplication with division. For example, to solve <span class="process-math">\(4x = 16\)</span> we divide each size by <span class="process-math">\(4\)</span> or multiply each side by the multiplicative inverse of <span class="process-math">\(4\text{,}\)</span> it’s reciprocal <span class="process-math">\(\frac{1}{4}\text{.}\)</span>
 </div>
 </div>
-<div class="para logical" id="p-169">
+<div class="para logical" id="p-186">
 <div class="para">We can write our matrix-vector equation as</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -262,36 +278,46 @@ A\vec{x} = \vec{b},
 <div class="para">where <span class="process-math">\(A\)</span> is the matrix above, <span class="process-math">\(\vec{x}\)</span> is the vector with entries <span class="process-math">\(x\)</span> and <span class="process-math">\(y\text{,}\)</span> and <span class="process-math">\(\vec{b}\)</span> is the vector with entries <span class="process-math">\(26\)</span> and <span class="process-math">\(20\text{.}\)</span>
 </div>
 </div>
-<div class="para logical" id="p-170">
-<div class="para">With matrices, we can’t ``divide’’ but we can multiply my multiplicative inverses. So we need to define the inverse of a matrix, this is</div>
+<div class="para logical" id="p-187">
+<div class="para">With matrices, we can’t "divide" but we can multiply my multiplicative inverses. So we need to define the inverse of a matrix, this is</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \begin{pmatrix}
-a\ampb\\c\ampd\end{pmatrix}^{-1} =
-\frac{1}{ad-bc}\begin{pmatrix}
-d\amp-b\\-b\ampa\end{pmatrix}.
+a \amp b\\
+c \amp d
+\end{pmatrix}^{-1} =
+\frac{1}{ad-bc}
+\begin{pmatrix}
+d \amp -b\\
+-b \amp a
+\end{pmatrix}.
 \end{equation*}
 </div>
-<div class="para">The quantity in the denominator in front of the matrix is called the \emph{determinant}, <span class="process-math">\(\operatorname{det}(A) = ad-bc\text{.}\)</span>  Under conditions where <span class="process-math">\(\operatorname{det}(A)=0\text{,}\)</span> we are unable to invert the matrix (a big part of linear algebra is identifying conditions under which we can and cannot invert matrices).</div>
+<div class="para">The quantity in the denominator in front of the matrix is called the <em class="emphasis">determinant</em>, <span class="process-math">\(\operatorname{det}(A) = ad-bc\text{.}\)</span> Under conditions where <span class="process-math">\(\operatorname{det}(A)=0\text{,}\)</span> we are unable to invert the matrix (a big part of linear algebra is identifying conditions under which we can and cannot invert matrices).</div>
 </div>
-<div class="para logical" id="p-171">
+<div class="para logical" id="p-188">
 <div class="para">Back to our example</div>
 <div class="displaymath process-math">
 \begin{equation*}
 A =
 \begin{pmatrix}
-5\amp3\\2\amp6\end{pmatrix},
+5\amp 3\\
+2 \amp 6
+\end{pmatrix},
 \end{equation*}
 </div>
-<div class="para">so first <span class="process-math">\(\operatorname{det}(A) = (5)(6) - (3)(2) = 24\text{.}\)</span>  Now,</div>
+<div class="para">so first <span class="process-math">\(\operatorname{det}(A) = (5)(6) - (3)(2) = 24\text{.}\)</span> Now,</div>
 <div class="displaymath process-math">
 \begin{equation*}
 A^{-1} =
-\nicefrac{1}{24}\begin{pmatrix}
-6\amp-3\\-2\amp5\end{pmatrix} =
+\frac{1}{24}\begin{pmatrix}
+6 \amp -3\\
+-2 \amp 5
+\end{pmatrix} =
 \begin{pmatrix}
-\nicefrac{6}{24}\amp\nicefrac{-3}{24}\\\nicefrac{-2}{24}\
-amp\nicefrac{5}{24}\end{pmatrix},
+\frac{6}{24} \amp \frac{-3}{24}\\
+\frac{-2}{24} \amp \frac{5}{24}
+\end{pmatrix},
 \end{equation*}
 </div>
 <div class="para">The coefficients could be simplified, but, why bother? To solve our original problem, we multiply both sides by the inverse of <span class="process-math">\(A\text{,}\)</span>
@@ -299,32 +325,37 @@ amp\nicefrac{5}{24}\end{pmatrix},
 <div class="displaymath process-math">
 \begin{equation*}
 \begin{pmatrix}
-\nicefrac{6}{24}\amp\nicefrac{-3}{24}\\\nicefrac{-2}{
-24}\amp\nicefrac{5}{24}\end{pmatrix}\cdot
+\frac{6}{24} \amp \frac{-3}{24}\\
+\frac{-2}{24}\amp \frac{5}{24}
+\end{pmatrix}\cdot
 \begin{pmatrix}
-5\amp3\\2\amp6\end{pmatrix} \cdot
+5\amp 3\\2\amp 6\end{pmatrix} \cdot
 \begin{pmatrix}
 x\\y\end{pmatrix} =
 \begin{pmatrix}
-\nicefrac{6}{24}\amp\nicefrac{-3}{24}\\\nicefrac{-2}{24}\
-amp\nicefrac{5}{24}\end{pmatrix}\begin{pmatrix}
-26\\20\end{pmatrix}.
+\frac{6}{24} \amp \frac{-3}{24}\\
+\frac{-2}{24} \amp \frac{5}{24}
+\end{pmatrix}
+\begin{pmatrix}
+26\\20
+\end{pmatrix}.
 \end{equation*}
 </div>
 <div class="para">The left, for reasons we can confirm later, is simply <span class="process-math">\(\begin{pmatrix}
-x\\y\end{pmatrix}\text{,}\)</span> while on the right we have to calculate the result of matrix-vector multiplication,</div>
+x\\y
+\end{pmatrix}\text{,}\)</span> while on the right we have to calculate the result of matrix-vector multiplication,</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \begin{pmatrix}
-\nicefrac{6}{24}\amp\nicefrac{-3}{24}\\
-\nicefrac{-2}{24} \amp \nicefrac{5}{24}
+\frac{6}{24} \amp \frac{-3}{24}\\
+\frac{-2}{24} \amp \frac{5}{24}
 \end{pmatrix}
 \begin{pmatrix}
 26\\20
 \end{pmatrix} =
 \begin{pmatrix}
-(\nicefrac{6}{24})(26) + (\nicefrac{-3}{24})(20)\\
-(\nicefrac{-2}{24})(26) + (\nicefrac{5}{24})(20)
+(\frac{6}{24})(26) + (\frac{-3}{24})(20)\\
+(\frac{-2}{24})(26) + (\frac{5}{24})(20)
 \end{pmatrix}
 =
 \begin{pmatrix}
@@ -336,18 +367,19 @@ x\\y\end{pmatrix}\text{,}\)</span> while on the right we have to calculate the r
 <div class="displaymath process-math">
 \begin{equation*}
 \begin{pmatrix}
-\nicefrac{6}{24}\amp\nicefrac{-3}{24}\\
-\nicefrac{-2}{24}\amp\nicefrac{5}{24}
-\end{pmatrix}\cdot
+\frac{6}{24}\amp \frac{-3}{24}\\
+\frac{-2}{24}\amp \frac{5}{24}
+\end{pmatrix}
+\cdot
 \begin{pmatrix}
-5\amp3\\
-2\amp6
-\end{pmatrix} \amp =
+5\amp 3\\
+2\amp 6
+\end{pmatrix} =
 \begin{pmatrix}
-(\nicefrac{6}{24})(5) + (\nicefrac{-3}{24})(2)
-\amp (\nicefrac{6}{24})(3) + (\nicefrac{-3}{24})(6)\\
-\nicefrac{-2}{24})(5) + (\nicefrac{5}{24})(2) 
-\amp (\nicefrac{-2}{24})(3) + (\nicefrac{5}{24})(6)
+(\frac{6}{24})(5) + (\frac{-3}{24})(2)
+\amp (\frac{6}{24})(3) + (\frac{-3}{24})(6)\\
+\frac{-2}{24})(5) + (\frac{5}{24})(2) 
+\amp (\frac{-2}{24})(3) + (\frac{5}{24})(6)
 \end{pmatrix} = 
 \begin{pmatrix}
 1 \amp 0 \\
@@ -356,12 +388,12 @@ x\\y\end{pmatrix}\text{,}\)</span> while on the right we have to calculate the r
 \end{equation*}
 </div>
 </div>
-<div class="para logical" id="p-172">
+<div class="para logical" id="p-189">
 <div class="para">The result of <span class="process-math">\(A^{-1}A\)</span> is called an identity matrix, when this multiplied the vector, we get the following</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \begin{pmatrix}
-1 \amp 0 \\0 \amp
+1 \amp 0 \\0 \amp 
 1\end{pmatrix}
 \begin{pmatrix}
 x \\y
@@ -387,22 +419,22 @@ x\\y
 \end{equation*}
 </div>
 </div>
-<div class="para logical" id="p-173">
-<div class="para">There are other important matrix properties that have and will show up, primarily the eigensystem - the paired collection of eigenvalues and eigenvectors.  To find eigenvectors we are looking for the following</div>
+<div class="para logical" id="p-190">
+<div class="para">There are other important matrix properties that have and will show up, primarily the eigensystem - the paired collection of eigenvalues and eigenvectors. To find eigenvectors we are looking for the following</div>
 <div class="displaymath process-math">
 \begin{equation*}
 A\vec{x} = \lambda
 \vec{x},
 \end{equation*}
 </div>
-<div class="para">in other words, we are looking for a special number <span class="process-math">\(\lambda\)</span> that has the same effect on the entries of the vector as does the more complicated matrix-vector multiplication.  We need to find a number <span class="process-math">\(\lambda\)</span> such that</div>
+<div class="para">in other words, we are looking for a special number <span class="process-math">\(\lambda\)</span> that has the same effect on the entries of the vector as does the more complicated matrix-vector multiplication. We need to find a number <span class="process-math">\(\lambda\)</span> such that</div>
 <div class="displaymath process-math">
 \begin{equation*}
 A\vec{x} - \lambda\vec{x} =
 0.
 \end{equation*}
 </div>
-<div class="para">But this is tricky since <span class="process-math">\(A\)</span> is a matrix, <span class="process-math">\(\lambda\)</span> is a number, and <span class="process-math">\(\vec{x}\)</span> is a vector.  To make the matrix and number more compatible we can write this as <span class="process-math">\((A - \lambda I)\vec{x} = 0\text{,}\)</span> where <span class="process-math">\(I\)</span> is the <span class="process-math">\(2\times2\)</span> \emph{identity matrix}  introduced not long ago, with <span class="process-math">\(1\)</span>’s on the main diagonal only and zeros elsewhere.  It would be easy to solve the equation if the entries in <span class="process-math">\(\vec{x}\)</span> were all zeros, but that isn’t interesting.  Instead we will solve <span class="process-math">\(\operatorname{det}(A-\lambda I) =0\)</span> for <span class="process-math">\(\lambda\text{.}\)</span> Returning to the general case (with entries <span class="process-math">\(a, b, \dots\)</span>), we have to find the determinant of</div>
+<div class="para">But this is tricky since <span class="process-math">\(A\)</span> is a matrix, <span class="process-math">\(\lambda\)</span> is a number, and <span class="process-math">\(\vec{x}\)</span> is a vector. To make the matrix and number more compatible we can write this as <span class="process-math">\((A - \lambda I)\vec{x} = 0\text{,}\)</span> where <span class="process-math">\(I\)</span> is the <span class="process-math">\(2\times2\)</span> <em class="emphasis">identity matrix</em> introduced not long ago, with <span class="process-math">\(1\)</span>’s on the main diagonal only and zeros elsewhere. It would be easy to solve the equation if the entries in <span class="process-math">\(\vec{x}\)</span> were all zeros, but that isn’t interesting. Instead we will solve <span class="process-math">\(\operatorname{det}(A-\lambda I) =0\)</span> for <span class="process-math">\(\lambda\text{.}\)</span> Returning to the general case (with entries <span class="process-math">\(a, b, \dots\)</span>), we have to find the determinant of</div>
 <div class="displaymath process-math">
 \begin{equation*}
 A-\lambda I = \begin{pmatrix}
@@ -412,18 +444,18 @@ a -
 </div>
 <div class="para">then set it to zero and solve for the necessary <span class="process-math">\(\lambda\)</span> values.</div>
 </div>
-<div class="para logical" id="p-174">
+<div class="para logical" id="p-191">
 <div class="para">The determinant is <span class="process-math">\(\operatorname{det}(A-\lambda I) =
-(a-\lambda)(d-\lambda)-bc\text{.}\)</span>  Conveniently this can be written directly in terms of two important matrix properties, the trace and the determinant.  We’ve already introduced the determinant, <span class="process-math">\(\Delta =
+(a-\lambda)(d-\lambda)-bc\text{.}\)</span> Conveniently this can be written directly in terms of two important matrix properties, the trace and the determinant. We’ve already introduced the determinant, <span class="process-math">\(\Delta =
 \operatorname{det}(A)\text{,}\)</span> and the trace, <span class="process-math">\(\tau =
 \operatorname{tr}(A)\text{,}\)</span> is just the sum of the entries along the main diagonal.</div>
-<div class="displaymath process-math" id="md-3">
+<div class="displaymath process-math" id="md-4">
 \begin{align*}
 \end{align*}
 </div>
-<div class="para">This means our \emph{eigenvalue} problem just requires us to solve the quadratic formula for a quadratic equations whose coefficients can be quickly collected from the entries of the original matrix.</div>
+<div class="para">This means our <em class="emphasis">eigenvalue</em> problem just requires us to solve the quadratic formula for a quadratic equations whose coefficients can be quickly collected from the entries of the original matrix.</div>
 </div>
-<div class="para logical" id="p-175">
+<div class="para logical" id="p-192">
 <div class="para">For a concrete example, use the matrix <span class="process-math">\(A\text{,}\)</span> we’ve introduced earlier. For this, <span class="process-math">\(\operatorname{tr}(A) = 11\)</span> and <span class="process-math">\(\operatorname{det}(A) = 24\text{.}\)</span> The equation for the eigenvalues is</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -438,17 +470,17 @@ a -
 3)(\lambda-8).
 \end{equation*}
 </div>
-<div class="para">The eigenvalues are <span class="process-math">\(\lambda = 3, 8\text{.}\)</span>  To remind you,</div>
+<div class="para">The eigenvalues are <span class="process-math">\(\lambda = 3, 8\text{.}\)</span> To remind you,</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \lambda_{\pm} = \frac{-(-11)\pm\sqrt{(-11)^2 -
 4(1)(24)}}{2(1)},
 \end{equation*}
 </div>
-<div class="para">it’s important to watch out for the sign of the \emph{discriminant} <span class="process-math">\((-11)^2 - 4(1)(24)\text{,}\)</span> which, if negative, would cause complex-valued solutions.</div>
+<div class="para">it’s important to watch out for the sign of the <em class="emphasis">discriminant</em> <span class="process-math">\((-11)^2 - 4(1)(24)\text{,}\)</span> which, if negative, would cause complex-valued solutions.</div>
 </div>
-<div class="para logical" id="p-176">
-<div class="para">Now that we have eigenvalues, we have to find the paired eigenvector for each, this sort of takes us back to the original ideas from this document, we need to find the vector for which <span class="process-math">\((A-\lambda I)\vec{u} = 0\text{.}\)</span>  Or, for <span class="process-math">\(\lambda_1 = 8\text{,}\)</span>
+<div class="para logical" id="p-193">
+<div class="para">Now that we have eigenvalues, we have to find the paired eigenvector for each, this sort of takes us back to the original ideas from this document, we need to find the vector for which <span class="process-math">\((A-\lambda I)\vec{u} = 0\text{.}\)</span> Or, for <span class="process-math">\(\lambda_1 = 8\text{,}\)</span>
 </div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -463,14 +495,14 @@ u_1\\u_2\end{pmatrix} =
 <div class="para">in the matrix of coefficients, we subtract the same eigenvalue from each main diagonal entry. This is the linear system of equations</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\begin{cases}-3u_1 + 3u_2 \amp=0 \\2u_1 -
+\begin{cases}-3u_1 + 3u_2 \amp =0 \\2u_1 -
 2u_2 \amp =0\end{cases}.
 \end{equation*}
 </div>
-<div class="para">This is a rather strange one, you might notice that this is solved by <span class="process-math">\(u_2 = u_1\)</span> - we can choose the values <span class="process-math">\(u_1 = u_2 = 1\text{.}\)</span>  A somewhat peculiar feature of eigenvectors, is that we are often only concerned with the direction. The eigenvector is an arrow that points from <span class="process-math">\((0, 0)\)</span> to, in this case, <span class="process-math">\((1, 1)\text{.}\)</span>
+<div class="para">This is a rather strange one, you might notice that this is solved by <span class="process-math">\(u_2 = u_1\)</span> - we can choose the values <span class="process-math">\(u_1 = u_2 = 1\text{.}\)</span> A somewhat peculiar feature of eigenvectors, is that we are often only concerned with the direction. The eigenvector is an arrow that points from <span class="process-math">\((0, 0)\)</span> to, in this case, <span class="process-math">\((1, 1)\text{.}\)</span>
 </div>
 </div>
-<div class="para logical" id="p-177">
+<div class="para logical" id="p-194">
 <div class="para">Next, repeat for <span class="process-math">\(\lambda_2 = 3\text{,}\)</span>
 </div>
 <div class="displaymath process-math">
@@ -486,20 +518,20 @@ u_1\\u_2\end{pmatrix} =
 <div class="para">in the matrix of coefficients, we subtract the same eigenvalue from each main diagonal entry. This is the linear system of equations</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\begin{cases}2u_1 + 3u_2 \amp=0 \\2u_1 +
+\begin{cases}2u_1 + 3u_2 \amp =0 \\2u_1 +
 3u_2 \amp =0\end{cases}.
 \end{equation*}
 </div>
-<div class="para">These equations are repeated and give rise to <span class="process-math">\(u_2 = (-\nicefrac{2}{3})u_1\text{.}\)</span>  If we pick <span class="process-math">\(u_1 = 1\)</span> for convenience, we have <span class="process-math">\(u_2 = -\nicefrac{2}{3}\text{.}\)</span>  This eigenvector is an arrow that points from <span class="process-math">\((0, 0)\)</span> to <span class="process-math">\((1,
--\nicefrac{2}{3})\text{.}\)</span>
+<div class="para">These equations are repeated and give rise to <span class="process-math">\(u_2 = (-\frac{2}{3})u_1\text{.}\)</span> If we pick <span class="process-math">\(u_1 = 1\)</span> for convenience, we have <span class="process-math">\(u_2 = -\frac{2}{3}\text{.}\)</span> This eigenvector is an arrow that points from <span class="process-math">\((0, 0)\)</span> to <span class="process-math">\((1,
+-\frac{2}{3})\text{.}\)</span>
 </div>
 </div>
-<div class="para logical" id="p-178">
+<div class="para logical" id="p-195">
 <div class="para">What should be the case for each is that <span class="process-math">\(A\vec{u} = \lambda \vec{u}\text{.}\)</span> Verify that this is the case for the second pairing, using this example of the first to get started. First,</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \begin{pmatrix}
-5 \amp 3 \\ 2 \amp
+5 \amp 3 \\ 2 \amp 
 6\end{pmatrix}
 \begin{pmatrix}
 1\\1
@@ -509,7 +541,7 @@ u_1\\u_2\end{pmatrix} =
 \end{pmatrix},
 \end{equation*}
 </div>
-<div class="para">using standard matrix-vector multiplication.  Also,</div>
+<div class="para">using standard matrix-vector multiplication. Also,</div>
 <div class="displaymath process-math">
 \begin{equation*}
 8\begin{pmatrix}
@@ -520,18 +552,20 @@ u_1\\u_2\end{pmatrix} =
 \end{pmatrix}.
 \end{equation*}
 </div>
-<div class="para">Notice that multiplying the vector by the matrix and by the scalar eigenvalue give rise to the same result.  Effectively, we have ``replaced’’ the more difficult process of matrix-vector multiplication by the simpler process of scalar-vector multiplication.</div>
+<div class="para">Notice that multiplying the vector by the matrix and by the scalar eigenvalue give rise to the same result. Effectively, we have "replaced" the more difficult process of matrix-vector multiplication by the simpler process of scalar-vector multiplication.</div>
 </div>
-<div class="para" id="p-179">Sometimes we need to \emph{normalize} the eigenvector or control its length, we aren’t concerned with that here. Additionally, for the first we could have just as easily chosen <span class="process-math">\(u_1 =
-u_2 = -1\)</span> which would be a vector pointing in the opposite direction of what we’d first considered.  Surprisingly, for most of our needs this doesn’t really matter - what matters most is the angle the vector points towards (in this case still along the line <span class="process-math">\(y = x\)</span>).</div>
-<div class="para logical" id="p-180">
-<div class="para">To go back to how we started using matrices, Jacobian matrices of nonlinear systems and systems of linear differential equations, consider  the coupled linear system of differential equations,</div>
+<details id="ex-norm-eigenvectors" class="example example-like"><summary><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">A.1.1</span><span class="period">.</span>
+</h3></summary><article class="example example-like"><div class="para" id="p-196">Using the standard distance formula, calculate the length of the first eigenvector.  This represents the distance between the points <span class="process-math">\((0,0)\)</span> and <span class="process-math">\((1, 1)\)</span> in the plane. Then divide the entries of the vector by this amount and repeat the distance calculation.</div> <div class="para" id="p-197">While this is often useful, for our purposes, we can "absorb" the length of the vector into other constants that need to be calculated in the context of solving a problem.</div></article></details><div class="para" id="p-198">Sometimes we need to <em class="emphasis">normalize</em> the eigenvector or control its length, we aren’t concerned with that here. Additionally, for the first we could have just as easily chosen <span class="process-math">\(u_1 =
+u_2 = -1\)</span> which would be a vector pointing in the opposite direction of what we’d first considered. Surprisingly, for most of our needs this doesn’t really matter - what matters most is the angle the vector points towards (in this case still along the line <span class="process-math">\(y = x\)</span>).</div>
+<div class="para logical" id="p-199">
+<div class="para">To go back to how we started using matrices, Jacobian matrices of nonlinear systems and systems of linear differential equations, consider the coupled linear system of differential equations,</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \begin{pmatrix}
-\nicefrac{dx}{dt}\\\nicefrac{dy}{dt}\end{pmatrix} =
+\frac{dx}{dt}\\\frac{dy}{dt}\end{pmatrix} =
 \begin{pmatrix}
-5 \amp 3 \\ 2 \amp
+5 \amp 3 \\ 2 \amp 
 6\end{pmatrix}\begin{pmatrix}
 x\\y\end{pmatrix}.
 \end{equation*}
@@ -548,9 +582,9 @@ u_1\\u_2
 \end{pmatrix},
 \end{equation*}
 </div>
-<div class="para">solves the system.  It will turn out that <span class="process-math">\(r\)</span> is the eigenvalue and the vector is its corresponding eigenvector.</div>
+<div class="para">solves the system. It will turn out that <span class="process-math">\(r\)</span> is the eigenvalue and the vector is its corresponding eigenvector.</div>
 </div>
-<div class="para logical" id="p-181">
+<div class="para logical" id="p-200">
 <div class="para">To solve the differential equations, we do need initial conditions of the form</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -560,7 +594,7 @@ x(0)\\y(0)\end{pmatrix} =
 x_0\\y_0\end{pmatrix}.
 \end{equation*}
 </div>
-<div class="para">Since we have yet to use these numbers, let’s pick <span class="process-math">\(x_0 = 4\)</span> and <span class="process-math">\(y_0 = 7\text{.}\)</span>  To get started let’s express this initial condition as a \emph{linear combination} of eigenvectors.  This means we want to write</div>
+<div class="para">Since we have yet to use these numbers, let’s pick <span class="process-math">\(x_0 = 4\)</span> and <span class="process-math">\(y_0 = 7\text{.}\)</span> To get started let’s express this initial condition as a <em class="emphasis">&gt;linear combination</em> of eigenvectors. This means we want to write</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \begin{pmatrix}
@@ -568,47 +602,47 @@ x_0\\y_0\end{pmatrix}.
 c_1\begin{pmatrix}
 1\\1\end{pmatrix} +
 c_2\begin{pmatrix}
-1\\-\nicefrac{2}{3}\end{pmatrix},
+1\\-\frac{2}{3}\end{pmatrix},
 \end{equation*}
 </div>
-<div class="para">for constants <span class="process-math">\(c_1\)</span> and <span class="process-math">\(c_2\text{.}\)</span>  Oddly this is a \emph{new} linear system, but this time for the coefficients, it is equivalent to</div>
+<div class="para">for constants <span class="process-math">\(c_1\)</span> and <span class="process-math">\(c_2\text{.}\)</span> Oddly this is a <em class="emphasis">new</em> linear system, but this time for the coefficients, it is equivalent to</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \begin{cases}1\cdot c_1 + 1\cdot c_2 = 4\\1\cdot c_1
--\nicefrac{2}{3}c_2 = 7\end{cases}.
+-\frac{2}{3}c_2 = 7\end{cases}.
 \end{equation*}
 </div>
-<div class="para">Interestingly, the same techniques for solving linear systems from earlier apply - solve and substitute, add or subtract multiples of equations, or even rewrite this as a matrix-vector equation and invert.  Skipping those steps for now, <span class="process-math">\(c_1 = \nicefrac{29}{5}\)</span> and <span class="process-math">\(c_2 = -\nicefrac{9}{5}\text{.}\)</span>  This means that the solution corresponding to this initial condition is</div>
+<div class="para">Interestingly, the same techniques for solving linear systems from earlier apply - solve and substitute, add or subtract multiples of equations, or even rewrite this as a matrix-vector equation and invert. Skipping those steps for now, <span class="process-math">\(c_1 = \frac{29}{5}\)</span> and <span class="process-math">\(c_2 = -\frac{9}{5}\text{.}\)</span> This means that the solution corresponding to this initial condition is</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \begin{pmatrix}
 x(t)\\y(t)
 \end{pmatrix} =
-\nicefrac{29}{5}e^{8t}
+\frac{29}{5}e^{8t}
 \begin{pmatrix}
 1\\1\end{pmatrix} -
-\nicefrac{9}{5}e^{3t}
+\frac{9}{5}e^{3t}
 \begin{pmatrix}
-1\\-\nicefrac{2}{3}
+1\\-\frac{2}{3}
 \end{pmatrix}\text{.}
 \end{equation*}
 </div>
 </div>
-<div class="para logical" id="p-182">
-<div class="para">Here is one solution to the linear system of differential equations above.  It may not quite look so, but this is a slight curve traced out by coordinates of the form</div>
+<div class="para logical" id="p-201">
+<div class="para">Here is one solution to the linear system of differential equations above. It may not quite look so, but this is a slight curve traced out by coordinates of the form</div>
 <div class="displaymath process-math">
 \begin{equation*}
 (x(t), y(t)) =
-(\nicefrac{29}{5}e^{8t} - \nicefrac{9}{5}e^{5t}, \nicefrac{29}{5}e^{8t}
--\nicefrac{9}{5}(-\nicefrac{2}{3})e^{3t})
+\Big(\frac{29}{5}e^{8t} - \frac{9}{5}e^{5t}, \frac{29}{5}e^{8t}
+-\frac{9}{5}\Big(-\frac{2}{3}\Big)e^{3t}\Big)
 \end{equation*}
 </div>
 <div class="para">for <span class="process-math">\(t\geq 0\text{,}\)</span> starting from <span class="process-math">\((x(0), y(0)) = (4, 7)\text{.}\)</span>
 </div>
 </div>
 <figure class="figure figure-like" id="fig-lin-sys-sol"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/linear_sys.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.1.1<span class="period">.</span></span><span class="space"> </span>Solution to a linear system of differential equations.</figcaption></figure><div class="para logical" id="p-183">
-<div class="para">A couple interesting ideas, not shown yet, are that if initial conditions are multiples of the coordinates of a single eigenvalue, those are straight lines in the phase plane. Depending on which eigenvector is present, one of <span class="process-math">\(c_1\)</span> or <span class="process-math">\(c_2\)</span> will be zero.  For example, if <span class="process-math">\(x_0 = y_0 = 4\text{,}\)</span> then <span class="process-math">\(c_1 = 4\)</span> and <span class="process-math">\(c_2 = 0\text{.}\)</span> The solution will have no contribution from the second eigenpair and will instead  be</div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">A.1.2<span class="period">.</span></span><span class="space"> </span>Solution to a linear system of differential equations.</figcaption></figure><div class="para logical" id="p-202">
+<div class="para">A couple interesting ideas, not shown yet, are that if initial conditions are multiples of the coordinates of a single eigenvalue, those are straight lines in the phase plane. Depending on which eigenvector is present, one of <span class="process-math">\(c_1\)</span> or <span class="process-math">\(c_2\)</span> will be zero. For example, if <span class="process-math">\(x_0 = y_0 = 4\text{,}\)</span> then <span class="process-math">\(c_1 = 4\)</span> and <span class="process-math">\(c_2 = 0\text{.}\)</span> The solution will have no contribution from the second eigenpair and will instead be</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \begin{pmatrix}

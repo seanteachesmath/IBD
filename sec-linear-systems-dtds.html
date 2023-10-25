@@ -8,7 +8,7 @@
 <html lang="en-US" dir="ltr">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>What is modeling</title>
+<title>Linear systems of difference equations</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
@@ -106,7 +106,7 @@ window.MathJax = {
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="introduction.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="introduction.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec-simple-1d-ode.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\require{cancel}
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="what-is-dtds.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="introduction-single-dtds.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="exercises-2.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\require{cancel}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
@@ -123,10 +123,10 @@ window.MathJax = {
 <li class="toc-item toc-preface"><div class="toc-title-box"><a href="preface-themes.html" class="internal"><span class="title">Themes</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-chapter contains-active">
+<li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="introduction.html" class="internal"><span class="codenumber">1</span> <span class="title">Introduction</span></a></div>
-<ul class="structural toc-item-list contains-active">
-<li class="toc-item toc-section active"><div class="toc-title-box"><a href="what-is-modeling.html" class="internal"><span class="codenumber">1.1</span> <span class="title">What is modeling</span></a></div></li>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="what-is-modeling.html" class="internal"><span class="codenumber">1.1</span> <span class="title">What is modeling</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-simple-1d-ode.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Single differential equation models</span></a></div>
 <ul class="structural toc-item-list">
@@ -185,9 +185,9 @@ window.MathJax = {
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="exercises-1.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-chapter">
+<li class="toc-item toc-chapter contains-active">
 <div class="toc-title-box"><a href="introduction-single-dtds.html" class="internal"><span class="codenumber">3</span> <span class="title">Discrete-time dynamical systems</span></a></div>
-<ul class="structural toc-item-list">
+<ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="what-is-dtds.html" class="internal"><span class="codenumber">3.1</span> <span class="title">What is a discrete-time dynamical system?</span></a></div>
 <ul class="structural toc-item-list">
@@ -195,7 +195,7 @@ window.MathJax = {
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="what-is-dtds.html#sub-logistic-map" class="internal"><span class="codenumber">3.1.2</span> <span class="title">The logistic map</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-linear-systems-dtds.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Linear systems of difference equations</span></a></div></li>
+<li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-linear-systems-dtds.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Linear systems of difference equations</span></a></div></li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="exercises-2.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
@@ -204,86 +204,75 @@ window.MathJax = {
 <ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-linear-algebra.html" class="internal"><span class="codenumber">A.1</span> <span class="title">What is linear algebra?</span></a></div></li></ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="what-is-modeling"><h2 class="heading hide-type">
-<span class="type">Section</span><span class="space"> </span><span class="codenumber">1.1</span><span class="space"> </span><span class="title">What is modeling</span>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-linear-systems-dtds"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">3.2</span><span class="space"> </span><span class="title">Linear systems of difference equations</span>
 </h2>
-<div class="para" id="p-5"></div>
-<section class="paragraphs" id="what-is-mathematical-biology"><h3 class="heading"><span class="title">What is mathematical biology?</span></h3> <section class="paragraphs" id="what-is-mathematics"><h4 class="heading"><span class="title">What is mathematics?</span></h4> <div class="para" id="p-6">The study of number, quantity, space.</div> <section class="paragraphs" id="what-is-biology"><h5 class="heading"><span class="title">What is biology?</span></h5> <div class="para" id="p-7">The study of life.</div></section> <section class="paragraphs" id="what-is-mathematical-biology-1"><h5 class="heading"><span class="title">What is mathematical biology?</span></h5> <div class="para" id="p-8">Using mathematical tools to study life.</div> <div class="para logical" id="p-9"><ul class="disc">
-<li id="li-1"><div class="para" id="p-10">Understanding the details of interactions between interacting populations of chemicals, cells, or individuals</div></li>
-<li id="li-2"><div class="para" id="p-11">Understanding or hypothesizing the mechanisms by which any biological quantities (numbers, densities, concentrations) change over time (or space)</div></li>
-</ul></div></section> <section class="paragraphs" id="biology-vs-physics"><h5 class="heading"><span class="title">Biological science vs. Physical science.</span></h5> <div class="para" id="p-12">Physics has ‘laws’, biology has no such ‘laws’.</div></section></section></section><section class="paragraphs" id="what-are-our-goals-for-mathematical-biology"><h3 class="heading"><span class="title">What are our goals for mathematical biology.</span></h3> <div class="para logical" id="p-13"><ul class="disc">
-<li id="li-3"><div class="para" id="p-14">Draw qualitative conclusions about biological processes.</div></li>
-<li id="li-4"><div class="para" id="p-15">Apply simplified mechanisms to complex systems.</div></li>
-<li id="li-5"><div class="para" id="p-16">Guide thought experiments and physical experiments.</div></li>
-<li id="li-6"><div class="para" id="p-17">Occasionally make precise, quantitative predictions.</div></li>
-</ul></div></section><section class="paragraphs" id="what-is-a-mathematical-model"><h3 class="heading"><span class="title">What is a mathematical model?</span></h3> <section class="paragraphs" id="features-and-definitions"><h4 class="heading"><span class="title">Features and definitions.</span></h4> <div class="para" id="p-18">A mathematical model is an abstract mathematical description of any (biological) system, using logic, notation, and techniques of mathematics.</div></section> <section class="paragraphs" id="a-familiar-example"><h4 class="heading"><span class="title">A familiar example.</span></h4> <div class="para logical" id="p-19">
-<div class="para">Picture a tall, cylindrical water tower with radius <span class="process-math">\(r\)</span> in which the height of the water is <span class="process-math">\(h\text{.}\)</span> We want to know how fast the water level is dropping as we draw water from the bottom of the tank at a fixed flow. Our situation relies on the following relationship between volume of water and height of water.</div>
+<section class="introduction" id="introduction-32"><div class="para" id="p-165">Linear systems of difference equations are quite applicable, and moreover are very interesting examples of some key principles of linear algebra. For a very brief review of linear algebra, check out <a href="sec-linear-algebra.html" class="internal" title="Section A.1: What is linear algebra?">Section A.1</a>.</div></section><details id="ex-wet-plants" class="example example-like"><summary><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.2.1</span><span class="period">.</span>
+</h3></summary><article class="example example-like"><div class="para" id="p-166">Consider the following model of seedling/adult (i.e., vegetative and reproductive) plant dynamics of the form <span class="process-math">\(P_{t+1} = MP_t\text{.}\)</span> Entries of the matrix will be identified below, but to start assume the population starts with an initial distribution of <span class="process-math">\(P_0=
+\begin{pmatrix}
+V_0\\R_0
+\end{pmatrix} =
+\begin{pmatrix}
+100\\0
+\end{pmatrix}\text{.}\)</span>
+</div> <div class="para logical" id="p-167">
+<div class="para">Take a population with</div>
 <div class="displaymath process-math">
 \begin{equation*}
-(\text{change in
-volume})\propto(\text{change in height})
+M=M_w = \begin{pmatrix} 0 \amp s_w\\\sigma_w
+\amp a_w\end{pmatrix}\text{,}
 \end{equation*}
 </div>
-<div class="para">But what is the actual relationship between the two, and how do we replace ‘<span class="process-math">\(\propto\)</span>’ with ‘<span class="process-math">\(=\)</span>’? First,</div>
+<div class="para">where the subscript \(w\) denotes a population that experiences `wet’ weather. Let <span class="process-math">\(s_w=1.50\text{,}\)</span> <span class="process-math">\(\sigma_w = 0.55\text{,}\)</span> and <span class="process-math">\(a_w=0.1\text{.}\)</span> On average, adults (reproductive) one year give rise to one and a half new seedlings (vegetative) the next, just over half of the seedlings in one year survive to adulthood the next year, but only one in ten adults survives year to year.</div>
+</div> <ul class="disc">
+<li id="li-28"><div class="para" id="p-168">Compute a few values of the solution from initial conditions <span class="process-math">\(V_0 = 100\)</span> and <span class="process-math">\(R_0 = 0\text{.}\)</span>
+</div></li>
+<li id="li-29"><div class="para" id="p-169">Compute eigenvalues and eigenvectors of the matrix <span class="process-math">\(M_w\text{.}\)</span>
+</div></li>
+<li id="li-30"><div class="para" id="p-170">Express the solution for these initial conditions in terms of eigenvectors and eigenvalues.</div></li>
+</ul></article></details><details id="ex-dry-plants" class="example example-like"><summary><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.2.2</span><span class="period">.</span>
+</h3></summary><article class="example example-like"><div class="para logical" id="p-171">
+<div class="para">Consider the following model of seedling/adult (i.e., vegetative and reproductive) plant dynamics of the form <span class="process-math">\(P_{t+1} = MP_t\text{.}\)</span> Entries of the matrix will be identified below, but to start assume the population starts with an initial distribution of <span class="process-math">\(P_0=\begin{pmatrix}
+V_0\\R_0
+\end{pmatrix} =
+\begin{pmatrix}
+100\\0
+\end{pmatrix}\text{.}\)</span> Take a population with</div>
 <div class="displaymath process-math">
 \begin{equation*}
-V=\pi r^2
-h,
+M=M_d = \begin{pmatrix} 0 \amp s_w\\\sigma_w
+\amp a_w\end{pmatrix}\text{,}
 \end{equation*}
 </div>
-<div class="para">and differentiating,</div>
+<div class="para">where the subscript \(d\) denotes a population that experiences `wet’ weather. Let <span class="process-math">\(s_d=2.50\text{,}\)</span> <span class="process-math">\(\sigma_d = 0.05\text{,}\)</span> and <span class="process-math">\(a_d=0.8\text{.}\)</span> On average, adults (reproductive) one year give rise to one and a half new seedlings (vegetative) the next, just over half of the seedlings in one year survive to adulthood the next year, but only one in ten adults survives year to year.</div>
+</div> <ul class="disc">
+<li id="li-31"><div class="para" id="p-172">Compute a few values of the solution from initial conditions <span class="process-math">\(V_0 = 100\)</span> and <span class="process-math">\(R_0 = 0\text{.}\)</span>
+</div></li>
+<li id="li-32"><div class="para" id="p-173">Compute eigenvalues and eigenvectors of the matrix <span class="process-math">\(M_d\text{.}\)</span>
+</div></li>
+<li id="li-33"><div class="para" id="p-174">Express the solution for these initial conditions in terms of eigenvectors and eigenvalues.</div></li>
+</ul></article></details><details id="ex-wet-dry-plants" class="example example-like"><summary><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.2.3</span><span class="period">.</span>
+</h3></summary><article class="example example-like"><div class="para logical" id="p-175">
+<div class="para">Now for a twist. Assume that plants experience variable weather, specifically alternating wet and dry years. For example, <span class="process-math">\(P_1 = M_wP_0\text{,}\)</span> followed by <span class="process-math">\(P_2 = M_dP_1\text{.}\)</span> We might use the 2-year updating matrix <span class="process-math">\(M_{dw} = M_d M_w\)</span> and measure our plants every two years. Let <span class="process-math">\(Z_t\)</span> denote the <span class="process-math">\(t\)</span>-th measurement (i.e., made so that <span class="process-math">\(Z_0 = P_0\text{,}\)</span> <span class="process-math">\(Z_1 = P_2\text{,}\)</span> <span class="process-math">\(Z_2 = P_4\text{,}\)</span> and so on), described by</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\frac{d^{} {V}}{d {t}^{}} = \pi r^2
-\frac{d^{} {h}}{d {t}^{}}.
+Z_{t+1} = M_{dw} Z_t\text{.}
 \end{equation*}
 </div>
-</div> <div class="para" id="p-20">Pause to think about this. We want to know how the height <span class="process-math">\(h(t)\)</span> is changing as a function of time. We are thinking of a cylinder with a fixed radius, <span class="process-math">\(r\text{.}\)</span> We will assume that we are in control of the outflow from the tank, <span class="process-math">\(\displaystyle \frac{d^{} {V}}{d
-{t}^{}}\text{.}\)</span>
-</div> <div class="para logical" id="p-21">
-<div class="para">We can write a model for the height,</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\frac{d^{} {h}}{d
-{t}^{}}=\frac{\frac{d^{} {V}}{d {t}^{}}}{\pi r^2}.
-\end{equation*}
-</div>
-</div> <div class="para" id="p-22">Let’s assume we fix the outflow at <span class="process-math">\(\displaystyle100\,\frac{\text{ft}^3}{\text{ sec}}\text{,}\)</span> by adjusting the outflow knob. The first consequence is that the volume of water in the tank is decreasing, so that <span class="process-math">\(\displaystyle\frac{d^{} {V}}{d
-{t}^{}}\)</span> should be negative.</div> <div class="para" id="p-23">We’ll now use our model to study the dynamics of water depth in two theoretical water tanks: one tall and thin and the other short and thick.</div> <div class="para logical" id="p-24">
-<div class="para">When <span class="process-math">\(r=10\text{,}\)</span>
-</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\frac{d^{} {h}}{d
-{t}^{}}=\frac{-100\,\frac{\text{ft}^3}{\text{sec }}}{\pi \times(10
-\text{ft})^2}=-\frac{1}{\pi}\,\frac{\text{ft}}{\ text{sec}}.
-\end{equation*}
-</div>
-<div class="para">So that the water height <em class="emphasis">drops</em> about 1 foot in approximately 3 seconds.</div>
-</div> <div class="para logical" id="p-25">
-<div class="para">When <span class="process-math">\(r=100\text{,}\)</span>
-</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\frac{d^{} {h}}{d
-{t}^{}}=\frac{-100\,\frac{\text{ft}^3}{\text{sec }}}{\pi \times(100
-\text{ft})^2}=-\frac{1}{100\pi}\,\frac{\text{ft} }{\text{sec}}.
-\end{equation*}
-</div>
-<div class="para">So that the water height <em class="emphasis">drops</em> about 1 foot in approximately 5 minutes!</div>
-</div> <div class="para" id="p-26">This model allows us to discuss two important and often confused concepts in modeling: the distinction between parameters and (state) variables. The “state variable” is the ‘thing’ that we are making an effort to model. Here it is the height, <span class="process-math">\(h(t)\)</span> of the water in the tower. Everything else - the outflow volume <span class="process-math">\(\left(\displaystyle \frac{d^{} {V}}{d {t}^{}}\right)\)</span> and the radius <span class="process-math">\((r)\)</span> is known, or under our control. We call these things parameters. Changing parameters affects the evolution of state variables.</div></section></section><section class="paragraphs" id="why-do-we-write-models-and-what-can-we-model"><h3 class="heading"><span class="title">Why do we write models and what can we model?</span></h3> <section class="paragraphs" id="counting"><h4 class="heading"><span class="title">Counting.</span></h4> <div class="para" id="p-27">Models allow us to count things that might be too expensive, too time consuming, or otherwise impossible to count: animals, cells, proteins, viruses, molecules.</div></section> <section class="paragraphs" id="what-do-we-count"><h4 class="heading"><span class="title">What do we count?</span></h4> <div class="para logical" id="p-28"><ul class="disc">
-<li id="li-7"><div class="para" id="p-29">Populations of individual plants or animals that interact (Ecology)</div></li>
-<li id="li-8"><div class="para" id="p-30">Populations of cells <em class="emphasis">within</em> individuals that interact (Physiology, e.g., Immunology)</div></li>
-<li id="li-9"><div class="para" id="p-31">Populations of molecules and chemicals <em class="emphasis">within</em> cells that interact (Physiology, e.g., Neurobiology)</div></li>
-</ul></div></section></section><section class="paragraphs" id="what-does-a-model-look-like"><h3 class="heading"><span class="title">What does a model look like?</span></h3> <div class="para" id="p-32">A model is a description of “how things change” (like the height of water in a water tower). Biologically similar things might change in very different ways and be governed by very different processes.</div> <section class="paragraphs" id="thinking-about-time"><h4 class="heading"><span class="title">Thinking about time.</span></h4> <div class="para" id="p-33">We should think about how the organisms, or components of our model, interact with one another.Dynamics of some plants and animals are characterized by discrete, non-overlapping generations.</div> <div class="para logical" id="p-34"><ul class="disc">
-<li id="li-10"><div class="para" id="p-35">Insects might reproduce over just a few days and be dormant over the remainder of the year.</div></li>
-<li id="li-11"><div class="para" id="p-36">Plants might set seeds over a short season.</div></li>
-</ul></div> <div class="para" id="p-37">Alternatively, we might have a set of measurements at a regular interval (e.g., 2-weeks) that we wish to explain. Many human diseases are often reported to organizations like CDC and WHO at weekly, bi-weekly, or monthly intervals (e.g, measles, cholera, HIV).</div> <div class="para" id="p-38">Other organisms like yeast, bacteria, mice, and so on, might be best described by ‘continuous-time’ dynamics.</div></section> <section class="paragraphs" id="thinking-about-interactions"><h4 class="heading"><span class="title">Thinking about interactions.</span></h4> <div class="para" id="p-39">Interactions might be characterized as linear or non-linear.</div> <div class="para logical" id="p-40"><ul class="disc">
-<li id="li-12"><div class="para" id="p-41">From chemistry, “first-order reactions” are linear - exponential growth or decay result from first order reactions (linear-models).</div></li>
-<li id="li-13"><div class="para" id="p-42">Reactions with multiple reactants (interactions between Na and Cl, foxes and bunnies, humans and zombies are give rise to nonlinear models - products or functions state variables.</div></li>
-</ul></div></section> <section class="paragraphs" id="do-we-always-arrive-at-the-same-answer"><h4 class="heading"><span class="title">Do we always arrive at the same answer?</span></h4> <div class="para" id="p-43">Most of the models we study will be deterministic. This means our model (a set of rules, and initial conditions) will always give the same answer.</div> <div class="para" id="p-44">In contrast, some models can handle (random) variability between individuals or at different points in time. These are stochastic models, and while often more complicated, they allow us to ask and answer very different questions. As an example we’ll look at “birth-death process” models a bit later.</div></section></section></section></div>
+<ul class="disc">
+<li id="li-34"><div class="para" id="p-176">Compute a few values of the solution from initial conditions <span class="process-math">\(V_0 = 100\)</span> and <span class="process-math">\(R_0 = 0\text{.}\)</span>
+</div></li>
+<li id="li-35"><div class="para" id="p-177">Compute eigenvalues and eigenvectors of the matrix <span class="process-math">\(M_{dw}\text{.}\)</span>
+</div></li>
+<li id="li-36"><div class="para" id="p-178">Express the solution for these initial conditions in terms of eigenvectors and eigenvalues.</div></li>
+<li id="li-37"><div class="para" id="p-179">What do you notice about high powers of each eigenvalue?</div></li>
+</ul>
+</div></article></details></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="introduction.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-simple-1d-ode.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="what-is-dtds.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="exercises-2.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">

@@ -13,25 +13,21 @@
 <body class="ignore-math">
 <h3 class="heading"><span class="type">Paragraph</span></h3>
 <div class="para logical">
-<div class="para">A couple interesting ideas, not shown yet, are that if initial conditions are multiples of the coordinates of a single eigenvalue, those are straight lines in the phase plane. Depending on which eigenvector is present, one of <span class="process-math">\(c_1\)</span> or <span class="process-math">\(c_2\)</span> will be zero.  For example, if <span class="process-math">\(x_0 = y_0 = 4\text{,}\)</span> then <span class="process-math">\(c_1 = 4\)</span> and <span class="process-math">\(c_2 = 0\text{.}\)</span> The solution will have no contribution from the second eigenpair and will instead  be</div>
+<div class="para">Without linear algebra we can solve and substitute until we’ve identified all variables, or manipulate entire equations simultaneously. Solving the first equation for <span class="process-math">\(x\text{,}\)</span> we have</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\begin{pmatrix}
-x(t)\\y(t)
-\end{pmatrix}
-= 4e^{8t}
-\begin{pmatrix}
-1\\1
-\end{pmatrix}.
+y = \frac{26- 5x}{3}
 \end{equation*}
 </div>
-<div class="para">Alternatively,</div>
+<div class="para">which can be substituted into the second equation to give</div>
 <div class="displaymath process-math">
 \begin{equation*}
-(x(t), y(t)) = (4e^{8t}, 4e^{8t})
+2x +
+6\left(\frac{26- 5x}{3}\right) = 20,
 \end{equation*}
 </div>
-<div class="para">for <span class="process-math">\(t\geq 0\text{,}\)</span> starting from <span class="process-math">\((x(0), y(0)) = (4, 4)\text{.}\)</span>
+<div class="para">which when solved for <span class="process-math">\(x\)</span> gives <span class="process-math">\(x = 4\)</span> and substituting this in for <span class="process-math">\(x\)</span> gives <span class="process-math">\(y =
+2\text{.}\)</span>
 </div>
 </div>
 <span class="incontext"><a class="internal" href="sec-linear-algebra.html#p-183">in-context</a></span>
