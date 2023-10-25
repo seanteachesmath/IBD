@@ -11,8 +11,100 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">We now consider a population <span class="process-math">\(G_t\text{,}\)</span> which is the number of guppies living in a bowl on our desk. For simplicity, we will assume that we start with a female guppy who is gravid. Guppies are fascinating creatures that can spawn indefinitely after mating once. We’ll ignore the fact that she gives birth to males and females, so that ‘number of guppies’ above actually means ‘number of <em class="emphasis">female</em> guppies.</div>
-<span class="incontext"><a href="nonlinear-discrete-time-models-1d.html#p-188" class="internal">in-context</a></span>
+<h3 class="heading"><span class="type">Paragraph</span></h3>
+<div class="para logical">
+<div class="para">Back to our example</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A =
+\begin{pmatrix}
+5\amp 3\\
+2 \amp 6
+\end{pmatrix},
+\end{equation*}
+</div>
+<div class="para">so first <span class="process-math">\(\operatorname{det}(A) = (5)(6) - (3)(2) = 24\text{.}\)</span> Now,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A^{-1} =
+\frac{1}{24}\begin{pmatrix}
+6 \amp -3\\
+-2 \amp 5
+\end{pmatrix} =
+\begin{pmatrix}
+\frac{6}{24} \amp \frac{-3}{24}\\
+\frac{-2}{24} \amp \frac{5}{24}
+\end{pmatrix},
+\end{equation*}
+</div>
+<div class="para">The coefficients could be simplified, but, why bother? To solve our original problem, we multiply both sides by the inverse of <span class="process-math">\(A\text{,}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{pmatrix}
+\frac{6}{24} \amp \frac{-3}{24}\\
+\frac{-2}{24}\amp \frac{5}{24}
+\end{pmatrix}\cdot
+\begin{pmatrix}
+5\amp 3\\2\amp 6\end{pmatrix} \cdot
+\begin{pmatrix}
+x\\y\end{pmatrix} =
+\begin{pmatrix}
+\frac{6}{24} \amp \frac{-3}{24}\\
+\frac{-2}{24} \amp \frac{5}{24}
+\end{pmatrix}
+\begin{pmatrix}
+26\\20
+\end{pmatrix}.
+\end{equation*}
+</div>
+<div class="para">The left, for reasons we can confirm later, is simply <span class="process-math">\(\begin{pmatrix}
+x\\y
+\end{pmatrix}\text{,}\)</span> while on the right we have to calculate the result of matrix-vector multiplication,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{pmatrix}
+\frac{6}{24} \amp \frac{-3}{24}\\
+\frac{-2}{24} \amp \frac{5}{24}
+\end{pmatrix}
+\begin{pmatrix}
+26\\20
+\end{pmatrix} =
+\begin{pmatrix}
+(\frac{6}{24})(26) + (\frac{-3}{24})(20)\\
+(\frac{-2}{24})(26) + (\frac{5}{24})(20)
+\end{pmatrix}
+=
+\begin{pmatrix}
+4\\2
+\end{pmatrix} 
+\end{equation*}
+</div>
+<div class="para">To confirm what happens on the left,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{pmatrix}
+\frac{6}{24}\amp \frac{-3}{24}\\
+\frac{-2}{24}\amp \frac{5}{24}
+\end{pmatrix}
+\cdot
+\begin{pmatrix}
+5\amp 3\\
+2\amp 6
+\end{pmatrix} =
+\begin{pmatrix}
+(\frac{6}{24})(5) + (\frac{-3}{24})(2)
+\amp (\frac{6}{24})(3) + (\frac{-3}{24})(6)\\
+\frac{-2}{24})(5) + (\frac{5}{24})(2) 
+\amp (\frac{-2}{24})(3) + (\frac{5}{24})(6)
+\end{pmatrix} = 
+\begin{pmatrix}
+1 \amp 0 \\
+0 \amp 1
+\end{pmatrix} 
+\end{equation*}
+</div>
+</div>
+<span class="incontext"><a class="internal" href="sec-linear-algebra.html#p-188">in-context</a></span>
 </body>
 </html>

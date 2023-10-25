@@ -11,22 +11,24 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h4 class="heading"><span class="type">Paragraph</span></h4>
+<h3 class="heading"><span class="type">Paragraph</span></h3>
 <div class="para logical">
-<div class="para">Multiplying <span class="process-math">\(p.c.p\)</span> by population size <span class="process-math">\(N_t\)</span> gives our updating function, <span class="process-math">\(f(N_t)=(p.c.p.)\times N_t\text{.}\)</span> Then, our model is</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/fig-upd.html">
+<div class="para">With matrices, we can’t "divide" but we can multiply my multiplicative inverses. So we need to define the inverse of a matrix, this is</div>
+<div class="displaymath process-math">
 \begin{equation*}
-N_{t+1}=f(N_t)=(p.c.p.)\times N_t.
+\begin{pmatrix}
+a \amp b\\
+c \amp d
+\end{pmatrix}^{-1} =
+\frac{1}{ad-bc}
+\begin{pmatrix}
+d \amp -b\\
+-b \amp a
+\end{pmatrix}.
 \end{equation*}
 </div>
-<div class="para">Some sample updating functions are plotted in <a href="" class="xref" data-knowl="./knowl/fig-upd.html" title="Figure 6.2.2">Figure 6.2.2</a>. Notice that there are some major qualitative changes when we compare the line in the left panel to any of the curves in the right panel. Most importantly, the updating function intersects the resetting line more than once. Again, these intersections suggest that</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/fig-upd.html">
-\begin{equation*}
-N_{t+1}=N_t=N^*.
-\end{equation*}
+<div class="para">The quantity in the denominator in front of the matrix is called the <em class="emphasis">determinant</em>, <span class="process-math">\(\operatorname{det}(A) = ad-bc\text{.}\)</span> Under conditions where <span class="process-math">\(\operatorname{det}(A)=0\text{,}\)</span> we are unable to invert the matrix (a big part of linear algebra is identifying conditions under which we can and cannot invert matrices).</div>
 </div>
-<div class="para">Recalling our previous notation and definitions, these nonlinear models possess multiple equilibria!</div>
-</div>
-<span class="incontext"><a href="nonlinear-discrete-time-models-1d.html#p-187" class="internal">in-context</a></span>
+<span class="incontext"><a class="internal" href="sec-linear-algebra.html#p-187">in-context</a></span>
 </body>
 </html>

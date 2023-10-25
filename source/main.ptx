@@ -4,7 +4,7 @@
 
 <latex-preamble>
     <package>cancel</package>
-    <package>genfrac</package>
+<!-->    <package>genfrac</package>-->
 </latex-preamble>
 
 <latex-image-preamble>

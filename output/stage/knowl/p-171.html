@@ -11,89 +11,22 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h3 class="heading"><span class="type">Paragraph</span></h3>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">Back to our example</div>
-<div class="displaymath process-math">
-\begin{equation*}
-A =
-\begin{pmatrix}
-5\amp3\\2\amp6\end{pmatrix},
-\end{equation*}
-</div>
-<div class="para">so first <span class="process-math">\(\operatorname{det}(A) = (5)(6) - (3)(2) = 24\text{.}\)</span>  Now,</div>
-<div class="displaymath process-math">
-\begin{equation*}
-A^{-1} =
-\nicefrac{1}{24}\begin{pmatrix}
-6\amp-3\\-2\amp5\end{pmatrix} =
-\begin{pmatrix}
-\nicefrac{6}{24}\amp\nicefrac{-3}{24}\\\nicefrac{-2}{24}\
-amp\nicefrac{5}{24}\end{pmatrix},
-\end{equation*}
-</div>
-<div class="para">The coefficients could be simplified, but, why bother? To solve our original problem, we multiply both sides by the inverse of <span class="process-math">\(A\text{,}\)</span>
-</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\begin{pmatrix}
-\nicefrac{6}{24}\amp\nicefrac{-3}{24}\\\nicefrac{-2}{
-24}\amp\nicefrac{5}{24}\end{pmatrix}\cdot
-\begin{pmatrix}
-5\amp3\\2\amp6\end{pmatrix} \cdot
-\begin{pmatrix}
-x\\y\end{pmatrix} =
-\begin{pmatrix}
-\nicefrac{6}{24}\amp\nicefrac{-3}{24}\\\nicefrac{-2}{24}\
-amp\nicefrac{5}{24}\end{pmatrix}\begin{pmatrix}
-26\\20\end{pmatrix}.
-\end{equation*}
-</div>
-<div class="para">The left, for reasons we can confirm later, is simply <span class="process-math">\(\begin{pmatrix}
-x\\y\end{pmatrix}\text{,}\)</span> while on the right we have to calculate the result of matrix-vector multiplication,</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\begin{pmatrix}
-\nicefrac{6}{24}\amp\nicefrac{-3}{24}\\
-\nicefrac{-2}{24} \amp \nicefrac{5}{24}
-\end{pmatrix}
-\begin{pmatrix}
-26\\20
+<div class="para">Consider the following model of seedling/adult (i.e., vegetative and reproductive) plant dynamics of the form <span class="process-math">\(P_{t+1} = MP_t\text{.}\)</span> Entries of the matrix will be identified below, but to start assume the population starts with an initial distribution of <span class="process-math">\(P_0=\begin{pmatrix}
+V_0\\R_0
 \end{pmatrix} =
 \begin{pmatrix}
-(\nicefrac{6}{24})(26) + (\nicefrac{-3}{24})(20)\\
-(\nicefrac{-2}{24})(26) + (\nicefrac{5}{24})(20)
-\end{pmatrix}
-=
-\begin{pmatrix}
-4\\2
-\end{pmatrix} 
-\end{equation*}
-</div>
-<div class="para">To confirm what happens on the left,</div>
+100\\0
+\end{pmatrix}\text{.}\)</span> Take a population with</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\begin{pmatrix}
-\nicefrac{6}{24}\amp\nicefrac{-3}{24}\\
-\nicefrac{-2}{24}\amp\nicefrac{5}{24}
-\end{pmatrix}\cdot
-\begin{pmatrix}
-5\amp3\\
-2\amp6
-\end{pmatrix} \amp =
-\begin{pmatrix}
-(\nicefrac{6}{24})(5) + (\nicefrac{-3}{24})(2)
-\amp (\nicefrac{6}{24})(3) + (\nicefrac{-3}{24})(6)\\
-\nicefrac{-2}{24})(5) + (\nicefrac{5}{24})(2) 
-\amp (\nicefrac{-2}{24})(3) + (\nicefrac{5}{24})(6)
-\end{pmatrix} = 
-\begin{pmatrix}
-1 \amp 0 \\
-0 \amp 1
-\end{pmatrix} 
+M=M_d = \begin{pmatrix} 0 \amp s_w\\\sigma_w
+\amp a_w\end{pmatrix}\text{,}
 \end{equation*}
 </div>
+<div class="para">where the subscript \(d\) denotes a population that experiences `wet’ weather. Let <span class="process-math">\(s_d=2.50\text{,}\)</span> <span class="process-math">\(\sigma_d = 0.05\text{,}\)</span> and <span class="process-math">\(a_d=0.8\text{.}\)</span> On average, adults (reproductive) one year give rise to one and a half new seedlings (vegetative) the next, just over half of the seedlings in one year survive to adulthood the next year, but only one in ten adults survives year to year.</div>
 </div>
-<span class="incontext"><a class="internal" href="sec-linear-algebra.html#p-171">in-context</a></span>
+<span class="incontext"><a class="internal" href="sec-linear-systems-dtds.html#p-171">in-context</a></span>
 </body>
 </html>

@@ -12,50 +12,7 @@
 </head>
 <body class="ignore-math">
 <h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para logical">
-<div class="para">To solve the differential equations, we do need initial conditions of the form</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\begin{pmatrix}
-x(0)\\y(0)\end{pmatrix} =
-\begin{pmatrix}
-x_0\\y_0\end{pmatrix}.
-\end{equation*}
-</div>
-<div class="para">Since we have yet to use these numbers, let’s pick <span class="process-math">\(x_0 = 4\)</span> and <span class="process-math">\(y_0 = 7\text{.}\)</span>  To get started let’s express this initial condition as a \emph{linear combination} of eigenvectors.  This means we want to write</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\begin{pmatrix}
-4\\7\end{pmatrix} =
-c_1\begin{pmatrix}
-1\\1\end{pmatrix} +
-c_2\begin{pmatrix}
-1\\-\nicefrac{2}{3}\end{pmatrix},
-\end{equation*}
-</div>
-<div class="para">for constants <span class="process-math">\(c_1\)</span> and <span class="process-math">\(c_2\text{.}\)</span>  Oddly this is a \emph{new} linear system, but this time for the coefficients, it is equivalent to</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\begin{cases}1\cdot c_1 + 1\cdot c_2 = 4\\1\cdot c_1
--\nicefrac{2}{3}c_2 = 7\end{cases}.
-\end{equation*}
-</div>
-<div class="para">Interestingly, the same techniques for solving linear systems from earlier apply - solve and substitute, add or subtract multiples of equations, or even rewrite this as a matrix-vector equation and invert.  Skipping those steps for now, <span class="process-math">\(c_1 = \nicefrac{29}{5}\)</span> and <span class="process-math">\(c_2 = -\nicefrac{9}{5}\text{.}\)</span>  This means that the solution corresponding to this initial condition is</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\begin{pmatrix}
-x(t)\\y(t)
-\end{pmatrix} =
-\nicefrac{29}{5}e^{8t}
-\begin{pmatrix}
-1\\1\end{pmatrix} -
-\nicefrac{9}{5}e^{3t}
-\begin{pmatrix}
-1\\-\nicefrac{2}{3}
-\end{pmatrix}\text{.}
-\end{equation*}
-</div>
-</div>
-<span class="incontext"><a class="internal" href="sec-linear-algebra.html#p-181">in-context</a></span>
+<div class="para"></div>
+<span class="incontext"><a class="internal" href="exercises-2.html#p-181">in-context</a></span>
 </body>
 </html>

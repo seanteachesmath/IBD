@@ -175,5 +175,120 @@ source="39-cobweb.png"/> </figure>
 
 </section>
 
+
+
+<section xml:id = "sec-linear-systems-dtds">
+<title>Linear systems of difference equations</title>
+<introduction><p>
+Linear systems of difference equations are quite applicable, and moreover are very interesting examples of some key principles of linear algebra.
+ For a very brief review of linear algebra, check out <xref ref = "sec-linear-algebra"/>.
+ </p>
+ </introduction>
+
+<example xml:id = "ex-wet-plants">
+<statement>
+<p>
+Consider the following model of seedling/adult (i.e., vegetative and
+reproductive) plant dynamics of the form <m>P_{t+1} = MP_t</m>. Entries
+of the matrix will be identified below, but to start assume the
+population starts with an initial distribution of
+<m>P_0=
+\begin{pmatrix}
+V_0\\R_0
+\end{pmatrix} =
+\begin{pmatrix}
+100\\0
+\end{pmatrix}</m>.
+</p>
+
+<p>Take a population with <me>M=M_w = \begin{pmatrix} 0 \amp s_w\\\sigma_w
+\amp a_w\end{pmatrix}</me>, where the subscript \(w\) denotes a population
+that experiences `wet' weather. Let <m>s_w=1.50</m>, <m>\sigma_w = 0.55</m>,
+and <m>a_w=0.1</m>. On average, adults (reproductive) one year give rise to
+one and a half new seedlings (vegetative) the next, just over half of
+the seedlings in one year survive to adulthood the next year, but only
+one in ten adults survives year to year.</p>
+<ul>
+<li><p>Compute a few values of the solution from initial conditions <m>V_0 = 100</m> and <m>R_0 = 0</m>.</p></li>
+<li><p>Compute eigenvalues and eigenvectors of the matrix <m>M_w</m>.</p></li>
+<li><p>Express the solution for these initial conditions in terms of eigenvectors and eigenvalues.</p></li>
+</ul>
+</statement>
+</example>
+
+
+<example xml:id = "ex-dry-plants">
+<statement><p>
+Consider the following model of seedling/adult (i.e., vegetative and
+reproductive) plant dynamics of the form <m>P_{t+1} = MP_t</m>. Entries
+of the matrix will be identified below, but to start assume the
+population starts with an initial distribution of
+<m>P_0=\begin{pmatrix}
+V_0\\R_0
+\end{pmatrix} =
+\begin{pmatrix}
+100\\0
+\end{pmatrix}</m>.
+
+Take a population with <me>M=M_d = \begin{pmatrix} 0 \amp s_w\\\sigma_w
+\amp a_w\end{pmatrix}</me>, where the subscript \(d\) denotes a population
+that experiences `wet' weather. Let <m>s_d=2.50</m>, <m>\sigma_d = 0.05</m>,
+and <m>a_d=0.8</m>. On average, adults (reproductive) one year give rise to
+one and a half new seedlings (vegetative) the next, just over half of
+the seedlings in one year survive to adulthood the next year, but only
+one in ten adults survives year to year.</p>
+<ul>
+<li><p>Compute a few values of the solution from initial conditions <m>V_0 = 100</m> and <m>R_0 = 0</m>.</p></li>
+<li><p>Compute eigenvalues and eigenvectors of the matrix <m>M_d</m>.</p></li>
+<li><p>Express the solution for these initial conditions in terms of eigenvectors and eigenvalues.</p></li>
+</ul>
+</statement>
+</example>
+
+<example xml:id = "ex-wet-dry-plants">
+<statement>
+<p>
+Now for a twist. Assume that plants experience variable weather, specifically alternating wet
+and dry years. For example, <m>P_1 = M_wP_0</m>, followed by <m>P_2 = M_dP_1</m>. We might use the 2-year
+updating matrix <m>M_{dw} = M_d M_w</m> and measure our plants every two years. Let <m>Z_t</m> denote the
+<m>t</m>-th measurement (i.e., made so that <m>Z_0 = P_0</m>, <m>Z_1 = P_2</m>, <m>Z_2 = P_4</m>, and so on), described by
+<me>Z_{t+1} = M_{dw} Z_t</me>.
+
+<ul>
+<li><p>Compute a few values of the solution from initial conditions <m>V_0 = 100</m> and <m>R_0 = 0</m>.</p></li>
+<li><p>Compute eigenvalues and eigenvectors of the matrix <m>M_{dw}</m>.</p></li>
+<li><p>Express the solution for these initial conditions in terms of eigenvectors and eigenvalues.</p></li>
+<li><p>What do you notice about high powers of each eigenvalue?</p></li>
+</ul>
+</p>
+
+</statement>
+</example>
+
+
+</section>
+
+<exercises>
+<introduction><p>
+Relax, nothing to see here.
+</p></introduction>
+
+<exercise>
+<statement>
+</statement>
+</exercise>
+
+<exercise>
+<statement>
+</statement>
+</exercise>
+
+<exercise>
+<statement>
+</statement>
+</exercise>
+<conclusion><p></p></conclusion>
+</exercises>
+
 </chapter>
 

@@ -11,31 +11,23 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h3 class="heading"><span class="type">Paragraph</span></h3>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">For a concrete example, use the matrix <span class="process-math">\(A\text{,}\)</span> we’ve introduced earlier. For this, <span class="process-math">\(\operatorname{tr}(A) = 11\)</span> and <span class="process-math">\(\operatorname{det}(A) = 24\text{.}\)</span> The equation for the eigenvalues is</div>
+<div class="para">Now for a twist. Assume that plants experience variable weather, specifically alternating wet and dry years. For example, <span class="process-math">\(P_1 = M_wP_0\text{,}\)</span> followed by <span class="process-math">\(P_2 = M_dP_1\text{.}\)</span> We might use the 2-year updating matrix <span class="process-math">\(M_{dw} = M_d M_w\)</span> and measure our plants every two years. Let <span class="process-math">\(Z_t\)</span> denote the <span class="process-math">\(t\)</span>-th measurement (i.e., made so that <span class="process-math">\(Z_0 = P_0\text{,}\)</span> <span class="process-math">\(Z_1 = P_2\text{,}\)</span> <span class="process-math">\(Z_2 = P_4\text{,}\)</span> and so on), described by</div>
 <div class="displaymath process-math">
 \begin{equation*}
-0 = \lambda^2 - 11\lambda +
-24.
+Z_{t+1} = M_{dw} Z_t\text{.}
 \end{equation*}
 </div>
-<div class="para">We could use the quadratic formula, and more generally we should, but for a quick start, this one factors to</div>
-<div class="displaymath process-math">
-\begin{equation*}
-0 = (\lambda -
-3)(\lambda-8).
-\end{equation*}
+<ul class="disc">
+<li><div class="para">Compute a few values of the solution from initial conditions <span class="process-math">\(V_0 = 100\)</span> and <span class="process-math">\(R_0 = 0\text{.}\)</span>
+</div></li>
+<li><div class="para">Compute eigenvalues and eigenvectors of the matrix <span class="process-math">\(M_{dw}\text{.}\)</span>
+</div></li>
+<li><div class="para">Express the solution for these initial conditions in terms of eigenvectors and eigenvalues.</div></li>
+<li><div class="para">What do you notice about high powers of each eigenvalue?</div></li>
+</ul>
 </div>
-<div class="para">The eigenvalues are <span class="process-math">\(\lambda = 3, 8\text{.}\)</span>  To remind you,</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\lambda_{\pm} = \frac{-(-11)\pm\sqrt{(-11)^2 -
-4(1)(24)}}{2(1)},
-\end{equation*}
-</div>
-<div class="para">it’s important to watch out for the sign of the \emph{discriminant} <span class="process-math">\((-11)^2 - 4(1)(24)\text{,}\)</span> which, if negative, would cause complex-valued solutions.</div>
-</div>
-<span class="incontext"><a class="internal" href="sec-linear-algebra.html#p-175">in-context</a></span>
+<span class="incontext"><a class="internal" href="sec-linear-systems-dtds.html#p-175">in-context</a></span>
 </body>
 </html>
