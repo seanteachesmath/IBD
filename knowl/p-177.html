@@ -11,22 +11,31 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h5 class="heading"><span class="type">Paragraph</span></h5>
+<h3 class="heading"><span class="type">Paragraph</span></h3>
 <div class="para logical">
-<div class="para">How does ‘flower immigration’ affect dynamics? If we replace both <span class="process-math">\(N_{t+1}\)</span> and <span class="process-math">\(N_t\)</span> by <span class="process-math">\(N^*\)</span> the equilibrium value, we have</div>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<div class="para">Next, repeat for <span class="process-math">\(\lambda_2 = 3\text{,}\)</span>
+</div>
+<div class="displaymath process-math">
 \begin{equation*}
-N^*=rN^*+F.
+\begin{pmatrix}
+5-3 \amp 3 \\ 2 \amp 6 -
+3\end{pmatrix}\begin{pmatrix}
+u_1\\u_2\end{pmatrix} =
+\begin{pmatrix}
+0\\0\end{pmatrix},
 \end{equation*}
 </div>
-<div class="para">This gives us a value for the flower population,</div>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<div class="para">in the matrix of coefficients, we subtract the same eigenvalue from each main diagonal entry. This is the linear system of equations</div>
+<div class="displaymath process-math">
 \begin{equation*}
-N^*=\frac{F}{1-r},
+\begin{cases}2u_1 + 3u_2 \amp=0 \\2u_1 +
+3u_2 \amp =0\end{cases}.
 \end{equation*}
 </div>
-<div class="para">which tells us that <span class="process-math">\(N^*&gt;0\)</span> if <span class="process-math">\(r&lt;1\)</span> and <span class="process-math">\(N^*&lt;0\)</span> if <span class="process-math">\(r&gt;1\text{.}\)</span> It is important to notice early on that only non-negative equilibria make sense on most biological situations, especially with regard to population dynamics. With immigration (importation of plants), solutions can be traced on the diagrams in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "fig-dandelion2" missing or not unique]</code>.</div>
+<div class="para">These equations are repeated and give rise to <span class="process-math">\(u_2 = (-\nicefrac{2}{3})u_1\text{.}\)</span>  If we pick <span class="process-math">\(u_1 = 1\)</span> for convenience, we have <span class="process-math">\(u_2 = -\nicefrac{2}{3}\text{.}\)</span>  This eigenvector is an arrow that points from <span class="process-math">\((0, 0)\)</span> to <span class="process-math">\((1,
+-\nicefrac{2}{3})\text{.}\)</span>
 </div>
-<span class="incontext"><a href="what-is-dtds.html#p-177" class="internal">in-context</a></span>
+</div>
+<span class="incontext"><a class="internal" href="sec-linear-algebra.html#p-177">in-context</a></span>
 </body>
 </html>

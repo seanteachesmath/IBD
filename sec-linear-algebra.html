@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>What is linear algebra?</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Introduction to Biological Dynamics">
+<meta property="book:author" content="Sean Laverty">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "https://pretextbook.org/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.32/pretext_search.js"></script><link href="https://pretextbook.org/css/0.82/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.32</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.32/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.32/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.32/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+<link href="https://pretextbook.org/css/0.82/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body id="laverty-IBD" class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" target="_blank" href=""></a><div class="title-container">
+<h1 class="heading"><a href="intro-bio-dynamics.html"><span class="title">Introduction to Biological Dynamics</span></a></h1>
+<p class="byline">Sean Laverty</p>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="linear-algebra.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="linear-algebra.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\require{cancel}\require{genfrac}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural contains-active toc-item-list">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="preface-disclaimer.html" class="internal"><span class="title">Disclaimer</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="preface-motto.html" class="internal"><span class="title">Preface</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="preface-themes.html" class="internal"><span class="title">Themes</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="introduction.html" class="internal"><span class="codenumber">1</span> <span class="title">Introduction</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="what-is-modeling.html" class="internal"><span class="codenumber">1.1</span> <span class="title">What is modeling</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-simple-1d-ode.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Single differential equation models</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-simple-1d-ode.html#sub-logistic-growth" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Logistic growth</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-simple-1d-ode.html#sub-constant-harvesting" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Logistic growth with constant harvesting</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-simple-1d-ode.html#sub-proportional-harvesting" class="internal"><span class="codenumber">1.2.3</span> <span class="title">Logistic growth with proportional harvesting</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="systems.html" class="internal"><span class="codenumber">2</span> <span class="title">Introduction</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="systems-intro.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Introduction to 2D systems</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="systems-intro.html#subsec-real-distinct-opposite" class="internal"><span class="codenumber">2.1.1</span> <span class="title">Real and distinct eigenvalues of opposite sign</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="systems-intro.html#subsec-real-distinct-same" class="internal"><span class="codenumber">2.1.2</span> <span class="title">Real and distinct eigenvalues of the same sign</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="systems-intro.html#subsec-real-repeated" class="internal"><span class="codenumber">2.1.3</span> <span class="title">Real and repeated eigenvalues</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="systems-intro.html#subsec-complex" class="internal"><span class="codenumber">2.1.4</span> <span class="title">Complex eigenvalues</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-nonlinear-systems.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Nonlinear systems</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-nonlinear-systems.html#subsec-SIS" class="internal"><span class="codenumber">2.2.1</span> <span class="title">SI epidemiological model</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec-nonlinear-systems.html#subsec-pred-prey" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Predator-prey</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec-nonlinear-systems.html#subsubsec-pred-prey-null" class="internal"><span class="codenumber">2.2.2.1</span> <span class="title">Predator-Prey nullclines</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec-nonlinear-systems.html#subsubsec-pred-prey-equilibrium" class="internal"><span class="codenumber">2.2.2.2</span> <span class="title">Predator-Prey phase plane and equilibria</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec-nonlinear-systems.html#subsubsec-pred-prey-jacobian" class="internal"><span class="codenumber">2.2.2.3</span> <span class="title">Predator-Prey Jacobian</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec-nonlinear-systems.html#subsubsec-pred-prey-summary" class="internal"><span class="codenumber">2.2.2.4</span> <span class="title">Summary of Predator-Prey analysis</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec-nonlinear-systems.html#subsec-mod-pred-prey" class="internal"><span class="codenumber">2.2.3</span> <span class="title">Modified Predator-prey</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec-nonlinear-systems.html#subsubsec-mod-pred-prey-null" class="internal"><span class="codenumber">2.2.3.1</span> <span class="title">Modified Predator-Prey nullclines</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec-nonlinear-systems.html#subsubsec-mod-pred-prey-equilibrium" class="internal"><span class="codenumber">2.2.3.2</span> <span class="title">Modified Predator-Prey phase plane and equilibria</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec-nonlinear-systems.html#subsubsec-mod-pred-prey-jacobian" class="internal"><span class="codenumber">2.2.3.3</span> <span class="title">Modified Predator-Prey Jacobian</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec-nonlinear-systems.html#subsubsec-mod-pred-prey-summary" class="internal"><span class="codenumber">2.2.3.4</span> <span class="title">Summary of Modified Predator-Prey analysis</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec-nonlinear-systems.html#subsec-SIS-reprise" class="internal"><span class="codenumber">2.2.4</span> <span class="title">SIS epidemiological model</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec-nonlinear-systems.html#subsubsec-SIS-null" class="internal"><span class="codenumber">2.2.4.1</span> <span class="title">SIS nullclines</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec-nonlinear-systems.html#subsubsec-SIS-equilibrium" class="internal"><span class="codenumber">2.2.4.2</span> <span class="title">SIS phase plane and equilibria</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec-nonlinear-systems.html#subsubsec-SIS-jacobian" class="internal"><span class="codenumber">2.2.4.3</span> <span class="title">SIS Jacobian</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec-nonlinear-systems.html#subsubsec-SIS-summary" class="internal"><span class="codenumber">2.2.4.4</span> <span class="title">Summary of SIS analysis</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="exercises-1.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="introduction-single-dtds.html" class="internal"><span class="codenumber">3</span> <span class="title">Discrete-time dynamical systems</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section">
+<div class="toc-title-box"><a href="what-is-dtds.html" class="internal"><span class="codenumber">3.1</span> <span class="title">What is a discrete-time dynamical system?</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="what-is-dtds.html#sub-geometric-decay" class="internal"><span class="codenumber">3.1.1</span> <span class="title">A linear DTDS</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="what-is-dtds.html#sub-logistic-map" class="internal"><span class="codenumber">3.1.2</span> <span class="title">The logistic map</span></a></div></li>
+</ul>
+</li></ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="linear-algebra.html" class="internal"><span class="codenumber">4</span> <span class="title">Linear algebra essentials</span></a></div>
+<ul class="structural toc-item-list contains-active"><li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-linear-algebra.html" class="internal"><span class="codenumber">4.1</span> <span class="title">What is linear algebra?</span></a></div></li></ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-linear-algebra"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">4.1</span><span class="space"> </span><span class="title">What is linear algebra?</span>
+</h2>
+<section class="introduction" id="introduction-32"><div class="para logical" id="p-165">
+<div class="para">Consider the system of two linear equations</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{cases} 5x + 3y = 26\\ 2x+6y=20
+\end{cases},
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> represent the cost per item of two distinct items purchased by two customers and <span class="process-math">\(26\)</span> and <span class="process-math">\(20\)</span> their total costs, respectively. The coefficients are the numbers of each item purchased by each customer.  The goal is to use information like this to determine the currently unknown to us costs for each item.  A helpful visual is to solve for both equations as linear functions of <span class="process-math">\(y\)</span> and identify where the graphs of the lines intersect.</div>
+</div></section><div class="para logical" id="p-166">
+<div class="para">Without linear algebra we can solve and substitute until we’ve identified all variables, or manipulate entire equations simultaneously.  Solving the first equation for <span class="process-math">\(x\text{,}\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+y = \frac{26- 5x}{3}
+\end{equation*}
+</div>
+<div class="para">which can be substituted into the second equation to give</div>
+<div class="displaymath process-math">
+\begin{equation*}
+2x +
+6\left(\frac{26- 5x}{3}\right) = 20,
+\end{equation*}
+</div>
+<div class="para">which when solved for <span class="process-math">\(x\)</span> gives <span class="process-math">\(x = 4\)</span> and substituting this in for <span class="process-math">\(x\)</span> gives <span class="process-math">\(y =
+2\text{.}\)</span>
+</div>
+</div>
+<div class="para" id="p-167">Instead, if we multiply the second equation by <span class="process-math">\(\nicefrac{1}{2}\text{,}\)</span> we get <span class="process-math">\(\nicefrac{1}{2}(2x+6y)
+=\nicefrac{1}{2}(20)\)</span> which is <span class="process-math">\(x+3y = 10\text{.}\)</span>  Subtract that from both sides of the first equation, \begin{alignat*} 5x+3y \amp= \amp\amp\phantom{-}26\\ - (x+3y) \amp\phantom{=} \amp\amp-10\\ \hline 4x - 0y \amp= \amp\amp16 \end{alignat*} Notice this completely eliminates the <span class="process-math">\(y\)</span>-variable and we have <span class="process-math">\(x = 4\)</span> as the solution. Substituting this back in to each original equation for <span class="process-math">\(x\)</span> we find <span class="process-math">\(y = 2\text{.}\)</span>  Alternatively we could have multiplied the second equation by <span class="process-math">\(\nicefrac{5}{2}\)</span> and used that to eliminate <span class="process-math">\(y\)</span> and solve for <span class="process-math">\(y\text{.}\)</span>
+</div>
+<div class="para logical" id="p-168">
+<div class="para">We can introduce a matrix-vector equation</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{pmatrix}
+5\amp 3\\
+2\amp 6
+\end{pmatrix} \cdot
+\begin{pmatrix}
+x\\y
+\end{pmatrix} =
+\begin{pmatrix}
+26\\20
+\end{pmatrix}.
+\end{equation*}
+</div>
+<div class="para">We take the numbers in the first row, rotate 90 degrees, align with the <span class="process-math">\(x\)</span> and <span class="process-math">\(y\text{,}\)</span> multiply and add, in order to get back the entry of the first row on the right-hand side, here <span class="process-math">\(26\text{.}\)</span>  Above when dealing with \emph{scalar} variables like <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> whose coefficients were scalars, we could eliminate multiplication with division.  For example, to solve <span class="process-math">\(4x = 16\)</span> we divide each size by <span class="process-math">\(4\)</span> or multiply each side by the multiplicative inverse of <span class="process-math">\(4\text{,}\)</span> it’s reciprocal <span class="process-math">\(\nicefrac{1}{4}\text{.}\)</span>
+</div>
+</div>
+<div class="para logical" id="p-169">
+<div class="para">We can write our matrix-vector equation as</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A\vec{x} = \vec{b},
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(A\)</span> is the matrix above, <span class="process-math">\(\vec{x}\)</span> is the vector with entries <span class="process-math">\(x\)</span> and <span class="process-math">\(y\text{,}\)</span> and <span class="process-math">\(\vec{b}\)</span> is the vector with entries <span class="process-math">\(26\)</span> and <span class="process-math">\(20\text{.}\)</span>
+</div>
+</div>
+<div class="para logical" id="p-170">
+<div class="para">With matrices, we can’t ``divide’’ but we can multiply my multiplicative inverses. So we need to define the inverse of a matrix, this is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{pmatrix}
+a\ampb\\c\ampd\end{pmatrix}^{-1} =
+\frac{1}{ad-bc}\begin{pmatrix}
+d\amp-b\\-b\ampa\end{pmatrix}.
+\end{equation*}
+</div>
+<div class="para">The quantity in the denominator in front of the matrix is called the \emph{determinant}, <span class="process-math">\(\operatorname{det}(A) = ad-bc\text{.}\)</span>  Under conditions where <span class="process-math">\(\operatorname{det}(A)=0\text{,}\)</span> we are unable to invert the matrix (a big part of linear algebra is identifying conditions under which we can and cannot invert matrices).</div>
+</div>
+<div class="para logical" id="p-171">
+<div class="para">Back to our example</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A =
+\begin{pmatrix}
+5\amp3\\2\amp6\end{pmatrix},
+\end{equation*}
+</div>
+<div class="para">so first <span class="process-math">\(\operatorname{det}(A) = (5)(6) - (3)(2) = 24\text{.}\)</span>  Now,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A^{-1} =
+\nicefrac{1}{24}\begin{pmatrix}
+6\amp-3\\-2\amp5\end{pmatrix} =
+\begin{pmatrix}
+\nicefrac{6}{24}\amp\nicefrac{-3}{24}\\\nicefrac{-2}{24}\
+amp\nicefrac{5}{24}\end{pmatrix},
+\end{equation*}
+</div>
+<div class="para">The coefficients could be simplified, but, why bother? To solve our original problem, we multiply both sides by the inverse of <span class="process-math">\(A\text{,}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{pmatrix}
+\nicefrac{6}{24}\amp\nicefrac{-3}{24}\\\nicefrac{-2}{
+24}\amp\nicefrac{5}{24}\end{pmatrix}\cdot
+\begin{pmatrix}
+5\amp3\\2\amp6\end{pmatrix} \cdot
+\begin{pmatrix}
+x\\y\end{pmatrix} =
+\begin{pmatrix}
+\nicefrac{6}{24}\amp\nicefrac{-3}{24}\\\nicefrac{-2}{24}\
+amp\nicefrac{5}{24}\end{pmatrix}\begin{pmatrix}
+26\\20\end{pmatrix}.
+\end{equation*}
+</div>
+<div class="para">The left, for reasons we can confirm later, is simply <span class="process-math">\(\begin{pmatrix}
+x\\y\end{pmatrix}\text{,}\)</span> while on the right we have to calculate the result of matrix-vector multiplication,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{pmatrix}
+\nicefrac{6}{24}\amp\nicefrac{-3}{24}\\
+\nicefrac{-2}{24} \amp \nicefrac{5}{24}
+\end{pmatrix}
+\begin{pmatrix}
+26\\20
+\end{pmatrix} =
+\begin{pmatrix}
+(\nicefrac{6}{24})(26) + (\nicefrac{-3}{24})(20)\\
+(\nicefrac{-2}{24})(26) + (\nicefrac{5}{24})(20)
+\end{pmatrix}
+=
+\begin{pmatrix}
+4\\2
+\end{pmatrix} 
+\end{equation*}
+</div>
+<div class="para">To confirm what happens on the left,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{pmatrix}
+\nicefrac{6}{24}\amp\nicefrac{-3}{24}\\
+\nicefrac{-2}{24}\amp\nicefrac{5}{24}
+\end{pmatrix}\cdot
+\begin{pmatrix}
+5\amp3\\
+2\amp6
+\end{pmatrix} \amp =
+\begin{pmatrix}
+(\nicefrac{6}{24})(5) + (\nicefrac{-3}{24})(2)
+\amp (\nicefrac{6}{24})(3) + (\nicefrac{-3}{24})(6)\\
+\nicefrac{-2}{24})(5) + (\nicefrac{5}{24})(2) 
+\amp (\nicefrac{-2}{24})(3) + (\nicefrac{5}{24})(6)
+\end{pmatrix} = 
+\begin{pmatrix}
+1 \amp 0 \\
+0 \amp 1
+\end{pmatrix} 
+\end{equation*}
+</div>
+</div>
+<div class="para logical" id="p-172">
+<div class="para">The result of <span class="process-math">\(A^{-1}A\)</span> is called an identity matrix, when this multiplied the vector, we get the following</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{pmatrix}
+1 \amp 0 \\0 \amp
+1\end{pmatrix}
+\begin{pmatrix}
+x \\y
+\end{pmatrix} = 
+\begin{pmatrix}
+(1)(x) \amp (0)(y) \\
+(0)(x) \amp (1)(y)
+\end{pmatrix} =
+\begin{pmatrix}
+x\\y
+\end{pmatrix}.
+\end{equation*}
+</div>
+<div class="para">So, multiplying by <span class="process-math">\(A^{-1}\)</span> on each side of the original equation gives on the left, the vector of unknowns and on the right, their values, or</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{pmatrix}
+x\\y
+\end{pmatrix} =
+\begin{pmatrix}
+4\\2
+\end{pmatrix}.
+\end{equation*}
+</div>
+</div>
+<div class="para logical" id="p-173">
+<div class="para">There are other important matrix properties that have and will show up, primarily the eigensystem - the paired collection of eigenvalues and eigenvectors.  To find eigenvectors we are looking for the following</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A\vec{x} = \lambda
+\vec{x},
+\end{equation*}
+</div>
+<div class="para">in other words, we are looking for a special number <span class="process-math">\(\lambda\)</span> that has the same effect on the entries of the vector as does the more complicated matrix-vector multiplication.  We need to find a number <span class="process-math">\(\lambda\)</span> such that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A\vec{x} - \lambda\vec{x} =
+0.
+\end{equation*}
+</div>
+<div class="para">But this is tricky since <span class="process-math">\(A\)</span> is a matrix, <span class="process-math">\(\lambda\)</span> is a number, and <span class="process-math">\(\vec{x}\)</span> is a vector.  To make the matrix and number more compatible we can write this as <span class="process-math">\((A - \lambda I)\vec{x} = 0\text{,}\)</span> where <span class="process-math">\(I\)</span> is the <span class="process-math">\(2\times2\)</span> \emph{identity matrix}  introduced not long ago, with <span class="process-math">\(1\)</span>’s on the main diagonal only and zeros elsewhere.  It would be easy to solve the equation if the entries in <span class="process-math">\(\vec{x}\)</span> were all zeros, but that isn’t interesting.  Instead we will solve <span class="process-math">\(\operatorname{det}(A-\lambda I) =0\)</span> for <span class="process-math">\(\lambda\text{.}\)</span> Returning to the general case (with entries <span class="process-math">\(a, b, \dots\)</span>), we have to find the determinant of</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A-\lambda I = \begin{pmatrix}
+a -
+\lambda \amp b\\c \amp d - \lambda \end{pmatrix},
+\end{equation*}
+</div>
+<div class="para">then set it to zero and solve for the necessary <span class="process-math">\(\lambda\)</span> values.</div>
+</div>
+<div class="para logical" id="p-174">
+<div class="para">The determinant is <span class="process-math">\(\operatorname{det}(A-\lambda I) =
+(a-\lambda)(d-\lambda)-bc\text{.}\)</span>  Conveniently this can be written directly in terms of two important matrix properties, the trace and the determinant.  We’ve already introduced the determinant, <span class="process-math">\(\Delta =
+\operatorname{det}(A)\text{,}\)</span> and the trace, <span class="process-math">\(\tau =
+\operatorname{tr}(A)\text{,}\)</span> is just the sum of the entries along the main diagonal.</div>
+<div class="displaymath process-math" id="md-3">
+\begin{align*}
+\end{align*}
+</div>
+<div class="para">This means our \emph{eigenvalue} problem just requires us to solve the quadratic formula for a quadratic equations whose coefficients can be quickly collected from the entries of the original matrix.</div>
+</div>
+<div class="para logical" id="p-175">
+<div class="para">For a concrete example, use the matrix <span class="process-math">\(A\text{,}\)</span> we’ve introduced earlier. For this, <span class="process-math">\(\operatorname{tr}(A) = 11\)</span> and <span class="process-math">\(\operatorname{det}(A) = 24\text{.}\)</span> The equation for the eigenvalues is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+0 = \lambda^2 - 11\lambda +
+24.
+\end{equation*}
+</div>
+<div class="para">We could use the quadratic formula, and more generally we should, but for a quick start, this one factors to</div>
+<div class="displaymath process-math">
+\begin{equation*}
+0 = (\lambda -
+3)(\lambda-8).
+\end{equation*}
+</div>
+<div class="para">The eigenvalues are <span class="process-math">\(\lambda = 3, 8\text{.}\)</span>  To remind you,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\lambda_{\pm} = \frac{-(-11)\pm\sqrt{(-11)^2 -
+4(1)(24)}}{2(1)},
+\end{equation*}
+</div>
+<div class="para">it’s important to watch out for the sign of the \emph{discriminant} <span class="process-math">\((-11)^2 - 4(1)(24)\text{,}\)</span> which, if negative, would cause complex-valued solutions.</div>
+</div>
+<div class="para logical" id="p-176">
+<div class="para">Now that we have eigenvalues, we have to find the paired eigenvector for each, this sort of takes us back to the original ideas from this document, we need to find the vector for which <span class="process-math">\((A-\lambda I)\vec{u} = 0\text{.}\)</span>  Or, for <span class="process-math">\(\lambda_1 = 8\text{,}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{pmatrix}
+5-8 \amp 3 \\ 2 \amp 6 -
+8\end{pmatrix}\begin{pmatrix}
+u_1\\u_2\end{pmatrix} =
+\begin{pmatrix}
+0\\0\end{pmatrix},
+\end{equation*}
+</div>
+<div class="para">in the matrix of coefficients, we subtract the same eigenvalue from each main diagonal entry. This is the linear system of equations</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{cases}-3u_1 + 3u_2 \amp=0 \\2u_1 -
+2u_2 \amp =0\end{cases}.
+\end{equation*}
+</div>
+<div class="para">This is a rather strange one, you might notice that this is solved by <span class="process-math">\(u_2 = u_1\)</span> - we can choose the values <span class="process-math">\(u_1 = u_2 = 1\text{.}\)</span>  A somewhat peculiar feature of eigenvectors, is that we are often only concerned with the direction. The eigenvector is an arrow that points from <span class="process-math">\((0, 0)\)</span> to, in this case, <span class="process-math">\((1, 1)\text{.}\)</span>
+</div>
+</div>
+<div class="para logical" id="p-177">
+<div class="para">Next, repeat for <span class="process-math">\(\lambda_2 = 3\text{,}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{pmatrix}
+5-3 \amp 3 \\ 2 \amp 6 -
+3\end{pmatrix}\begin{pmatrix}
+u_1\\u_2\end{pmatrix} =
+\begin{pmatrix}
+0\\0\end{pmatrix},
+\end{equation*}
+</div>
+<div class="para">in the matrix of coefficients, we subtract the same eigenvalue from each main diagonal entry. This is the linear system of equations</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{cases}2u_1 + 3u_2 \amp=0 \\2u_1 +
+3u_2 \amp =0\end{cases}.
+\end{equation*}
+</div>
+<div class="para">These equations are repeated and give rise to <span class="process-math">\(u_2 = (-\nicefrac{2}{3})u_1\text{.}\)</span>  If we pick <span class="process-math">\(u_1 = 1\)</span> for convenience, we have <span class="process-math">\(u_2 = -\nicefrac{2}{3}\text{.}\)</span>  This eigenvector is an arrow that points from <span class="process-math">\((0, 0)\)</span> to <span class="process-math">\((1,
+-\nicefrac{2}{3})\text{.}\)</span>
+</div>
+</div>
+<div class="para logical" id="p-178">
+<div class="para">What should be the case for each is that <span class="process-math">\(A\vec{u} = \lambda \vec{u}\text{.}\)</span> Verify that this is the case for the second pairing, using this example of the first to get started. First,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{pmatrix}
+5 \amp 3 \\ 2 \amp
+6\end{pmatrix}
+\begin{pmatrix}
+1\\1
+\end{pmatrix} =
+\begin{pmatrix}
+8\\8
+\end{pmatrix},
+\end{equation*}
+</div>
+<div class="para">using standard matrix-vector multiplication.  Also,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+8\begin{pmatrix}
+1\\1
+\end{pmatrix} =
+\begin{pmatrix}
+8\\8
+\end{pmatrix}.
+\end{equation*}
+</div>
+<div class="para">Notice that multiplying the vector by the matrix and by the scalar eigenvalue give rise to the same result.  Effectively, we have ``replaced’’ the more difficult process of matrix-vector multiplication by the simpler process of scalar-vector multiplication.</div>
+</div>
+<div class="para" id="p-179">Sometimes we need to \emph{normalize} the eigenvector or control its length, we aren’t concerned with that here. Additionally, for the first we could have just as easily chosen <span class="process-math">\(u_1 =
+u_2 = -1\)</span> which would be a vector pointing in the opposite direction of what we’d first considered.  Surprisingly, for most of our needs this doesn’t really matter - what matters most is the angle the vector points towards (in this case still along the line <span class="process-math">\(y = x\)</span>).</div>
+<div class="para logical" id="p-180">
+<div class="para">To go back to how we started using matrices, Jacobian matrices of nonlinear systems and systems of linear differential equations, consider  the coupled linear system of differential equations,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{pmatrix}
+\nicefrac{dx}{dt}\\\nicefrac{dy}{dt}\end{pmatrix} =
+\begin{pmatrix}
+5 \amp 3 \\ 2 \amp
+6\end{pmatrix}\begin{pmatrix}
+x\\y\end{pmatrix}.
+\end{equation*}
+</div>
+<div class="para">As described elsewhere, we assume that an exponential of the form</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{pmatrix}
+x(t)\\y(t)
+\end{pmatrix} =
+e^{rt}
+\begin{pmatrix}
+u_1\\u_2
+\end{pmatrix},
+\end{equation*}
+</div>
+<div class="para">solves the system.  It will turn out that <span class="process-math">\(r\)</span> is the eigenvalue and the vector is its corresponding eigenvector.</div>
+</div>
+<div class="para logical" id="p-181">
+<div class="para">To solve the differential equations, we do need initial conditions of the form</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{pmatrix}
+x(0)\\y(0)\end{pmatrix} =
+\begin{pmatrix}
+x_0\\y_0\end{pmatrix}.
+\end{equation*}
+</div>
+<div class="para">Since we have yet to use these numbers, let’s pick <span class="process-math">\(x_0 = 4\)</span> and <span class="process-math">\(y_0 = 7\text{.}\)</span>  To get started let’s express this initial condition as a \emph{linear combination} of eigenvectors.  This means we want to write</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{pmatrix}
+4\\7\end{pmatrix} =
+c_1\begin{pmatrix}
+1\\1\end{pmatrix} +
+c_2\begin{pmatrix}
+1\\-\nicefrac{2}{3}\end{pmatrix},
+\end{equation*}
+</div>
+<div class="para">for constants <span class="process-math">\(c_1\)</span> and <span class="process-math">\(c_2\text{.}\)</span>  Oddly this is a \emph{new} linear system, but this time for the coefficients, it is equivalent to</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{cases}1\cdot c_1 + 1\cdot c_2 = 4\\1\cdot c_1
+-\nicefrac{2}{3}c_2 = 7\end{cases}.
+\end{equation*}
+</div>
+<div class="para">Interestingly, the same techniques for solving linear systems from earlier apply - solve and substitute, add or subtract multiples of equations, or even rewrite this as a matrix-vector equation and invert.  Skipping those steps for now, <span class="process-math">\(c_1 = \nicefrac{29}{5}\)</span> and <span class="process-math">\(c_2 = -\nicefrac{9}{5}\text{.}\)</span>  This means that the solution corresponding to this initial condition is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{pmatrix}
+x(t)\\y(t)
+\end{pmatrix} =
+\nicefrac{29}{5}e^{8t}
+\begin{pmatrix}
+1\\1\end{pmatrix} -
+\nicefrac{9}{5}e^{3t}
+\begin{pmatrix}
+1\\-\nicefrac{2}{3}
+\end{pmatrix}\text{.}
+\end{equation*}
+</div>
+</div>
+<div class="para logical" id="p-182">
+<div class="para">Here is one solution to the linear system of differential equations above.  It may not quite look so, but this is a slight curve traced out by coordinates of the form</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(x(t), y(t)) =
+(\nicefrac{29}{5}e^{8t} - \nicefrac{9}{5}e^{5t}, \nicefrac{29}{5}e^{8t}
+-\nicefrac{9}{5}(-\nicefrac{2}{3})e^{3t})
+\end{equation*}
+</div>
+<div class="para">for <span class="process-math">\(t\geq 0\text{,}\)</span> starting from <span class="process-math">\((x(0), y(0)) = (4, 7)\text{.}\)</span>
+</div>
+</div>
+<figure class="figure figure-like" id="fig-lin-sys-sol"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/linear_sys.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.1.1<span class="period">.</span></span><span class="space"> </span>Solution to a linear system of differential equations.</figcaption></figure><div class="para logical" id="p-183">
+<div class="para">A couple interesting ideas, not shown yet, are that if initial conditions are multiples of the coordinates of a single eigenvalue, those are straight lines in the phase plane. Depending on which eigenvector is present, one of <span class="process-math">\(c_1\)</span> or <span class="process-math">\(c_2\)</span> will be zero.  For example, if <span class="process-math">\(x_0 = y_0 = 4\text{,}\)</span> then <span class="process-math">\(c_1 = 4\)</span> and <span class="process-math">\(c_2 = 0\text{.}\)</span> The solution will have no contribution from the second eigenpair and will instead  be</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{pmatrix}
+x(t)\\y(t)
+\end{pmatrix}
+= 4e^{8t}
+\begin{pmatrix}
+1\\1
+\end{pmatrix}.
+\end{equation*}
+</div>
+<div class="para">Alternatively,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(x(t), y(t)) = (4e^{8t}, 4e^{8t})
+\end{equation*}
+</div>
+<div class="para">for <span class="process-math">\(t\geq 0\text{,}\)</span> starting from <span class="process-math">\((x(0), y(0)) = (4, 4)\text{.}\)</span>
+</div>
+</div></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="linear-algebra.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+</div>
+</body>
+</html>

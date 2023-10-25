@@ -11,8 +11,89 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<div class="para">highly productive adult plants that generate lots of seedlings (large <span class="process-math">\(s\)</span>)</div>
-<span class="incontext"><a href="what-is-dtds.html#p-171" class="internal">in-context</a></span>
+<h3 class="heading"><span class="type">Paragraph</span></h3>
+<div class="para logical">
+<div class="para">Back to our example</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A =
+\begin{pmatrix}
+5\amp3\\2\amp6\end{pmatrix},
+\end{equation*}
+</div>
+<div class="para">so first <span class="process-math">\(\operatorname{det}(A) = (5)(6) - (3)(2) = 24\text{.}\)</span>  Now,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A^{-1} =
+\nicefrac{1}{24}\begin{pmatrix}
+6\amp-3\\-2\amp5\end{pmatrix} =
+\begin{pmatrix}
+\nicefrac{6}{24}\amp\nicefrac{-3}{24}\\\nicefrac{-2}{24}\
+amp\nicefrac{5}{24}\end{pmatrix},
+\end{equation*}
+</div>
+<div class="para">The coefficients could be simplified, but, why bother? To solve our original problem, we multiply both sides by the inverse of <span class="process-math">\(A\text{,}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{pmatrix}
+\nicefrac{6}{24}\amp\nicefrac{-3}{24}\\\nicefrac{-2}{
+24}\amp\nicefrac{5}{24}\end{pmatrix}\cdot
+\begin{pmatrix}
+5\amp3\\2\amp6\end{pmatrix} \cdot
+\begin{pmatrix}
+x\\y\end{pmatrix} =
+\begin{pmatrix}
+\nicefrac{6}{24}\amp\nicefrac{-3}{24}\\\nicefrac{-2}{24}\
+amp\nicefrac{5}{24}\end{pmatrix}\begin{pmatrix}
+26\\20\end{pmatrix}.
+\end{equation*}
+</div>
+<div class="para">The left, for reasons we can confirm later, is simply <span class="process-math">\(\begin{pmatrix}
+x\\y\end{pmatrix}\text{,}\)</span> while on the right we have to calculate the result of matrix-vector multiplication,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{pmatrix}
+\nicefrac{6}{24}\amp\nicefrac{-3}{24}\\
+\nicefrac{-2}{24} \amp \nicefrac{5}{24}
+\end{pmatrix}
+\begin{pmatrix}
+26\\20
+\end{pmatrix} =
+\begin{pmatrix}
+(\nicefrac{6}{24})(26) + (\nicefrac{-3}{24})(20)\\
+(\nicefrac{-2}{24})(26) + (\nicefrac{5}{24})(20)
+\end{pmatrix}
+=
+\begin{pmatrix}
+4\\2
+\end{pmatrix} 
+\end{equation*}
+</div>
+<div class="para">To confirm what happens on the left,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{pmatrix}
+\nicefrac{6}{24}\amp\nicefrac{-3}{24}\\
+\nicefrac{-2}{24}\amp\nicefrac{5}{24}
+\end{pmatrix}\cdot
+\begin{pmatrix}
+5\amp3\\
+2\amp6
+\end{pmatrix} \amp =
+\begin{pmatrix}
+(\nicefrac{6}{24})(5) + (\nicefrac{-3}{24})(2)
+\amp (\nicefrac{6}{24})(3) + (\nicefrac{-3}{24})(6)\\
+\nicefrac{-2}{24})(5) + (\nicefrac{5}{24})(2) 
+\amp (\nicefrac{-2}{24})(3) + (\nicefrac{5}{24})(6)
+\end{pmatrix} = 
+\begin{pmatrix}
+1 \amp 0 \\
+0 \amp 1
+\end{pmatrix} 
+\end{equation*}
+</div>
+</div>
+<span class="incontext"><a class="internal" href="sec-linear-algebra.html#p-171">in-context</a></span>
 </body>
 </html>

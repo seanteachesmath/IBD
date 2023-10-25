@@ -11,8 +11,32 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<div class="para">tough adult plants that are likely to survive</div>
-<span class="incontext"><a href="what-is-dtds.html#p-173" class="internal">in-context</a></span>
+<h3 class="heading"><span class="type">Paragraph</span></h3>
+<div class="para logical">
+<div class="para">There are other important matrix properties that have and will show up, primarily the eigensystem - the paired collection of eigenvalues and eigenvectors.  To find eigenvectors we are looking for the following</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A\vec{x} = \lambda
+\vec{x},
+\end{equation*}
+</div>
+<div class="para">in other words, we are looking for a special number <span class="process-math">\(\lambda\)</span> that has the same effect on the entries of the vector as does the more complicated matrix-vector multiplication.  We need to find a number <span class="process-math">\(\lambda\)</span> such that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A\vec{x} - \lambda\vec{x} =
+0.
+\end{equation*}
+</div>
+<div class="para">But this is tricky since <span class="process-math">\(A\)</span> is a matrix, <span class="process-math">\(\lambda\)</span> is a number, and <span class="process-math">\(\vec{x}\)</span> is a vector.  To make the matrix and number more compatible we can write this as <span class="process-math">\((A - \lambda I)\vec{x} = 0\text{,}\)</span> where <span class="process-math">\(I\)</span> is the <span class="process-math">\(2\times2\)</span> \emph{identity matrix}  introduced not long ago, with <span class="process-math">\(1\)</span>’s on the main diagonal only and zeros elsewhere.  It would be easy to solve the equation if the entries in <span class="process-math">\(\vec{x}\)</span> were all zeros, but that isn’t interesting.  Instead we will solve <span class="process-math">\(\operatorname{det}(A-\lambda I) =0\)</span> for <span class="process-math">\(\lambda\text{.}\)</span> Returning to the general case (with entries <span class="process-math">\(a, b, \dots\)</span>), we have to find the determinant of</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A-\lambda I = \begin{pmatrix}
+a -
+\lambda \amp b\\c \amp d - \lambda \end{pmatrix},
+\end{equation*}
+</div>
+<div class="para">then set it to zero and solve for the necessary <span class="process-math">\(\lambda\)</span> values.</div>
+</div>
+<span class="incontext"><a class="internal" href="sec-linear-algebra.html#p-173">in-context</a></span>
 </body>
 </html>
