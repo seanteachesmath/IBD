@@ -439,7 +439,12 @@ starting from <m>(x(0), y(0)) = (4, 7)</m>.</p>
 </figure>
 
 
-
+<example xml:id = "ex-norm-vector">
+<introduction><p>
+Normalize the eigenvector and repeat the calculation of constants calculation of coefficients <m>c_1</m> and <m>c_2</m> from above.w
+</p>
+</introduction>
+</example>
 
 <p>A couple interesting ideas, not shown
 yet, are that if initial conditions are multiples of the coordinates of
