@@ -11,8 +11,31 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<div class="para">Thinking about equilibria is key to understanding dynamics of dandelions. Equilibria (or steady-states, or fixed-points) are values at which the solution is unchanging. With our notation this means <span class="process-math">\(N_{t+1}=N_t=N^*\text{.}\)</span> By inspection of <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "fig-dandelion" missing or not unique]</code>, the only equilibrium point is <span class="process-math">\(N^*=0\text{,}\)</span> this is the only place that either of our labeled lines intersect the diagonal.</div>
-<span class="incontext"><a href="what-is-dtds.html#p-175" class="internal">in-context</a></span>
+<h3 class="heading"><span class="type">Paragraph</span></h3>
+<div class="para logical">
+<div class="para">For a concrete example, use the matrix <span class="process-math">\(A\text{,}\)</span> we’ve introduced earlier. For this, <span class="process-math">\(\operatorname{tr}(A) = 11\)</span> and <span class="process-math">\(\operatorname{det}(A) = 24\text{.}\)</span> The equation for the eigenvalues is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+0 = \lambda^2 - 11\lambda +
+24.
+\end{equation*}
+</div>
+<div class="para">We could use the quadratic formula, and more generally we should, but for a quick start, this one factors to</div>
+<div class="displaymath process-math">
+\begin{equation*}
+0 = (\lambda -
+3)(\lambda-8).
+\end{equation*}
+</div>
+<div class="para">The eigenvalues are <span class="process-math">\(\lambda = 3, 8\text{.}\)</span>  To remind you,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\lambda_{\pm} = \frac{-(-11)\pm\sqrt{(-11)^2 -
+4(1)(24)}}{2(1)},
+\end{equation*}
+</div>
+<div class="para">it’s important to watch out for the sign of the \emph{discriminant} <span class="process-math">\((-11)^2 - 4(1)(24)\text{,}\)</span> which, if negative, would cause complex-valued solutions.</div>
+</div>
+<span class="incontext"><a class="internal" href="sec-linear-algebra.html#p-175">in-context</a></span>
 </body>
 </html>

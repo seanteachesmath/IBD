@@ -11,23 +11,33 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h5 class="heading"><span class="type">Paragraph</span></h5>
+<h3 class="heading"><span class="type">Paragraph</span></h3>
 <div class="para logical">
-<div class="para">And finally,</div>
+<div class="para">To go back to how we started using matrices, Jacobian matrices of nonlinear systems and systems of linear differential equations, consider  the coupled linear system of differential equations,</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\begin{aligned}
-x_{t+1} &amp;=N_{t+1}-N^* &amp;
-\qquad\text{(from the definition)}\\ 
-x_{t+1} &amp;=\left(rN_t+F\right)-N^* &amp; \qquad\text{(from the model)}\\
-x_{t+1} &amp;=\left(r\left(N^*+x_t\right)+F\right)-N ^* &amp; \qquad\text{(from the definition)}\\
-x_{t+1} &amp;=\left(rN^*+F\right)+rx_t-N^* &amp; \qquad\text{(shuffle)}\\
-x_{t+1} &amp;=\left(N^*\right)+rx_t-N^* &amp; \qquad\text{(equilibrium condition)}\\ 
-x_{t+1} &amp;=rx_t &amp; \qquad\text{(evolution of }x_t\text{)}\\
-\end{aligned}
+\begin{pmatrix}
+\nicefrac{dx}{dt}\\\nicefrac{dy}{dt}\end{pmatrix} =
+\begin{pmatrix}
+5 \amp 3 \\ 2 \amp
+6\end{pmatrix}\begin{pmatrix}
+x\\y\end{pmatrix}.
 \end{equation*}
 </div>
+<div class="para">As described elsewhere, we assume that an exponential of the form</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{pmatrix}
+x(t)\\y(t)
+\end{pmatrix} =
+e^{rt}
+\begin{pmatrix}
+u_1\\u_2
+\end{pmatrix},
+\end{equation*}
 </div>
-<span class="incontext"><a href="what-is-dtds.html#p-180" class="internal">in-context</a></span>
+<div class="para">solves the system.  It will turn out that <span class="process-math">\(r\)</span> is the eigenvalue and the vector is its corresponding eigenvector.</div>
+</div>
+<span class="incontext"><a class="internal" href="sec-linear-algebra.html#p-180">in-context</a></span>
 </body>
 </html>

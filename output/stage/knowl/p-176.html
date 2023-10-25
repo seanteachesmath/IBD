@@ -11,15 +11,30 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h5 class="heading"><span class="type">Paragraph</span></h5>
+<h3 class="heading"><span class="type">Paragraph</span></h3>
 <div class="para logical">
-<div class="para">It might be the case, however, that our neighbors secretly transplant dandelions in our yards at night. To mimic this unkind reality, assume that <span class="process-math">\(F\geq0\)</span> flowers are arriving each week. Our new model is,</div>
+<div class="para">Now that we have eigenvalues, we have to find the paired eigenvector for each, this sort of takes us back to the original ideas from this document, we need to find the vector for which <span class="process-math">\((A-\lambda I)\vec{u} = 0\text{.}\)</span>  Or, for <span class="process-math">\(\lambda_1 = 8\text{,}\)</span>
+</div>
 <div class="displaymath process-math">
 \begin{equation*}
-N_{t+1}=r N_t+F.
+\begin{pmatrix}
+5-8 \amp 3 \\ 2 \amp 6 -
+8\end{pmatrix}\begin{pmatrix}
+u_1\\u_2\end{pmatrix} =
+\begin{pmatrix}
+0\\0\end{pmatrix},
 \end{equation*}
 </div>
+<div class="para">in the matrix of coefficients, we subtract the same eigenvalue from each main diagonal entry. This is the linear system of equations</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{cases}-3u_1 + 3u_2 \amp=0 \\2u_1 -
+2u_2 \amp =0\end{cases}.
+\end{equation*}
 </div>
-<span class="incontext"><a href="what-is-dtds.html#p-176" class="internal">in-context</a></span>
+<div class="para">This is a rather strange one, you might notice that this is solved by <span class="process-math">\(u_2 = u_1\)</span> - we can choose the values <span class="process-math">\(u_1 = u_2 = 1\text{.}\)</span>  A somewhat peculiar feature of eigenvectors, is that we are often only concerned with the direction. The eigenvector is an arrow that points from <span class="process-math">\((0, 0)\)</span> to, in this case, <span class="process-math">\((1, 1)\text{.}\)</span>
+</div>
+</div>
+<span class="incontext"><a class="internal" href="sec-linear-algebra.html#p-176">in-context</a></span>
 </body>
 </html>

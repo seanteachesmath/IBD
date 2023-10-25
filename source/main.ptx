@@ -4,7 +4,7 @@
 
 <latex-preamble>
     <package>cancel</package>
-    <package>cancel</package>
+    <package>genfrac</package>
 </latex-preamble>
 
 <latex-image-preamble>
@@ -108,6 +108,7 @@ assigned, first <latex/>, then <c>R</c>, then <c>sage</c>.
         
         <xi:include href="./fall2023/dtds.ptx" />
         
+        <xi:include href="./fall2023/app_linear.ptx" />
         
 <!-->        <xi:include href="./fall2023/system-de.ptx" />-->
 

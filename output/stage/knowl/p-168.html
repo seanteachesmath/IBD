@@ -11,19 +11,26 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h5 class="heading"><span class="type">Paragraph</span></h5>
+<h3 class="heading"><span class="type">Paragraph</span></h3>
 <div class="para logical">
-<div class="para">We can re-write our model</div>
+<div class="para">We can introduce a matrix-vector equation</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\begin{aligned} 
-N_{t+1} &amp;= rN_t\\
-&amp;=s\sigma N_t+a N_t\\ 
-N_{t+1} &amp;= (s\sigma+a)N_t
-\end{aligned}
+\begin{pmatrix}
+5\amp 3\\
+2\amp 6
+\end{pmatrix} \cdot
+\begin{pmatrix}
+x\\y
+\end{pmatrix} =
+\begin{pmatrix}
+26\\20
+\end{pmatrix}.
 \end{equation*}
 </div>
+<div class="para">We take the numbers in the first row, rotate 90 degrees, align with the <span class="process-math">\(x\)</span> and <span class="process-math">\(y\text{,}\)</span> multiply and add, in order to get back the entry of the first row on the right-hand side, here <span class="process-math">\(26\text{.}\)</span>  Above when dealing with \emph{scalar} variables like <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> whose coefficients were scalars, we could eliminate multiplication with division.  For example, to solve <span class="process-math">\(4x = 16\)</span> we divide each size by <span class="process-math">\(4\)</span> or multiply each side by the multiplicative inverse of <span class="process-math">\(4\text{,}\)</span> it’s reciprocal <span class="process-math">\(\nicefrac{1}{4}\text{.}\)</span>
 </div>
-<span class="incontext"><a href="what-is-dtds.html#p-168" class="internal">in-context</a></span>
+</div>
+<span class="incontext"><a class="internal" href="sec-linear-algebra.html#p-168">in-context</a></span>
 </body>
 </html>

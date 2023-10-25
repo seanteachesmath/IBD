@@ -11,24 +11,51 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h5 class="heading"><span class="type">Paragraph</span></h5>
+<h3 class="heading"><span class="type">Paragraph</span></h3>
 <div class="para logical">
-<div class="para">So, it looks like <span class="process-math">\(x_t\)</span> evolves according to</div>
+<div class="para">To solve the differential equations, we do need initial conditions of the form</div>
 <div class="displaymath process-math">
 \begin{equation*}
-x_t=r^tx_0.
+\begin{pmatrix}
+x(0)\\y(0)\end{pmatrix} =
+\begin{pmatrix}
+x_0\\y_0\end{pmatrix}.
 \end{equation*}
 </div>
-<div class="para">Which gives,</div>
+<div class="para">Since we have yet to use these numbers, let’s pick <span class="process-math">\(x_0 = 4\)</span> and <span class="process-math">\(y_0 = 7\text{.}\)</span>  To get started let’s express this initial condition as a \emph{linear combination} of eigenvectors.  This means we want to write</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\begin{aligned} N_t&amp;=N^*+x_t\\
-&amp;=N^*+r^tx_0\\ &amp;=N^*+r^t\left(N_0-N^*\right)\\
-N_t&amp;=(1-r^t)N^*+r^tN_0.\end{aligned}
+\begin{pmatrix}
+4\\7\end{pmatrix} =
+c_1\begin{pmatrix}
+1\\1\end{pmatrix} +
+c_2\begin{pmatrix}
+1\\-\nicefrac{2}{3}\end{pmatrix},
 \end{equation*}
 </div>
-<div class="para">Thus, the solution is a weighted average of <span class="process-math">\(N^*\)</span> and <span class="process-math">\(N_0\text{,}\)</span> and depends on the weight <span class="process-math">\(r\text{.}\)</span> For <span class="process-math">\(r&lt;1\)</span> weight moves from <span class="process-math">\(N_0\)</span> to <span class="process-math">\(N^*\)</span> as <span class="process-math">\(t\)</span> increases (the abundance of the initial flowers is reduced). Since we have a formula for <span class="process-math">\(N^*\text{,}\)</span> we can also plug it into the final equation above ...formula... We can see what ‘generations’ form our population at any given week using the last of the above formulas. Of course, we could have started here by applying our model recursively. But, this approach gives some nice information about our solution in terms of equilibria (<span class="process-math">\(N^*\)</span>), initial values (<span class="process-math">\(N_0\)</span>), and perturbations (<span class="process-math">\(x_t\)</span>).</div>
+<div class="para">for constants <span class="process-math">\(c_1\)</span> and <span class="process-math">\(c_2\text{.}\)</span>  Oddly this is a \emph{new} linear system, but this time for the coefficients, it is equivalent to</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{cases}1\cdot c_1 + 1\cdot c_2 = 4\\1\cdot c_1
+-\nicefrac{2}{3}c_2 = 7\end{cases}.
+\end{equation*}
 </div>
-<span class="incontext"><a href="what-is-dtds.html#p-181" class="internal">in-context</a></span>
+<div class="para">Interestingly, the same techniques for solving linear systems from earlier apply - solve and substitute, add or subtract multiples of equations, or even rewrite this as a matrix-vector equation and invert.  Skipping those steps for now, <span class="process-math">\(c_1 = \nicefrac{29}{5}\)</span> and <span class="process-math">\(c_2 = -\nicefrac{9}{5}\text{.}\)</span>  This means that the solution corresponding to this initial condition is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{pmatrix}
+x(t)\\y(t)
+\end{pmatrix} =
+\nicefrac{29}{5}e^{8t}
+\begin{pmatrix}
+1\\1\end{pmatrix} -
+\nicefrac{9}{5}e^{3t}
+\begin{pmatrix}
+1\\-\nicefrac{2}{3}
+\end{pmatrix}\text{.}
+\end{equation*}
+</div>
+</div>
+<span class="incontext"><a class="internal" href="sec-linear-algebra.html#p-181">in-context</a></span>
 </body>
 </html>

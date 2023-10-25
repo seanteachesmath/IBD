@@ -1,0 +1,435 @@
+<chapter xml:id="linear-algebra"> <title>Linear algebra essentials</title>
+
+<section xml:id="sec-linear-algebra"> <title>What is linear algebra?</title> 
+
+<introduction>
+<p>Consider the system of two
+linear equations 
+<me>\begin{cases} 5x + 3y = 26\\ 2x+6y=20
+\end{cases},</me> where <m>x</m> and <m>y</m> represent the cost per
+item of two distinct items purchased by two customers and <m>26</m> and
+<m>20</m> their total costs, respectively. The coefficients are the
+numbers of each item purchased by each customer.  The goal is to use
+information like this to determine the currently unknown to us costs for
+each item.  A helpful visual is to solve for both equations as linear
+functions of <m>y</m> and identify where the graphs of the lines
+intersect.</p>
+</introduction>
+
+
+<p>Without linear algebra we can solve and substitute until we've identified
+all variables, or manipulate entire equations simultaneously.  Solving
+the first equation for <m>x</m>, we have 
+<me>y = \frac{26- 5x}{3}</me>
+which can be substituted into the second equation to give 
+<me>2x +
+6\left(\frac{26- 5x}{3}\right) = 20,</me> which when solved for <m>x</m>
+gives <m>x = 4</m> and substituting this in for <m>x</m> gives <m>y =
+2</m>.</p>
+
+<p>Instead, if we multiply the second equation by
+<m>\nicefrac{1}{2}</m>, we get <m>\nicefrac{1}{2}(2x+6y)
+=\nicefrac{1}{2}(20)</m> which is <m>x+3y = 10</m>.  Subtract that from
+both sides of the first equation, \begin{alignat*} 5x+3y \amp=
+\amp\amp\phantom{-}26\\ - (x+3y) \amp\phantom{=} \amp\amp-10\\ \hline 4x
+- 0y \amp= \amp\amp16 \end{alignat*} Notice this completely eliminates
+the <m>y</m>-variable and we have <m>x = 4</m> as the solution. 
+Substituting this back in to each original equation for <m>x</m> we find
+<m>y = 2</m>.  Alternatively we could have multiplied the second
+equation by <m>\nicefrac{5}{2}</m> and used that to eliminate <m>y</m>
+and solve for <m>y</m>.</p>
+
+<p>We can introduce a matrix-vector equation
+
+<me>\begin{pmatrix}
+5\amp 3\\
+2\amp 6
+\end{pmatrix} \cdot
+\begin{pmatrix}
+x\\y
+\end{pmatrix} =
+\begin{pmatrix}
+26\\20
+\end{pmatrix}.</me> We take the numbers in the
+first row, rotate 90 degrees, align with the <m>x</m> and <m>y</m>,
+multiply and add, in order to get back the entry of the first row on the
+right-hand side, here <m>26</m>.  Above when dealing with \emph{scalar}
+variables like <m>x</m> and <m>y</m> whose coefficients were scalars, we
+could eliminate multiplication with division.  For example, to solve
+<m>4x = 16</m> we divide each size by <m>4</m> or multiply each side by
+the multiplicative inverse of <m>4</m>, it's reciprocal
+<m>\nicefrac{1}{4}</m>. </p>
+
+
+<p>We can write our matrix-vector equation as
+<me>A\vec{x} = \vec{b},</me> where <m>A</m> is the matrix above,
+<m>\vec{x}</m> is the vector with entries <m>x</m> and <m>y</m>, and
+<m>\vec{b}</m> is the vector with entries <m>26</m> and <m>20</m>. 
+</p>
+
+<p>With matrices, we can't ``divide'' but we can multiply my
+multiplicative inverses. So we need to define the inverse of a matrix,
+this is 
+<me>\begin{pmatrix}
+a\ampb\\c\ampd\end{pmatrix}^{-1} =
+\frac{1}{ad-bc}\begin{pmatrix}
+d\amp-b\\-b\ampa\end{pmatrix}.</me> The
+quantity in the denominator in front of the matrix is called the
+\emph{determinant}, <m>\operatorname{det}(A) = ad-bc</m>.  Under
+conditions where <m>\operatorname{det}(A)=0</m>, we are unable to invert
+the matrix (a big part of linear algebra is identifying conditions under
+which we can and cannot invert matrices).</p>
+
+
+<p>Back to our example 
+<me>A =
+\begin{pmatrix}
+5\amp3\\2\amp6\end{pmatrix},</me> so first
+<m>\operatorname{det}(A) = (5)(6) - (3)(2) = 24</m>.  Now, 
+<me>A^{-1} =
+\nicefrac{1}{24}\begin{pmatrix}
+6\amp-3\\-2\amp5\end{pmatrix} =
+\begin{pmatrix}
+\nicefrac{6}{24}\amp\nicefrac{-3}{24}\\\nicefrac{-2}{24}\
+amp\nicefrac{5}{24}\end{pmatrix},</me> The coefficients could be
+simplified, but, why bother? To solve our original problem, we multiply
+both sides by the inverse of <m>A</m>,
+
+<me>\begin{pmatrix}
+\nicefrac{6}{24}\amp\nicefrac{-3}{24}\\\nicefrac{-2}{
+24}\amp\nicefrac{5}{24}\end{pmatrix}\cdot
+\begin{pmatrix}
+5\amp3\\2\amp6\end{pmatrix} \cdot
+\begin{pmatrix}
+x\\y\end{pmatrix} =
+\begin{pmatrix}
+\nicefrac{6}{24}\amp\nicefrac{-3}{24}\\\nicefrac{-2}{24}\
+amp\nicefrac{5}{24}\end{pmatrix}\begin{pmatrix}
+26\\20\end{pmatrix}.</me>
+The left, for reasons we can confirm later, is simply
+<m>\begin{pmatrix}
+x\\y\end{pmatrix}</m>, while on the right we have to
+calculate the result of matrix-vector multiplication,
+<me>
+
+\begin{pmatrix}
+\nicefrac{6}{24}\amp\nicefrac{-3}{24}\\
+\nicefrac{-2}{24} \amp \nicefrac{5}{24}
+\end{pmatrix}
+\begin{pmatrix}
+26\\20
+\end{pmatrix} =
+\begin{pmatrix}
+(\nicefrac{6}{24})(26) + (\nicefrac{-3}{24})(20)\\
+(\nicefrac{-2}{24})(26) + (\nicefrac{5}{24})(20)
+\end{pmatrix}
+=
+\begin{pmatrix}
+4\\2
+\end{pmatrix} 
+</me>
+To confirm what happens on the left, 
+<me>
+\begin{pmatrix}
+\nicefrac{6}{24}\amp\nicefrac{-3}{24}\\
+\nicefrac{-2}{24}\amp\nicefrac{5}{24}
+\end{pmatrix}\cdot
+\begin{pmatrix}
+5\amp3\\
+2\amp6
+\end{pmatrix} \amp =
+\begin{pmatrix}
+(\nicefrac{6}{24})(5) + (\nicefrac{-3}{24})(2)
+\amp (\nicefrac{6}{24})(3) + (\nicefrac{-3}{24})(6)\\
+\nicefrac{-2}{24})(5) + (\nicefrac{5}{24})(2) 
+\amp (\nicefrac{-2}{24})(3) + (\nicefrac{5}{24})(6)
+\end{pmatrix} = 
+\begin{pmatrix}
+1 \amp 0 \\
+0 \amp 1
+\end{pmatrix} 
+</me>
+</p>
+
+
+<p>The result of <m>A^{-1}A</m> is
+called an identity matrix, when this multiplied the vector, we get the
+following 
+<me>\begin{pmatrix}
+1 \amp 0 \\0 \amp
+1\end{pmatrix}
+\begin{pmatrix}
+x \\y
+\end{pmatrix} = 
+\begin{pmatrix}
+(1)(x) \amp (0)(y) \\
+(0)(x) \amp (1)(y)
+\end{pmatrix} =
+\begin{pmatrix}
+x\\y
+\end{pmatrix}.</me> So, multiplying by <m>A^{-1}</m>
+on each side of the original equation gives on the left, the vector of
+unknowns and on the right, their values, or
+
+<me>
+\begin{pmatrix}
+x\\y
+\end{pmatrix} =
+\begin{pmatrix}
+4\\2
+\end{pmatrix}.</me>
+</p>
+
+
+
+<p>There are other important
+matrix properties that have and will show up, primarily the eigensystem
+- the paired collection of eigenvalues and eigenvectors.  To find
+eigenvectors we are looking for the following 
+<me>A\vec{x} = \lambda
+\vec{x},</me> in other words, we are looking for a special number
+<m>\lambda</m> that has the same effect on the entries of the vector as
+does the more complicated matrix-vector multiplication.  We need to find
+a number <m>\lambda</m> such that 
+<me>A\vec{x} - \lambda\vec{x} =
+0.</me> But this is tricky since <m>A</m> is a matrix, <m>\lambda</m> is
+a number, and <m>\vec{x}</m> is a vector.  To make the matrix and number
+more compatible we can write this as <m>(A - \lambda I)\vec{x} = 0</m>,
+where <m>I</m> is the <m>2\times2</m> \emph{identity matrix}  introduced
+not long ago, with <m>1</m>'s on the main diagonal only and zeros
+elsewhere.  It would be easy to solve the equation if the entries in
+<m>\vec{x}</m> were all zeros, but that isn't interesting.  Instead we
+will solve <m>\operatorname{det}(A-\lambda I) =0</m> for <m>\lambda</m>.
+ Returning to the general case (with entries <m>a, b, \dots</m>), we
+have to find the determinant of 
+<me>A-\lambda I = \begin{pmatrix}
+a -
+\lambda \amp b\\c \amp d - \lambda \end{pmatrix},</me> then set it to
+zero and solve for the necessary <m>\lambda</m> values.</p>
+
+
+
+
+
+<p>The determinant is <m>\operatorname{det}(A-\lambda I) =
+(a-\lambda)(d-\lambda)-bc</m>.  Conveniently this can be written
+directly in terms of two important matrix properties, the trace and the
+determinant.  We've already introduced the determinant, <m>\Delta =
+\operatorname{det}(A)</m>, and the trace, <m>\tau =
+\operatorname{tr}(A)</m>, is just the sum of the entries along the main
+diagonal. <md> \operatorname{det}(A-\lambda I) \amp=
+(a-\lambda)(d-\lambda)-bc\\ \amp= ad - a\lambda -d\lambda+
+\lambda^2-bc\\ \amp=\lambda^2 -
+\underbrace{(a+d)}_{\operatorname{tr}(A)}\lambda +
+\underbrace{(ad-bc)}_{\operatorname{det}(A)} </md> This means our
+\emph{eigenvalue} problem just requires us to solve the quadratic
+formula for a quadratic equations whose coefficients can be quickly
+collected from the entries of the original matrix.</p>
+
+
+
+<p>
+For a concrete
+example, use the matrix <m>A</m>, we've introduced earlier. For this,
+<m>\operatorname{tr}(A) = 11</m> and <m>\operatorname{det}(A) = 24</m>. 
+The equation for the eigenvalues is 
+<me>0 = \lambda^2 - 11\lambda +
+24.</me> We could use the quadratic formula, and more generally we
+should, but for a quick start, this one factors to 
+<me>0 = (\lambda -
+3)(\lambda-8).</me> The eigenvalues are <m>\lambda = 3, 8</m>.  To
+remind you, 
+<me>\lambda_{\pm} = \frac{-(-11)\pm\sqrt{(-11)^2 -
+4(1)(24)}}{2(1)},</me> it's important to watch out for the sign of the
+\emph{discriminant} <m>(-11)^2 - 4(1)(24)</m>, which, if negative, would
+cause complex-valued solutions.</p>
+
+
+<p>Now that we have eigenvalues, we have
+to find the paired eigenvector for each, this sort of takes us back to
+the original ideas from this document, we need to find the vector for
+which <m>(A-\lambda I)\vec{u} = 0</m>.  Or, for <m>\lambda_1 = 8</m>,
+
+<me>\begin{pmatrix}
+ 5-8 \amp 3 \\ 2 \amp 6 -
+8\end{pmatrix}\begin{pmatrix}
+u_1\\u_2\end{pmatrix} =
+\begin{pmatrix}
+0\\0\end{pmatrix},</me> in the matrix of coefficients, we
+subtract the same eigenvalue from each main diagonal entry. This is the
+linear system of equations 
+<me>\begin{cases}-3u_1 + 3u_2 \amp=0 \\2u_1 -
+2u_2 \amp =0\end{cases}.</me> This is a rather strange one, you might
+notice that this is solved by <m>u_2 = u_1</m> - we can choose the
+values <m>u_1 = u_2 = 1</m>.  A somewhat peculiar feature of
+eigenvectors, is that we are often only concerned with the direction. 
+The eigenvector is an arrow that points from <m>(0, 0)</m> to, in this
+case, <m>(1, 1)</m>.</p>
+
+
+
+<p>
+Next, repeat for <m>\lambda_2 = 3</m>,
+
+<me>\begin{pmatrix}
+ 5-3 \amp 3 \\ 2 \amp 6 -
+3\end{pmatrix}\begin{pmatrix}
+u_1\\u_2\end{pmatrix} =
+\begin{pmatrix}
+0\\0\end{pmatrix},</me> in the matrix of coefficients, we
+subtract the same eigenvalue from each main diagonal entry. This is the
+linear system of equations 
+<me>\begin{cases}2u_1 + 3u_2 \amp=0 \\2u_1 +
+3u_2 \amp =0\end{cases}.</me> These equations are repeated and give rise
+to <m>u_2 = (-\nicefrac{2}{3})u_1</m>.  If we pick <m>u_1 = 1</m> for
+convenience, we have <m>u_2 = -\nicefrac{2}{3}</m>.  This eigenvector is
+an arrow that points from <m>(0, 0)</m> to <m>(1,
+-\nicefrac{2}{3})</m>.</p>
+
+
+
+<p>
+What should be the case for each is that
+<m>A\vec{u} = \lambda \vec{u}</m>. Verify that this is the case for the
+second pairing, using this example of the first to get started. First,
+
+<me>\begin{pmatrix}
+ 5 \amp 3 \\ 2 \amp
+6\end{pmatrix}
+\begin{pmatrix}
+1\\1
+\end{pmatrix} =
+\begin{pmatrix}
+8\\8
+\end{pmatrix},</me> using standard matrix-vector
+multiplication.  Also, 
+<me>8\begin{pmatrix}
+1\\1
+\end{pmatrix} =
+\begin{pmatrix}
+8\\8
+\end{pmatrix}.</me> Notice that multiplying the
+vector by the matrix and by the scalar eigenvalue give rise to the same
+result.  Effectively, we have ``replaced'' the more difficult process of
+matrix-vector multiplication by the simpler process of scalar-vector
+multiplication.</p>
+
+<p>
+Sometimes we need to \emph{normalize} the eigenvector
+or control its length, we aren't concerned with that here. 
+Additionally, for the first we could have just as easily chosen <m>u_1 =
+u_2 = -1</m> which would be a vector pointing in the opposite direction
+of what we'd first considered.  Surprisingly, for most of our needs this
+doesn't really matter - what matters most is the angle the vector points
+towards (in this case still along the line <m>y = x</m>).</p>
+
+<p>
+To go back
+to how we started using matrices, Jacobian matrices of nonlinear systems
+and systems of linear differential equations, consider  the coupled
+linear system of differential equations,
+
+<me>\begin{pmatrix}
+\nicefrac{dx}{dt}\\\nicefrac{dy}{dt}\end{pmatrix} =
+\begin{pmatrix}
+ 5 \amp 3 \\ 2 \amp
+6\end{pmatrix}\begin{pmatrix}
+x\\y\end{pmatrix}.</me>  As described
+elsewhere, we assume that an exponential of the form
+
+<me>\begin{pmatrix}
+x(t)\\y(t)
+\end{pmatrix} =
+e^{rt}
+\begin{pmatrix}
+u_1\\u_2
+\end{pmatrix},</me> solves the system.  It
+will turn out that <m>r</m> is the eigenvalue and the vector is its
+corresponding eigenvector.  </p>
+
+
+
+<p>
+To solve the differential equations, we
+do need initial conditions of the form
+
+<me>\begin{pmatrix}
+x(0)\\y(0)\end{pmatrix} =
+\begin{pmatrix}
+x_0\\y_0\end{pmatrix}.</me>  Since we have yet to use
+these numbers, let's pick <m>x_0 = 4</m> and <m>y_0 = 7</m>.  To get
+started let's express this initial condition as a \emph{linear
+combination} of eigenvectors.  This means we want to write
+
+<me>\begin{pmatrix}
+4\\7\end{pmatrix} =
+c_1\begin{pmatrix}
+1\\1\end{pmatrix} +
+c_2\begin{pmatrix}
+1\\-\nicefrac{2}{3}\end{pmatrix},</me> for constants
+<m>c_1</m> and <m>c_2</m>.  Oddly this is a \emph{new} linear system,
+but this time for the coefficients, it is equivalent to
+
+<me>\begin{cases}1\cdot c_1 + 1\cdot c_2 = 4\\1\cdot c_1
+-\nicefrac{2}{3}c_2 = 7\end{cases}.</me> Interestingly, the same
+techniques for solving linear systems from earlier apply - solve and
+substitute, add or subtract multiples of equations, or even rewrite this
+as a matrix-vector equation and invert.  Skipping those steps for now,
+<m>c_1 = \nicefrac{29}{5}</m> and <m>c_2 = -\nicefrac{9}{5}</m>.  This
+means that the solution corresponding to this initial condition is
+
+<me>\begin{pmatrix}
+x(t)\\y(t)
+\end{pmatrix} =
+\nicefrac{29}{5}e^{8t}
+\begin{pmatrix}
+1\\1\end{pmatrix} -
+\nicefrac{9}{5}e^{3t}
+\begin{pmatrix}
+1\\-\nicefrac{2}{3}
+\end{pmatrix}</me>.
+</p>
+
+
+<p>
+Here is one solution to the linear system of differential
+equations above.  It may not quite look so, but this is a slight curve
+traced out by coordinates of the form 
+<me>(x(t), y(t)) =
+(\nicefrac{29}{5}e^{8t} - \nicefrac{9}{5}e^{5t}, \nicefrac{29}{5}e^{8t}
+-\nicefrac{9}{5}(-\nicefrac{2}{3})e^{3t})</me> for <m>t\geq 0</m>,
+starting from <m>(x(0), y(0)) = (4, 7)</m>.</p>
+
+
+
+<figure xml:id = "fig-lin-sys-sol">
+<caption>Solution to a linear system of differential equations.</caption>
+<image source="linear_sys.png"/>
+</figure>
+
+
+
+
+<p>A couple interesting ideas, not shown
+yet, are that if initial conditions are multiples of the coordinates of
+a single eigenvalue, those are straight lines in the phase plane. 
+Depending on which eigenvector is present, one of <m>c_1</m> or
+<m>c_2</m> will be zero.  For example, if <m>x_0 = y_0 = 4</m>, then
+<m>c_1 = 4</m> and <m>c_2 = 0</m>. The solution will have no
+contribution from the second eigenpair and will instead  be
+
+<me>\begin{pmatrix}
+x(t)\\y(t)
+\end{pmatrix}
+= 4e^{8t}
+\begin{pmatrix}
+1\\1
+\end{pmatrix}.</me> Alternatively, 
+<me>(x(t), y(t)) = (4e^{8t}, 4e^{8t})</me> for <m>t\geq 0</m>, starting from
+<m>(x(0), y(0)) = (4, 4)</m>.</p>
+-->
+
+</section>
+
+</chapter>
+
