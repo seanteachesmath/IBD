@@ -86,7 +86,7 @@ c \amp d
 \frac{1}{ad-bc}
 \begin{pmatrix}
 d \amp -b\\
--b \amp a
+-c \amp a
 \end{pmatrix}.</me> The
 quantity in the denominator in front of the matrix is called the
 <em>determinant</em>, <m>\operatorname{det}(A) = ad-bc</m>. Under
